@@ -1,0 +1,1481 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///strands_framing_type.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///get_point_position.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_matrix.json"
+        },
+        {
+            "uri": "file:///Math_compose_transform_matrix.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///Math_array.json"
+        },
+        {
+            "uri": "file:///Core_Constants_default_value.json"
+        },
+        {
+            "uri": "file:///int_filter.json"
+        },
+        {
+            "uri": "file:///get_array_indices.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///create_volume_geo_prop.json"
+        },
+        {
+            "uri": "file:///is_a.json"
+        },
+        {
+            "uri": "file:///is_a_mesh.json"
+        },
+        {
+            "uri": "file:///is_a_strands.json"
+        },
+        {
+            "uri": "file:///is_a_points.json"
+        },
+        {
+            "uri": "file:///is_a_volume.json"
+        },
+        {
+            "uri": "file:///get_geo_schema_type.json"
+        },
+        {
+            "uri": "file:///switch_is_a.json"
+        },
+        {
+            "uri": "file:///get_target_component.json"
+        },
+        {
+            "uri": "file:///create_data_geo_prop.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///set_geo_property.array.json"
+        },
+        {
+            "uri": "file:///set_geo_property.scalar.json"
+        },
+        {
+            "uri": "file:///get_strands_structure.json"
+        },
+        {
+            "uri": "file:///access_offset_array.json"
+        },
+        {
+            "uri": "file:///get_geo_property_check.json"
+        },
+        {
+            "uri": "file:///update_point_strand_index.json"
+        },
+        {
+            "uri": "file:///check_point_strand_index.json"
+        },
+        {
+            "uri": "file:///update_strands_ratio.json"
+        },
+        {
+            "uri": "file:///check_point_ratio.json"
+        },
+        {
+            "uri": "file:///Math_vector3_to_vector4.json"
+        },
+        {
+            "uri": "file:///Math_vector4_to_vector3.json"
+        },
+        {
+            "uri": "file:///multiply_vector_by_matrix.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///Math_change_range.json"
+        },
+        {
+            "uri": "file:///change_range.json"
+        },
+        {
+            "uri": "file:///oscillator.json"
+        },
+        {
+            "uri": "file:///get_point_ratio.json"
+        },
+        {
+            "uri": "file:///set_point_position.json"
+        },
+        {
+            "uri": "file:///get_point_orientation.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_rotate_by_quaternion.json"
+        },
+        {
+            "uri": "file:///get_point_binormal.json"
+        },
+        {
+            "uri": "file:///get_point_tangent.json"
+        },
+        {
+            "uri": "file:///Math_matrix_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_length_squared.json"
+        },
+        {
+            "uri": "file:///normal_and_tangent_to_orientation.json"
+        },
+        {
+            "uri": "file:///get_point_normal.json"
+        },
+        {
+            "uri": "file:///Core_Array_slice_array.json"
+        },
+        {
+            "uri": "file:///increment_decrement.json"
+        },
+        {
+            "uri": "file:///project_vector.json"
+        },
+        {
+            "uri": "file:///Math_axis_angle_to_quaternion.json"
+        },
+        {
+            "uri": "file:///array_conversion_type.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds.json"
+        },
+        {
+            "uri": "file:///flatten_2D_array.json"
+        },
+        {
+            "uri": "file:///erase_property.json"
+        },
+        {
+            "uri": "file:///set_point_normal.json"
+        },
+        {
+            "uri": "file:///Core_Array_reverse_array.json"
+        },
+        {
+            "uri": "file:///remove_from_array.json"
+        },
+        {
+            "uri": "file:///remove_first_in_array.json"
+        },
+        {
+            "uri": "file:///set_point_tangent.json"
+        },
+        {
+            "uri": "file:///set_point_orientation.json"
+        },
+        {
+            "uri": "file:///set_point_binormal.json"
+        },
+        {
+            "uri": "file:///find_orthogonal_vectors.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///Core_Array_flatten_nested_array.json"
+        },
+        {
+            "uri": "file:///object_terminal.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///materials.json"
+        },
+        {
+            "uri": "file:///set_strands_shape.json"
+        },
+        {
+            "uri": "file:///get_sub_object.json"
+        },
+        {
+            "uri": "file:///get_point_count.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///validate_strands.json"
+        },
+        {
+            "uri": "file:///construct_strands.json"
+        },
+        {
+            "uri": "file:///update_strands_tangents.json"
+        },
+        {
+            "uri": "file:///set_strands_size_profile.json"
+        },
+        {
+            "uri": "file:///instances.json"
+        },
+        {
+            "uri": "file:///Math_almost_equal.json"
+        },
+        {
+            "uri": "file:///rotation_between_vectors.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_is_empty.json"
+        },
+        {
+            "uri": "file:///get_geo_target_count.json"
+        },
+        {
+            "uri": "file:///volume_types.json"
+        },
+        {
+            "uri": "file:///volume_nodedefs.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_vector.json"
+        },
+        {
+            "uri": "file:///standard_surface_mat.json"
+        },
+        {
+            "uri": "file:///assign_diagnostic_material.json"
+        },
+        {
+            "uri": "file:///set_orientation_value.json"
+        },
+        {
+            "uri": "file:///get_geo_property_or_default.json"
+        },
+        {
+            "uri": "file:///CoreStringOps.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_scalar.json"
+        },
+        {
+            "uri": "file:///jotun_rand.json"
+        },
+        {
+            "uri": "file:///random_value.json"
+        },
+        {
+            "uri": "file:///randomize_point_rotation.json"
+        },
+        {
+            "uri": "file:///validate_mesh.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        },
+        {
+            "uri": "file:///update_mesh_normals.json"
+        },
+        {
+            "uri": "file:///create_mesh_sphere.json"
+        },
+        {
+            "uri": "file:///Core_Array_sum_array_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_sum_array.json"
+        },
+        {
+            "uri": "file:///fluids_types.json"
+        },
+        {
+            "uri": "file:///fluids_nodedefs.json"
+        },
+        {
+            "uri": "file:///string_to_array.json"
+        },
+        {
+            "uri": "file:///half_of.json"
+        },
+        {
+            "uri": "file:///create_mesh_cube.json"
+        },
+        {
+            "uri": "file:///randomize_selection.json"
+        },
+        {
+            "uri": "file:///delete_points_in_points.json"
+        },
+        {
+            "uri": "file:///delete_points.json"
+        },
+        {
+            "uri": "file:///find_all_in_array.json"
+        },
+        {
+            "uri": "file:///cull_points.json"
+        },
+        {
+            "uri": "file:///create_mesh_plane.json"
+        },
+        {
+            "uri": "file:///Core_Array_all_any_array.json"
+        },
+        {
+            "uri": "file:///create_instances.json"
+        },
+        {
+            "uri": "file:///flatten_instance_selection.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_invert.json"
+        },
+        {
+            "uri": "file:///points_to_transforms.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_axis_angle.json"
+        },
+        {
+            "uri": "file:///translate_points.json"
+        },
+        {
+            "uri": "file:///Math_lerp_with_clamp.json"
+        },
+        {
+            "uri": "file:///scale_points.json"
+        },
+        {
+            "uri": "file:///rotate_points.json"
+        },
+        {
+            "uri": "file:///dump_object.json"
+        },
+        {
+            "uri": "file:///Math_nlerp.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_slerp.json"
+        },
+        {
+            "uri": "file:///get_indexed_geo_property_check.json"
+        },
+        {
+            "uri": "file:///get_mesh_structure.json"
+        },
+        {
+            "uri": "file:///transform_points.json"
+        },
+        {
+            "uri": "file:///merge_meshes.json"
+        },
+        {
+            "uri": "file:///merge_points.json"
+        },
+        {
+            "uri": "file:///merge_strands.json"
+        },
+        {
+            "uri": "file:///merge_geometry.json"
+        },
+        {
+            "uri": "file:///bake_instanced_geometry.json"
+        },
+        {
+            "uri": "file:///strands_basis_to_orientation.json"
+        },
+        {
+            "uri": "file:///point_transform_scope.json"
+        },
+        {
+            "uri": "file:///array_average.json"
+        },
+        {
+            "uri": "file:///get_strand_length.json"
+        },
+        {
+            "uri": "file:///update_strands_orientations.json"
+        },
+        {
+            "uri": "file:///check_strands_orientations.json"
+        },
+        {
+            "uri": "file:///get_point_length.json"
+        },
+        {
+            "uri": "file:///get_point_size.json"
+        },
+        {
+            "uri": "file:///curl_strands.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        },
+        {
+            "uri": "file:///fill_interpolated_array.json"
+        },
+        {
+            "uri": "file:///strands_extrusion_type.json"
+        },
+        {
+            "uri": "file:///axis_type.json"
+        },
+        {
+            "uri": "file:///set_geo_property_data.json"
+        },
+        {
+            "uri": "file:///twice_of.json"
+        },
+        {
+            "uri": "file:///cumulative_sum_array.json"
+        },
+        {
+            "uri": "file:///add_points_to_points.json"
+        },
+        {
+            "uri": "file:///validate_points.json"
+        },
+        {
+            "uri": "file:///construct_points.json"
+        },
+        {
+            "uri": "file:///set_point_shape.json"
+        },
+        {
+            "uri": "file:///int_array_filter.json"
+        },
+        {
+            "uri": "file:///create_strands_from_counts.json"
+        },
+        {
+            "uri": "file:///Arnold_enums.json"
+        },
+        {
+            "uri": "file:///set_Arnold_parameter.json"
+        },
+        {
+            "uri": "file:///Arnold_ray_types.json"
+        },
+        {
+            "uri": "file:///Arnold_ray_bitmask.json"
+        },
+        {
+            "uri": "file:///set_Arnold_geo_settings.json"
+        },
+        {
+            "uri": "file:///set_Arnold_strands_settings.json"
+        },
+        {
+            "uri": "file:///create_arrow_strands.json"
+        },
+        {
+            "uri": "file:///point_scope.json"
+        },
+        {
+            "uri": "file:///UV_set_name.json"
+        },
+        {
+            "uri": "file:///set_mesh_UVs.json"
+        },
+        {
+            "uri": "file:///extrude_strands.json"
+        },
+        {
+            "uri": "file:///get_from_interpolated_array.json"
+        },
+        {
+            "uri": "file:///noise_nodedefs.json"
+        },
+        {
+            "uri": "file:///point_nodedefs.json"
+        },
+        {
+            "uri": "file:///Math_within_bounds.json"
+        },
+        {
+            "uri": "file:///create_braids_from_strands.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::braid",
+            "uriImported": "stream:/stream",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-667.467 598.781"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-305.276 591.462"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#426d54"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-1937.82 266.792 587.404 497.163"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "use time to drive the phase of the curl. \nThis is so that we can demonstrate the procedural braid workflow with a little animation."
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#37486d"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Create a straight strands, then curl it."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-1318.09 61.925 544.492 537.273"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d4747"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Generate a braid along the curly strands."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-737.002 146.026 322.243 419.525"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop3",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#68366d"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Extrude the strands to tubes."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-354.282 129.263 299.662 432.165"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "output"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "input"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Modeling::Strands,create_braids_from_strands"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Geometry::Strands,twist_strands"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Diagnostic::Display,point_transform_scope"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-2982.8 66.6037 3976.54 724.324"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "Create a braid mesh procedurally."
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "braid_thumb.png"
+                }
+            ],
+            "ports": [],
+            "compounds": [
+                {
+                    "name": "simple_guide_strand",
+                    "uriImported": "stream:/stream",
+                    "metadata": [
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Geometry::Strands::Internal,update_strands_ratio"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,MJCG::Core::Array,fill_interpolated_array"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Math,add"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,MJCG::Strands,catmull_rom_strand"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,MJCG::Array,1D_to_2D_array"
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-2595.6 235.874 1813.17 630.155"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "start"
+                                                        },
+                                                        {
+                                                            "metaName": "end"
+                                                        },
+                                                        {
+                                                            "metaName": "size"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "strands"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "start",
+                            "portDirection": "input",
+                            "portType": "Math::float3"
+                        },
+                        {
+                            "portName": "end",
+                            "portDirection": "input",
+                            "portType": "Math::float3"
+                        },
+                        {
+                            "portName": "size",
+                            "portDirection": "input",
+                            "portType": "long"
+                        },
+                        {
+                            "portName": "strands",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "array_size",
+                            "nodeType": "Core::Array::array_size",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-2182.51 693.431"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "build_array",
+                            "nodeType": "Core::Array::build_array",
+                            "multiInPortNames": [
+                                "output",
+                                "converted"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1633.64 546.913"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "construct_strands",
+                            "nodeType": "Geometry::Strands::construct_strands",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1342.5 370.659"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "to_unsigned_int",
+                            "nodeType": "Core::Type_Conversion::to_unsigned_int",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1913.04 689.399"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value7",
+                            "valueType": "uint",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1909.56 491.301"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "fill_interpolated_array",
+                            "nodeType": "MJCG::Core::Array::fill_interpolated_array",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-2474.87 389.856"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "update_strands_ratio",
+                            "nodeType": "Geometry::Strands::Internal::update_strands_ratio",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1079.96 362.341"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "array_size.size",
+                            "target": "to_unsigned_int.from"
+                        },
+                        {
+                            "source": "build_array.array",
+                            "target": "construct_strands.strand_offset"
+                        },
+                        {
+                            "source": "construct_strands.strands",
+                            "target": "update_strands_ratio.strands"
+                        },
+                        {
+                            "source": "to_unsigned_int.unsigned_int",
+                            "target": "build_array.first.converted"
+                        },
+                        {
+                            "source": "value7.output",
+                            "target": "build_array.first.output"
+                        },
+                        {
+                            "source": "fill_interpolated_array.interpolated",
+                            "target": "array_size.array"
+                        },
+                        {
+                            "source": "fill_interpolated_array.interpolated",
+                            "target": "construct_strands.point_position"
+                        },
+                        {
+                            "source": "update_strands_ratio.out_strands",
+                            "target": ".strands"
+                        },
+                        {
+                            "source": ".start",
+                            "target": "fill_interpolated_array.first"
+                        },
+                        {
+                            "source": ".end",
+                            "target": "fill_interpolated_array.second"
+                        },
+                        {
+                            "source": ".size",
+                            "target": "fill_interpolated_array.size"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "value7.value",
+                            "valueType": "uint",
+                            "value": "0U"
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "value1",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1901.02 558.861"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "time_in_seconds",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1641.68 404.178"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "curl_strands",
+                    "nodeType": "MJCG::Geometry::Strands::curl_strands",
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::proxy"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Curl Settings.Radius",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Curl Settings.Frequency",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                },
+                                {
+                                    "metaName": "Curl Settings",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                },
+                                {
+                                    "metaName": "Curl",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Frequency",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1037.09 204.608"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "time",
+                    "nodeType": "Core::Time::time",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1910.4 334.396"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "simple_guide_strand",
+                    "nodeType": "simple_guide_strand",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1293.38 107.04"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "extrude_strands",
+                    "nodeType": "MJCG::Modeling::Strands::extrude_strands",
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::final",
+                        "Core::Graph::terminal::diagnostic"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-311.342 180.215"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "create_braids_from_strands",
+                    "nodeType": "MJCG::Modeling::Strands::create_braids_from_strands",
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::proxy"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-690.899 202.158"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "value1.output",
+                    "target": "multiply.first.output1"
+                },
+                {
+                    "source": "time.seconds",
+                    "target": "multiply.first.time_in_seconds"
+                },
+                {
+                    "source": "multiply.output",
+                    "target": "curl_strands.phase"
+                },
+                {
+                    "source": "simple_guide_strand.strands",
+                    "target": "curl_strands.strands"
+                },
+                {
+                    "source": "curl_strands.out_strands",
+                    "target": "create_braids_from_strands.strands"
+                },
+                {
+                    "source": "create_braids_from_strands.out_strands",
+                    "target": "extrude_strands.strands"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "value1.value",
+                    "valueType": "float",
+                    "value": "0.200000003f"
+                },
+                {
+                    "valueName": "curl_strands.frequency",
+                    "valueType": "float",
+                    "value": "1.5f"
+                },
+                {
+                    "valueName": "curl_strands.size",
+                    "valueType": "float",
+                    "value": "0.75f"
+                },
+                {
+                    "valueName": "curl_strands.height",
+                    "valueType": "float",
+                    "value": "0.25f"
+                },
+                {
+                    "valueName": "curl_strands.update_framing",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "curl_strands.framing_algorithm",
+                    "valueType": "MJCG::strandsFramingType",
+                    "value": "Parallel Transport"
+                },
+                {
+                    "valueName": "simple_guide_strand.start",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "-2.5f",
+                        "y": "5f",
+                        "z": "-2.5f"
+                    }
+                },
+                {
+                    "valueName": "simple_guide_strand.end",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "2.5f",
+                        "y": "0f",
+                        "z": "2.5f"
+                    }
+                },
+                {
+                    "valueName": "simple_guide_strand.size",
+                    "valueType": "long",
+                    "value": "100"
+                },
+                {
+                    "valueName": "extrude_strands.tube_sides",
+                    "valueType": "long",
+                    "value": "24"
+                },
+                {
+                    "valueName": "extrude_strands.twist",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "extrude_strands.size",
+                    "valueType": "float",
+                    "value": "0.300000012f"
+                },
+                {
+                    "valueName": "extrude_strands.size_profile",
+                    "valueType": "Amino::FCurve",
+                    "value": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "-0.82887",
+                                        "yp": "0.99677400000000005",
+                                        "x": "0",
+                                        "y": "1",
+                                        "xn": "0.82887",
+                                        "yn": "1.003226"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.59999999999999998",
+                                        "yp": "0.80000000000000004",
+                                        "x": "1",
+                                        "y": "0.80000000000000004",
+                                        "xn": "1.3999999999999999",
+                                        "yn": "0.80000000000000004"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "valueName": "extrude_strands.start_cap",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "extrude_strands.end_cap",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "create_braids_from_strands.size",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "create_braids_from_strands.size_profile",
+                    "valueType": "Amino::FCurve",
+                    "value": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "-0.82887",
+                                        "yp": "0.99677400000000005",
+                                        "x": "0",
+                                        "y": "1",
+                                        "xn": "0.82887",
+                                        "yn": "1.003226"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.59999999999999998",
+                                        "yp": "0.59999999999999998",
+                                        "x": "1",
+                                        "y": "0.59999999999999998",
+                                        "xn": "1.3999999999999999",
+                                        "yn": "0.59999999999999998"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "valueName": "create_braids_from_strands.twist",
+                    "valueType": "float",
+                    "value": "45f"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

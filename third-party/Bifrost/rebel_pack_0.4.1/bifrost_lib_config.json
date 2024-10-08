@@ -1,0 +1,19 @@
+{
+  "AminoConfigurations": [
+    {
+      "vendorName": "Autodesk",
+      "libraryVersion": "0.4.1",
+      "libraryName": "Rebel-PO-Alliance",
+      "jsonLibs": [
+        {
+          "path": "compounds",
+          "files": [ ]
+        },
+        {
+          "path": "graphs",
+          "files": [ ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_matrix_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_matrix.json"
+        },
+        {
+            "uri": "file:///Math_compose_transform_matrix.json"
+        },
+        {
+            "uri": "file:///Math_lerp_with_clamp.json"
+        },
+        {
+            "uri": "file:///Math_nlerp.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_slerp.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Core::Math::linear_interpolate_transform",
+            "uriImported": "file:///linear_interpolate_transform.json",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../math/docs/linear_interpolate_transform.md"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/mjcg.png"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-422.769 381.762"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "first"
+                                                },
+                                                {
+                                                    "metaName": "second"
+                                                },
+                                                {
+                                                    "metaName": "fraction"
+                                                },
+                                                {
+                                                    "metaName": "clamp_negative"
+                                                },
+                                                {
+                                                    "metaName": "clamp_above_one"
+                                                },
+                                                {
+                                                    "metaName": "always_use_shorter_arc"
+                                                },
+                                                {
+                                                    "metaName": "use_nlerp_if_closer"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "interpolated"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1251.44 226.148"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,linear_interpolate"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,euler_to_quaternion"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,lerp"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,quaternion_to_euler"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Diagnostic::Display,transform_scope"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-662.029 -134.192 2535.19 773.365"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-170.423 -209.452"
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"first\"\n            },\n            {\n                \"port\": \"second\"\n            },\n            {\n                \"port\": \"fraction\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Clamp\",\n                \"items\": [\n                    {\n                        \"port\": \"clamp_negative\"\n                    },\n                    {\n                        \"port\": \"clamp_above_one\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Quaternion\",\n                \"items\": [\n                    {\n                        \"port\": \"always_use_shorter_arc\"\n                    },\n                    {\n                        \"port\": \"use_nlerp_if_closer\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "PortExpandedState",
+                    "metadata": [
+                        {
+                            "metaName": "Clamp",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "first",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "second",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "fraction",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "interpolated",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "clamp_negative",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "clamp_above_one",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "always_use_shorter_arc",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "use_nlerp_if_closer",
+                    "portDirection": "input",
+                    "portType": "float"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "matrix_to_quaternion",
+                    "nodeType": "Core::Math::matrix_to_SRT",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "129.819 73"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "matrix_to_quaternion1",
+                    "nodeType": "Core::Math::matrix_to_SRT",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "144.143 350.785"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "compose_transform_matrix",
+                    "nodeType": "Core::Math::SRT_to_matrix",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "965.748 200.788"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "quaternion_slerp",
+                    "nodeType": "Core::Math::quaternion_slerp",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "617.239 248.673"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "linear_interpolate",
+                    "nodeType": "Core::Math::linear_interpolate",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "608.285 -37.4262"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "linear_interpolate1",
+                    "nodeType": "Core::Math::linear_interpolate",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "615.729 593.712"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "matrix_to_quaternion.quaternion",
+                    "target": "quaternion_slerp.from_quaternion"
+                },
+                {
+                    "source": "matrix_to_quaternion1.quaternion",
+                    "target": "quaternion_slerp.to_quaternion"
+                },
+                {
+                    "source": "quaternion_slerp.interpolated",
+                    "target": "compose_transform_matrix.quaternion"
+                },
+                {
+                    "source": ".clamp_negative",
+                    "target": "quaternion_slerp.clamp_negative"
+                },
+                {
+                    "source": ".clamp_above_one",
+                    "target": "quaternion_slerp.clamp_above_one"
+                },
+                {
+                    "source": ".always_use_shorter_arc",
+                    "target": "quaternion_slerp.always_use_shorter_arc"
+                },
+                {
+                    "source": ".use_nlerp_if_closer",
+                    "target": "quaternion_slerp.use_nlerp_if_closer"
+                },
+                {
+                    "source": "matrix_to_quaternion.scale",
+                    "target": "linear_interpolate.first"
+                },
+                {
+                    "source": "matrix_to_quaternion1.scale",
+                    "target": "linear_interpolate.second"
+                },
+                {
+                    "source": "linear_interpolate.interpolated",
+                    "target": "compose_transform_matrix.scale"
+                },
+                {
+                    "source": "matrix_to_quaternion.translation",
+                    "target": "linear_interpolate1.first"
+                },
+                {
+                    "source": "matrix_to_quaternion1.translation",
+                    "target": "linear_interpolate1.second"
+                },
+                {
+                    "source": "linear_interpolate1.interpolated",
+                    "target": "compose_transform_matrix.translation"
+                },
+                {
+                    "source": ".clamp_negative",
+                    "target": "linear_interpolate.clamp_negative"
+                },
+                {
+                    "source": ".clamp_above_one",
+                    "target": "linear_interpolate.clamp_above_one"
+                },
+                {
+                    "source": ".clamp_negative",
+                    "target": "linear_interpolate1.clamp_negative"
+                },
+                {
+                    "source": ".clamp_negative",
+                    "target": "linear_interpolate1.clamp_above_one"
+                },
+                {
+                    "source": ".fraction",
+                    "target": "quaternion_slerp.fraction"
+                },
+                {
+                    "source": ".fraction",
+                    "target": "linear_interpolate.fraction"
+                },
+                {
+                    "source": ".fraction",
+                    "target": "linear_interpolate1.fraction"
+                },
+                {
+                    "source": ".first",
+                    "target": "matrix_to_quaternion.transform"
+                },
+                {
+                    "source": ".second",
+                    "target": "matrix_to_quaternion1.transform"
+                },
+                {
+                    "source": "compose_transform_matrix.transform",
+                    "target": ".interpolated"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "quaternion_slerp.clamp_negative",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "quaternion_slerp.clamp_above_one",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "quaternion_slerp.always_use_shorter_arc",
+                    "valueType": "bool",
+                    "value": "false"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "header": {
+    "metadata": [
+      {
+        "metaName": "adskFileFormatVersion",
+        "metaValue": "100L"
+      }
+    ]
+  },
+  "namespaces": [
+    {
+      "name": "MJCG::Modeling::Growth::Internal",
+      "metadata": [
+        {
+          "metaName": "internal",
+          "metaType": "bool",
+          "metaValue": "true"
+        }
+      ]
+    }
+  ]
+}

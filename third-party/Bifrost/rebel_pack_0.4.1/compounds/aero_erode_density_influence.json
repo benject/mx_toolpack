@@ -1,0 +1,459 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///influence_fields_types.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///insert_child_object.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///clamp_influence.json"
+        },
+        {
+            "uri": "file:///modifier_influence.json"
+        },
+        {
+            "uri": "file:///modulate_influence.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Simulation::Influence::aero_erode_density_influence",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../docs/${language}/aero_erode_density_influence.md"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1116.66 522.187"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "influence"
+                                                },
+                                                {
+                                                    "metaName": "enable"
+                                                },
+                                                {
+                                                    "metaName": "fog_density_subtracted"
+                                                },
+                                                {
+                                                    "metaName": "min_fog_density"
+                                                },
+                                                {
+                                                    "metaName": "max_fog_density"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_influence"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "2474.63 403.772"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,negate"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Logic,if"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,build_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,multiply"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "877.535 -57.6109 1761.67 1201.07"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "178.5 374"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPackExperimental.svg"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "influence",
+                    "portDirection": "input",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "enable",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "out_influence",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "fog_density_subtracted",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.400000006f"
+                },
+                {
+                    "portName": "min_fog_density",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.0299999993f"
+                },
+                {
+                    "portName": "max_fog_density",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.100000001f"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "modifier_influence",
+                    "nodeType": "Simulation::Influence::modifier_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Modifier Properties",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1686.94 577.638"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "modulate_influence",
+                    "nodeType": "Simulation::Influence::modulate_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Modulate Properties",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2004.85 554.993"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if2",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2221.02 388.539"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "negate",
+                    "nodeType": "Core::Math::negate",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1398.14 726.953"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "modifier_influence.out_influence",
+                    "target": "modulate_influence.influence"
+                },
+                {
+                    "source": ".enable",
+                    "target": "if2.condition"
+                },
+                {
+                    "source": ".influence",
+                    "target": "modifier_influence.influence"
+                },
+                {
+                    "source": ".influence",
+                    "target": "if2.false_case"
+                },
+                {
+                    "source": "if2.output",
+                    "target": ".out_influence"
+                },
+                {
+                    "source": ".fog_density_subtracted",
+                    "target": "negate.value"
+                },
+                {
+                    "source": "negate.negated",
+                    "target": "modifier_influence.value"
+                },
+                {
+                    "source": "modulate_influence.out_influence",
+                    "target": "if2.true_case"
+                },
+                {
+                    "source": ".min_fog_density",
+                    "target": "modulate_influence.min"
+                },
+                {
+                    "source": ".max_fog_density",
+                    "target": "modulate_influence.max"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "modifier_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "modifier_influence.property",
+                    "valueType": "string",
+                    "value": "voxel_fog_density"
+                },
+                {
+                    "valueName": "modifier_influence.operation",
+                    "valueType": "Simulation::Influence::Operation_Type",
+                    "value": "Add"
+                },
+                {
+                    "valueName": "modifier_influence.value",
+                    "valueType": "float",
+                    "value": "-0.400000006f"
+                },
+                {
+                    "valueName": "modifier_influence.rate",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "modifier_influence.enable_clamp",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "modifier_influence.max",
+                    "valueType": "float",
+                    "value": "100000f"
+                },
+                {
+                    "valueName": "modulate_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "modulate_influence.property",
+                    "valueType": "string",
+                    "value": "voxel_fog_density"
+                },
+                {
+                    "valueName": "modulate_influence.use_gradient",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "modulate_influence.min",
+                    "valueType": "float",
+                    "value": "0.0299999993f"
+                },
+                {
+                    "valueName": "modulate_influence.max",
+                    "valueType": "float",
+                    "value": "0.100000001f"
+                },
+                {
+                    "valueName": "modulate_influence.invert",
+                    "valueType": "bool",
+                    "value": "true"
+                }
+            ]
+        }
+    ]
+}

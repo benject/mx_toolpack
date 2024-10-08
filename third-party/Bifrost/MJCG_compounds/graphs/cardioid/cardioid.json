@@ -1,0 +1,1536 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///create_volume_geo_prop.json"
+        },
+        {
+            "uri": "file:///is_a.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///is_a_mesh.json"
+        },
+        {
+            "uri": "file:///is_a_strands.json"
+        },
+        {
+            "uri": "file:///is_a_points.json"
+        },
+        {
+            "uri": "file:///is_a_volume.json"
+        },
+        {
+            "uri": "file:///get_geo_schema_type.json"
+        },
+        {
+            "uri": "file:///switch_is_a.json"
+        },
+        {
+            "uri": "file:///get_target_component.json"
+        },
+        {
+            "uri": "file:///create_data_geo_prop.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///set_geo_property.array.json"
+        },
+        {
+            "uri": "file:///set_geo_property.scalar.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_lerp_with_clamp.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Core_Constants_default_value.json"
+        },
+        {
+            "uri": "file:///Math_change_range.json"
+        },
+        {
+            "uri": "file:///Math_array.json"
+        },
+        {
+            "uri": "file:///int_filter.json"
+        },
+        {
+            "uri": "file:///get_array_indices.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///get_strands_structure.json"
+        },
+        {
+            "uri": "file:///access_offset_array.json"
+        },
+        {
+            "uri": "file:///get_geo_property_check.json"
+        },
+        {
+            "uri": "file:///update_point_strand_index.json"
+        },
+        {
+            "uri": "file:///check_point_strand_index.json"
+        },
+        {
+            "uri": "file:///update_strands_ratio.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///materials.json"
+        },
+        {
+            "uri": "file:///set_strands_shape.json"
+        },
+        {
+            "uri": "file:///resize_vector.json"
+        },
+        {
+            "uri": "file:///Core_Array_slice_array.json"
+        },
+        {
+            "uri": "file:///Core_Array_reverse_array.json"
+        },
+        {
+            "uri": "file:///increment_decrement.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds.json"
+        },
+        {
+            "uri": "file:///remove_from_array.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///validate_strands.json"
+        },
+        {
+            "uri": "file:///construct_strands.json"
+        },
+        {
+            "uri": "file:///fill_interpolated_array.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_matrix.json"
+        },
+        {
+            "uri": "file:///Math_compose_transform_matrix.json"
+        },
+        {
+            "uri": "file:///Math_vector3_to_vector4.json"
+        },
+        {
+            "uri": "file:///Math_vector4_to_vector3.json"
+        },
+        {
+            "uri": "file:///multiply_vector_by_matrix.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_rotate_by_quaternion.json"
+        },
+        {
+            "uri": "file:///validate_mesh.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        },
+        {
+            "uri": "file:///half_of.json"
+        },
+        {
+            "uri": "file:///Math_axis_angle_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_length_squared.json"
+        },
+        {
+            "uri": "file:///Math_almost_equal.json"
+        },
+        {
+            "uri": "file:///rotation_between_vectors.json"
+        },
+        {
+            "uri": "file:///create_mesh_plane.json"
+        },
+        {
+            "uri": "file:///twice_of.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_is_empty.json"
+        },
+        {
+            "uri": "file:///get_geo_target_count.json"
+        },
+        {
+            "uri": "file:///volume_types.json"
+        },
+        {
+            "uri": "file:///volume_nodedefs.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_vector.json"
+        },
+        {
+            "uri": "file:///standard_surface_mat.json"
+        },
+        {
+            "uri": "file:///assign_diagnostic_material.json"
+        },
+        {
+            "uri": "file:///object_terminal.json"
+        },
+        {
+            "uri": "file:///create_circle.json"
+        },
+        {
+            "uri": "file:///array_conversion_type.json"
+        },
+        {
+            "uri": "file:///flatten_2D_array.json"
+        },
+        {
+            "uri": "file:///cumulative_sum_array.json"
+        },
+        {
+            "uri": "file:///int_array_filter.json"
+        },
+        {
+            "uri": "file:///set_geo_property_data.json"
+        },
+        {
+            "uri": "file:///set_point_position.json"
+        },
+        {
+            "uri": "file:///create_strands_from_counts.json"
+        },
+        {
+            "uri": "file:///create_cardioid.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::cardioid",
+            "uriImported": "file:///__duplicateCompoundURIHelper__",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "2960.9 968.322"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_strands"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "4111.46 477.888"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d3f3f"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Generate a RGB color gradiant along the strands ratio, randomize color luminance, set the color geo property and render settings."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "2807.9 392.485 1536.07 498.24"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#396d3f"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Generate a cardioid."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "2484.11 404.558 294.299 468.01"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#69426d"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Animate the cardioid using the time. We offset it a little bit."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "1866.24 418.808 567.495 489.352"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Diagnostic::Display,assign_diagnostic_material"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "input"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,add"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Time,time"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Geometry::Strands,set_strands_shape"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "1817.55 -42.455 2599.7 1632.09"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "Generate an evolving cardioid shape using strands."
+                },
+                {
+                    "metaName": "example_scene",
+                    "metaType": "string",
+                    "metaValue": "cardioid_example.ma"
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "cardioid_thumb.png"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "out_strands",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "color_by_ratio",
+                    "uriImported": "file:///__duplicateCompoundURIHelper__",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "2711.72 1013.11"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "in_strands"
+                                                        },
+                                                        {
+                                                            "metaName": "start_color"
+                                                        },
+                                                        {
+                                                            "metaName": "mid_color"
+                                                        },
+                                                        {
+                                                            "metaName": "end_color"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "4248.94 1086.94"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "color"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "2463.35 869.685 2212.33 764.781"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "in_strands",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "color",
+                            "portDirection": "output",
+                            "portType": "array<Math::float4>"
+                        },
+                        {
+                            "portName": "start_color",
+                            "portDirection": "input",
+                            "portType": "Math::float4"
+                        },
+                        {
+                            "portName": "mid_color",
+                            "portDirection": "input",
+                            "portType": "Math::float4"
+                        },
+                        {
+                            "portName": "end_color",
+                            "portDirection": "input",
+                            "portType": "Math::float4"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "linear_interpolate",
+                            "nodeType": "Core::Math::linear_interpolate",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3641.71 863.312"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "linear_interpolate1",
+                            "nodeType": "Core::Math::linear_interpolate",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3966.81 1038.17"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "rescale",
+                            "nodeType": "Core::Math::change_range",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3351.42 1170.39"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "rescale1",
+                            "nodeType": "Core::Math::change_range",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3636.47 1366.41"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "update_strand_ratio",
+                            "nodeType": "Geometry::Strands::Internal::update_strands_ratio",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3014.83 1367.16"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "rescale.result",
+                            "target": "linear_interpolate.fraction"
+                        },
+                        {
+                            "source": "linear_interpolate.interpolated",
+                            "target": "linear_interpolate1.first"
+                        },
+                        {
+                            "source": "rescale1.result",
+                            "target": "linear_interpolate1.fraction"
+                        },
+                        {
+                            "source": "update_strand_ratio.point_ratio",
+                            "target": "rescale.value"
+                        },
+                        {
+                            "source": "update_strand_ratio.point_ratio",
+                            "target": "rescale1.value"
+                        },
+                        {
+                            "source": ".in_strands",
+                            "target": "update_strand_ratio.strands"
+                        },
+                        {
+                            "source": ".end_color",
+                            "target": "linear_interpolate1.second"
+                        },
+                        {
+                            "source": ".start_color",
+                            "target": "linear_interpolate.first"
+                        },
+                        {
+                            "source": ".mid_color",
+                            "target": "linear_interpolate.second"
+                        },
+                        {
+                            "source": "linear_interpolate1.interpolated",
+                            "target": ".color"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "linear_interpolate.clamp_negative",
+                            "valueType": "bool",
+                            "value": "false"
+                        },
+                        {
+                            "valueName": "linear_interpolate.clamp_above_one",
+                            "valueType": "bool",
+                            "value": "false"
+                        },
+                        {
+                            "valueName": "linear_interpolate1.clamp_negative",
+                            "valueType": "bool",
+                            "value": "false"
+                        },
+                        {
+                            "valueName": "linear_interpolate1.clamp_above_one",
+                            "valueType": "bool",
+                            "value": "false"
+                        },
+                        {
+                            "valueName": "rescale.from_end",
+                            "valueType": "float",
+                            "value": "0.5f"
+                        },
+                        {
+                            "valueName": "rescale.to_end",
+                            "valueType": "float",
+                            "value": "1f"
+                        },
+                        {
+                            "valueName": "rescale1.from_start",
+                            "valueType": "float",
+                            "value": "0.5f"
+                        },
+                        {
+                            "valueName": "rescale1.from_end",
+                            "valueType": "float",
+                            "value": "1f"
+                        },
+                        {
+                            "valueName": "rescale1.to_end",
+                            "valueType": "float",
+                            "value": "1f"
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                },
+                {
+                    "name": "randomize_luminance",
+                    "uriImported": "file:///__duplicateCompoundURIHelper__",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "2841.07 1032.43"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "base_color"
+                                                        },
+                                                        {
+                                                            "metaName": "factor"
+                                                        },
+                                                        {
+                                                            "metaName": "seed"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "4645.19 1062.55"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "color"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Math,linear_interpolate"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Math,negate"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Math,add"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,MJCG::Math,rescale"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Array,array_size"
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "2703.43 759 2093.14 1188"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "color",
+                            "portDirection": "output",
+                            "portType": "array<Math::float4>"
+                        },
+                        {
+                            "portName": "base_color",
+                            "portDirection": "input",
+                            "portType": "array<Math::float4>"
+                        },
+                        {
+                            "portName": "factor",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "seed",
+                            "portDirection": "input",
+                            "portType": "long"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "scalar_to_vector5",
+                            "nodeType": "Core::Conversion::scalar_to_vector4",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3785.42 1254.39"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "multiply",
+                            "nodeType": "Core::Math::multiply",
+                            "multiInPortNames": [
+                                "output1",
+                                "output2"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "4052.42 1145.59"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "random_value_array",
+                            "nodeType": "Core::Randomization::random_value_array",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3498.73 1278.6"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "array_size",
+                            "nodeType": "Core::Array::array_size",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "3146.42 1302.48"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "linear_interpolate",
+                            "nodeType": "Core::Math::linear_interpolate",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "4368.16 999.407"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": ".base_color",
+                            "target": "multiply.first.output1"
+                        },
+                        {
+                            "source": "scalar_to_vector5.vector4",
+                            "target": "multiply.first.output2"
+                        },
+                        {
+                            "source": ".base_color",
+                            "target": "array_size.array"
+                        },
+                        {
+                            "source": "array_size.size",
+                            "target": "random_value_array.size"
+                        },
+                        {
+                            "source": ".seed",
+                            "target": "random_value_array.seed"
+                        },
+                        {
+                            "source": "random_value_array.random_values",
+                            "target": "scalar_to_vector5.x"
+                        },
+                        {
+                            "source": "random_value_array.random_values",
+                            "target": "scalar_to_vector5.y"
+                        },
+                        {
+                            "source": "random_value_array.random_values",
+                            "target": "scalar_to_vector5.z"
+                        },
+                        {
+                            "source": ".factor",
+                            "target": "linear_interpolate.fraction"
+                        },
+                        {
+                            "source": "multiply.output",
+                            "target": "linear_interpolate.second"
+                        },
+                        {
+                            "source": ".base_color",
+                            "target": "linear_interpolate.first"
+                        },
+                        {
+                            "source": "linear_interpolate.interpolated",
+                            "target": ".color"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "scalar_to_vector5.x",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "scalar_to_vector5.y",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "scalar_to_vector5.z",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "scalar_to_vector5.w",
+                            "valueType": "float",
+                            "value": "1f"
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "set_geo_property",
+                    "nodeType": "Geometry::Properties::set_geo_property",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3370.14 426.879"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "color_by_ratio",
+                    "nodeType": "color_by_ratio",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2845.95 559.974"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "randomize_luminance",
+                    "nodeType": "randomize_luminance",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3110.18 566.581"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "set_strands_shape",
+                    "nodeType": "Geometry::Strands::set_strands_shape",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3611.76 439.446"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "create_cardioid",
+                    "nodeType": "MJCG::Modeling::Strands::create_cardioid",
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::proxy"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Transform",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Cardioid.Vector Shift",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Cardioid.Geometry",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Cardioid",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                },
+                                {
+                                    "metaName": "Cardioid.Modular Multiplication",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2518.81 443.196"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "time",
+                    "nodeType": "Core::Time::time",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1897.79 481.599"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "add",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "seconds",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2165.33 562.938"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1900.67 704.041"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "30"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "assign_diagnostic_material",
+                    "nodeType": "Diagnostic::Display::assign_diagnostic_material",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3853.64 447.936"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "randomize_luminance.color",
+                    "target": "set_geo_property.data"
+                },
+                {
+                    "source": "color_by_ratio.color",
+                    "target": "randomize_luminance.base_color"
+                },
+                {
+                    "source": "set_geo_property.out_geometry",
+                    "target": "set_strands_shape.strands"
+                },
+                {
+                    "source": "create_cardioid.strands",
+                    "target": "color_by_ratio.in_strands"
+                },
+                {
+                    "source": "create_cardioid.strands",
+                    "target": "set_geo_property.geometry"
+                },
+                {
+                    "source": "time.seconds",
+                    "target": "add.first.seconds"
+                },
+                {
+                    "source": "value.output",
+                    "target": "add.first.output1"
+                },
+                {
+                    "source": "add.output",
+                    "target": "create_cardioid.factor"
+                },
+                {
+                    "source": "set_strands_shape.out_strands",
+                    "target": "assign_diagnostic_material.geometry"
+                },
+                {
+                    "source": "assign_diagnostic_material.geometry_with_material",
+                    "target": ".out_strands"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "set_geo_property.property",
+                    "valueType": "string",
+                    "value": "color"
+                },
+                {
+                    "valueName": "set_geo_property.default",
+                    "valueType": "Math::float4",
+                    "value": {
+                        "x": "1f",
+                        "y": "1f",
+                        "z": "1f",
+                        "w": "1f"
+                    }
+                },
+                {
+                    "valueName": "set_geo_property.target",
+                    "valueType": "string",
+                    "value": "point_component"
+                },
+                {
+                    "valueName": "color_by_ratio.in_strands",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "color_by_ratio.start_color",
+                    "valueType": "Math::float4",
+                    "value": {
+                        "x": "1f",
+                        "y": "0f",
+                        "z": "0f",
+                        "w": "1f"
+                    }
+                },
+                {
+                    "valueName": "color_by_ratio.mid_color",
+                    "valueType": "Math::float4",
+                    "value": {
+                        "x": "0f",
+                        "y": "1f",
+                        "z": "0f",
+                        "w": "1f"
+                    }
+                },
+                {
+                    "valueName": "color_by_ratio.end_color",
+                    "valueType": "Math::float4",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "1f",
+                        "w": "1f"
+                    }
+                },
+                {
+                    "valueName": "randomize_luminance.factor",
+                    "valueType": "float",
+                    "value": "0.200000003f"
+                },
+                {
+                    "valueName": "randomize_luminance.seed",
+                    "valueType": "long",
+                    "value": "1991"
+                },
+                {
+                    "valueName": "set_strands_shape.default_size",
+                    "valueType": "float",
+                    "value": "0.00499999989f"
+                },
+                {
+                    "valueName": "create_cardioid.radius",
+                    "valueType": "float",
+                    "value": "7.5f"
+                },
+                {
+                    "valueName": "create_cardioid.modulo",
+                    "valueType": "long",
+                    "value": "2000"
+                },
+                {
+                    "valueName": "create_cardioid.factor",
+                    "valueType": "float",
+                    "value": "50f"
+                },
+                {
+                    "valueName": "create_cardioid.shift_1",
+                    "valueType": "float",
+                    "value": "0.25f"
+                },
+                {
+                    "valueName": "create_cardioid.shift_2",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "create_cardioid.shift_3",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "create_cardioid.shrink_length",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "create_cardioid.segments",
+                    "valueType": "long",
+                    "value": "3"
+                },
+                {
+                    "valueName": "create_cardioid.scale",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "1f",
+                        "y": "1f",
+                        "z": "1f"
+                    }
+                },
+                {
+                    "valueName": "create_cardioid.rotation",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "create_cardioid.translation",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "create_cardioid.use_transform_matrix",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "create_cardioid.transform",
+                    "valueType": "Math::float4x4",
+                    "value": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "valueName": "value.value",
+                    "valueType": "float",
+                    "value": "30f"
+                },
+                {
+                    "valueName": "assign_diagnostic_material.emission_color",
+                    "valueType": "string",
+                    "value": "color"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "output"
+                },
+                {
+                    "name": "input"
+                }
+            ]
+        }
+    ]
+}

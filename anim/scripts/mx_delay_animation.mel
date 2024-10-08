@@ -1,0 +1,219 @@
+global proc delayAnimUI(){
+
+    if (`window -exists delayAnim_ui`)
+    {deleteUI delayAnim_ui;}
+
+    window -t delayAnim_ui -wh 320 180  delayAnim_ui ;
+
+    columnLayout -cat "left" 5 col_layout;
+
+	text "Delay Animation";
+	text " ";	
+	text " select first 'lead' object and then other 'follow' objects";
+	text " fill the delay frame and then hit button";
+	text " ";	
+    rowLayout -nc 3;
+    text -font "boldLabelFont"  "Delay Frames";
+	text " ";
+	textField -w 50 -h 20 delayFrames_field;
+	setParent col_layout;
+
+	rowLayout -nc 3;
+	checkBox -w 100 -l "translate" anim_translate;
+	checkBox -w 100 -l "rotation" anim_rotation;
+	checkBox -w 100 -l "scale" anim_scale;
+	setParent col_layout;
+	text " ";	
+    button -w 300 -h 30 -l "create delay animation" -c "delayAnimation;";
+
+    showWindow delayAnim_ui;
+
+};
+
+
+
+global proc delayAnimation()
+{
+	string $selectList[] = `ls -sl`;
+
+	int $delayFrames = `textField -q -text delayFrames_field`;	
+
+	int $translate=`checkBox -q -v anim_translate`;	
+	int $rotate=`checkBox -q -v anim_rotation`;	
+	int $scale=`checkBox -q -v anim_scale`;
+
+	print($rotate);
+
+	int $i , $j ;
+	$j=`size($selectList)`;
+    float $oriAttrX ,$oriAttrY , $oriAttrZ;
+	string $expText[];
+	string $expTextTranslate[];
+	string $expTextRotate[];
+	string $expTextScale[];
+	string $expTextTranslateAttr[];
+	string $expTextRotateAttr[];
+	string $expTextScaleAttr[];
+	string $temp;	
+	
+	
+	addAttr -ln delayFrames -at long  -min 1 $selectList[0];
+	setAttr -e -keyable true ($selectList[0]+".delayFrames");
+	setAttr ($selectList[$i]+".delayFrames") $delayFrames;
+	
+	
+		
+	/*
+	//original TranslateX
+	for ($i=0; $i<$j ; $i++)
+		
+	{
+		$oriAttr=`getAttr ($selectList[$i]+".tx");
+		addAttr -ln oriTx -at double $selectList[$i];
+		setAttr ($selectList[0]+".oriTx") $oriAttr;
+	}
+	
+	
+	//original TranslateX
+	for ($i=0; $i<$j ; $i++)
+		
+	{
+		$oriAttr=`getAttr ($selectList[$i]+".tx");
+		addAttr -ln oriTx -at double $selectList[$i];
+		setAttr ($selectList[0]+".oriTx") $oriAttr;
+	}	
+	
+	
+	//original TranslateX
+	for ($i=0; $i<$j ; $i++)
+		
+	{
+		$oriAttr=`getAttr ($selectList[$i]+".tx");
+		addAttr -ln oriTx -at double $selectList[$i];
+		setAttr ($selectList[0]+".oriTx") $oriAttr;
+	}
+	
+	
+	*/
+	
+	
+	$expText[0] =" int $time =`currentTime -q`;\r"+"int $delayFrame = `getAttr "+ $selectList[0] +".delayFrames`;\n ";
+		  
+	if($translate) {	
+
+		//original TranslateX
+		for ($i=0; $i<$j ; $i++)		
+		{
+			$oriAttrX=`getAttr ($selectList[$i]+".tx")`;
+			addAttr -ln oriTx -at double $selectList[$i];
+			setAttr ($selectList[$i]+".oriTx") $oriAttrX;
+		}
+
+		//original TranslateY
+		for ($i=0; $i<$j ; $i++)		
+		{
+			$oriAttrY=`getAttr ($selectList[$i]+".ty")`;
+			addAttr -ln oriTy -at double $selectList[$i];
+			setAttr ($selectList[$i]+".oriTy") $oriAttrY;
+		}		
+		
+		//original TranslateZ
+		for ($i=0; $i<$j ; $i++)		
+		{
+			$oriAttrZ=`getAttr ($selectList[$i]+".tz")`;
+			addAttr -ln oriTz -at double $selectList[$i];
+			setAttr ($selectList[$i]+".oriTz") $oriAttrZ;
+		}	
+
+		////////////translate X axis
+		for($i=1;$i<$j;$i++){
+			$expTextTranslate[$i]="float $delayTx"+$i+"=`getAttr -time( $time - " +  "$delayFrame * " + $i + " ) " + $selectList[0]+".tx`;\n";
+		    $expTextTranslateAttr[$i]=$selectList[$i]+".tx = $delayTx"+ $i +" + " + "`getAttr  "+$selectList[$i]+".oriTx `" + "- `getAttr "+$selectList[0]+".oriTx ` ;\n";
+		}
+		
+		////////////translate Y axis
+		for($i=1;$i<$j;$i++){
+			$expTextTranslate[$i+$j]="float $delayTy"+$i+"=`getAttr -time( $time - " +  "$delayFrame * " + $i + " ) " + $selectList[0]+".ty`;\n";		   
+			$expTextTranslateAttr[$i+$j]=$selectList[$i]+".ty = $delayTy"+ $i +" + " + "`getAttr  "+$selectList[$i]+".oriTy `" + "- `getAttr "+$selectList[0]+".oriTy ` ;\n";
+		}
+		
+		
+		////////////translate Z axis
+		for($i=1;$i<$j;$i++){
+			$expTextTranslate[$i+$j+$j]="float $delayTz"+$i+"=`getAttr -time( $time - " + "$delayFrame * " + $i + " ) " + $selectList[0]+".tz`;\n";
+		    $expTextTranslateAttr[$i+$j+$j]=$selectList[$i]+".tz = $delayTz"+ $i +" + " + "`getAttr  "+$selectList[$i]+".oriTz `"  + "-`getAttr "+$selectList[0]+".oriTz ` ;\n";
+		}
+
+
+		
+		$temp=stringArrayToString ($expTextTranslate , "\n") ;
+		$temp=$expText[0]+$temp;
+		string $exp=$temp;
+		$temp=stringArrayToString ($expTextTranslateAttr ,"\n");
+		$exp=$exp+$temp;
+		
+		expression -n dalayExp_t -s $exp;
+	}
+	  
+	if($rotate) {
+
+		//original TranslateX
+		for ($i=0; $i<$j ; $i++)		
+		{
+			$oriAttrX=`getAttr ($selectList[$i]+".rx")`;
+			addAttr -ln oriRx -at double $selectList[$i];
+			setAttr ($selectList[$i]+".oriRx") $oriAttrX;
+		}
+
+		//original TranslateY
+		for ($i=0; $i<$j ; $i++)		
+		{
+			$oriAttrY=`getAttr ($selectList[$i]+".ry")`;
+			addAttr -ln oriRy -at double $selectList[$i];
+			setAttr ($selectList[$i]+".oriRy") $oriAttrY;
+		}		
+		
+		//original TranslateZ
+		for ($i=0; $i<$j ; $i++){
+			$oriAttrZ=`getAttr ($selectList[$i]+".rz")`;
+			addAttr -ln oriRz -at double $selectList[$i];
+			setAttr ($selectList[$i]+".oriRz") $oriAttrZ;
+		}	
+
+		
+		////////////Rotate X axis
+		for($i=1;$i<$j;$i++)
+		{
+			$expTextRotate[$i]="float $delayRx"+$i+"=`getAttr -time( $time - " +  "$delayFrame * " + $i + " ) " + $selectList[0]+".rx`;\n";
+		    $expTextRotateAttr[$i]=$selectList[$i]+".rx = $delayRx"+ $i +" + " + "`getAttr  "+$selectList[$i]+".oriRx `" + "-`getAttr "+$selectList[0]+".oriRx` ;\n";
+		}
+		
+		////////////Rotate Y axis
+		for($i=1;$i<$j;$i++)
+		{
+			$expTextRotate[$i+$j]="float $delayRy"+$i+"=`getAttr -time( $time - " +  "$delayFrame * " + $i + " ) " + $selectList[0]+".ry`;\n";		   
+			$expTextRotateAttr[$i+$j]=$selectList[$i]+".ry = $delayRy"+ $i +" + " + "`getAttr  "+$selectList[$i]+".oriRy `" + "-`getAttr "+$selectList[0]+".oriRy ` ;\n";
+		}		
+		
+		////////////Rotate Z axis
+		for($i=1;$i<$j;$i++)
+		{
+			$expTextRotate[$i+$j+$j]="float $delayRz"+$i+"=`getAttr -time( $time - " + "$delayFrame * " + $i + " ) " + $selectList[0]+".rz`;\n";
+		    $expTextRotateAttr[$i+$j+$j]=$selectList[$i]+".rz = $delayRz"+ $i +" + " + "`getAttr  "+$selectList[$i]+".oriRz `" + "-`getAttr "+$selectList[0]+".oriRz ` ;\n";
+		}
+		
+		$temp=stringArrayToString ($expTextRotate, "\n") ;
+		$temp=$expText[0]+$temp;
+		string $exp=$temp;
+		$temp=stringArrayToString ($expTextRotateAttr,"\n");
+		$exp=$exp+$temp;
+		
+		expression -n dalayExp_r -s $exp;
+	
+	}
+	
+
+	print "success!!";
+}
+
+delayAnimUI;

@@ -1,0 +1,35 @@
+global proc SelectSamePoly(){
+    // Select similar based on topology
+
+    string $selectedObjs[] = `ls -sl -long -tr`;
+
+    // Get all meshes (with transforms) in the scene
+    string $sceneMeshes[] =  `ls -long -type "mesh"`;
+    string $meshTransforms[] = `listRelatives -p -fullPath -type "transform" $sceneMeshes`;
+
+        string $saveSimilar;
+
+        for ($eachS in $selectedObjs)
+        {
+            select $eachS;
+
+            for ($i=0; $i < size($meshTransforms); $i++ ) 
+            {
+                string $meshCheck = `polyCompare -fd -uv $eachS $meshTransforms[$i]`;
+                if ($meshCheck == 0)
+                {
+                    $saveSimilar += (" " + $meshTransforms[$i]);
+                }
+            }
+
+
+        }
+
+
+    // convert to Array
+    $objToArray_sim = stringToStringArray($saveSimilar, " "); 
+    select -r $objToArray_sim;
+
+    // clear stored Objects
+    $saveSimilar = "";
+}

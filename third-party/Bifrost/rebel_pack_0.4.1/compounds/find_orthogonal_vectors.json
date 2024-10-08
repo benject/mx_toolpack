@@ -1,0 +1,671 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            },
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Core::Math::find_orthogonal_vectors",
+            "uriImported": "file:///stream",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../docs/${language}/find_orthogonal_vectors.md"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "vector"
+                                                },
+                                                {
+                                                    "metaName": "normalize_outputs"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-290.986 542.264"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "orthogonal_a"
+                                                },
+                                                {
+                                                    "metaName": "orthogonal_b"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "2811.25 444.83"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPack.svg"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "orthogonal_a",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "orthogonal_b",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "vector",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "normalize_outputs",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "vector3_to_scalar",
+                    "nodeType": "Core::Conversion::vector3_to_scalar",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "113.954 60.0951"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "lessThan",
+                    "nodeType": "Core::Logic::less",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "748.83 -284.097"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "lessThan1",
+                    "nodeType": "Core::Logic::less",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "739.324 -45.5339"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if_x_less_than_y",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1327.06 175.931"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "x_basis",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "116.241 585.65"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "y_basis",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "105.994 764.285"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "z_basis",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "112.825 946.309"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if_x_less_than_z",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "994.614 30.9242"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if_y_less_than_z",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1008.35 304.829"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "lessThan2",
+                    "nodeType": "Core::Logic::less",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "734.256 278.227"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "cross",
+                    "nodeType": "Core::Math::cross",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1637.3 323.729"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize",
+                    "nodeType": "Core::Math::normalize",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2201.25 305.83"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "absolute",
+                    "nodeType": "Core::Math::absolute_value",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "418.954 -211.905"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2506.25 333.83"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "cross1",
+                    "nodeType": "Core::Math::cross",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1937.06 519.931"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if1",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2506.25 576.83"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize1",
+                    "nodeType": "Core::Math::normalize",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2201.25 580.83"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "absolute1",
+                    "nodeType": "Core::Math::absolute_value",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "418.954 -16.9049"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "absolute2",
+                    "nodeType": "Core::Math::absolute_value",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "418.954 178.095"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "lessThan.output",
+                    "target": "if_x_less_than_y.condition"
+                },
+                {
+                    "source": "lessThan1.output",
+                    "target": "if_x_less_than_z.condition"
+                },
+                {
+                    "source": "if_x_less_than_y.output",
+                    "target": "cross.second"
+                },
+                {
+                    "source": "x_basis.output",
+                    "target": "if_x_less_than_z.true_case"
+                },
+                {
+                    "source": "y_basis.output",
+                    "target": "if_y_less_than_z.true_case"
+                },
+                {
+                    "source": "z_basis.output",
+                    "target": "if_x_less_than_z.false_case"
+                },
+                {
+                    "source": "z_basis.output",
+                    "target": "if_y_less_than_z.false_case"
+                },
+                {
+                    "source": "if_x_less_than_z.output",
+                    "target": "if_x_less_than_y.true_case"
+                },
+                {
+                    "source": "if_y_less_than_z.output",
+                    "target": "if_x_less_than_y.false_case"
+                },
+                {
+                    "source": "lessThan2.output",
+                    "target": "if_y_less_than_z.condition"
+                },
+                {
+                    "source": "cross.cross_product",
+                    "target": "normalize.value"
+                },
+                {
+                    "source": "cross.cross_product",
+                    "target": "if.false_case"
+                },
+                {
+                    "source": "cross.cross_product",
+                    "target": "cross1.second"
+                },
+                {
+                    "source": "normalize.normalized",
+                    "target": "if.true_case"
+                },
+                {
+                    "source": "if.output",
+                    "target": ".orthogonal_a"
+                },
+                {
+                    "source": "cross1.cross_product",
+                    "target": "if1.false_case"
+                },
+                {
+                    "source": "cross1.cross_product",
+                    "target": "normalize1.value"
+                },
+                {
+                    "source": "if1.output",
+                    "target": ".orthogonal_b"
+                },
+                {
+                    "source": "normalize1.normalized",
+                    "target": "if1.true_case"
+                },
+                {
+                    "source": ".vector",
+                    "target": "cross.first"
+                },
+                {
+                    "source": ".vector",
+                    "target": "cross1.first"
+                },
+                {
+                    "source": ".vector",
+                    "target": "vector3_to_scalar.vector3"
+                },
+                {
+                    "source": "vector3_to_scalar.x",
+                    "target": "absolute.value"
+                },
+                {
+                    "source": "absolute.absolute_value",
+                    "target": "lessThan.first"
+                },
+                {
+                    "source": "absolute.absolute_value",
+                    "target": "lessThan1.first"
+                },
+                {
+                    "source": "vector3_to_scalar.y",
+                    "target": "absolute1.value"
+                },
+                {
+                    "source": "absolute1.absolute_value",
+                    "target": "lessThan.second"
+                },
+                {
+                    "source": "absolute1.absolute_value",
+                    "target": "lessThan2.first"
+                },
+                {
+                    "source": "vector3_to_scalar.z",
+                    "target": "absolute2.value"
+                },
+                {
+                    "source": "absolute2.absolute_value",
+                    "target": "lessThan1.second"
+                },
+                {
+                    "source": "absolute2.absolute_value",
+                    "target": "lessThan2.second"
+                },
+                {
+                    "source": ".normalize_outputs",
+                    "target": "if.condition"
+                },
+                {
+                    "source": ".normalize_outputs",
+                    "target": "if1.condition"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "x_basis.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "1f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "y_basis.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "1f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "z_basis.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "1f"
+                    }
+                }
+            ]
+        }
+    ]
+}

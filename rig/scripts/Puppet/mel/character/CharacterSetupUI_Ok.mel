@@ -1,0 +1,2310 @@
+
+
+global proc CharacterSetupUI(){
+
+if (`window -ex CharacterSetupTool` == true)
+
+	{deleteUI CharacterSetupTool;}
+
+	windowPref -ra;
+
+	window -w 350 -h 330 -t ("Puppet CharacterSetupTool ") -in "CharacterSetupTool" -s true -tb true CharacterSetupTool;
+
+	columnLayout;
+
+	separator -style "in" -w 380 -h 10;
+
+	    rowColumnLayout -numberOfColumns 1 -cw 1 315 ;
+           button -label "OpenBaseJoint" -align "center" -c OpenBaseJoint;
+	    separator -style "in" -w 315 -h 15;
+ 	    setParent "..";   
+
+	    rowColumnLayout -numberOfColumns 1 -cw 1 315 ;
+           button -label "CreateSetup" -align "center" -c CreateSetup;
+	    separator -style "in" -w 315 -h 15;
+ 	    setParent "..";
+	    
+	    rowColumnLayout -numberOfColumns 1 -cw 1 315;
+	    button -label "Ctl left to Right " -align "center" -c CtlLefttoRight;
+	    separator -style "in" -w 380 -h 15;
+	    setParent "..";
+
+	    rowColumnLayout -numberOfColumns 1 -cw 1 315;
+	    button -label "Ctl Right to Left " -align "center" -c CtlRighttoLeft;
+	    separator -style "in" -w 315 -h 15;
+	    setParent "..";
+
+    	    frameLayout -label "Search and Replace" -borderStyle "etchedIn" 
+				-collapse 1 -collapsable 1 
+				-collapseCommand "int $winSize = `window -q -h wp_RenameWindow`; int $newSize = $winSize - 104; window -e -h $newSize wp_RenameWindow;"
+				-expandCommand "int $winSize = `window -q -h wp_RenameWindow`; int $newSize = $winSize + 104; window -e -h $newSize wp_RenameWindow;"
+				-w 320 -h 125 -marginWidth 5 -marginHeight 5;
+				
+	    columnLayout -adjustableColumn 1;
+			textFieldGrp -label "Search:" -text "pasted__" -columnWidth 1 70 -columnWidth 2 236 WP_SearchAndReplace_SearchTFG;
+			text -l "" -h 4;
+			textFieldGrp -label "Replace:" -text "" -columnWidth 1 70 -columnWidth 2 236 WP_SearchAndReplace_ReplaceTFG;
+			text -l "" -h 4;
+			radioButtonGrp -numberOfRadioButtons 3 -label "" -sl 1 -labelArray3 "Hierarchy" "Selected" "All" -columnWidth 1 30 WP_SearchAndReplace_OptionRBG;
+			text -l "" -h 4;
+			button -h 23 -l "Apply" -bgc 0.663 0.663 0.663 -c "WP_SearchAndRename()";
+	    setParent..;
+
+
+
+	    showWindow CharacterSetupTool;
+}
+CharacterSetupUI;
+
+
+//ͨ������
+
+global proc lockChannAll()
+{
+$lockCAll = `ls -sl`;
+setAttr -lock true -keyable false ($lockCAll[0]+".tx");
+setAttr -lock true -keyable false ($lockCAll[0]+".ty");
+setAttr -lock true -keyable false ($lockCAll[0]+".tz");
+setAttr -lock true -keyable false ($lockCAll[0]+".rx");
+setAttr -lock true -keyable false ($lockCAll[0]+".ry");
+setAttr -lock true -keyable false ($lockCAll[0]+".rz");
+setAttr -lock true -keyable false ($lockCAll[0]+".sx");
+setAttr -lock true -keyable false ($lockCAll[0]+".sy");
+setAttr -lock true -keyable false ($lockCAll[0]+".sz");
+setAttr -lock true -keyable false ($lockCAll[0]+".v");
+}
+
+global proc lockChannTSV()
+{
+$lockCTSV = `ls -sl`;
+$num = `size($lockCTSV)`;
+int $i;
+for($i=0;$i<$num;$i++)
+{
+setAttr -lock true -keyable false ($lockCTSV[$i]+".tx");
+setAttr -lock true -keyable false ($lockCTSV[$i]+".ty");
+setAttr -lock true -keyable false ($lockCTSV[$i]+".tz");
+setAttr -lock true -keyable false ($lockCTSV[$i]+".sx");
+setAttr -lock true -keyable false ($lockCTSV[$i]+".sy");
+setAttr -lock true -keyable false ($lockCTSV[$i]+".sz");
+setAttr -lock true -keyable false ($lockCTSV[$i]+".v");
+}
+}
+
+global proc lockChannSV()
+{
+$lockCSV = `ls -sl`;
+$num = `size($lockCSV)`;
+int $i;
+for($i=0;$i<$num;$i++)
+{
+setAttr -lock true -keyable false ($lockCSV[$i]+".sx");
+setAttr -lock true -keyable false ($lockCSV[$i]+".sy");
+setAttr -lock true -keyable false ($lockCSV[$i]+".sz");
+setAttr -lock true -keyable false ($lockCSV[$i]+".v");
+}
+}
+
+
+global proc lockChannRSV()
+{
+$lockCRSV = `ls -sl`;
+$num = `size($lockCRSV)`;
+int $i;
+for($i=0;$i<$num;$i++)
+{
+setAttr -lock true -keyable false ($lockCRSV[$i]+".rx");
+setAttr -lock true -keyable false ($lockCRSV[$i]+".ry");
+setAttr -lock true -keyable false ($lockCRSV[$i]+".rz");
+setAttr -lock true -keyable false ($lockCRSV[$i]+".sx");
+setAttr -lock true -keyable false ($lockCRSV[$i]+".sy");
+setAttr -lock true -keyable false ($lockCRSV[$i]+".sz");
+setAttr -lock true -keyable false ($lockCRSV[$i]+".v");
+}
+}
+
+//��ָ�ؽ�����
+global proc figaim()
+{
+$seljnt = `ls -sl`;
+aimConstraint -offset 0 0 0 -weight 1 -aimVector 1 0 0 -upVector 0 1 0 -worldUpType "objectrotation" -worldUpVector 0 -1 0 -worldUpObject P_Hand_locator $seljnt[0] $seljnt[1];
+select $seljnt[1];
+pickWalk -d down;
+delete;
+select $seljnt[1];
+$jntort = `xform -q -os -ro`;
+setAttr  ($seljnt[1]+".jointOrient")  $jntort[0] $jntort[1] $jntort[2];
+setAttr ($seljnt[1]+".rotate") 0 0 0;
+}
+
+
+global proc parentctl()  //��������λ
+{
+$ParentCtl = `ls -sl`;
+select $ParentCtl[1];
+$CtlGroup = `pickWalk -d up`;
+parentConstraint $ParentCtl[0] $CtlGroup;
+select $CtlGroup;
+pickWalk -d down;
+pickWalk -d left;
+delete;
+}
+
+global proc parentctlF()  //��������λ��ָ
+{
+$ParentCtl = `ls -sl`;
+select $ParentCtl[1];
+pickWalk -d up;
+$CtlGroup = `pickWalk -d up`;
+parentConstraint $ParentCtl[0] $CtlGroup;
+select $CtlGroup;
+pickWalk -d down;
+pickWalk -d left;
+delete;
+}
+
+//��������ik
+global proc ikhandle(){
+
+$jo = `ls -sl`;
+ikHandle -sol "ikRPsolver" -sj $jo[0] -ee $jo[2];
+select $jo[0];
+$start = `xform -q -ws -t`;
+select $jo[2];
+$end = `xform -q -ws -t`;
+
+vector $distVone;
+float $j1[] = `xform -q -ws -t $jo[0]`;
+float $j2[] = `xform -q -ws -t $jo[1]`;
+$distVone= <<$j2[0]-$j1[0] , $j2[1]-$j1[1],$j2[2]-$j1[2]>>;
+float $dist1 =mag($distVone);
+vector $distVtwo;
+float $j3[] = `xform -q -ws -t $jo[1]`;
+float $j4[] = `xform -q -ws -t $jo[2]`;
+$distVtwo= <<$j4[0]-$j3[0] , $j4[1]-$j3[1],$j4[2]-$j3[2]>>;
+float $dist2 =mag($distVtwo);
+
+$disall = `distanceDimension -sp $start[0]  $start[1]  $start[2]-ep $end[0]  $end[1]  $end[2]` ;
+
+$sca = `createNode  multiplyDivide`;
+connectAttr ($disall+".distance")  ($sca+".input1.input1X");
+setAttr ($sca+".operation") 2;
+
+
+$jotsa =  $dist1 + $dist2;
+
+setAttr ($sca+".input2X") $jotsa;
+$con = `createNode condition`;
+connectAttr ($disall+".distance") ($con+".firstTerm.");
+setAttr ($con+".operation") 2;
+connectAttr ($sca+".output.outputX") ($con+".colorIfTrue.colorIfTrueR.");
+$cla = `createNode clamp`;
+connectAttr ($con+".outColor.outColorR") ($cla+".input.inputR.");
+setAttr ($cla+".minR") 1;
+setAttr ($cla+".maxR") 10;
+connectAttr ($cla+".output.outputR") ($jo[0]+".scaleX");
+connectAttr ($cla+".output.outputR") ($jo[1]+".scaleX");
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//��������
+
+//select Footvectortz;
+//parent -w;
+
+global proc OpenBaseJoint(){
+
+file -import -type "mayaBinary"  -ignoreVersion -ra true -mergeNamespacesOnClash false -namespace "joint_ok" -options "v=0;"  -pr  -importFrameRate true  -importTimeRange "override" "D:/workspace/coding/mx_toolpack/src/mayalib/rig/scripts/Puppet/mel/character/joint_ok.mb";
+namespace -mergeNamespaceWithRoot -rm "joint_ok";
+	
+}
+
+global proc CreateSetup(){
+
+
+select P_Hip_R_Jnt;
+$hiprjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Hip_R_Jnt -p $hiprjnt[0] $hiprjnt[1] $hiprjnt[2];
+
+select P_Knee_R_Jnt;
+$kneerjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Knee_R_Jnt -p $kneerjnt[0] $kneerjnt[1] $kneerjnt[2]; 
+
+select P_Ankle_R_Jnt;
+$anklejnt = `xform -q -ws -t`;
+select -cl;
+joint -n Ankle_R_Jnt -p $anklejnt[0] $anklejnt[1] $anklejnt[2]; 
+
+select P_Toe_R_01_Jnt;
+$toer01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Toe_R_01_Jnt -p $toer01jnt[0] $toer01jnt[1] $toer01jnt[2]; 
+
+select P_Toe_R_02_Jnt;
+$toer02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Toe_R_02_Jnt -p $toer02jnt[0] $toer02jnt[1] $toer02jnt[2]; 
+
+select P_Pelvis_Jnt;
+$pelvisjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Pelvis_Jnt -p $pelvisjnt[0] $pelvisjnt[1] $pelvisjnt[2]; 
+select -cl;
+joint -n Pelvis_Jnt_IK -rad 1.5 -p $pelvisjnt[0] $pelvisjnt[1] $pelvisjnt[2]; 
+select -cl;
+joint -n Pelvis_Jnt_FK -rad 1.2 -p $pelvisjnt[0] $pelvisjnt[1] $pelvisjnt[2]; 
+
+select P_Spline_01_Jnt;
+$spline01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Spline_01_Jnt -p $spline01jnt[0] $spline01jnt[1] $spline01jnt[2]; 
+select -cl;
+joint -n Spline_01_Jnt_IK -rad 1.5 -p $spline01jnt[0] $spline01jnt[1] $spline01jnt[2]; 
+select -cl;
+joint -n Spline_01_Jnt_FK -rad 1.2 -p $spline01jnt[0] $spline01jnt[1] $spline01jnt[2]; 
+
+select P_Spline_02_Jnt;
+$spline02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Spline_02_Jnt -p $spline02jnt[0] $spline02jnt[1] $spline02jnt[2]; 
+select -cl;
+joint -n Spline_02_Jnt_IK -rad 1.5 -p $spline02jnt[0] $spline02jnt[1] $spline02jnt[2]; 
+select -cl;
+joint -n Spline_02_Jnt_FK -rad 1.2 -p $spline02jnt[0] $spline02jnt[1] $spline02jnt[2]; 
+
+select P_Spline_03_Jnt;
+$spline03jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Spline_03_Jnt -p $spline03jnt[0] $spline03jnt[1] $spline03jnt[2]; 
+select -cl;
+joint -n Spline_03_Jnt_IK -rad 1.5 -p $spline03jnt[0] $spline03jnt[1] $spline03jnt[2]; 
+select -cl;
+joint -n Spline_03_Jnt_FK -rad 1.2 -p $spline03jnt[0] $spline03jnt[1] $spline03jnt[2]; 
+
+select P_Spline_04_Jnt;
+$spline04jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Spline_04_Jnt -p $spline04jnt[0] $spline04jnt[1] $spline04jnt[2]; 
+select -cl;
+joint -n Spline_04_Jnt_IK -rad 1.5 -p $spline04jnt[0] $spline04jnt[1] $spline04jnt[2]; 
+select -cl;
+joint -n Spline_04_Jnt_FK -rad 1.2 -p $spline04jnt[0] $spline04jnt[1] $spline04jnt[2]; 
+
+select P_Chest_Jnt;
+$chestjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Chest_Jnt -p $chestjnt[0] $chestjnt[1] $chestjnt[2]; 
+select -cl;
+joint -n Chest_Jnt_IK -rad 1.5 -p $chestjnt[0] $chestjnt[1] $chestjnt[2]; 
+select -cl;
+joint -n Chest_Jnt_FK -rad 1.2 -p $chestjnt[0] $chestjnt[1] $chestjnt[2]; 
+
+select P_Scapula_R_Jnt;
+$scapulajnt = `xform -q -ws -t`;
+select -cl;
+joint -n Scapula_R_Jnt -p $scapulajnt[0] $scapulajnt[1] $scapulajnt[2]; 
+
+select P_Shoulder_R_Jnt;
+$shoulderrjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Shoulder_R_Jnt -p $shoulderrjnt[0] $shoulderrjnt[1] $shoulderrjnt[2]; 
+
+select P_Elbow_R_Jnt;
+$elbowrjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Elbow_R_Jnt -p $elbowrjnt[0] $elbowrjnt[1] $elbowrjnt[2]; 
+
+select P_Wrist_R_Jnt;
+$wristrjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Wrist_R_Jnt -p $wristrjnt[0] $wristrjnt[1] $wristrjnt[2]; 
+Duplicate;
+rename "Wrist_R_Jnt1" "Hand_R_Jnt";
+
+select -cl;
+$wristtwistrjntx = ($elbowrjnt[0]+$wristrjnt[0])/2 ;
+$wristtwistrjnty = ($elbowrjnt[1]+$wristrjnt[1])/2 ;
+$wristtwistrjntz = ($elbowrjnt[2]+$wristrjnt[2])/2 ;
+joint -n P_WristTwist_R_Jnt -p $wristtwistrjntx $wristtwistrjnty $wristtwistrjntz;
+
+select P_ThumbFinger_R_01_Jnt;
+$thumbfingerr01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n ThumbFinger_R_01_Jnt -p $thumbfingerr01jnt[0] $thumbfingerr01jnt[1] $thumbfingerr01jnt[2]; 
+
+select P_ThumbFinger_R_02_Jnt;
+$thumbfingerr02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n ThumbFinger_R_02_Jnt -p $thumbfingerr02jnt[0] $thumbfingerr02jnt[1] $thumbfingerr02jnt[2]; 
+
+select P_ThumbFinger_R_03_Jnt;
+$thumbfingerr03jnt = `xform -q -ws -t`;
+select -cl;
+joint -n ThumbFinger_R_03_Jnt -p $thumbfingerr03jnt[0] $thumbfingerr03jnt[1] $thumbfingerr03jnt[2]; 
+
+select P_ThumbFinger_R_04_Jnt;
+$thumbfingerr04jnt = `xform -q -ws -t`;
+select -cl;
+joint -n ThumbFinger_R_04_Jnt -p $thumbfingerr04jnt[0] $thumbfingerr04jnt[1] $thumbfingerr04jnt[2]; 
+
+select P_IndexFinger_R_01_Jnt;
+$inderfingerr01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n IndexFinger_R_01_Jnt -p $inderfingerr01jnt[0] $inderfingerr01jnt[1] $inderfingerr01jnt[2]; 
+
+select P_IndexFinger_R_02_Jnt;
+$inderfingerr02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n IndexFinger_R_02_Jnt -p $inderfingerr02jnt[0] $inderfingerr02jnt[1] $inderfingerr02jnt[2]; 
+
+select P_IndexFinger_R_03_Jnt;
+$inderfingerr03jnt = `xform -q -ws -t`;
+select -cl;
+joint -n IndexFinger_R_03_Jnt -p $inderfingerr03jnt[0] $inderfingerr03jnt[1] $inderfingerr03jnt[2]; 
+
+select P_IndexFinger_R_04_Jnt;
+$inderfingerr04jnt = `xform -q -ws -t`;
+select -cl;
+joint -n IndexFinger_R_04_Jnt -p $inderfingerr04jnt[0] $inderfingerr04jnt[1] $inderfingerr04jnt[2]; 
+
+select P_MiddleFinger_R_01_Jnt;
+$middlefingerr01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n MiddleFinger_R_01_Jnt -p $middlefingerr01jnt[0] $middlefingerr01jnt[1] $middlefingerr01jnt[2]; 
+
+select P_MiddleFinger_R_02_Jnt;
+$middlefingerr02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n MiddleFinger_R_02_Jnt -p $middlefingerr02jnt[0] $middlefingerr02jnt[1] $middlefingerr02jnt[2];
+
+select P_MiddleFinger_R_03_Jnt;
+$middlefingerr03jnt = `xform -q -ws -t`;
+select -cl;
+joint -n MiddleFinger_R_03_Jnt -p $middlefingerr03jnt[0] $middlefingerr03jnt[1] $middlefingerr03jnt[2];
+
+select P_MiddleFinger_R_04_Jnt;
+$middlefingerr04jnt = `xform -q -ws -t`;
+select -cl;
+joint -n MiddleFinger_R_04_Jnt -p $middlefingerr04jnt[0] $middlefingerr04jnt[1] $middlefingerr04jnt[2];
+
+select P_RingFinger_R_01_Jnt;
+$ringfingr01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n RingFinger_R_01_Jnt -p $ringfingr01jnt[0] $ringfingr01jnt[1] $ringfingr01jnt[2];
+
+select P_RingFinger_R_02_Jnt;
+$ringfingr02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n RingFinger_R_02_Jnt -p $ringfingr02jnt[0] $ringfingr02jnt[1] $ringfingr02jnt[2];
+
+select P_RingFinger_R_03_Jnt;
+$ringfingr03jnt = `xform -q -ws -t`;
+select -cl;
+joint -n RingFinger_R_03_Jnt -p $ringfingr03jnt[0] $ringfingr03jnt[1] $ringfingr03jnt[2];
+
+select P_RingFinger_R_04_Jnt;
+$ringfingr04jnt = `xform -q -ws -t`;
+select -cl;
+joint -n RingFinger_R_04_Jnt -p $ringfingr04jnt[0] $ringfingr04jnt[1] $ringfingr04jnt[2];
+
+select P_PinkyFinger_R_01_Jnt;
+$pinkyfingerr01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n PinkyFinger_R_01_Jnt -p $pinkyfingerr01jnt[0] $pinkyfingerr01jnt[1] $pinkyfingerr01jnt[2];
+
+select P_PinkyFinger_R_02_Jnt;
+$pinkyfingerr02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n PinkyFinger_R_02_Jnt -p $pinkyfingerr02jnt[0] $pinkyfingerr02jnt[1] $pinkyfingerr02jnt[2];
+
+select P_PinkyFinger_R_03_Jnt;
+$pinkyfingerr03jnt = `xform -q -ws -t`;
+select -cl;
+joint -n PinkyFinger_R_03_Jnt -p $pinkyfingerr03jnt[0] $pinkyfingerr03jnt[1] $pinkyfingerr03jnt[2];
+
+select P_PinkyFinger_R_04_Jnt;
+$pinkyfingerr04jnt = `xform -q -ws -t`;
+select -cl;
+joint -n PinkyFinger_R_04_Jnt -p $pinkyfingerr04jnt[0] $pinkyfingerr04jnt[1] $pinkyfingerr04jnt[2];
+
+select P_Cup_R_Jnt;
+$cuprjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Cup_R_Jnt -p $cuprjnt[0] $cuprjnt[1] $cuprjnt[2];
+
+select P_Neck_01_Jnt;
+$neck01jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Neck_01_Jnt -p $neck01jnt[0] $neck01jnt[1] $neck01jnt[2];
+
+select P_Neck_02_Jnt;
+$neck02jnt = `xform -q -ws -t`;
+select -cl;
+joint -n Neck_02_Jnt -p $neck02jnt[0] $neck02jnt[1] $neck02jnt[2];
+
+select P_Head_Jnt;
+$headjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Head_Jnt -p $headjnt[0] $headjnt[1] $headjnt[2];
+
+select P_Hair_Jnt;
+$hairjnt = `xform -q -ws -t`;
+select -cl;
+joint -n Hair_Jnt -p $hairjnt[0] $hairjnt[1] $hairjnt[2];
+
+parent Hair_Jnt Head_Jnt; 
+parent Head_Jnt Neck_02_Jnt; 
+parent Neck_02_Jnt Neck_01_Jnt;
+parent Neck_01_Jnt Chest_Jnt;
+parent Chest_Jnt Spline_04_Jnt;
+parent Spline_04_Jnt Spline_03_Jnt;
+parent Spline_03_Jnt Spline_02_Jnt;
+parent Spline_02_Jnt Spline_01_Jnt;
+parent Spline_01_Jnt Pelvis_Jnt;
+
+parent Chest_Jnt_IK Spline_04_Jnt_IK;
+parent Spline_04_Jnt_IK Spline_03_Jnt_IK;
+parent Spline_03_Jnt_IK Spline_02_Jnt_IK;
+parent Spline_02_Jnt_IK Spline_01_Jnt_IK;
+parent Spline_01_Jnt_IK Pelvis_Jnt_IK;
+
+parent Chest_Jnt_FK Spline_04_Jnt_FK;
+parent Spline_04_Jnt_FK Spline_03_Jnt_FK;
+parent Spline_03_Jnt_FK Spline_02_Jnt_FK;
+parent Spline_02_Jnt_FK Spline_01_Jnt_FK;
+parent Spline_01_Jnt_FK Pelvis_Jnt_FK;
+
+parent Elbow_R_Jnt Shoulder_R_Jnt;
+parent Shoulder_R_Jnt Scapula_R_Jnt;
+
+select Pelvis_Jnt;
+joint -e -oj xyz -secondaryAxisOrient xdown -ch;
+select Pelvis_Jnt_FK;
+joint -e -oj xyz -secondaryAxisOrient xdown -ch;
+select Scapula_R_Jnt;
+joint -e -oj xyz -secondaryAxisOrient ydown -ch;
+select Hand_R_Jnt;
+joint -e -oj none -secondaryAxisOrient xup -ch -zso;
+select Wrist_R_Jnt;
+joint -e -oj none -secondaryAxisOrient xup -ch -zso;
+
+
+aimConstraint -offset 0 0 0 -weight 1 -aimVector 1 0 0 -upVector 0 0 1 -worldUpType "object"  -worldUpObject Footvectortz Knee_R_Jnt Hip_R_Jnt;
+select Hip_R_Jnt;
+pickWalk -d down;
+delete;
+select Hip_R_Jnt;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+aimConstraint -offset 0 0 0 -weight 1 -aimVector 1 0 0 -upVector 0 0 1 -worldUpType "object"  -worldUpObject Footvectortz Ankle_R_Jnt Knee_R_Jnt;
+select Knee_R_Jnt;
+pickWalk -d down;
+delete;
+select Knee_R_Jnt;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+aimConstraint -offset 0 0 0 -weight 1 -aimVector 1 0 0 -upVector 0 0 1 -worldUpType "object"  -worldUpObject Footvectortz Toe_R_01_Jnt Ankle_R_Jnt;
+select Ankle_R_Jnt;
+pickWalk -d down;
+delete;
+select Ankle_R_Jnt;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+aimConstraint -offset 0 0 0 -weight 1 -aimVector 1 0 0 -upVector 0 0 1 -worldUpType "object"  -worldUpObject Footvectortz Toe_R_02_Jnt Toe_R_01_Jnt ;
+select Toe_R_01_Jnt;
+pickWalk -d down;
+delete;
+select Toe_R_01_Jnt;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+parent Toe_R_02_Jnt Toe_R_01_Jnt;
+parent Toe_R_01_Jnt Ankle_R_Jnt;
+parent Ankle_R_Jnt Knee_R_Jnt;
+parent Knee_R_Jnt Hip_R_Jnt;
+
+select Elbow_R_Jnt;
+joint -e -oj none -secondaryAxisOrient xup -ch -zso;
+select -r P_WristTwist_R_Jnt ;
+select -tgl Elbow_R_Jnt ;
+figaim; 
+
+select P_WristTwist_R_Jnt;
+joint -e -oj none -secondaryAxisOrient xup -ch -zso;
+select Hand_R_Jnt;
+select -r Hand_R_Jnt ;
+select -tgl P_WristTwist_R_Jnt ;
+figaim; 
+
+
+select ThumbFinger_R_04_Jnt;
+select -tgl ThumbFinger_R_03_Jnt ;
+figaim; 
+$ThumbFinger_R_03_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_ThumbFinger_R_03_Jnt ThumbFinger_R_03_Jnt`;
+delete $ThumbFinger_R_03_Jnt_Ox;
+select ThumbFinger_R_03_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select ThumbFinger_R_03_Jnt;
+select -tgl ThumbFinger_R_02_Jnt ;
+figaim; 
+$ThumbFinger_R_02_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_ThumbFinger_R_02_Jnt ThumbFinger_R_02_Jnt`;
+delete $ThumbFinger_R_02_Jnt_Ox;
+select ThumbFinger_R_02_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select ThumbFinger_R_02_Jnt;
+select -tgl ThumbFinger_R_01_Jnt ;
+figaim; 
+$ThumbFinger_R_01_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_ThumbFinger_R_01_Jnt ThumbFinger_R_01_Jnt`;
+delete $ThumbFinger_R_01_Jnt_Ox;
+select ThumbFinger_R_01_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select IndexFinger_R_04_Jnt;
+select -tgl IndexFinger_R_03_Jnt ;
+figaim; 
+$IndexFinger_R_03_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_IndexFinger_R_03_Jnt IndexFinger_R_03_Jnt`;
+delete $IndexFinger_R_03_Jnt_Ox;
+select IndexFinger_R_03_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+
+select IndexFinger_R_03_Jnt;
+select -tgl IndexFinger_R_02_Jnt ;
+figaim; 
+$IndexFinger_R_02_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_IndexFinger_R_02_Jnt IndexFinger_R_02_Jnt`;
+delete $IndexFinger_R_02_Jnt_Ox;
+select IndexFinger_R_02_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+select IndexFinger_R_02_Jnt;
+select -tgl IndexFinger_R_01_Jnt ;
+figaim; 
+$IndexFinger_R_01_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_IndexFinger_R_01_Jnt IndexFinger_R_01_Jnt`;
+delete $IndexFinger_R_01_Jnt_Ox;
+select IndexFinger_R_01_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select MiddleFinger_R_04_Jnt;
+select -tgl MiddleFinger_R_03_Jnt ;
+figaim; 
+$MiddleFinger_R_03_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_MiddleFinger_R_03_Jnt MiddleFinger_R_03_Jnt`;
+delete $MiddleFinger_R_03_Jnt_Ox;
+select MiddleFinger_R_03_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select MiddleFinger_R_03_Jnt;
+select -tgl MiddleFinger_R_02_Jnt ;
+figaim; 
+$MiddleFinger_R_02_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_MiddleFinger_R_02_Jnt MiddleFinger_R_02_Jnt`;
+delete $MiddleFinger_R_02_Jnt_Ox;
+select MiddleFinger_R_02_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+select MiddleFinger_R_02_Jnt;
+select -tgl MiddleFinger_R_01_Jnt ;
+figaim; 
+$MiddleFinger_R_01_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_MiddleFinger_R_01_Jnt MiddleFinger_R_01_Jnt`;
+delete $MiddleFinger_R_01_Jnt_Ox;
+select MiddleFinger_R_01_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+select RingFinger_R_04_Jnt;
+select -tgl RingFinger_R_03_Jnt ;
+figaim; 
+$RingFinger_R_03_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_RingFinger_R_03_Jnt RingFinger_R_03_Jnt`;
+delete $RingFinger_R_03_Jnt_Ox;
+select RingFinger_R_03_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select RingFinger_R_03_Jnt;
+select -tgl RingFinger_R_02_Jnt ;
+figaim; 
+$RingFinger_R_02_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_RingFinger_R_02_Jnt RingFinger_R_02_Jnt`;
+delete $RingFinger_R_02_Jnt_Ox;
+select RingFinger_R_02_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select RingFinger_R_02_Jnt;
+select -tgl RingFinger_R_01_Jnt ;
+figaim; 
+$RingFinger_R_01_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_RingFinger_R_01_Jnt RingFinger_R_01_Jnt`;
+delete $RingFinger_R_01_Jnt_Ox;
+select RingFinger_R_01_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select PinkyFinger_R_04_Jnt;
+select -tgl PinkyFinger_R_03_Jnt ;
+figaim; 
+$PinkyFinger_R_03_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_PinkyFinger_R_03_Jnt PinkyFinger_R_03_Jnt`;
+delete $PinkyFinger_R_03_Jnt_Ox;
+select PinkyFinger_R_03_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select PinkyFinger_R_03_Jnt;
+select -tgl PinkyFinger_R_02_Jnt ;
+figaim; 
+$PinkyFinger_R_02_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_PinkyFinger_R_02_Jnt PinkyFinger_R_02_Jnt`;
+delete $PinkyFinger_R_02_Jnt_Ox;
+select PinkyFinger_R_02_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+
+select PinkyFinger_R_02_Jnt;
+select -tgl PinkyFinger_R_01_Jnt ;
+figaim; 
+$PinkyFinger_R_01_Jnt_Ox = `orientConstraint -w 1 -skip y -skip z P_PinkyFinger_R_01_Jnt PinkyFinger_R_01_Jnt`;
+delete $PinkyFinger_R_01_Jnt_Ox;
+select PinkyFinger_R_01_Jnt ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+select P_Hand_locator;
+rotate -r -os 180 0 0;
+parent -w;
+$cuprhjnt = `xform -q -ws -ro`;
+setAttr  Cup_R_Jnt.jointOrient  $cuprhjnt[0] $cuprhjnt[1] $cuprhjnt[2];
+setAttr  Hand_R_Jnt.jointOrient  $cuprhjnt[0] $cuprhjnt[1] $cuprhjnt[2];
+setAttr  Wrist_R_Jnt.jointOrient  $cuprhjnt[0] $cuprhjnt[1] $cuprhjnt[2];
+parent P_WristTwist_R_Jnt Elbow_R_Jnt;
+parent P_Hand_locator P_Hand_locator_Grp;
+rotate -r -os -180 0 0;
+
+parent Hand_R_Jnt Elbow_R_Jnt;
+parent Wrist_R_Jnt Hand_R_Jnt; 
+parent ThumbFinger_R_04_Jnt ThumbFinger_R_03_Jnt;
+parent ThumbFinger_R_03_Jnt ThumbFinger_R_02_Jnt;
+parent ThumbFinger_R_02_Jnt ThumbFinger_R_01_Jnt;
+parent IndexFinger_R_04_Jnt IndexFinger_R_03_Jnt;
+parent IndexFinger_R_03_Jnt IndexFinger_R_02_Jnt;
+parent IndexFinger_R_02_Jnt IndexFinger_R_01_Jnt;
+parent MiddleFinger_R_04_Jnt MiddleFinger_R_03_Jnt;
+parent MiddleFinger_R_03_Jnt MiddleFinger_R_02_Jnt;
+parent MiddleFinger_R_02_Jnt MiddleFinger_R_01_Jnt;
+parent RingFinger_R_04_Jnt RingFinger_R_03_Jnt;
+parent RingFinger_R_03_Jnt RingFinger_R_02_Jnt;
+parent RingFinger_R_02_Jnt RingFinger_R_01_Jnt;
+parent PinkyFinger_R_04_Jnt PinkyFinger_R_03_Jnt;
+parent PinkyFinger_R_03_Jnt PinkyFinger_R_02_Jnt;
+parent PinkyFinger_R_02_Jnt PinkyFinger_R_01_Jnt;
+parent ThumbFinger_R_01_Jnt Wrist_R_Jnt;
+parent IndexFinger_R_01_Jnt Wrist_R_Jnt;
+parent MiddleFinger_R_01_Jnt Wrist_R_Jnt;
+parent RingFinger_R_01_Jnt Cup_R_Jnt;
+parent PinkyFinger_R_01_Jnt Cup_R_Jnt;
+parent Cup_R_Jnt Wrist_R_Jnt;
+parent Scapula_R_Jnt Chest_Jnt;
+parent Hip_R_Jnt Pelvis_Jnt;
+
+
+select Scapula_R_Jnt;
+mirrorJoint -mirrorYZ -mirrorBehavior -searchReplace "_R_" "_L_";
+select Hip_R_Jnt;
+mirrorJoint -mirrorYZ -mirrorBehavior -searchReplace "_R_" "_L_";
+select -r Chest_Jnt ;
+DisconnectJoint;
+rename "Chest_Jnt" "Chest_Jnt_Up";
+rename "joint1" "Chest_Jnt";
+parent Chest_Jnt_Up Chest_Jnt ;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//��������λ
+
+
+
+
+select P_Pelvis_Scale;
+$PelvisScale = `xform -q -s`;
+
+select -cl;
+file -import -type "mayaBinary"   -loadReferenceDepth "all" "D:/workspace/coding/mx_toolpack/src/mayalib/rig/scripts/Puppet/mel/character/character_Ctl_New.02.mb";
+setAttr "N_Ctl_All.scale" $PelvisScale[0] $PelvisScale[1] $PelvisScale[2];
+select N_Ctl_All;
+makeIdentity -apply true -t 0 -r 0 -s 1 -n 0;
+DeleteHistory
+select -cl;
+select -r N_HipSwing_Ctl_Cn N_Foot_IKFk_R_Ctl_Cn N_Foot_IKFk_L_Ctl_Cn N_Hand_IKFk_R_Ctl_Cn N_Hand_IKFk_L_Ctl_Cn N_Foot_Vector_R_Ctl_Cn N_Foot_Vector_L_Ctl_Cn N_Arm_Vector_R_Ctl_Cn N_Arm_Vector_L_Ctl_Cn N_Scapula_R_Ctl_Cn N_Scapula_L_Ctl_Cn N_Hand_IK_L_Ctl_Cn N_Hand_IK_R_Ctl_Cn N_Foot_IK_L_Ctl_Cn N_Foot_IK_R_Ctl_Cn N_Chest_IK_Ctl_Cn N_Pelvis_IK_Ctl_Cn N_Toe_FK_L_Ctl_Cn N_Ankle_FK_L_Ctl_Cn N_Knee_FK_L_Ctl_Cn N_Hip_FK_L_Ctl_Cn N_Toe_FK_R_Ctl_Cn N_Ankle_FK_R_Ctl_Cn N_Knee_FK_R_Ctl_Cn N_Hip_FK_R_Ctl_Cn N_Pelvis_FK_Ctl_Cn N_Spline_01_FK_Ctl_Cn N_Spline_03_FK_Ctl_Cn N_Chest_FK_Ctl_Cn N_Head_Ctl_Cn N_Neck_01_Ctl_Cn N_Finger_R_Ctl_All N_Finger_L_Ctl_All N_Hand_FK_R_Ctl_Cn N_Elbow_FK_R_Ctl_Cn N_Shoulder_Fk_R_Ctl_Cn N_Shoulder_Fk_L_Ctl_Cn N_Elbow_FK_L_Ctl_Cn N_Hand_FK_L_Ctl_Cn ;
+parent -w;
+//����
+
+$PelJntJOY = `getAttr Pelvis_Jnt.jointOrientY`;
+if ($PelJntJOY < -60)
+
+{
+$Pelparnet_TempA = `pointConstraint -w 1 Pelvis_Jnt N_Pelvis_FK_Ctl_Cn`;
+delete $Pelparnet_TempA; 
+setAttr "N_Pelvis_FK_Ctl_Cn.rotateY" -90;
+}
+
+else
+{
+$Pelparnet_TempB = `pointConstraint -w 1 Pelvis_Jnt N_Pelvis_FK_Ctl_Cn`;
+delete $Pelparnet_TempB; 
+//$Pelparnet_Temp = `parentConstraint -w 1 Pelvis_Jnt N_Pelvis_FK_Ctl`;
+//delete $Pelparnet_Temp;
+//makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Pelvis_FK_Ctl;
+}
+
+select Spline_01_Jnt N_Spline_01_FK_Ctl;
+parentctl;
+
+select Spline_03_Jnt N_Spline_03_FK_Ctl;
+parentctl;
+
+select Chest_Jnt N_Chest_FK_Ctl;
+parentctl;
+
+select Spline_01_Jnt N_HipSwing_Ctl;   //�β�
+parentctl;
+
+select Scapula_L_Jnt N_Scapula_L_Ctl ;
+parentctl;
+
+select Shoulder_L_Jnt N_Shoulder_Fk_L_Ctl;  // ����
+parentctl;
+
+select  Elbow_L_Jnt N_Elbow_FK_L_Ctl;
+parentctl;
+
+//���ֿ�������λ
+
+select Wrist_L_Jnt N_Hand_FK_L_Ctl;
+parentctl;
+
+if ($PelJntJOY < -60)
+{
+$HandIKLPoint_Temp = `pointConstraint -w 1 Wrist_L_Jnt N_Hand_IK_L_Ctl_Cn`;
+delete $HandIKLPoint_Temp;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IK_L_Ctl_Cn;
+setAttr "N_Hand_IK_L_Ctl_Cn.rotateZ" 90;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IK_L_Ctl_Cn;
+
+}
+else
+{ 
+select Hand_L_Jnt N_Hand_IK_L_Ctl;
+parentctl;
+select N_Hand_IK_L_Ctl_Cn;
+rotate -r -os 180 0 0 ;
+
+}
+
+select  Wrist_L_Jnt N_Hand_IKFk_L_Ctl;
+parentctl;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IKFk_L_Ctl;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IKFk_L_Ctl_Cn;
+select  ThumbFinger_L_01_Jnt N_TF_L_01_Ctl;
+parentctlF;
+
+select ThumbFinger_L_02_Jnt N_TF_L_02_Ctl;
+parentctlF;
+
+select ThumbFinger_L_03_Jnt N_TF_L_03_Ctl;
+parentctlF;
+
+select IndexFinger_L_01_Jnt N_IF_L_01_Ctl;
+parentctlF;
+
+select IndexFinger_L_02_Jnt N_IF_L_02_Ctl;
+parentctlF;
+
+select IndexFinger_L_03_Jnt N_IF_L_03_Ctl;
+parentctlF;
+
+select MiddleFinger_L_01_Jnt N_MF_L_01_Ctl;
+parentctlF;
+
+select  MiddleFinger_L_02_Jnt N_MF_L_02_Ctl;
+parentctlF;
+
+select MiddleFinger_L_03_Jnt N_MF_L_03_Ctl ;
+parentctlF;
+
+select RingFinger_L_01_Jnt N_RF_L_01_Ctl;
+parentctlF;
+
+select RingFinger_L_02_Jnt N_RF_L_02_Ctl;
+parentctlF;
+
+select  RingFinger_L_03_Jnt N_RF_L_03_Ctl;
+parentctlF;
+
+select PinkyFinger_L_01_Jnt N_PF_L_01_Ctl;
+parentctlF;
+
+select  PinkyFinger_L_02_Jnt N_PF_L_02_Ctl;
+parentctlF;
+
+select  PinkyFinger_L_03_Jnt N_PF_L_03_Ctl;
+parentctlF;
+
+select  Head_Jnt N_Head_Ctl;//ͷ����������λ
+parentctl;
+
+select Neck_01_Jnt N_Neck_01_Ctl;
+parentctl;
+
+if ($PelJntJOY < -60)
+{
+$Backpoint_Temp = `pointConstraint -w 1 Pelvis_Jnt N_Back_Ctl_Cn`;
+delete $Backpoint_Temp;
+setAttr "N_Back_Ctl_Cn.rotateY" -90;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Back_Ctl_Cn;
+
+}
+else
+{
+$Backpoint_Temp = `pointConstraint -w 1 Pelvis_Jnt N_Back_Ctl_Cn`;
+delete $Backpoint_Temp;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Back_Ctl_Cn;
+//$BackParent_Temp = `parentConstraint -w 1 Pelvis_Jnt N_Back_Ctl`;
+//delete $BackParent_Temp;
+//makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Back_Ctl;
+}
+//select Pelvis_Jnt N_Back_Ctl;//����back
+//parentctl;
+
+select Scapula_R_Jnt N_Scapula_R_Ctl;//�ұۿ�������λ
+parentctl;
+
+select Shoulder_R_Jnt N_Shoulder_Fk_R_Ctl;
+parentctl;
+
+select Elbow_R_Jnt N_Elbow_FK_R_Ctl;
+parentctl;
+
+select Wrist_R_Jnt N_Hand_FK_R_Ctl;
+parentctl;
+
+//���ֿ�������λ
+if ($PelJntJOY < -60)
+{
+$HandIKLPoint_Temp = `pointConstraint -w 1 Wrist_R_Jnt N_Hand_IK_R_Ctl_Cn`;
+delete $HandIKLPoint_Temp;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IK_R_Ctl_Cn;
+setAttr "N_Hand_IK_R_Ctl_Cn.rotateZ" 90;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IK_R_Ctl_Cn;
+
+}
+else
+{ 
+select Hand_R_Jnt N_Hand_IK_R_Ctl ;
+parentctl;
+
+}
+
+$HandIKFKRParent_Temp = `parentConstraint -w 1 Wrist_R_Jnt N_Hand_IKFk_R_Ctl_Cn`;
+delete $HandIKFKRParent_Temp;
+//select Wrist_R_Jnt N_Hand_IKFk_R_Ctl;
+//parentctl;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IKFk_R_Ctl_Cn;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Hand_IKFk_R_Ctl;
+
+select ThumbFinger_R_01_Jnt N_TF_R_01_Ctl;
+parentctlF;
+
+select ThumbFinger_R_02_Jnt N_TF_R_02_Ctl;
+parentctlF;
+
+select ThumbFinger_R_03_Jnt N_TF_R_03_Ctl;
+parentctlF;
+
+select IndexFinger_R_01_Jnt N_IF_R_01_Ctl;
+parentctlF;
+
+select IndexFinger_R_02_Jnt N_IF_R_02_Ctl;
+parentctlF;
+
+select IndexFinger_R_03_Jnt N_IF_R_03_Ctl;
+parentctlF;
+
+select MiddleFinger_R_01_Jnt N_MF_R_01_Ctl;
+parentctlF;
+
+select MiddleFinger_R_02_Jnt N_MF_R_02_Ctl;
+parentctlF;
+
+select MiddleFinger_R_03_Jnt N_MF_R_03_Ctl;
+parentctlF;
+
+select RingFinger_R_01_Jnt N_RF_R_01_Ctl;
+parentctlF;
+
+select RingFinger_R_02_Jnt N_RF_R_02_Ctl;
+parentctlF;
+
+select RingFinger_R_03_Jnt N_RF_R_03_Ctl;
+parentctlF;
+
+select PinkyFinger_R_01_Jnt N_PF_R_01_Ctl;
+parentctlF;
+
+select PinkyFinger_R_02_Jnt N_PF_R_02_Ctl;
+parentctlF;
+
+select PinkyFinger_R_03_Jnt N_PF_R_03_Ctl;
+parentctlF;
+
+//���ȿ�������λ
+select Hip_R_Jnt N_Hip_FK_R_Ctl;
+parentctl;
+
+select Knee_R_Jnt  N_Knee_FK_R_Ctl ;
+parentctl;
+
+select Ankle_R_Jnt N_Ankle_FK_R_Ctl;
+parentctl;
+
+select Toe_R_01_Jnt N_Toe_FK_R_Ctl;
+parentctl;
+
+select Toe_R_01_Jnt N_Foot_IKFk_R_Ctl;
+parentctl;
+
+
+$FootRIKParent_Temp = `parentConstraint -sr x -sr y -sr z Toe_R_01_Jnt N_Foot_IK_R_Ctl_Cn`;
+delete $FootRIKParent_Temp;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Foot_IK_R_Ctl_Cn;
+
+
+//���ȿ�������λ
+select Hip_L_Jnt N_Hip_FK_L_Ctl;
+parentctl;
+
+select Knee_L_Jnt  N_Knee_FK_L_Ctl ;
+parentctl;
+
+select Ankle_L_Jnt N_Ankle_FK_L_Ctl;
+parentctl;
+
+select Toe_L_01_Jnt N_Toe_FK_L_Ctl;
+parentctl;
+
+select Toe_L_01_Jnt N_Foot_IKFk_L_Ctl;
+parentctl;
+
+
+$FootLIKParent_Temp = `parentConstraint -sr x -sr y -sr z Toe_L_01_Jnt N_Foot_IK_L_Ctl_Cn`;
+delete $FootLIKParent_Temp ;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Foot_IK_L_Ctl_Cn;
+//����ik��������λ
+if ($PelJntJOY < -60)
+{
+$PelIKpoint_Temp = `pointConstraint -w 1 Pelvis_Jnt N_Pelvis_IK_Ctl_Cn`;
+delete $PelIKpoint_Temp;
+setAttr "N_Pelvis_IK_Ctl_Cn.rotateY" -90;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Pelvis_IK_Ctl_Cn;
+
+}
+else
+{
+$PelIKpoint_Temp = `pointConstraint -w 1 Pelvis_Jnt N_Pelvis_IK_Ctl_Cn`;
+delete $PelIKpoint_Temp;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Pelvis_IK_Ctl_Cn;
+//$PelIKParent_Temp = `parentConstraint -w 1 Pelvis_Jnt N_Pelvis_IK_Ctl`;
+//delete $PelIKParent_Temp;
+//makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Pelvis_IK_Ctl;
+}
+
+if ($PelJntJOY < -60)
+{
+$ChestIKpoint_Temp = `pointConstraint -w 1 Chest_Jnt_Up N_Chest_IK_Ctl_Cn`;
+delete $ChestIKpoint_Temp;
+setAttr "N_Chest_IK_Ctl_Cn.rotateY" -90;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Chest_IK_Ctl_Cn;
+}
+
+else
+{
+$ChestIKpoint_Temp = `pointConstraint -w 1 Chest_Jnt_Up N_Chest_IK_Ctl_Cn`;
+delete $ChestIKpoint_Temp;
+makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Chest_IK_Ctl_Cn;
+//$ChestIKParent_Temp = `parentConstraint -w 1 Chest_Jnt_Up N_Chest_IK_Ctl_Cn`;
+//delete $ChestIKParent_Temp;
+//makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 N_Chest_IK_Ctl;
+}
+
+//select N_Pelvis_FK_Ctl_Cn;
+//$pelvisjntxyz = `xform -q -ws -t`;
+//setAttr N_Pelvis_IK_Ctl_Cn.t $pelvisjntxyz[0] $pelvisjntxyz[1] $pelvisjntxyz[2];
+
+//select N_Chest_FK_Ctl_Cn;
+//$chestjntxyz = `xform -q -ws -t`;
+//setAttr N_Chest_IK_Ctl_Cn.t $chestjntxyz[0] $chestjntxyz[1] $chestjntxyz[2];
+
+//ik��������������λ//////////////////////////////////////////////////////////
+//��
+
+
+select Handvectortz;            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+$HandVec_T = `xform -q -ws -t`;
+
+move -rpr  $HandVec_T[0] $HandVec_T[1] $HandVec_T[2] N_Arm_Vector_R_Ctl_Cn;
+move -rpr  (-$HandVec_T[0]) $HandVec_T[1] $HandVec_T[2] N_Arm_Vector_L_Ctl_Cn;
+
+
+//��
+
+select Footvectortz;
+$FootVec_T = `xform -q -ws -t`;
+
+move -rpr $FootVec_T[0] $FootVec_T[1] $FootVec_T[2] N_Foot_Vector_R_Ctl_Cn;
+move -rpr (-$FootVec_T[0]) $FootVec_T[1] $FootVec_T[2] N_Foot_Vector_L_Ctl_Cn;
+
+
+//select Footvectortz;
+//duplicate -rr -n "Footvectortz_L";
+//makeIdentity -a 1 ;
+//group -n "Foot_L_vec_Tan_G";
+//makeIdentity -a 1 ;
+//xform -os -piv 0 0 0;
+//setAttr "Foot_L_vec_Tan_G.scaleX" -1;
+
+//$FootVec_R_Parnet = `parentConstraint  -sr x -sr y -sr z Footvectortz N_Foot_Vector_R_Ctl_Cn`;
+//delete $FootVec_R_Parnet;
+//$FootVec_L_Parnet = `parentConstraint  -sr x -sr y -sr z Footvectortz_L N_Foot_Vector_L_Ctl_Cn`;
+//delete $FootVec_L_Parnet;
+
+//delete Footvectortz Handvectortz Foot_L_vec_Tan_G;
+
+select -r N_HipSwing_Ctl_Cn N_Foot_IKFk_R_Ctl_Cn N_Foot_IKFk_L_Ctl_Cn N_Hand_IKFk_R_Ctl_Cn N_Hand_IKFk_L_Ctl_Cn N_Foot_Vector_R_Ctl_Cn N_Foot_Vector_L_Ctl_Cn N_Arm_Vector_R_Ctl_Cn N_Arm_Vector_L_Ctl_Cn N_Scapula_R_Ctl_Cn N_Scapula_L_Ctl_Cn N_Hand_IK_L_Ctl_Cn N_Hand_IK_R_Ctl_Cn N_Foot_IK_L_Ctl_Cn N_Foot_IK_R_Ctl_Cn N_Chest_IK_Ctl_Cn N_Pelvis_IK_Ctl_Cn N_Toe_FK_L_Ctl_Cn N_Ankle_FK_L_Ctl_Cn N_Knee_FK_L_Ctl_Cn N_Hip_FK_L_Ctl_Cn N_Toe_FK_R_Ctl_Cn N_Ankle_FK_R_Ctl_Cn N_Knee_FK_R_Ctl_Cn N_Hip_FK_R_Ctl_Cn N_Pelvis_FK_Ctl_Cn N_Spline_01_FK_Ctl_Cn N_Spline_03_FK_Ctl_Cn N_Chest_FK_Ctl_Cn N_Head_Ctl_Cn N_Neck_01_Ctl_Cn N_Finger_R_Ctl_All N_Finger_L_Ctl_All N_Hand_FK_R_Ctl_Cn N_Elbow_FK_R_Ctl_Cn N_Shoulder_Fk_R_Ctl_Cn N_Shoulder_Fk_L_Ctl_Cn N_Elbow_FK_L_Ctl_Cn N_Hand_FK_L_Ctl_Cn ;
+select -add N_Ctl_All;
+parent;
+select -cl;
+
+delete P_Pelvis_Scale;
+//���ְ�//////////////
+//������ָ///
+parent N_TF_L_03_Ctl_Cn N_TF_L_02_Ctl;
+parent N_TF_L_02_Ctl_Cn N_TF_L_01_Ctl;
+parent N_IF_L_03_Ctl_Cn N_IF_L_02_Ctl;
+parent N_IF_L_02_Ctl_Cn N_IF_L_01_Ctl;
+parent N_MF_L_03_Ctl_Cn N_MF_L_02_Ctl; 
+parent N_MF_L_02_Ctl_Cn N_MF_L_01_Ctl; 
+parent N_RF_L_03_Ctl_Cn N_RF_L_02_Ctl;
+parent N_RF_L_02_Ctl_Cn N_RF_L_01_Ctl;
+parent N_PF_L_03_Ctl_Cn N_PF_L_02_Ctl;
+parent N_PF_L_02_Ctl_Cn N_PF_L_01_Ctl;
+
+connectAttr -f N_Hand_IKFk_L_Ctl.Cup Cup_L_Jnt.rotateX;
+select -r N_RF_L_01_Ctl_Cn N_PF_L_01_Ctl_Cn ;
+group -n Cup_L_Grp;
+parentConstraint -mo -weight 1 Cup_L_Jnt Cup_L_Grp;
+
+parent N_Hand_IKFk_L_Ctl_Cn N_Finger_L_Ctl_All;
+parentConstraint -mo -weight 1 Wrist_L_Jnt N_Finger_L_Ctl_All;
+parent N_Hand_FK_L_Ctl_Cn N_Elbow_FK_L_Ctl;
+parent N_Elbow_FK_L_Ctl_Cn N_Shoulder_Fk_L_Ctl;
+parent N_Shoulder_Fk_L_Ctl_Cn N_Scapula_L_Ctl;
+parentConstraint -mo -weight 1 Chest_Jnt_Up N_Scapula_L_Ctl_Cn;
+select -cl;
+//���������������
+select -cl;
+//��ָ���������ӣ�
+orientConstraint -mo -w 1 N_TF_L_01_Ctl ThumbFinger_L_01_Jnt;
+orientConstraint -mo -w 1 N_TF_L_02_Ctl ThumbFinger_L_02_Jnt;
+orientConstraint -mo -w 1 N_TF_L_03_Ctl ThumbFinger_L_03_Jnt;
+
+orientConstraint -mo -w 1 N_IF_L_01_Ctl  IndexFinger_L_01_Jnt ;
+orientConstraint -mo -w 1 N_IF_L_02_Ctl  IndexFinger_L_02_Jnt ;
+orientConstraint -mo -w 1 N_IF_L_03_Ctl  IndexFinger_L_03_Jnt ;
+
+orientConstraint -mo -w 1 N_MF_L_01_Ctl  MiddleFinger_L_01_Jnt ;
+orientConstraint -mo -w 1 N_MF_L_02_Ctl  MiddleFinger_L_02_Jnt ;
+orientConstraint -mo -w 1 N_MF_L_03_Ctl  MiddleFinger_L_03_Jnt ;
+
+orientConstraint -mo -w 1 N_RF_L_01_Ctl  RingFinger_L_01_Jnt ;
+orientConstraint -mo -w 1 N_RF_L_02_Ctl  RingFinger_L_02_Jnt ;
+orientConstraint -mo -w 1 N_RF_L_03_Ctl  RingFinger_L_03_Jnt ;
+
+orientConstraint -mo -w 1 N_PF_L_01_Ctl  PinkyFinger_L_01_Jnt ;
+orientConstraint -mo -w 1 N_PF_L_02_Ctl  PinkyFinger_L_02_Jnt ;
+orientConstraint -mo -w 1 N_PF_L_03_Ctl  PinkyFinger_L_03_Jnt ;
+
+select -cl;
+//Fk����
+$orientC_Hand_L = `orientConstraint -mo -w 1  N_Hand_FK_L_Ctl Hand_L_Jnt`;
+$orientC_Elbow_L = `orientConstraint -mo -w 1  N_Elbow_FK_L_Ctl Elbow_L_Jnt`;
+$orientC_Shoulder_L = `orientConstraint -mo -w 1  N_Shoulder_Fk_L_Ctl Shoulder_L_Jnt`;
+$orientC_Scapula_L = `orientConstraint -mo -w 1  N_Scapula_L_Ctl Scapula_L_Jnt`;
+//FK������IKFK�л�����
+$Hand_L_IKFK_Rev = `createNode reverse`;
+connectAttr -f N_Hand_IKFk_L_Ctl.IKFK ($Hand_L_IKFK_Rev+".inputX");
+connectAttr -f ($Hand_L_IKFK_Rev+".outputX") ($orientC_Hand_L[0]+".N_Hand_FK_L_CtlW0");
+connectAttr -f ($Hand_L_IKFK_Rev+".outputX") ($orientC_Elbow_L[0]+".N_Elbow_FK_L_CtlW0");
+connectAttr -f ($Hand_L_IKFK_Rev+".outputX") ($orientC_Shoulder_L[0]+".N_Shoulder_Fk_L_CtlW0");
+connectAttr -f ($Hand_L_IKFK_Rev+".outputX") N_Shoulder_Fk_L_Ctl.visibility;
+//����첲��������/////////////////////////////
+//select -r P_WristTwist_L_Jnt ;
+//setAttr -lock true "P_WristTwist_L_Jnt.ry";
+//setAttr -lock true "P_WristTwist_L_Jnt.rz";
+
+$Elbow_L_Jnt_Ry = `getAttr Elbow_L_Jnt.ry`;
+if($Elbow_L_Jnt_Ry == 0)
+   {
+	rotate -r -os 0 -30 0 Elbow_L_Jnt;
+	joint -e -spa Elbow_L_Jnt;
+	rotate -r -os 0 30 0 Elbow_L_Jnt;
+   }
+//����ik�����ڵ�������
+select -r Shoulder_L_Jnt  Elbow_L_Jnt  Hand_L_Jnt;
+ikhandle;
+rename "locator1" "Hand_L_DMuplocator";
+rename "locator2" "Hand_L_DMdnlocator";
+rename "distanceDimension1" "Hand_L_DM";
+rename "ikHandle1" "Hand_L_ikHandle";
+rename "multiplyDivide1" "Hand_L_MuA";
+rename "condition1" "Hand_L_ConditionA";
+rename "clamp1" "Hand_L_ClampA";
+setAttr Hand_L_DM.v 0;
+parent Hand_L_DMuplocator Scapula_L_Jnt;
+parent Hand_L_DMdnlocator N_Hand_IK_L_Ctl;
+parent Hand_L_ikHandle N_Hand_IK_L_Ctl;
+setAttr Hand_L_DMdnlocator.v 0;
+setAttr Hand_L_DMuplocator.v 0;
+setAttr Hand_L_ikHandle.v 0;
+
+parent N_Hand_IK_L_Ctl_Cn N_Back_Ctl;
+
+//IKFK�л�
+$Handwist_L_IKro = `parentConstraint -mo -st x -st y -st z -w 1 N_Hand_IK_L_Ctl Wrist_L_Jnt`;
+connectAttr -f Elbow_L_Jnt.sx P_WristTwist_L_Jnt.sx;
+connectAttr -f N_Hand_IKFk_L_Ctl.IKFK ($Handwist_L_IKro[0]+".N_Hand_IK_L_CtlW0");
+connectAttr -f N_Hand_IKFk_L_Ctl.IKFK Hand_L_ikHandle.ikBlend;
+select -r N_Arm_Vector_L_Ctl ;
+select -tgl Hand_L_ikHandle ;
+poleVectorConstraint -weight 1;
+
+createNode multiplyDivide -n "Hand_L_MuB";
+connectAttr -f Hand_L_ConditionA.outColorR Hand_L_MuB.input1X;
+connectAttr -f N_Hand_IK_L_Ctl.Stretchy Hand_L_MuB.input2X;
+connectAttr -f Hand_L_MuB.outputX Hand_L_ClampA.inputR;
+createNode multiplyDivide -n "Hand_L_MuC";
+connectAttr -f N_Hand_IKFk_L_Ctl.IKFK Hand_L_MuC.input1X;
+connectAttr -f Hand_L_MuB.outputX Hand_L_MuC.input2X;
+connectAttr -f Hand_L_MuC.outputX Hand_L_ClampA.inputR;
+connectAttr -f N_Hand_IKFk_L_Ctl.IKFK N_Hand_IK_L_Ctl.visibility;
+connectAttr -f N_Hand_IKFk_L_Ctl.IKFK N_Arm_Vector_L_Ctl.visibility;
+parentConstraint -mo -w 1 Chest_Jnt_Up N_Arm_Vector_L_Ctl_Cn;
+
+createNode multiplyDivide -n Hand_L_MuD;
+connectAttr -f N_Ctl_All.sx Hand_L_MuD.input2X;
+connectAttr -f Hand_L_DMShape.distance Hand_L_MuD.input1X;
+connectAttr -f Hand_L_MuD.outputX Hand_L_MuA.input1X;
+setAttr Hand_L_MuD.operation 2;
+
+createNode plusMinusAverage -n WirstTwistjnt_Ro_L_Ave;
+createNode multiplyDivide -n WirstTwistjnt_Ro_L_MpD;
+connectAttr -f Hand_L_Jnt.rotateX WirstTwistjnt_Ro_L_Ave.input1D[0];
+connectAttr -f Wrist_L_Jnt.rotateX WirstTwistjnt_Ro_L_Ave.input1D[1];
+connectAttr -f WirstTwistjnt_Ro_L_Ave.output1D WirstTwistjnt_Ro_L_MpD.input1X;
+setAttr "WirstTwistjnt_Ro_L_MpD.input2X" 0.5;
+connectAttr -f WirstTwistjnt_Ro_L_MpD.outputX P_WristTwist_L_Jnt.rotateX;
+
+
+//�ֲ�_L������ͨ������
+select N_Hand_IKFk_L_Ctl; 
+lockChannAll;
+
+select N_TF_L_01_Ctl N_TF_L_02_Ctl N_TF_L_03_Ctl N_IF_L_01_Ctl N_IF_L_02_Ctl N_IF_L_03_Ctl N_MF_L_01_Ctl N_MF_L_02_Ctl N_MF_L_03_Ctl N_RF_L_01_Ctl N_RF_L_02_Ctl N_RF_L_03_Ctl N_PF_L_01_Ctl N_PF_L_02_Ctl N_PF_L_03_Ctl N_Hand_FK_L_Ctl N_Elbow_FK_L_Ctl N_Shoulder_Fk_L_Ctl N_Scapula_L_Ctl;
+lockChannTSV; 
+
+select N_Hand_IK_L_Ctl;
+lockChannSV;
+
+select N_Arm_Vector_L_Ctl;
+lockChannRSV;
+
+select -cl;
+group -em -n FollowG;
+parent FollowG N_Back_Ctl;
+
+$Hand_L_UnFollowCon = `parentConstraint -mo -w 1 FollowG N_Hand_IK_L_Ctl_Cn`;
+$Hand_L_FollowCon = `parentConstraint -mo -w 1 Chest_Jnt_Up N_Hand_IK_L_Ctl_Cn `;
+$Hand_L_Followrev = `createNode reverse`;
+connectAttr -f N_Hand_IK_L_Ctl.Follow ($Hand_L_Followrev+".inputX");
+connectAttr -f ($Hand_L_Followrev+".outputX") ($Hand_L_UnFollowCon[0]+".FollowGW0");
+connectAttr -f N_Hand_IK_L_Ctl.Follow  ($Hand_L_FollowCon[0]+".Chest_Jnt_UpW1");
+
+
+
+//���ְ�//////////////
+//������ָ///
+parent N_TF_R_03_Ctl_Cn N_TF_R_02_Ctl;
+parent N_TF_R_02_Ctl_Cn N_TF_R_01_Ctl;
+parent N_IF_R_03_Ctl_Cn N_IF_R_02_Ctl;
+parent N_IF_R_02_Ctl_Cn N_IF_R_01_Ctl;
+parent N_MF_R_03_Ctl_Cn N_MF_R_02_Ctl; 
+parent N_MF_R_02_Ctl_Cn N_MF_R_01_Ctl; 
+parent N_RF_R_03_Ctl_Cn N_RF_R_02_Ctl;
+parent N_RF_R_02_Ctl_Cn N_RF_R_01_Ctl;
+parent N_PF_R_03_Ctl_Cn N_PF_R_02_Ctl;
+parent N_PF_R_02_Ctl_Cn N_PF_R_01_Ctl;
+
+connectAttr -f N_Hand_IKFk_R_Ctl.Cup Cup_R_Jnt.rotateX;
+select -r N_RF_R_01_Ctl_Cn N_PF_R_01_Ctl_Cn ;
+group -n Cup_R_Grp;
+parentConstraint -mo -weight 1 Cup_R_Jnt Cup_R_Grp;
+
+parent N_Hand_IKFk_R_Ctl_Cn N_Finger_R_Ctl_All;
+parentConstraint -mo -weight 1 Wrist_R_Jnt N_Finger_R_Ctl_All;
+parent N_Hand_FK_R_Ctl_Cn N_Elbow_FK_R_Ctl;
+parent N_Elbow_FK_R_Ctl_Cn N_Shoulder_Fk_R_Ctl;
+parent N_Shoulder_Fk_R_Ctl_Cn N_Scapula_R_Ctl;
+parentConstraint -mo -weight 1 Chest_Jnt_Up N_Scapula_R_Ctl_Cn;
+select -cl;
+//���������������
+select -cl;
+//��ָ���������ӣ�
+orientConstraint -mo -w 1 N_TF_R_01_Ctl ThumbFinger_R_01_Jnt;
+orientConstraint -mo -w 1 N_TF_R_02_Ctl ThumbFinger_R_02_Jnt;
+orientConstraint -mo -w 1 N_TF_R_03_Ctl ThumbFinger_R_03_Jnt;
+
+orientConstraint -mo -w 1 N_IF_R_01_Ctl  IndexFinger_R_01_Jnt ;
+orientConstraint -mo -w 1 N_IF_R_02_Ctl  IndexFinger_R_02_Jnt ;
+orientConstraint -mo -w 1 N_IF_R_03_Ctl  IndexFinger_R_03_Jnt ;
+
+orientConstraint -mo -w 1 N_MF_R_01_Ctl  MiddleFinger_R_01_Jnt ;
+orientConstraint -mo -w 1 N_MF_R_02_Ctl  MiddleFinger_R_02_Jnt ;
+orientConstraint -mo -w 1 N_MF_R_03_Ctl  MiddleFinger_R_03_Jnt ;
+
+orientConstraint -mo -w 1 N_RF_R_01_Ctl  RingFinger_R_01_Jnt ;
+orientConstraint -mo -w 1 N_RF_R_02_Ctl  RingFinger_R_02_Jnt ;
+orientConstraint -mo -w 1 N_RF_R_03_Ctl  RingFinger_R_03_Jnt ;
+
+orientConstraint -mo -w 1 N_PF_R_01_Ctl  PinkyFinger_R_01_Jnt ;
+orientConstraint -mo -w 1 N_PF_R_02_Ctl  PinkyFinger_R_02_Jnt ;
+orientConstraint -mo -w 1 N_PF_R_03_Ctl  PinkyFinger_R_03_Jnt ;
+
+select -cl;
+//Fk����
+$orientC_Hand_R = `orientConstraint -mo -w 1  N_Hand_FK_R_Ctl Hand_R_Jnt`;
+$orientC_Elbow_R = `orientConstraint -mo -w 1  N_Elbow_FK_R_Ctl Elbow_R_Jnt`;
+$orientC_Shoulder_R = `orientConstraint -mo -w 1  N_Shoulder_Fk_R_Ctl Shoulder_R_Jnt`;
+$orientC_Scapula_R = `orientConstraint -mo -w 1  N_Scapula_R_Ctl Scapula_R_Jnt`;
+//FK������IKFK�л�����
+$Hand_R_IKFK_Rev = `createNode reverse`;
+connectAttr -f N_Hand_IKFk_R_Ctl.IKFK ($Hand_R_IKFK_Rev+".inputX");
+connectAttr -f ($Hand_R_IKFK_Rev+".outputX") ($orientC_Hand_R[0]+".N_Hand_FK_R_CtlW0");
+connectAttr -f ($Hand_R_IKFK_Rev+".outputX") ($orientC_Elbow_R[0]+".N_Elbow_FK_R_CtlW0");
+connectAttr -f ($Hand_R_IKFK_Rev+".outputX") ($orientC_Shoulder_R[0]+".N_Shoulder_Fk_R_CtlW0");
+connectAttr -f ($Hand_R_IKFK_Rev+".outputX") N_Shoulder_Fk_R_Ctl.visibility;
+//����첲��������
+
+
+$Elbow_R_Jnt_Ry = `getAttr Elbow_R_Jnt.ry`;
+if($Elbow_R_Jnt_Ry == 0)
+   {
+	rotate -r -os 0 -30 0 Elbow_R_Jnt;
+	joint -e -spa Elbow_R_Jnt;
+	rotate -r -os 0 30 0 Elbow_R_Jnt;
+   }
+
+//����ik�����ڵ�������
+select -r Shoulder_R_Jnt  Elbow_R_Jnt  Hand_R_Jnt;
+ikhandle;
+rename "locator1" "Hand_R_DMuplocator";
+rename "locator2" "Hand_R_DMdnlocator";
+rename "distanceDimension1" "Hand_R_DM";
+rename "ikHandle1" "Hand_R_ikHandle";
+rename "multiplyDivide1" "Hand_R_MuA";
+rename "condition1" "Hand_R_ConditionA";
+rename "clamp1" "Hand_R_ClampA";
+setAttr Hand_R_DM.v 0;
+parent Hand_R_DMuplocator Scapula_R_Jnt;
+parent Hand_R_DMdnlocator N_Hand_IK_R_Ctl;
+parent Hand_R_ikHandle N_Hand_IK_R_Ctl;
+setAttr Hand_R_DMdnlocator.v 0;
+setAttr Hand_R_DMuplocator.v 0;
+setAttr Hand_R_ikHandle.v 0;
+
+createNode multiplyDivide -n Hand_R_MuD;
+connectAttr -f N_Ctl_All.sx Hand_R_MuD.input2X;
+connectAttr -f Hand_R_DMShape.distance Hand_R_MuD.input1X;
+connectAttr -f Hand_R_MuD.outputX Hand_R_MuA.input1X;
+setAttr Hand_R_MuD.operation 2;
+
+//IKFK�л�
+$Handwist_R_IKro = `parentConstraint -mo -st x -st y -st z -w 1 N_Hand_IK_R_Ctl Wrist_R_Jnt`;
+connectAttr -f Elbow_R_Jnt.sx P_WristTwist_R_Jnt.sx;
+connectAttr -f N_Hand_IKFk_R_Ctl.IKFK ($Handwist_R_IKro[0]+".N_Hand_IK_R_CtlW0");
+connectAttr -f N_Hand_IKFk_R_Ctl.IKFK Hand_R_ikHandle.ikBlend;
+select -r N_Arm_Vector_R_Ctl ;
+select -tgl Hand_R_ikHandle ;
+poleVectorConstraint -weight 1;
+
+createNode multiplyDivide -n "Hand_R_MuB";
+connectAttr -f Hand_R_ConditionA.outColorR Hand_R_MuB.input1X;
+connectAttr -f N_Hand_IK_R_Ctl.Stretchy Hand_R_MuB.input2X;
+connectAttr -f Hand_R_MuB.outputX Hand_R_ClampA.inputR;
+createNode multiplyDivide -n "Hand_R_MuC";
+connectAttr -f N_Hand_IKFk_R_Ctl.IKFK Hand_R_MuC.input1X;
+connectAttr -f Hand_R_MuB.outputX Hand_R_MuC.input2X;
+connectAttr -f Hand_R_MuC.outputX Hand_R_ClampA.inputR;
+connectAttr -f N_Hand_IKFk_R_Ctl.IKFK N_Hand_IK_R_Ctl.visibility;
+connectAttr -f N_Hand_IKFk_R_Ctl.IKFK N_Arm_Vector_R_Ctl.visibility;
+parentConstraint -mo -w 1 Chest_Jnt_Up N_Arm_Vector_R_Ctl_Cn;
+
+createNode plusMinusAverage -n WirstTwistjnt_Ro_R_Ave;
+createNode multiplyDivide -n WirstTwistjnt_Ro_R_MpD;
+connectAttr -f Hand_R_Jnt.rotateX WirstTwistjnt_Ro_R_Ave.input1D[0];
+connectAttr -f Wrist_R_Jnt.rotateX WirstTwistjnt_Ro_R_Ave.input1D[1];
+connectAttr -f WirstTwistjnt_Ro_R_Ave.output1D WirstTwistjnt_Ro_R_MpD.input1X;
+setAttr "WirstTwistjnt_Ro_R_MpD.input2X" 0.5;
+connectAttr -f WirstTwistjnt_Ro_R_MpD.outputX P_WristTwist_R_Jnt.rotateX;
+
+
+//�ֲ�_R������ͨ������
+select N_Hand_IKFk_R_Ctl; 
+lockChannAll;
+
+select N_TF_R_01_Ctl N_TF_R_02_Ctl N_TF_R_03_Ctl N_IF_R_01_Ctl N_IF_R_02_Ctl N_IF_R_03_Ctl N_MF_R_01_Ctl N_MF_R_02_Ctl N_MF_R_03_Ctl N_RF_R_01_Ctl N_RF_R_02_Ctl N_RF_R_03_Ctl N_PF_R_01_Ctl N_PF_R_02_Ctl N_PF_R_03_Ctl N_Hand_FK_R_Ctl N_Elbow_FK_R_Ctl N_Shoulder_Fk_R_Ctl N_Scapula_R_Ctl;
+lockChannTSV; 
+
+select N_Hand_IK_R_Ctl;
+lockChannSV;
+
+select N_Arm_Vector_R_Ctl;
+lockChannRSV;
+
+$Hand_R_UnFollowCon = `parentConstraint -mo -w 1 FollowG N_Hand_IK_R_Ctl_Cn`;
+$Hand_R_FollowCon = `parentConstraint -mo -w 1 Chest_Jnt_Up N_Hand_IK_R_Ctl_Cn `;
+$Hand_R_Followrev = `createNode reverse`;
+connectAttr -f N_Hand_IK_R_Ctl.Follow ($Hand_R_Followrev+".inputX");
+connectAttr -f ($Hand_R_Followrev+".outputX") ($Hand_R_UnFollowCon[0]+".FollowGW0");
+connectAttr -f N_Hand_IK_R_Ctl.Follow  ($Hand_R_FollowCon[0]+".Chest_Jnt_UpW1");
+
+//ͷ������������
+orientConstraint -mo -w 1 N_Head_Ctl Head_Jnt;
+parent N_Head_Ctl_Cn N_Neck_01_Ctl;
+orientConstraint -mo -w 1 N_Neck_01_Ctl Neck_01_Jnt;
+parentConstraint -mo -w 1 Neck_02_Jnt N_Head_Ctl_Cn;
+connectAttr -f N_Neck_01_Ctl.r Neck_02_Jnt.r;
+parentConstraint -mo -w 1 Chest_Jnt_Up N_Neck_01_Ctl_Cn ;
+select N_Head_Ctl;
+group -n HeadFollowG;
+$HeadFollowP = `orientConstraint -mo -w 1 FollowG HeadFollowG`;
+connectAttr -f N_Head_Ctl.Follow ($HeadFollowP[0]+".FollowGW0");
+//ͷ��������ͨ������
+select N_Head_Ctl;
+lockChannTSV;
+select N_Neck_01_Ctl;
+lockChannTSV;
+
+
+//��׵����
+//Fk����
+$chestFkorient = `orientConstraint -mo -w 1 N_Chest_FK_Ctl Chest_Jnt_FK`;
+
+$spline04Fk_parent = `parentConstraint -mo -w 1 Spline_04_Jnt_FK N_Chest_FK_Ctl_Cn`;
+connectAttr -f N_Spline_03_FK_Ctl.r Spline_04_Jnt_FK.r;
+
+$spline03FKorient = `orientConstraint -mo -w 1 N_Spline_03_FK_Ctl Spline_03_Jnt_FK`;
+
+$spline04FK_parent = `parentConstraint -mo -w 1 Spline_02_Jnt_FK N_Spline_03_FK_Ctl_Cn`;
+connectAttr -f N_Spline_01_FK_Ctl.r Spline_02_Jnt_FK.r;
+
+$spline01Fkorient = `orientConstraint -mo -w 1 N_Spline_01_FK_Ctl Spline_01_Jnt_FK`;
+parent N_Spline_01_FK_Ctl_Cn N_Pelvis_FK_Ctl;
+
+select -r Pelvis_Jnt_FK ;
+group -n HipSwing_G;
+select -r HipSwing_G ;
+move $spline01jnt[0] $spline01jnt[1] $spline01jnt[2] HipSwing_G.scalePivot HipSwing_G.rotatePivot ;
+group -n Pelvis_FK_G;
+select -r Pelvis_FK_G;
+move $pelvisjnt[0] $pelvisjnt[1] $pelvisjnt[2] Pelvis_FK_G.scalePivot Pelvis_FK_G.rotatePivot ;
+
+$hipswingFKorient = `orientConstraint -mo -w 1 N_HipSwing_Ctl HipSwing_G`;
+$pelvisFKparent = `parentConstraint -mo -w 1 N_Pelvis_FK_Ctl Pelvis_FK_G`;
+parent N_HipSwing_Ctl_Cn  N_Pelvis_FK_Ctl;
+
+$SplineFK_ParentA = `parentConstraint -mo -w 1 Pelvis_Jnt_FK Pelvis_Jnt`;
+$SplineFK_ParentB = `parentConstraint -mo -w 1 Spline_01_Jnt_FK Spline_01_Jnt`;
+$SplineFK_ParentC = `parentConstraint -mo -w 1 Spline_02_Jnt_FK Spline_02_Jnt`;
+$SplineFK_ParentD = `parentConstraint -mo -w 1 Spline_03_Jnt_FK Spline_03_Jnt`;
+$SplineFK_ParentE = `parentConstraint -mo -w 1 Spline_04_Jnt_FK Spline_04_Jnt`;
+$SplineFK_ParentF = `parentConstraint -mo -w 1 Chest_Jnt_FK Chest_Jnt`;
+
+
+
+$splineIKFK_rev = `createNode reverse`;
+connectAttr -f N_Back_Ctl.SplineIKFK ($splineIKFK_rev+".inputX");
+
+
+connectAttr -f ($splineIKFK_rev+".outputX") ($chestFkorient[0]+".N_Chest_FK_CtlW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($spline03FKorient[0]+".N_Spline_03_FK_CtlW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($spline01Fkorient[0]+".N_Spline_01_FK_CtlW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($hipswingFKorient[0]+".N_HipSwing_CtlW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($pelvisFKparent[0]+".N_Pelvis_FK_CtlW0");
+
+connectAttr -f ($splineIKFK_rev+".outputX") ($SplineFK_ParentA[0]+".Pelvis_Jnt_FKW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($SplineFK_ParentB[0]+".Spline_01_Jnt_FKW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($SplineFK_ParentC[0]+".Spline_02_Jnt_FKW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($SplineFK_ParentD[0]+".Spline_03_Jnt_FKW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($SplineFK_ParentE[0]+".Spline_04_Jnt_FKW0");
+connectAttr -f ($splineIKFK_rev+".outputX") ($SplineFK_ParentF[0]+".Chest_Jnt_FKW0");
+
+
+connectAttr -f ($splineIKFK_rev+".outputX") N_Chest_FK_Ctl.visibility;
+connectAttr -f ($splineIKFK_rev+".outputX") N_Spline_03_FK_Ctl.visibility;
+connectAttr -f ($splineIKFK_rev+".outputX") N_Pelvis_FK_Ctl.visibility;
+
+setAttr Pelvis_Jnt_FK.v 0;
+
+//ik����
+
+$SlpineIKHandle_Sys = `ikHandle -n "splineIKHandle" -solver  ikSplineSolver  -pcv 0 -sj Pelvis_Jnt_IK  -ee  Chest_Jnt_IK`;
+int $SlpineIKHandle_cv = `size $SlpineIKHandle_Sys`;
+select $SlpineIKHandle_Sys[$SlpineIKHandle_cv-1];
+rename "SpIKHandleCurve";
+select SpIKHandleCurve;
+
+$Spline_spans = `getAttr SpIKHandleCurve.spans`;
+$Spline_degree = `getAttr SpIKHandleCurve.degree`;
+int $Splinei;
+int $SplineNum = ($Spline_spans)+($Spline_degree);
+for($Splinei=0;$Splinei<$SplineNum;$Splinei++)
+{
+select -r SpIKHandleCurve.cv[$Splinei];
+cluster -n SplineIK_Clu_00;
+}
+parent SplineIK_Clu_01Handle SplineIK_Clu_00Handle;
+parent SplineIK_Clu_02Handle SplineIK_Clu_03Handle;
+parent SplineIK_Clu_03Handle N_Chest_IK_Ctl;
+parent SplineIK_Clu_00Handle N_Pelvis_IK_Ctl;
+
+connectAttr -f N_Back_Ctl.SplineIKFK splineIKHandle.ikBlend;
+connectAttr -f N_Pelvis_IK_Ctl.rx splineIKHandle.roll;
+$spiktwistMD = `createNode multiplyDivide`;
+connectAttr -f N_Pelvis_IK_Ctl.rx ($spiktwistMD+".input1X");
+setAttr ($spiktwistMD+".input2X") -1;
+$spiktwistAdd_Ave = `createNode plusMinusAverage`;
+
+connectAttr -f ($spiktwistMD+".outputX") ($spiktwistAdd_Ave+".input1D[0]");
+connectAttr -f N_Chest_IK_Ctl.rx ($spiktwistAdd_Ave+".input1D[1]");
+connectAttr -f ($spiktwistAdd_Ave+".output1D") splineIKHandle.twist;
+
+$SplineIK_ParentA = `parentConstraint -mo -w 1 N_Pelvis_IK_Ctl Pelvis_Jnt`;
+$SplineIK_ParentB = `parentConstraint -mo -w 1 Spline_01_Jnt_IK Spline_01_Jnt`;
+$SplineIK_ParentC = `parentConstraint -mo -w 1 Spline_02_Jnt_IK Spline_02_Jnt`;
+$SplineIK_ParentD = `parentConstraint -mo -w 1 Spline_03_Jnt_IK Spline_03_Jnt`;
+$SplineIK_ParentE = `parentConstraint -mo -w 1 Spline_04_Jnt_IK Spline_04_Jnt`;
+$SplineIK_ParentF = `parentConstraint -mo -w 1 N_Chest_IK_Ctl Chest_Jnt`;////////////////////////////
+//$SplineIK_ParentG = `parentConstraint -mo -w 1 N_Chest_IK_Ctl Chest_Jnt_Up`;
+
+connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentA[0]+".N_Pelvis_IK_CtlW1");
+connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentB[0]+".Spline_01_Jnt_IKW1");
+connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentC[0]+".Spline_02_Jnt_IKW1");
+connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentD[0]+".Spline_03_Jnt_IKW1");
+connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentE[0]+".Spline_04_Jnt_IKW1");
+connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentF[0]+".N_Chest_IK_CtlW1");//////////////////////
+//connectAttr -f N_Back_Ctl.SplineIKFK ($SplineIK_ParentG[0]+".N_Chest_IK_CtlW0");
+
+connectAttr -f N_Back_Ctl.SplineIKFK N_Pelvis_IK_Ctl.visibility;
+connectAttr -f N_Back_Ctl.SplineIKFK N_Chest_IK_Ctl.visibility;
+
+$SplineIK_arc = `createNode arcLengthDimension`;
+connectAttr -f SpIKHandleCurveShape.worldSpace[0] ($SplineIK_arc+".nurbsGeometry");
+
+$spikcuvValue = `getAttr SpIKHandleCurveShape.maxValue`;
+setAttr ($SplineIK_arc+".uParamValue") $spikcuvValue;
+$SplineScale_MD = `createNode multiplyDivide`;
+connectAttr -f ($SplineIK_arc+".arcLength") ($SplineScale_MD+".input1X");
+setAttr ($SplineScale_MD+".input2X")  $spikcuvValue;
+setAttr ($SplineScale_MD+".operation") 2;
+connectAttr -f ($SplineScale_MD+".outputX") Pelvis_Jnt_IK.scaleY;
+connectAttr -f Pelvis_Jnt_IK.scaleY Spline_01_Jnt_IK.scaleY;
+connectAttr -f Pelvis_Jnt_IK.scaleY Spline_02_Jnt_IK.scaleY;
+connectAttr -f Pelvis_Jnt_IK.scaleY Spline_03_Jnt_IK.scaleY;
+connectAttr -f Pelvis_Jnt_IK.scaleY Spline_04_Jnt_IK.scaleY;
+
+setAttr Pelvis_Jnt_IK.v 0;
+setAttr splineIKHandle.v 0;
+rename "arcLengthDimension1" "Spline_Arc";
+setAttr Spline_Arc.v 0;
+setAttr  SpIKHandleCurve.v 0;
+setAttr SplineIK_Clu_00Handle.v 0;
+setAttr SplineIK_Clu_01Handle.v 0;
+setAttr SplineIK_Clu_02Handle.v 0;
+setAttr SplineIK_Clu_03Handle.v 0;
+//��׵��������
+createNode condition -n Spline_IK_Str_Con;
+connectAttr -f N_Chest_IK_Ctl.Stretchy Spline_IK_Str_Con.firstTerm;
+connectAttr -f Spline_ArcShape.arcLength Spline_IK_Str_Con.colorIfTrueR;
+connectAttr -f multiplyDivide2.input2X Spline_IK_Str_Con.colorIfFalseR;
+setAttr Spline_IK_Str_Con.operation 2;
+connectAttr -f Spline_IK_Str_Con.outColorR multiplyDivide2.input1X;
+createNode  multiplyDivide -n Spline_IK_Str_ConA;
+connectAttr -f N_Back_Ctl.SplineIKFK Spline_IK_Str_ConA.input1X;
+connectAttr -f N_Chest_IK_Ctl.Stretchy Spline_IK_Str_ConA.input2X;
+connectAttr -f Spline_IK_Str_ConA.outputX Chest_Jnt_parentConstraint1.N_Chest_IK_CtlW1;
+
+//��׵������ͨ������
+select N_Chest_FK_Ctl;
+lockChannTSV;
+select N_Spline_03_FK_Ctl;
+lockChannTSV;
+select N_Spline_01_FK_Ctl;
+lockChannTSV;
+select N_HipSwing_Ctl;
+lockChannTSV;
+select N_Pelvis_FK_Ctl;
+lockChannSV;
+select N_Chest_IK_Ctl;
+lockChannSV;
+select N_Pelvis_IK_Ctl;
+lockChannSV;
+
+//��������/////////////////////////////////////////////////////////////////////////////////////////
+
+//ik����
+
+
+$Knee_L_Jnt_Re = `getAttr Knee_L_Jnt.jointOrientZ`;
+if($Knee_L_Jnt_Re == 0)
+   {
+	//rotate -r -os 0 30 0 Knee_L_Jnt;
+	//joint -e -spa Knee_L_Jnt;
+	//rotate -r -os 0 -30 0 Knee_L_Jnt;
+  	setAttr "Knee_L_Jnt.preferredAngleZ" 30;
+
+   }
+
+
+select Hip_L_Jnt Knee_L_Jnt Ankle_L_Jnt;
+ikhandle;
+rename "ikHandle1" "Foot_IK_L_handle";
+rename "distanceDimension1" "FootIK_L_DM";
+rename "locator1" "Foot_L_DMuplocator";
+rename "locator2" "Foot_L_DMdnlocator";
+parent Foot_L_DMuplocator Pelvis_Jnt;
+parent Foot_L_DMdnlocator N_Foot_IK_L_Ctl;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK Foot_IK_L_handle.ikBlend;
+select -r N_Foot_Vector_L_Ctl ;
+select -tgl Foot_IK_L_handle ;
+poleVectorConstraint -weight 1;
+ikHandle -n Ankle_L_IKh -sol ikSCsolver -sj Ankle_L_Jnt -ee Toe_L_01_Jnt;
+ikHandle -n Toe_L_IKh -sol ikSCsolver -sj Toe_L_01_Jnt -ee Toe_L_02_Jnt;
+select Toe_L_01_Jnt;
+$Toe_L_01_T = `xform -q -ws -t`;
+select Toe_L_02_Jnt;
+$Toe_L_02_T = `xform -q -ws -t`;
+select Ankle_L_Jnt;
+$Ankle_L_T = `xform -q -ws -t`;
+
+select Toe_L_IKh;
+group -n "Toe_L_IKh_G";
+xform -os -piv $Toe_L_01_T[0] $Toe_L_01_T[1] $Toe_L_01_T[2];
+
+select Foot_IK_L_handle Ankle_L_IKh;
+group -n Foot_M_L_half_G;
+xform -os -piv $Toe_L_01_T[0] $Toe_L_01_T[1] $Toe_L_01_T[2];
+
+select Toe_L_IKh_G Foot_M_L_half_G;
+group -n "Foot_L_G";
+xform -os -piv $Toe_L_02_T[0] $Toe_L_02_T[1] $Toe_L_02_T[2];
+
+select Toe_L_IKh_G Foot_M_L_half_G;
+group -n "ball_Twist_L_G";
+xform -os -piv $Toe_L_01_T[0] $Toe_L_01_T[1] $Toe_L_01_T[2];
+
+select ball_Twist_L_G;
+group -n "Foot_L_half_G";
+xform -os -piv $Toe_L_02_T[0] $Toe_L_02_T[1] $Toe_L_02_T[2];
+
+select Foot_L_G;
+group -n "Foot_L_G_Cn";
+xform -os -piv 0 0 0;
+parent Foot_L_G_Cn N_Foot_IK_L_Ctl;
+
+connectAttr -f N_Foot_IK_L_Ctl.Foot_Roll Foot_L_G.rx;
+connectAttr -f N_Foot_IK_L_Ctl.Toe_Roll Toe_L_IKh_G.rx;
+connectAttr -f N_Foot_IK_L_Ctl.Toe_Twist Foot_L_G.ry;
+connectAttr -f N_Foot_IK_L_Ctl.Ball_Twist ball_Twist_L_G.ry;
+
+createNode condition -n "Foot_L_Roll_condA";
+createNode condition -n "Foot_L_Roll_condB";
+createNode plusMinusAverage -n "Foot_L_Roll_PMA";
+connectAttr -f N_Foot_IK_L_Ctl.Foot_M_Roll Foot_L_Roll_condB.firstTerm;
+connectAttr -f N_Foot_IK_L_Ctl.Foot_M_Roll Foot_L_Roll_condB.colorIfTrueR;
+setAttr "Foot_L_Roll_condB.colorIfFalseR" 30;
+setAttr Foot_L_Roll_condB.operation 4;
+connectAttr -f Foot_L_Roll_condB.outColorR Foot_M_L_half_G.rotateX;
+setAttr "Foot_L_Roll_condB.secondTerm" 30;
+connectAttr -f N_Foot_IK_L_Ctl.Foot_M_Roll Foot_L_Roll_PMA.input2D[0].input2Dx;
+setAttr "Foot_L_Roll_PMA.input2D[1].input2Dx" 30;
+setAttr Foot_L_Roll_PMA.operation 2;
+connectAttr -f Foot_L_Roll_PMA.output2Dx Foot_L_Roll_condA.firstTerm;
+connectAttr -f Foot_L_Roll_PMA.output2Dx Foot_L_Roll_condA.colorIfTrueR;
+setAttr "Foot_L_Roll_condA.colorIfFalseR" 0;
+connectAttr -f Foot_L_Roll_condA.outColorR Foot_L_half_G.rotateX;
+setAttr Foot_L_Roll_condA.operation 2;
+rename "condition1" "FootIKStre_L_Con";
+createNode  multiplyDivide -n FootIKStre_L_MD;
+connectAttr -f FootIKStre_L_Con.outColorR FootIKStre_L_MD.input1X;
+connectAttr -f N_Foot_IK_L_Ctl.Stretchy FootIKStre_L_MD.input2X;
+createNode  multiplyDivide -n FootIKStre_L_MDA;
+connectAttr -f FootIKStre_L_MD.outputX FootIKStre_L_MDA.input1X;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK FootIKStre_L_MDA.input2X;
+connectAttr -f FootIKStre_L_MDA.outputX clamp1.inputR;
+createNode  multiplyDivide -n FootIKStre_L_MDC;
+connectAttr -f N_Ctl_All.scale FootIKStre_L_MDC.input2;
+connectAttr -f FootIK_L_DMShape.distance FootIKStre_L_MDC.input1X;
+setAttr FootIKStre_L_MDC.operation 2;
+rename "multiplyDivide3" "FootIKStre_L_MDD";
+connectAttr -f FootIKStre_L_MDC.outputX FootIKStre_L_MDD.input1X;
+parentConstraint -n "Foot_L_ToeCtl_P" -mo -w 1 Toe_L_01_Jnt N_Foot_IKFk_L_Ctl_Cn;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK N_Foot_IK_L_Ctl.visibility;
+setAttr Foot_L_DMuplocator.v 0;
+setAttr FootIK_L_DM.v 0;
+setAttr Foot_IK_L_handle.v 0;
+setAttr Foot_L_DMdnlocator.v 0;
+setAttr Foot_L_G_Cn.v 0;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK Toe_L_IKh.ikBlend;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK Ankle_L_IKh.ikBlend;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK N_Foot_Vector_L_Ctl.visibility;
+//parent N_Hip_FK_L_Ctl_Cn N_HipSwing_Ctl;
+group -em -n Foot_Follow;
+$Foot_Follow_L_Parent = `parentConstraint -mo -w 1 Foot_Follow N_Foot_IK_L_Ctl_Cn`;
+connectAttr -f N_Foot_IK_L_Ctl.Follow ($Foot_Follow_L_Parent[0]+".Foot_FollowW0");
+
+//fk����
+$ToeFK_L_orient = `orientConstraint -mo -w 1 N_Toe_FK_L_Ctl Toe_L_01_Jnt`;
+$AnkleFK_L_orient = `orientConstraint -mo -w 1 N_Ankle_FK_L_Ctl Ankle_L_Jnt`;
+$KneeFK_L_orient = `orientConstraint -mo -w 1 N_Knee_FK_L_Ctl Knee_L_Jnt`;
+$HipFK_L_orient = `orientConstraint -mo -w 1 N_Hip_FK_L_Ctl Hip_L_Jnt`;
+parent N_Toe_FK_L_Ctl_Cn N_Ankle_FK_L_Ctl;
+parent N_Ankle_FK_L_Ctl_Cn N_Knee_FK_L_Ctl;
+parent N_Knee_FK_L_Ctl_Cn N_Hip_FK_L_Ctl;
+//parent N_Hip_FK_L_Ctl_Cn N_Pelvis_FK_Ctl;
+
+$Foot_L_IKFK_rev = `createNode reverse`;
+connectAttr -f N_Foot_IKFk_L_Ctl.IKFK ($Foot_L_IKFK_rev+".inputX");
+connectAttr -f ($Foot_L_IKFK_rev+".outputX") ($ToeFK_L_orient[0]+".N_Toe_FK_L_CtlW0");
+connectAttr -f ($Foot_L_IKFK_rev+".outputX") ($AnkleFK_L_orient[0]+".N_Ankle_FK_L_CtlW0");
+connectAttr -f ($Foot_L_IKFK_rev+".outputX") ($KneeFK_L_orient[0]+".N_Knee_FK_L_CtlW0");
+connectAttr -f ($Foot_L_IKFK_rev+".outputX") ($HipFK_L_orient[0]+".N_Hip_FK_L_CtlW0");
+connectAttr -f ($Foot_L_IKFK_rev+".outputX") N_Hip_FK_L_Ctl.visibility;
+
+
+//������ͨ������
+select N_Hip_FK_L_Ctl;
+lockChannTSV;
+select N_Knee_FK_L_Ctl;
+lockChannTSV;
+select N_Ankle_FK_L_Ctl;
+lockChannTSV;
+select N_Toe_FK_L_Ctl;
+lockChannTSV;
+select N_Foot_IKFk_L_Ctl;
+lockChannAll;
+select N_Foot_Vector_L_Ctl;
+lockChannRSV;
+select N_Foot_IK_L_Ctl;
+lockChannSV;
+
+/////////////////////////////////////////////////
+
+//��������
+//ik����
+$Knee_R_Jnt_Re = `getAttr Knee_R_Jnt.jointOrientZ`;
+if($Knee_R_Jnt_Re == 0)
+   {
+	//rotate -r -os 0 30 0 ;
+	//joint -e -spa Knee_R_Jnt;
+	//rotate -r -os 0 -30 0 ;
+	setAttr "Knee_R_Jnt.preferredAngleZ" 30;
+
+   }
+
+
+select Hip_R_Jnt Knee_R_Jnt Ankle_R_Jnt;
+ikhandle;
+rename "ikHandle1" "Foot_IK_R_handle";
+rename "distanceDimension1" "FootIK_R_DM";
+rename "locator1" "Foot_R_DMuplocator";
+rename "locator2" "Foot_R_DMdnlocator";
+parent Foot_R_DMuplocator Pelvis_Jnt;
+parent Foot_R_DMdnlocator N_Foot_IK_R_Ctl;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK Foot_IK_R_handle.ikBlend;
+select -r N_Foot_Vector_R_Ctl ;
+select -tgl Foot_IK_R_handle ;
+poleVectorConstraint -weight 1;
+ikHandle -n Ankle_R_IKh -sol ikSCsolver -sj Ankle_R_Jnt -ee Toe_R_01_Jnt;
+ikHandle -n Toe_R_IKh -sol ikSCsolver -sj Toe_R_01_Jnt -ee Toe_R_02_Jnt;
+select Toe_R_01_Jnt;
+$Toe_R_01_T = `xform -q -ws -t`;
+select Toe_R_02_Jnt;
+$Toe_R_02_T = `xform -q -ws -t`;
+select Ankle_R_Jnt;
+$Ankle_R_T = `xform -q -ws -t`;
+
+select Toe_R_IKh;
+group -n "Toe_R_IKh_G";
+xform -os -piv $Toe_R_01_T[0] $Toe_R_01_T[1] $Toe_R_01_T[2];
+
+select Foot_IK_R_handle Ankle_R_IKh;
+group -n Foot_M_R_half_G;
+xform -os -piv $Toe_R_01_T[0] $Toe_R_01_T[1] $Toe_R_01_T[2];
+
+select Toe_R_IKh_G Foot_M_R_half_G;
+group -n "Foot_R_G";
+xform -os -piv $Toe_R_02_T[0] $Toe_R_02_T[1] $Toe_R_02_T[2];
+
+select Toe_R_IKh_G Foot_M_R_half_G;
+group -n "ball_Twist_R_G";
+xform -os -piv $Toe_R_01_T[0] $Toe_R_01_T[1] $Toe_R_01_T[2];
+
+select ball_Twist_R_G;
+group -n "Foot_R_half_G";
+xform -os -piv $Toe_R_02_T[0] $Toe_R_02_T[1] $Toe_R_02_T[2];
+
+select Foot_R_G;
+group -n "Foot_R_G_Cn";
+xform -os -piv 0 0 0;
+parent Foot_R_G_Cn N_Foot_IK_R_Ctl;
+
+connectAttr -f N_Foot_IK_R_Ctl.Foot_Roll Foot_R_G.rx;
+connectAttr -f N_Foot_IK_R_Ctl.Toe_Roll Toe_R_IKh_G.rx;
+connectAttr -f N_Foot_IK_R_Ctl.Toe_Twist Foot_R_G.ry;
+connectAttr -f N_Foot_IK_R_Ctl.Ball_Twist ball_Twist_R_G.ry;
+
+createNode condition -n "Foot_R_Roll_condA";
+createNode condition -n "Foot_R_Roll_condB";
+createNode plusMinusAverage -n "Foot_R_Roll_PMA";
+connectAttr -f N_Foot_IK_R_Ctl.Foot_M_Roll Foot_R_Roll_condB.firstTerm;
+connectAttr -f N_Foot_IK_R_Ctl.Foot_M_Roll Foot_R_Roll_condB.colorIfTrueR;
+setAttr "Foot_R_Roll_condB.colorIfFalseR" 30;
+setAttr Foot_R_Roll_condB.operation 4;
+connectAttr -f Foot_R_Roll_condB.outColorR Foot_M_R_half_G.rotateX;
+setAttr "Foot_R_Roll_condB.secondTerm" 30;
+connectAttr -f N_Foot_IK_R_Ctl.Foot_M_Roll Foot_R_Roll_PMA.input2D[0].input2Dx;
+setAttr "Foot_R_Roll_PMA.input2D[1].input2Dx" 30;
+setAttr Foot_R_Roll_PMA.operation 2;
+connectAttr -f Foot_R_Roll_PMA.output2Dx Foot_R_Roll_condA.firstTerm;
+connectAttr -f Foot_R_Roll_PMA.output2Dx Foot_R_Roll_condA.colorIfTrueR;
+setAttr "Foot_R_Roll_condA.colorIfFalseR" 0;
+connectAttr -f Foot_R_Roll_condA.outColorR Foot_R_half_G.rotateX;
+setAttr Foot_R_Roll_condA.operation 2;
+rename "condition1" "FootIKStre_R_Con";
+createNode  multiplyDivide -n FootIKStre_R_MD;
+connectAttr -f FootIKStre_R_Con.outColorR FootIKStre_R_MD.input1X;
+connectAttr -f N_Foot_IK_R_Ctl.Stretchy FootIKStre_R_MD.input2X;
+createNode  multiplyDivide -n FootIKStre_R_MDA;
+connectAttr -f FootIKStre_R_MD.outputX FootIKStre_R_MDA.input1X;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK FootIKStre_R_MDA.input2X;
+connectAttr -f FootIKStre_R_MDA.outputX clamp2.inputR;
+createNode  multiplyDivide -n FootIKStre_R_MDC;
+connectAttr -f N_Ctl_All.scale FootIKStre_R_MDC.input2;
+connectAttr -f FootIK_R_DMShape.distance FootIKStre_R_MDC.input1X;
+setAttr FootIKStre_R_MDC.operation 2;
+rename "multiplyDivide3" "FootIKStre_R_MDD";
+connectAttr -f FootIKStre_R_MDC.outputX FootIKStre_R_MDD.input1X;
+parentConstraint -n "Foot_R_ToeCtl_P" -mo -w 1 Toe_R_01_Jnt N_Foot_IKFk_R_Ctl_Cn;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK N_Foot_IK_R_Ctl.visibility;
+setAttr Foot_R_DMuplocator.v 0;
+setAttr FootIK_R_DM.v 0;
+setAttr Foot_IK_R_handle.v 0;
+setAttr Foot_R_DMdnlocator.v 0;
+setAttr Foot_R_G_Cn.v 0;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK Toe_R_IKh.ikBlend;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK Ankle_R_IKh.ikBlend;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK N_Foot_Vector_R_Ctl.visibility;
+//parent N_Hip_FK_R_Ctl_Cn N_HipSwing_Ctl;
+$Foot_Follow_R_Parent = `parentConstraint -mo -w 1 Foot_Follow N_Foot_IK_R_Ctl_Cn`;
+connectAttr -f N_Foot_IK_R_Ctl.Follow ($Foot_Follow_R_Parent[0]+".Foot_FollowW0");
+
+//fk����
+$ToeFK_R_orient = `orientConstraint -mo -w 1 N_Toe_FK_R_Ctl Toe_R_01_Jnt`;
+$AnkleFK_R_orient = `orientConstraint -mo -w 1 N_Ankle_FK_R_Ctl Ankle_R_Jnt`;
+$KneeFK_R_orient = `orientConstraint -mo -w 1 N_Knee_FK_R_Ctl Knee_R_Jnt`;
+$HipFK_R_orient = `orientConstraint -mo -w 1 N_Hip_FK_R_Ctl Hip_R_Jnt`;
+parent N_Toe_FK_R_Ctl_Cn N_Ankle_FK_R_Ctl;
+parent N_Ankle_FK_R_Ctl_Cn N_Knee_FK_R_Ctl;
+parent N_Knee_FK_R_Ctl_Cn N_Hip_FK_R_Ctl;
+//parent N_Hip_FK_R_Ctl_Cn N_Pelvis_FK_Ctl;
+
+$Foot_R_IKFK_rev = `createNode reverse`;
+connectAttr -f N_Foot_IKFk_R_Ctl.IKFK ($Foot_R_IKFK_rev+".inputX");
+connectAttr -f ($Foot_R_IKFK_rev+".outputX") ($ToeFK_R_orient[0]+".N_Toe_FK_R_CtlW0");
+connectAttr -f ($Foot_R_IKFK_rev+".outputX") ($AnkleFK_R_orient[0]+".N_Ankle_FK_R_CtlW0");
+connectAttr -f ($Foot_R_IKFK_rev+".outputX") ($KneeFK_R_orient[0]+".N_Knee_FK_R_CtlW0");
+connectAttr -f ($Foot_R_IKFK_rev+".outputX") ($HipFK_R_orient[0]+".N_Hip_FK_R_CtlW0");
+connectAttr -f ($Foot_R_IKFK_rev+".outputX") N_Hip_FK_R_Ctl.visibility;
+
+
+
+//������ͨ������
+select N_Hip_FK_R_Ctl;
+lockChannTSV;
+select N_Knee_FK_R_Ctl;
+lockChannTSV;
+select N_Ankle_FK_R_Ctl;
+lockChannTSV;
+select N_Toe_FK_R_Ctl;
+lockChannTSV;
+select N_Foot_IKFk_R_Ctl;
+lockChannAll;
+select N_Foot_Vector_R_Ctl;
+lockChannRSV;
+select N_Foot_IK_R_Ctl;
+lockChannSV;
+select N_Elbow_FK_L_Ctl;
+setAttr -lock true -keyable false "N_Elbow_FK_L_Ctl.rx";
+setAttr -lock true -keyable false "N_Elbow_FK_L_Ctl.rz";
+select N_Elbow_FK_R_Ctl;
+setAttr -lock true -keyable false "N_Elbow_FK_R_Ctl.rx";
+setAttr -lock true -keyable false "N_Elbow_FK_R_Ctl.rz";
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//�㼶����
+parent Foot_Follow Pelvis_Jnt;
+select N_Back_Ctl;
+lockChannSV;
+//parent Pelvis_Jnt N_Ctl_All;
+select Pelvis_Jnt;
+group -n Pelvis_Sca_G;
+scaleConstraint -mo -w 1 N_Pelvis_FK_Ctl Pelvis_Sca_G;
+parent Pelvis_FK_G N_Ctl_All;
+parent N_Pelvis_FK_Ctl_Cn N_Back_Ctl;
+parent N_Hand_IK_R_Ctl_Cn N_Back_Ctl;
+select N_Foot_IK_L_Ctl_Cn;
+group -n N_Foot_IK_L_G;
+parent N_Foot_IK_L_G N_Back_Ctl;
+select N_Foot_IK_R_Ctl_Cn;
+group -n N_Foot_IK_R_G;
+parent N_Foot_IK_R_G N_Back_Ctl;
+select N_Chest_IK_Ctl_Cn ;
+group -n N_Chest_IK_G;
+parent N_Chest_IK_G N_Back_Ctl;
+select N_Pelvis_IK_Ctl_Cn;
+group -n N_Pelvis_IK_G;
+parent N_Pelvis_IK_G N_Back_Ctl;
+
+select Pelvis_Jnt_IK Hand_L_DM Hand_R_DM splineIKHandle SpIKHandleCurve Spline_Arc FootIK_L_DM FootIK_R_DM;
+group -n Fixed;
+group -em -n Model;
+parent Model Fixed;
+parent Pelvis_Sca_G Fixed;
+
+select N_Ctl_All Fixed;
+group -n N_G;
+
+select -r N_Hip_FK_L_Ctl_Cn ;
+select -add N_Hip_FK_R_Ctl_Cn ;
+group -n Foot_FK_Ctl;
+parentConstraint -mo -w 1 Pelvis_Jnt Foot_FK_Ctl;
+
+select N_Foot_Vector_R_Ctl;
+group -n N_Foot_Vector_R_Ctl_Pnt;
+select N_Foot_Vector_L_Ctl;
+group -n N_Foot_Vector_L_Ctl_Pnt;
+pointConstraint -mo -w 1 Pelvis_Jnt N_Foot_Vector_R_Ctl_Pnt ;
+pointConstraint -mo -w 1 Pelvis_Jnt N_Foot_Vector_L_Ctl_Pnt ;
+parentConstraint -mo -w 1 Pelvis_Jnt N_Foot_Vector_R_Ctl_Cn;
+parentConstraint -mo -w 1 Pelvis_Jnt N_Foot_Vector_L_Ctl_Cn;
+connectAttr -f N_Foot_IK_R_Ctl.Follow N_Foot_Vector_R_Ctl_Cn_parentConstraint1.Pelvis_JntW0;
+connectAttr -f N_Foot_IK_L_Ctl.Follow N_Foot_Vector_L_Ctl_Cn_parentConstraint1.Pelvis_JntW0;
+createNode reverse -n FootPelvsiFollow_Rve;
+connectAttr -f N_Foot_IK_R_Ctl.Follow FootPelvsiFollow_Rve.inputX;
+connectAttr -f FootPelvsiFollow_Rve.outputX N_Foot_Vector_R_Ctl_Pnt_pointConstraint1.Pelvis_JntW0;
+connectAttr -f N_Foot_IK_L_Ctl.Follow FootPelvsiFollow_Rve.inputY;
+connectAttr -f FootPelvsiFollow_Rve.outputY N_Foot_Vector_L_Ctl_Pnt_pointConstraint1.Pelvis_JntW0;
+select N_Foot_Vector_R_Ctl_Cn N_Foot_Vector_L_Ctl_Cn;
+group -n N_Foot_Vector_All;
+parent N_Foot_Vector_All N_Back_Ctl;
+
+addAttr -ln "name"  -dt "string"  |N_G|Fixed;
+setAttr -e-keyable true |N_G|Fixed.name;
+setAttr -type "string" Fixed.name "N_"  ;
+parent N_Pelvis_FK_Ctl_Cn N_Body_Ctl;
+parent N_Chest_IK_G N_Body_Ctl;
+parent N_Pelvis_IK_G N_Body_Ctl;
+setAttr -lock true -keyable false "N_Body_Ctl.sx";
+setAttr -lock true -keyable false "N_Body_Ctl.sy";
+setAttr -lock true -keyable false "N_Body_Ctl.sz";
+setAttr -lock true -keyable false "N_Body_Ctl.v";
+parent Pelvis_Jnt_IK N_Body_Ctl;
+
+//IKFK�Զ��л�λ�òο�
+group -em -n "Arm_Vector_L_Ctl_Point";
+group -em -n "Arm_Vector_R_Ctl_Point";
+parent Arm_Vector_L_Ctl_Point N_Ctl_All;
+parent Arm_Vector_R_Ctl_Point N_Ctl_All;
+//����locator�ο�λ��
+
+CreateLocator;
+rename "locator1" "AutoIKFK_Elbow_R_Loc";
+CreateLocator;
+rename "locator1" "AutoIKFK_Shoulder_R_Loc";
+CreateLocator;
+rename "locator1" "AutoIKFK_Wrist_R_Loc";
+group -n "AutoIKFK_Elbow_R_Loc_Cn" AutoIKFK_Elbow_R_Loc;
+group -n "AutoIKFK_Wrist_R_Loc_Cn" AutoIKFK_Wrist_R_Loc;
+group -n "AutoIKFK_Shoulder_R_Loc_Cn" AutoIKFK_Shoulder_R_Loc;
+
+pointConstraint -w 1 Shoulder_R_Jnt AutoIKFK_Shoulder_R_Loc_Cn;
+pointConstraint -w 1 Elbow_R_Jnt AutoIKFK_Elbow_R_Loc_Cn;
+pointConstraint -w 1 Wrist_R_Jnt AutoIKFK_Wrist_R_Loc_Cn;
+connectAttr -f Shoulder_R_Jnt.rotate AutoIKFK_Shoulder_R_Loc.rotate;
+connectAttr -f Elbow_R_Jnt.rotate AutoIKFK_Elbow_R_Loc.rotate;
+connectAttr -f Wrist_R_Jnt.rotate AutoIKFK_Wrist_R_Loc.rotate;
+
+
+parent AutoIKFK_Elbow_R_Loc_Cn N_Ctl_All;
+parent AutoIKFK_Wrist_R_Loc_Cn N_Ctl_All;
+parent AutoIKFK_Shoulder_R_Loc_Cn N_Ctl_All;
+parentConstraint -w 1 Wrist_R_Jnt Arm_R_Auto;
+parent Arm_R_Auto N_Ctl_All;
+//�������ֲο�locator
+
+
+setAttr "AutoIKFK_Wrist_R_Loc_Cn.visibility" 0;
+setAttr "AutoIKFK_Elbow_R_Loc_Cn.visibility" 0;
+setAttr "AutoIKFK_Shoulder_R_Loc_Cn.visibility" 0;
+
+setAttr -lock true "AutoIKFK_Wrist_R_Loc_Cn.v";
+setAttr -lock true "AutoIKFK_Wrist_R_Loc_Cn.v";
+setAttr -lock true "AutoIKFK_Shoulder_R_Loc_Cn.v";
+select Arm_R_Auto;
+lockChannAll;
+
+
+//����locator�ο�λ��
+CreateLocator;
+rename "locator1" "AutoIKFK_Elbow_L_Loc";
+CreateLocator;
+rename "locator1" "AutoIKFK_Shoulder_L_Loc";
+CreateLocator;
+rename "locator1" "AutoIKFK_Wrist_L_Loc";
+CreateLocator;
+rename "locator1" "AutoIKFK_IKHandRo_L_Loc";
+$AutoIKFK_IKHandRo_L_LocParent = `parentConstraint -w 1 N_Hand_IK_L_Ctl AutoIKFK_IKHandRo_L_Loc`;
+delete $AutoIKFK_IKHandRo_L_LocParent;
+parent AutoIKFK_IKHandRo_L_Loc N_Hand_FK_L_Ctl;
+
+group -n "AutoIKFK_Elbow_L_Loc_Cn" AutoIKFK_Elbow_L_Loc;
+group -n "AutoIKFK_Wrist_L_Loc_Cn" AutoIKFK_Wrist_L_Loc;
+group -n "AutoIKFK_Shoulder_L_Loc_Cn" AutoIKFK_Shoulder_L_Loc;
+
+pointConstraint -w 1 Shoulder_L_Jnt AutoIKFK_Shoulder_L_Loc_Cn;
+pointConstraint -w 1 Elbow_L_Jnt AutoIKFK_Elbow_L_Loc_Cn;
+pointConstraint -w 1 Wrist_L_Jnt AutoIKFK_Wrist_L_Loc_Cn;
+connectAttr -f Shoulder_L_Jnt.rotate AutoIKFK_Shoulder_L_Loc.rotate;
+connectAttr -f Elbow_L_Jnt.rotate AutoIKFK_Elbow_L_Loc.rotate;
+connectAttr -f Wrist_L_Jnt.rotate AutoIKFK_Wrist_L_Loc.rotate;
+
+
+parent AutoIKFK_Elbow_L_Loc_Cn N_Ctl_All;
+parent AutoIKFK_Wrist_L_Loc_Cn N_Ctl_All;
+parent AutoIKFK_Shoulder_L_Loc_Cn N_Ctl_All;
+parentConstraint -w 1 Wrist_L_Jnt Arm_L_Auto;
+parent Arm_L_Auto N_Ctl_All;
+
+//����locator�ο�����
+setAttr "AutoIKFK_Wrist_L_Loc_Cn.visibility" 0;
+setAttr "AutoIKFK_Elbow_L_Loc_Cn.visibility" 0;
+setAttr "AutoIKFK_Shoulder_L_Loc_Cn.visibility" 0;
+
+setAttr -lock true "AutoIKFK_Wrist_L_Loc_Cn.v";
+setAttr -lock true "AutoIKFK_Wrist_L_Loc_Cn.v";
+setAttr -lock true "AutoIKFK_Shoulder_L_Loc_Cn.v";
+
+select Arm_L_Auto;
+lockChannAll;
+setAttr AutoIKFK_IKHandRo_L_Loc.v 0;
+setAttr -lock true -keyable false "AutoIKFK_IKHandRo_L_Loc.v";
+}
+
+
+//ikfkת����������״����
+
+global proc Scapula_CvpointT()
+{
+$selCtlCv = `ls -sl`;
+select ($selCtlCv[0] + (".cv[0:31]"));
+
+$sel = `ls -sl`;
+
+$armCvPointT = `xform -q -os -t $sel`;
+
+for ($i=0;$i<32;$i++)
+{
+setAttr ($selCtlCv[1]+".cv["+$i+"]") (-($armCvPointT[$i*3])) (-($armCvPointT[($i*3+1)])) (-($armCvPointT[($i*3+2)]));
+}
+}
+
+global proc ArmFoot_IKFK_CvpointT()
+{
+$selCtlCv = `ls -sl`;
+select ($selCtlCv[0] + (".cv[0:4]")) ;
+
+$sel = `ls -sl`;
+
+$armCvPointT = `xform -q -os -t $sel`;
+
+setAttr ($selCtlCv[1]+".cv[0]") (-$armCvPointT[0]) ($armCvPointT[1]) ($armCvPointT[2]);
+setAttr ($selCtlCv[1]+".cv[1]") (-$armCvPointT[3]) ($armCvPointT[4]) ($armCvPointT[5]);
+setAttr ($selCtlCv[1]+".cv[2]") (-$armCvPointT[6]) ($armCvPointT[7]) ($armCvPointT[8]);
+setAttr ($selCtlCv[1]+".cv[3]") (-$armCvPointT[9]) ($armCvPointT[10]) ($armCvPointT[11]);
+setAttr ($selCtlCv[1]+".cv[4]") (-$armCvPointT[12]) ($armCvPointT[13]) ($armCvPointT[14]);
+
+}
+global proc Foot_IKFK_CvpointT()
+{
+$selCtlCv = `ls -sl`;
+select ($selCtlCv[0] + (".cv[0:4]")) ;
+
+$sel = `ls -sl`;
+
+$armCvPointT = `xform -q -os -t $sel`;
+
+setAttr ($selCtlCv[1]+".cv[0]") (-$armCvPointT[0]) (-$armCvPointT[1]) (-$armCvPointT[2]);
+setAttr ($selCtlCv[1]+".cv[1]") (-$armCvPointT[3]) (-$armCvPointT[4]) (-$armCvPointT[5]);
+setAttr ($selCtlCv[1]+".cv[2]") (-$armCvPointT[6]) (-$armCvPointT[7]) (-$armCvPointT[8]);
+setAttr ($selCtlCv[1]+".cv[3]") (-$armCvPointT[9]) (-$armCvPointT[10]) (-$armCvPointT[11]);
+setAttr ($selCtlCv[1]+".cv[4]") (-$armCvPointT[12]) (-$armCvPointT[13]) (-$armCvPointT[14]);
+
+}
+
+global proc Foot_IK_CvpointT()
+{
+$selCtlCv = `ls -sl`;
+select ($selCtlCv[0] + (".cv[0:4]")) ;
+
+$sel = `ls -sl`;
+
+$armCvPointT = `xform -q -os -t  $sel`;
+
+setAttr ($selCtlCv[1]+".cv[0]") (-$armCvPointT[0]) ($armCvPointT[1]) ($armCvPointT[2]);
+setAttr ($selCtlCv[1]+".cv[1]") (-$armCvPointT[3]) ($armCvPointT[4]) ($armCvPointT[5]);
+setAttr ($selCtlCv[1]+".cv[2]") (-$armCvPointT[6]) ($armCvPointT[7]) ($armCvPointT[8]);
+setAttr ($selCtlCv[1]+".cv[3]") (-$armCvPointT[9]) ($armCvPointT[10]) ($armCvPointT[11]);
+setAttr ($selCtlCv[1]+".cv[4]") (-$armCvPointT[12]) ($armCvPointT[13]) ($armCvPointT[14]);
+
+}
+
+
+global proc Arm_IK_CvpointT()
+{
+$selCtlCv = `ls -sl`;
+select ($selCtlCv[0] + (".cv[0:4]")) ;
+
+$sel = `ls -sl`;
+
+$armCvPointT = `xform -q -os -t  $sel`;
+
+setAttr ($selCtlCv[1]+".cv[0]") (-$armCvPointT[0]) ($armCvPointT[1]) ($armCvPointT[2]);
+setAttr ($selCtlCv[1]+".cv[1]") (-$armCvPointT[3]) ($armCvPointT[4]) ($armCvPointT[5]);
+setAttr ($selCtlCv[1]+".cv[2]") (-$armCvPointT[6]) ($armCvPointT[7]) ($armCvPointT[8]);
+setAttr ($selCtlCv[1]+".cv[3]") (-$armCvPointT[9]) ($armCvPointT[10]) ($armCvPointT[11]);
+setAttr ($selCtlCv[1]+".cv[4]") (-$armCvPointT[12]) ($armCvPointT[13]) ($armCvPointT[14]);
+
+}
+
+
+global proc ArmFoot_FK_CvpointT()
+{
+$selCtlCv = `ls -sl`;
+select ($selCtlCv[0] + (".cv[0:7]")) ;
+
+$sel = `ls -sl`;
+
+$armCvPointT = `xform -q -os -t $sel`;
+
+setAttr ($selCtlCv[1]+".cv[4]") (-$armCvPointT[0]) (-$armCvPointT[1]) (-$armCvPointT[2]);
+setAttr ($selCtlCv[1]+".cv[5]") (-$armCvPointT[3]) (-$armCvPointT[4]) (-$armCvPointT[5]);
+setAttr ($selCtlCv[1]+".cv[6]") (-$armCvPointT[6]) (-$armCvPointT[7]) (-$armCvPointT[8]);
+setAttr ($selCtlCv[1]+".cv[7]") (-$armCvPointT[9]) (-$armCvPointT[10]) (-$armCvPointT[11]);
+setAttr ($selCtlCv[1]+".cv[0]") (-$armCvPointT[12]) (-$armCvPointT[13]) (-$armCvPointT[14]);
+setAttr ($selCtlCv[1]+".cv[1]") (-$armCvPointT[15]) (-$armCvPointT[16]) (-$armCvPointT[17]);
+setAttr ($selCtlCv[1]+".cv[2]") (-$armCvPointT[18]) (-$armCvPointT[19]) (-$armCvPointT[20]);
+setAttr ($selCtlCv[1]+".cv[3]") (-$armCvPointT[21]) (-$armCvPointT[22]) (-$armCvPointT[23]);
+}
+////////////////////////////////////////////////////////////////
+
+global proc CtlRighttoLeft()
+{
+select N_Shoulder_Fk_R_Ctl N_Shoulder_Fk_L_Ctl; ArmFoot_FK_CvpointT;
+select N_Elbow_FK_R_Ctl N_Elbow_FK_L_Ctl; ArmFoot_FK_CvpointT; 
+select N_Hand_FK_R_Ctl N_Hand_FK_L_Ctl; ArmFoot_FK_CvpointT;
+
+select N_TF_R_01_Ctl N_TF_L_01_Ctl; ArmFoot_FK_CvpointT;
+select N_TF_R_02_Ctl N_TF_L_02_Ctl; ArmFoot_FK_CvpointT;
+select N_TF_R_03_Ctl N_TF_L_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_IF_R_01_Ctl N_IF_L_01_Ctl; ArmFoot_FK_CvpointT;
+select N_IF_R_02_Ctl N_IF_L_02_Ctl; ArmFoot_FK_CvpointT;
+select N_IF_R_03_Ctl N_IF_L_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_MF_R_01_Ctl N_MF_L_01_Ctl; ArmFoot_FK_CvpointT;
+select N_MF_R_02_Ctl N_MF_L_02_Ctl; ArmFoot_FK_CvpointT;
+select N_MF_R_03_Ctl N_MF_L_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_RF_R_01_Ctl N_RF_L_01_Ctl; ArmFoot_FK_CvpointT;
+select N_RF_R_02_Ctl N_RF_L_02_Ctl; ArmFoot_FK_CvpointT;
+select N_RF_R_03_Ctl N_RF_L_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_PF_R_01_Ctl N_PF_L_01_Ctl; ArmFoot_FK_CvpointT; 
+select N_PF_R_02_Ctl N_PF_L_02_Ctl; ArmFoot_FK_CvpointT;
+select N_PF_R_03_Ctl N_PF_L_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_Hip_FK_R_Ctl N_Hip_FK_L_Ctl; ArmFoot_FK_CvpointT;
+select N_Knee_FK_R_Ctl N_Knee_FK_L_Ctl; ArmFoot_FK_CvpointT;
+select N_Ankle_FK_R_Ctl N_Ankle_FK_L_Ctl; ArmFoot_FK_CvpointT;
+select N_Toe_FK_R_Ctl N_Toe_FK_L_Ctl; ArmFoot_FK_CvpointT;
+
+
+select N_Hand_IK_R_Ctl N_Hand_IK_L_Ctl; Arm_IK_CvpointT;
+select N_Foot_IK_R_Ctl N_Foot_IK_L_Ctl; Foot_IK_CvpointT;
+
+select N_Hand_IKFk_R_Ctl N_Hand_IKFk_L_Ctl; ArmFoot_IKFK_CvpointT;
+select N_Foot_IKFk_R_Ctl N_Foot_IKFk_L_Ctl; Foot_IKFK_CvpointT;
+
+select  N_Scapula_R_Ctl  N_Scapula_L_Ctl ; Scapula_CvpointT;
+
+select -cl;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+global proc CtlLefttoRight()
+{
+select N_Shoulder_Fk_L_Ctl N_Shoulder_Fk_R_Ctl; ArmFoot_FK_CvpointT;
+select N_Elbow_FK_L_Ctl N_Elbow_FK_R_Ctl; ArmFoot_FK_CvpointT; 
+select N_Hand_FK_L_Ctl N_Hand_FK_R_Ctl; ArmFoot_FK_CvpointT;
+
+select N_TF_L_01_Ctl N_TF_R_01_Ctl; ArmFoot_FK_CvpointT;
+select N_TF_L_02_Ctl N_TF_R_02_Ctl; ArmFoot_FK_CvpointT;
+select N_TF_L_03_Ctl N_TF_R_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_IF_L_01_Ctl N_IF_R_01_Ctl; ArmFoot_FK_CvpointT;
+select N_IF_L_02_Ctl N_IF_R_02_Ctl; ArmFoot_FK_CvpointT;
+select N_IF_L_03_Ctl N_IF_R_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_MF_L_01_Ctl N_MF_R_01_Ctl; ArmFoot_FK_CvpointT;
+select N_MF_L_02_Ctl N_MF_R_02_Ctl; ArmFoot_FK_CvpointT;
+select N_MF_L_03_Ctl N_MF_R_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_RF_L_01_Ctl N_RF_R_01_Ctl; ArmFoot_FK_CvpointT;
+select N_RF_L_02_Ctl N_RF_R_02_Ctl; ArmFoot_FK_CvpointT;
+select N_RF_L_03_Ctl N_RF_R_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_PF_L_01_Ctl N_PF_R_01_Ctl; ArmFoot_FK_CvpointT; 
+select N_PF_L_02_Ctl N_PF_R_02_Ctl; ArmFoot_FK_CvpointT;
+select N_PF_L_03_Ctl N_PF_R_03_Ctl; ArmFoot_FK_CvpointT;
+
+select N_Hip_FK_L_Ctl N_Hip_FK_R_Ctl; ArmFoot_FK_CvpointT;
+select N_Knee_FK_L_Ctl N_Knee_FK_R_Ctl; ArmFoot_FK_CvpointT;
+select N_Ankle_FK_L_Ctl N_Ankle_FK_R_Ctl; ArmFoot_FK_CvpointT;
+select N_Toe_FK_L_Ctl N_Toe_FK_R_Ctl; ArmFoot_FK_CvpointT;
+
+
+select N_Hand_IK_L_Ctl N_Hand_IK_R_Ctl; Arm_IK_CvpointT;
+select N_Foot_IK_L_Ctl N_Foot_IK_R_Ctl; Foot_IK_CvpointT;
+
+select N_Hand_IKFk_L_Ctl N_Hand_IKFk_R_Ctl; ArmFoot_IKFK_CvpointT;
+select N_Foot_IKFk_L_Ctl N_Foot_IKFk_R_Ctl; Foot_IKFK_CvpointT;
+
+select  N_Scapula_L_Ctl  N_Scapula_R_Ctl ; Scapula_CvpointT;
+
+select -cl;
+
+}
+
+
+
+
+global proc WP_renameSelectedShape()
+{//WP_renameSelectedShape
+	string $objects[] = `ls -sl`;
+
+	string $objTransform;
+	for ($objTransform in $objects)
+	{
+	
+		string $shapes[] = `listRelatives -s -f $objTransform`;
+		
+		string $pathTransNodes[];
+		int $numTokens = tokenize($objTransform, "|", $pathTransNodes);
+		string $myTransObj = $pathTransNodes[$numTokens - 1];
+		
+		string $obj;
+		int $num = 1;
+		
+		for ($obj in $shapes)
+		{
+			string $newShapeName = ($myTransObj + "_Shape" + $num);
+			rename $obj $newShapeName;
+			$num += 1;
+		}
+	}
+}//WP_renameSelectedShape
+
+global proc WP_SearchAndRename()
+{
+    string $search = `textFieldGrp -q -tx WP_SearchAndReplace_SearchTFG`;
+	string $replace = `textFieldGrp -q -tx WP_SearchAndReplace_ReplaceTFG`;
+	string $options = `radioButtonGrp -q -sl WP_SearchAndReplace_OptionRBG`;
+	
+	if ($options == 1)
+	{
+			searchReplaceNames $search $replace "hierarchy";
+	}
+	
+	else if ($options == 2)
+	{
+			searchReplaceNames $search $replace "selected";
+	}
+	
+	else if ($options == 3)
+	{
+			searchReplaceNames $search $replace "all";
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

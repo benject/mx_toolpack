@@ -1,0 +1,967 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::graph_coloring_faces",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-393.614 790.677"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-147.679 795.081"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#3a6d4f"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Generate a mesh plane."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-1493.06 466.392 278.476 277.792"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#626d3b"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Compute neighborship data."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-1160.08 595.619 320.093 358.597"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Applies color labels to a set of component. \nEnsures neighbors can not share the same color label,\nwhile trying to use the minimum number of colors."
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d3d4c"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-794.318 611.885 329.995 293.268"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop3",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Apply per component diagnostic color using the color labels."
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#3c696d"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-434 411.324 524.078 339.67"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-1285.84 274.645 1183.22 862.738"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Geometry::Common,compute_graph_coloring"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "output"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Geometry::Mesh,update_point_neighbors"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,array_size"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Simulation::Common,force_pull_port"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "Applies color labels to a set of component. Graph coloring ensures two neighbors can not have the same color label, while trying to use the minimum number of colors."
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "graph_coloring_faces_thumb.png"
+                }
+            ],
+            "ports": [],
+            "compounds": [
+                {
+                    "name": "diagnostic_face_coloring",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-483.29 228.84"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "geometry"
+                                                        },
+                                                        {
+                                                            "metaName": "colors"
+                                                        },
+                                                        {
+                                                            "metaName": "color_seed"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "985.887 264.719"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "out_geometry"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-563.235 -168.598 1854.62 1133.14"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "geometry",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "colors",
+                            "portDirection": "input",
+                            "portType": "array<long>"
+                        },
+                        {
+                            "portName": "color_seed",
+                            "portDirection": "input",
+                            "portType": "long"
+                        },
+                        {
+                            "portName": "out_geometry",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compounds": [
+                        {
+                            "name": "compute_per_face_vertex_color",
+                            "metadata": [
+                                {
+                                    "metaName": "icon",
+                                    "metaType": "string",
+                                    "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                                },
+                                {
+                                    "metaName": "icon",
+                                    "metaType": "string",
+                                    "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                                },
+                                {
+                                    "metaName": "icon",
+                                    "metaType": "string",
+                                    "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,increment"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Array,array_size"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Array,resize_array"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Randomization,random_value"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Array,get_from_array"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "-694.205 -28.1746"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "max_iterations"
+                                                                },
+                                                                {
+                                                                    "metaName": "current_index"
+                                                                },
+                                                                {
+                                                                    "metaName": "face_vertex"
+                                                                },
+                                                                {
+                                                                    "metaName": "face_offset"
+                                                                },
+                                                                {
+                                                                    "metaName": "out_color"
+                                                                },
+                                                                {
+                                                                    "metaName": "seed"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "502.792 -40.0883"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "color"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-774 -394.484 1581 965.967"
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "max_iterations",
+                                    "portDirection": "input",
+                                    "portType": "long",
+                                    "portIterationLimit": "true"
+                                },
+                                {
+                                    "portName": "current_index",
+                                    "portDirection": "input",
+                                    "portType": "long",
+                                    "portIterationCounter": "true"
+                                },
+                                {
+                                    "portName": "face_vertex",
+                                    "portDirection": "input"
+                                },
+                                {
+                                    "portName": "face_offset",
+                                    "portDirection": "input"
+                                },
+                                {
+                                    "portName": "out_color",
+                                    "portDirection": "input",
+                                    "portIterationTarget": "true"
+                                },
+                                {
+                                    "portName": "seed",
+                                    "portDirection": "input",
+                                    "portType": "long"
+                                },
+                                {
+                                    "portName": "color",
+                                    "portDirection": "output",
+                                    "portType": "array<array<Math::float3>>",
+                                    "portIterationTarget": "true"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "get_face_vertex_indices",
+                                    "nodeType": "MJCG::Geometry::Mesh::get_face_vertex_indices",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-314.134 -135.017"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "random_value",
+                                    "nodeType": "Core::Randomization::random_value",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-37.1416 90.9299"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "resize_array",
+                                    "nodeType": "Core::Array::resize_array",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "240.944 -56.9261"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "array_size",
+                                    "nodeType": "Core::Array::array_size",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-42.6854 -107.805"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "get_face_vertex_indices.face_vertex_indices",
+                                    "target": "array_size.array"
+                                },
+                                {
+                                    "source": "random_value.random_value",
+                                    "target": "resize_array.default"
+                                },
+                                {
+                                    "source": "array_size.size",
+                                    "target": "resize_array.new_size"
+                                },
+                                {
+                                    "source": ".current_index",
+                                    "target": "get_face_vertex_indices.face_index"
+                                },
+                                {
+                                    "source": ".face_vertex",
+                                    "target": "get_face_vertex_indices.face_vertex"
+                                },
+                                {
+                                    "source": ".face_offset",
+                                    "target": "get_face_vertex_indices.face_offset"
+                                },
+                                {
+                                    "source": ".out_color",
+                                    "target": "random_value.index"
+                                },
+                                {
+                                    "source": "resize_array.resized",
+                                    "target": ".color"
+                                },
+                                {
+                                    "source": ".seed",
+                                    "target": "random_value.seed"
+                                }
+                            ],
+                            "values": [
+                                {
+                                    "valueName": "get_face_vertex_indices.face_index",
+                                    "valueType": "long",
+                                    "value": "4"
+                                },
+                                {
+                                    "valueName": "random_value.index",
+                                    "valueType": "long",
+                                    "value": "0"
+                                },
+                                {
+                                    "valueName": "random_value.min",
+                                    "valueType": "Math::float3",
+                                    "value": {
+                                        "x": "0f",
+                                        "y": "0f",
+                                        "z": "0f"
+                                    }
+                                },
+                                {
+                                    "valueName": "random_value.max",
+                                    "valueType": "Math::float3",
+                                    "value": {
+                                        "x": "1f",
+                                        "y": "1f",
+                                        "z": "1f"
+                                    }
+                                },
+                                {
+                                    "valueName": "random_value.seed",
+                                    "valueType": "long",
+                                    "value": "0"
+                                }
+                            ],
+                            "reservedNodeNames": [
+                                {
+                                    "name": "input"
+                                },
+                                {
+                                    "name": "output"
+                                }
+                            ],
+                            "forEachCompound": {
+                                "ports": []
+                            }
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "compute_per_face_vertex_color",
+                            "nodeType": "compute_per_face_vertex_color",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "136.265 349.486"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "assign_diagnostic_material",
+                            "nodeType": "Diagnostic::Display::assign_diagnostic_material",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "672.37 237.835"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "disconnect_mesh_faces",
+                            "nodeType": "Modeling::Mesh::disconnect_mesh_faces",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "124.282 99.5915"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "flatten_nested_array",
+                            "nodeType": "Core::Array::flatten_nested_array",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "406.652 352.384"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "get_mesh_structure",
+                            "nodeType": "Geometry::Mesh::get_mesh_structure",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-161.399 350.486"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "disconnect_mesh_faces.disconnected_mesh",
+                            "target": "assign_diagnostic_material.geometry"
+                        },
+                        {
+                            "source": "flatten_nested_array.flattened_array",
+                            "target": "assign_diagnostic_material.emission_color"
+                        },
+                        {
+                            "source": ".geometry",
+                            "target": "disconnect_mesh_faces.mesh"
+                        },
+                        {
+                            "source": "get_mesh_structure.face_count",
+                            "target": "compute_per_face_vertex_color.max_iterations"
+                        },
+                        {
+                            "source": "get_mesh_structure.face_vertex",
+                            "target": "compute_per_face_vertex_color.face_vertex"
+                        },
+                        {
+                            "source": "get_mesh_structure.face_offset",
+                            "target": "compute_per_face_vertex_color.face_offset"
+                        },
+                        {
+                            "source": ".geometry",
+                            "target": "get_mesh_structure.mesh"
+                        },
+                        {
+                            "source": ".color_seed",
+                            "target": "compute_per_face_vertex_color.seed"
+                        },
+                        {
+                            "source": ".colors",
+                            "target": "compute_per_face_vertex_color.out_color"
+                        },
+                        {
+                            "source": "compute_per_face_vertex_color.color",
+                            "target": "flatten_nested_array.nested_array"
+                        },
+                        {
+                            "source": "assign_diagnostic_material.geometry_with_material",
+                            "target": ".out_geometry"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "compute_per_face_vertex_color.max_iterations",
+                            "valueType": "long",
+                            "value": "10"
+                        },
+                        {
+                            "valueName": "compute_per_face_vertex_color.seed",
+                            "valueType": "long",
+                            "value": "16"
+                        },
+                        {
+                            "valueName": "assign_diagnostic_material.specular",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "assign_diagnostic_material.emission",
+                            "valueType": "float",
+                            "value": "1f"
+                        },
+                        {
+                            "valueName": "disconnect_mesh_faces.shrink",
+                            "valueType": "bool",
+                            "value": "false"
+                        },
+                        {
+                            "valueName": "disconnect_mesh_faces.shrink_amount",
+                            "valueType": "float",
+                            "value": "0.0500000007f"
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "create_mesh_plane",
+                    "nodeType": "Modeling::Primitive::create_mesh_plane",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1479.66 498.235"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "update_face_neighbors",
+                    "nodeType": "MJCG::Geometry::Mesh::update_face_neighbors",
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::diagnostic"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1115.42 638.627"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "diagnostic_face_coloring",
+                    "nodeType": "diagnostic_face_coloring",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-408.19 454.457"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "terminal",
+                    "nodeType": "Core::Graph::terminal",
+                    "fanInPortNames": {
+                        "final": [],
+                        "proxy": [
+                            "out_geometry"
+                        ],
+                        "diagnostic": []
+                    },
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::final",
+                        "Core::Graph::terminal::diagnostic"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-150.42 470.659"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "compute_graph_coloring",
+                    "nodeType": "MJCG::Geometry::Common::compute_graph_coloring",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-743.636 682.681"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "create_mesh_plane.plane_mesh",
+                    "target": "update_face_neighbors.mesh"
+                },
+                {
+                    "source": "create_mesh_plane.plane_mesh",
+                    "target": "diagnostic_face_coloring.geometry"
+                },
+                {
+                    "source": "diagnostic_face_coloring.out_geometry",
+                    "target": "terminal.proxy.out_geometry"
+                },
+                {
+                    "source": "update_face_neighbors.face_neighbors",
+                    "target": "compute_graph_coloring.neighbors"
+                },
+                {
+                    "source": "compute_graph_coloring.colored",
+                    "target": "diagnostic_face_coloring.colors"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "create_mesh_plane.length",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "create_mesh_plane.width",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "create_mesh_plane.length_segments",
+                    "valueType": "int",
+                    "value": "25L"
+                },
+                {
+                    "valueName": "create_mesh_plane.width_segments",
+                    "valueType": "int",
+                    "value": "25L"
+                },
+                {
+                    "valueName": "diagnostic_face_coloring.geometry",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "diagnostic_face_coloring.colors",
+                    "valueType": "array<long>",
+                    "value": []
+                },
+                {
+                    "valueName": "diagnostic_face_coloring.color_seed",
+                    "valueType": "long",
+                    "value": "3"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

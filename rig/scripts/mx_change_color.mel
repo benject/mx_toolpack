@@ -1,0 +1,35 @@
+
+global proc mx_changeColorUI(){
+	
+	string $colorIndex ;
+
+	if(`window -exists mx_changeColor_ui`) { deleteUI mx_changeColor_ui;}
+	window -wh 300 150 mx_changeColor_ui ;
+	columnLayout ;
+	
+
+	$colorIndex =`colorIndexSliderGrp -w 300 -h 40 -min 0 -max 32 -value 1  `;
+	
+	button -w 300 -h 30 -l "set color" -c ($index =("mx_changeColor_fun " +$colorIndex));
+	
+	showWindow;
+}
+global proc mx_changeColor_fun(string $colorIndex ){
+	
+	int $index =`colorIndexSliderGrp -q -value $colorIndex`-1;
+	$index =` clamp 0 32 $index`;
+	int $status = 0 ; 
+	string $shape[];
+
+	$sel =`ls -sl`;
+	for ($obj in $sel){
+		$shape =`listRelatives -c $obj`;
+		$status =1;
+		print $status ;
+		setAttr ($shape[0]+".overrideEnabled") $status;		
+		setAttr ($shape[0]+".overrideColor") $index  ;
+	}	
+	
+}
+
+mx_changeColorUI;

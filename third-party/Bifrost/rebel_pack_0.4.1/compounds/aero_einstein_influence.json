@@ -1,0 +1,2766 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///insert_child_object.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///add_influence_property.json"
+        },
+        {
+            "uri": "file:///influence_set_property.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        },
+        {
+            "uri": "file:///create_tagged_object.json"
+        },
+        {
+            "uri": "file:///vorticity_force.json"
+        },
+        {
+            "uri": "file:///vorticity_influence.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Simulation::Influence::aero_einstein_influence",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../docs/${language}/aero_einstein_influence.md"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "10 551"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "enable"
+                                                },
+                                                {
+                                                    "metaName": "master_magnitude"
+                                                },
+                                                {
+                                                    "metaName": "frequency_scale"
+                                                },
+                                                {
+                                                    "metaName": "fine_turbulence"
+                                                },
+                                                {
+                                                    "metaName": "fine_turbulence_speed"
+                                                },
+                                                {
+                                                    "metaName": "coarse_turbulence"
+                                                },
+                                                {
+                                                    "metaName": "coarse_turbulence_speed"
+                                                },
+                                                {
+                                                    "metaName": "vorticity"
+                                                },
+                                                {
+                                                    "metaName": "velocity_threshold"
+                                                },
+                                                {
+                                                    "metaName": "influence"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "4080.9 624.78"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_turbulence"
+                                                },
+                                                {
+                                                    "metaName": "out_vorticity"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"General\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    },\n                    {\n                        \"port\": \"master_magnitude\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Turbulence\",\n                \"items\": [\n                    {\n                        \"port\": \"fine_turbulence\"\n                    },\n                    {\n                        \"port\": \"fine_turbulence_speed\"\n                    },\n                    {\n                        \"port\": \"coarse_turbulence\"\n                    },\n                    {\n                        \"port\": \"coarse_turbulence_speed\"\n                    },\n                    {\n                        \"port\": \"frequency_scale\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Vorticity\",\n                \"items\": [\n                    {\n                        \"port\": \"vorticity\"\n                    },\n                    {\n                        \"port\": \"velocity_threshold\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "PortExpandedState",
+                    "metadata": [
+                        {
+                            "metaName": "General",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "Turbulence",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "Vorticity",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,multiply"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "output"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,build_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,clamp"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "27.0491 -249.838 2600.73 1286.83"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "580.698 367.569"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPackExperimental.svg"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "enable",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "master_magnitude",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "2.5f"
+                },
+                {
+                    "portName": "frequency_scale",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "fine_turbulence",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.75f"
+                },
+                {
+                    "portName": "fine_turbulence_speed",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "coarse_turbulence",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.0299999993f"
+                },
+                {
+                    "portName": "coarse_turbulence_speed",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.25f"
+                },
+                {
+                    "portName": "vorticity",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.5f"
+                },
+                {
+                    "portName": "velocity_threshold",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "20f"
+                },
+                {
+                    "portName": "influence",
+                    "portDirection": "input",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "out_turbulence",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "out_vorticity",
+                    "portDirection": "output"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "modulate_influence",
+                    "metadata": [
+                        {
+                            "metaName": "documentation",
+                            "metaType": "string",
+                            "metaValue": "../docs/${language}/modulate_influence.md"
+                        },
+                        {
+                            "metaName": "UILayout",
+                            "metaType": "string",
+                            "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Modulate Properties\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    },\n                    {\n                        \"port\": \"property\"\n                    },\n                    {\n                        \"port\": \"use_gradient\"\n                    },\n                    {\n                        \"port\": \"min\"\n                    },\n                    {\n                        \"port\": \"max\"\n                    },\n                    {\n                        \"port\": \"invert\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-30.5 59"
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-311.209 -517.176 2093.88 1570.78"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,length"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,power"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,square_root"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,multiply"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Fields,scalar_field"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "10 274"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "influence"
+                                                        },
+                                                        {
+                                                            "metaName": "enable"
+                                                        },
+                                                        {
+                                                            "metaName": "property"
+                                                        },
+                                                        {
+                                                            "metaName": "use_gradient"
+                                                        },
+                                                        {
+                                                            "metaName": "min"
+                                                        },
+                                                        {
+                                                            "metaName": "max"
+                                                        },
+                                                        {
+                                                            "metaName": "invert"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "2450 9"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "out_influence"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "influence",
+                            "portDirection": "input",
+                            "portType": "Amino::Object",
+                            "metadata": [
+                                {
+                                    "metaName": "quick_create",
+                                    "metaType": "string",
+                                    "metaValue": "Simulation::Influence::dissipation_influence;Simulation::Influence::modifier_influence;Simulation::Influence::modulate_influence;Simulation::Influence::turbulence_influence;Simulation::Influence::wind_influence"
+                                }
+                            ]
+                        },
+                        {
+                            "portName": "enable",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "property",
+                            "portDirection": "input",
+                            "portType": "string"
+                        },
+                        {
+                            "portName": "use_gradient",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "min",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "max",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "invert",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "out_influence",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compounds": [
+                        {
+                            "name": "append_influence",
+                            "metadata": [
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-70 -204.66 1301 714.32"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "enable"
+                                                                },
+                                                                {
+                                                                    "metaName": "influence"
+                                                                },
+                                                                {
+                                                                    "metaName": "insert"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "output"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "enable",
+                                    "portDirection": "input",
+                                    "portType": "bool"
+                                },
+                                {
+                                    "portName": "influence",
+                                    "portDirection": "input",
+                                    "portType": "Amino::Object"
+                                },
+                                {
+                                    "portName": "insert",
+                                    "portDirection": "input",
+                                    "portType": "Amino::Object"
+                                },
+                                {
+                                    "portName": "output",
+                                    "portDirection": "output"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "if",
+                                    "nodeType": "Core::Logic::if",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "620 49"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "insert_child_object",
+                                    "nodeType": "Simulation::Influence::Internal::Object_Link_List::insert_child_object",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "315 9"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "if.output",
+                                    "target": ".output"
+                                },
+                                {
+                                    "source": "insert_child_object.out",
+                                    "target": "if.true_case"
+                                },
+                                {
+                                    "source": ".enable",
+                                    "target": "if.condition"
+                                },
+                                {
+                                    "source": ".influence",
+                                    "target": "if.false_case"
+                                },
+                                {
+                                    "source": ".influence",
+                                    "target": "insert_child_object.child"
+                                },
+                                {
+                                    "source": ".insert",
+                                    "target": "insert_child_object.in"
+                                }
+                            ],
+                            "values": []
+                        },
+                        {
+                            "name": "mask_within_range",
+                            "metadata": [
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,subtract"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Fields,scalar_field"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Logic,if"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,power"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,clamp"
+                                },
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-70.1123 -395.636 3131.47 1358.33"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "10 204"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "property_field"
+                                                                },
+                                                                {
+                                                                    "metaName": "min"
+                                                                },
+                                                                {
+                                                                    "metaName": "max"
+                                                                },
+                                                                {
+                                                                    "metaName": "invert"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "2755 53"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "mask_field"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "property_field",
+                                    "portDirection": "input",
+                                    "portType": "Core::Fields::ScalarField"
+                                },
+                                {
+                                    "portName": "min",
+                                    "portDirection": "input",
+                                    "portType": "float"
+                                },
+                                {
+                                    "portName": "max",
+                                    "portDirection": "input",
+                                    "portType": "float"
+                                },
+                                {
+                                    "portName": "invert",
+                                    "portDirection": "input",
+                                    "portType": "bool"
+                                },
+                                {
+                                    "portName": "mask_field",
+                                    "portDirection": "output",
+                                    "portType": "Core::Fields::ScalarField"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "subtract",
+                                    "nodeType": "Core::Math::subtract",
+                                    "multiInPortNames": [
+                                        "max",
+                                        "min"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "315 321"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "scalar_field",
+                                    "nodeType": "Core::Fields::scalar_field",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1230 340"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "smallValue",
+                                    "valueType": "float",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "620 379"
+                                        },
+                                        {
+                                            "metaName": "valuenode_defaultvalue",
+                                            "metaType": "string",
+                                            "metaValue": "1e-05"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "equalZero",
+                                    "nodeType": "Core::Logic::equal",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "620 160"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "if3",
+                                    "nodeType": "Core::Logic::if",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "925 332"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "divide",
+                                    "nodeType": "Core::Math::divide",
+                                    "multiInPortNames": [
+                                        "distance_field",
+                                        "scalar_field"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1535 200"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "scalar_field_1",
+                                    "nodeType": "Core::Fields::scalar_field",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1840 12"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "subtract1",
+                                    "nodeType": "Core::Math::subtract",
+                                    "multiInPortNames": [
+                                        "scalar_field",
+                                        "output1"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "2145 10"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "clamp",
+                                    "nodeType": "Core::Math::clamp",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1840 207"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "if",
+                                    "nodeType": "Core::Logic::if",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "2450 53"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "scalar_field1",
+                                    "nodeType": "Core::Fields::scalar_field",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "925 136"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "subtract2",
+                                    "nodeType": "Core::Math::subtract",
+                                    "multiInPortNames": [
+                                        "property_field",
+                                        "scalar_field"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1230 97"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "subtract.output",
+                                    "target": "equalZero.first"
+                                },
+                                {
+                                    "source": "subtract.output",
+                                    "target": "if3.false_case"
+                                },
+                                {
+                                    "source": "scalar_field.scalar_field",
+                                    "target": "divide.first.scalar_field"
+                                },
+                                {
+                                    "source": "smallValue.output",
+                                    "target": "if3.true_case"
+                                },
+                                {
+                                    "source": "equalZero.output",
+                                    "target": "if3.condition"
+                                },
+                                {
+                                    "source": "if3.output",
+                                    "target": "scalar_field.value"
+                                },
+                                {
+                                    "source": "divide.output",
+                                    "target": "clamp.value"
+                                },
+                                {
+                                    "source": "scalar_field_1.scalar_field",
+                                    "target": "subtract1.first.scalar_field"
+                                },
+                                {
+                                    "source": "subtract1.output",
+                                    "target": "if.true_case"
+                                },
+                                {
+                                    "source": "clamp.clamped",
+                                    "target": "subtract1.first.output1"
+                                },
+                                {
+                                    "source": "clamp.clamped",
+                                    "target": "if.false_case"
+                                },
+                                {
+                                    "source": "if.output",
+                                    "target": ".mask_field"
+                                },
+                                {
+                                    "source": "scalar_field1.scalar_field",
+                                    "target": "subtract2.first.scalar_field"
+                                },
+                                {
+                                    "source": "subtract2.output",
+                                    "target": "divide.first.distance_field"
+                                },
+                                {
+                                    "source": ".property_field",
+                                    "target": "subtract2.first.property_field"
+                                },
+                                {
+                                    "source": ".min",
+                                    "target": "subtract.first.min"
+                                },
+                                {
+                                    "source": ".min",
+                                    "target": "scalar_field1.value"
+                                },
+                                {
+                                    "source": ".max",
+                                    "target": "subtract.first.max"
+                                },
+                                {
+                                    "source": ".invert",
+                                    "target": "if.condition"
+                                }
+                            ],
+                            "values": [
+                                {
+                                    "valueName": "scalar_field.value",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                },
+                                {
+                                    "valueName": "smallValue.value",
+                                    "valueType": "float",
+                                    "value": "9.99999975e-06f"
+                                },
+                                {
+                                    "valueName": "equalZero.second",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                },
+                                {
+                                    "valueName": "scalar_field_1.value",
+                                    "valueType": "float",
+                                    "value": "1f"
+                                },
+                                {
+                                    "valueName": "clamp.max",
+                                    "valueType": "float",
+                                    "value": "1f"
+                                },
+                                {
+                                    "valueName": "scalar_field1.value",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                }
+                            ]
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "append_influence",
+                            "nodeType": "append_influence",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "2145 9"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "property_proxy_field",
+                            "nodeType": "Core::Fields::property_proxy_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "620 339"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "mask_within_range",
+                            "nodeType": "mask_within_range",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1535 340"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "set_property",
+                            "nodeType": "Core::Object::set_property",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1840 186"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "if",
+                            "nodeType": "Core::Logic::if",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1230 203"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "gradient_field",
+                            "nodeType": "Core::Fields::gradient_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "673.047 51.1677"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "length",
+                            "nodeType": "Core::Math::length",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "419.58 -37.138"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "voxel_proxy_field",
+                            "nodeType": "Core::Fields::voxel_proxy_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "315 162"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "length1",
+                            "nodeType": "Core::Math::length",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "925 345"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "length2",
+                            "nodeType": "Core::Math::length",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "897.045 -103.379"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "append_influence.output",
+                            "target": ".out_influence"
+                        },
+                        {
+                            "source": "property_proxy_field.property_field",
+                            "target": "length1.vector"
+                        },
+                        {
+                            "source": "mask_within_range.mask_field",
+                            "target": "set_property.value"
+                        },
+                        {
+                            "source": "set_property.out_object",
+                            "target": "append_influence.insert"
+                        },
+                        {
+                            "source": "if.output",
+                            "target": "mask_within_range.property_field"
+                        },
+                        {
+                            "source": "gradient_field.gradient",
+                            "target": "length2.vector"
+                        },
+                        {
+                            "source": "length.length",
+                            "target": "gradient_field.scalar_field"
+                        },
+                        {
+                            "source": "voxel_proxy_field.voxel_field",
+                            "target": "length.vector"
+                        },
+                        {
+                            "source": "length1.length",
+                            "target": "if.false_case"
+                        },
+                        {
+                            "source": "length2.length",
+                            "target": "if.true_case"
+                        },
+                        {
+                            "source": ".influence",
+                            "target": "append_influence.influence"
+                        },
+                        {
+                            "source": ".enable",
+                            "target": "append_influence.enable"
+                        },
+                        {
+                            "source": ".property",
+                            "target": "property_proxy_field.property"
+                        },
+                        {
+                            "source": ".property",
+                            "target": "voxel_proxy_field.property"
+                        },
+                        {
+                            "source": ".use_gradient",
+                            "target": "if.condition"
+                        },
+                        {
+                            "source": ".min",
+                            "target": "mask_within_range.min"
+                        },
+                        {
+                            "source": ".max",
+                            "target": "mask_within_range.max"
+                        },
+                        {
+                            "source": ".invert",
+                            "target": "mask_within_range.invert"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "append_influence.enable",
+                            "valueType": "bool",
+                            "value": "true"
+                        },
+                        {
+                            "valueName": "property_proxy_field.property",
+                            "valueType": "string",
+                            "value": "opacity"
+                        },
+                        {
+                            "valueName": "property_proxy_field.field_type",
+                            "valueType": "Core::Fields::VectorField",
+                            "value": {}
+                        },
+                        {
+                            "valueName": "set_property.key",
+                            "valueType": "string",
+                            "value": "mask"
+                        },
+                        {
+                            "valueName": "voxel_proxy_field.property",
+                            "valueType": "string",
+                            "value": "voxel_signed_distance"
+                        },
+                        {
+                            "valueName": "voxel_proxy_field.interpolation",
+                            "valueType": "Geometry::Query::SamplerType",
+                            "value": "kLinear"
+                        },
+                        {
+                            "valueName": "voxel_proxy_field.field_type",
+                            "valueType": "Core::Fields::VectorField",
+                            "value": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "append_influence",
+                    "metadata": [
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-70 -204.66 1301 714.32"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "enable"
+                                                        },
+                                                        {
+                                                            "metaName": "influence"
+                                                        },
+                                                        {
+                                                            "metaName": "insert"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "enable",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "influence",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "insert",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "output",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "if",
+                            "nodeType": "Core::Logic::if",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "620 49"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "insert_child_object",
+                            "nodeType": "Simulation::Influence::Internal::Object_Link_List::insert_child_object",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "315 9"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "if.output",
+                            "target": ".output"
+                        },
+                        {
+                            "source": "insert_child_object.out",
+                            "target": "if.true_case"
+                        },
+                        {
+                            "source": ".enable",
+                            "target": "if.condition"
+                        },
+                        {
+                            "source": ".influence",
+                            "target": "if.false_case"
+                        },
+                        {
+                            "source": ".influence",
+                            "target": "insert_child_object.child"
+                        },
+                        {
+                            "source": ".insert",
+                            "target": "insert_child_object.in"
+                        }
+                    ],
+                    "values": []
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "modulate_influence",
+                    "nodeType": "modulate_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Modulate Properties",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3032.28 1003.86"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "add",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "output1",
+                        "voxel_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2145 398"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "add1",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "output1",
+                        "voxel_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2450 734"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "advect_field",
+                    "nodeType": "Core::Fields::advect_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1534.46 93.281"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "fractal_turbulence_field",
+                    "nodeType": "Core::Fields::fractal_turbulence_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 42"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "fractal_turbulence_field1",
+                    "nodeType": "Core::Fields::fractal_turbulence_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1840 446"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "influence_set_property",
+                    "nodeType": "Simulation::Influence::influence_set_property",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2755 635"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "influence_set_property1",
+                    "nodeType": "Simulation::Influence::influence_set_property",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2450 491"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "noise_field",
+                        "voxel_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1840 163"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply1",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "noise_field",
+                        "voxel_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2145 666"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply2",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "seconds",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620 400"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply3",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "seconds",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 1094"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "scalar_field",
+                    "nodeType": "Core::Fields::scalar_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 497"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "scalar_field1",
+                    "nodeType": "Core::Fields::scalar_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1535 1054"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "time",
+                    "nodeType": "Core::Time::time",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "315 217"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "time1",
+                    "nodeType": "Core::Time::time",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 906"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "315 460"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value1",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 1149"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.25"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "vorticity_influence",
+                    "nodeType": "Simulation::Influence::vorticity_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Vorticity Properties",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3337.28 973.862"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "voxel_proxy_field1",
+                    "nodeType": "Core::Fields::voxel_proxy_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 381"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value2",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620 10"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.75"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply4",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 11"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value3",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620 878"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply5",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1535 568"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value4",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 624"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.03"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply6",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2984.26 1317.33"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value5",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2450 1289"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply7",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 254"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value6",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620 205"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "30"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value7",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620 683"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value8",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 859"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.25"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply8",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1535 811"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3670 556"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value9",
+                    "valueType": "bool",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3365 474"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "clamp",
+                    "nodeType": "Core::Math::clamp",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1535 325"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "append_influence",
+                    "nodeType": "append_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3060 703"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value10",
+                    "valueType": "bool",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3532.94 781.339"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if1",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "3837.94 863.339"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value11",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925.235 -197.671"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply9",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "frame_length",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1226.06 -215.09"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "multiply.output",
+                    "target": "add.first.output1"
+                },
+                {
+                    "source": "multiply1.output",
+                    "target": "add1.first.output1"
+                },
+                {
+                    "source": "voxel_proxy_field1.voxel_field",
+                    "target": "add1.first.voxel_field"
+                },
+                {
+                    "source": "fractal_turbulence_field.noise_field",
+                    "target": "advect_field.field"
+                },
+                {
+                    "source": "voxel_proxy_field1.voxel_field",
+                    "target": "advect_field.velocity_field"
+                },
+                {
+                    "source": "scalar_field.scalar_field",
+                    "target": "fractal_turbulence_field.time"
+                },
+                {
+                    "source": "scalar_field1.scalar_field",
+                    "target": "fractal_turbulence_field1.time"
+                },
+                {
+                    "source": "influence_set_property1.out_influence",
+                    "target": "influence_set_property.influence"
+                },
+                {
+                    "source": "add1.output",
+                    "target": "influence_set_property.value"
+                },
+                {
+                    "source": "add.output",
+                    "target": "influence_set_property1.value"
+                },
+                {
+                    "source": "fractal_turbulence_field1.noise_field",
+                    "target": "multiply1.first.noise_field"
+                },
+                {
+                    "source": "time.seconds",
+                    "target": "multiply2.first.seconds"
+                },
+                {
+                    "source": "value.output",
+                    "target": "multiply2.first.output1"
+                },
+                {
+                    "source": "time1.seconds",
+                    "target": "multiply3.first.seconds"
+                },
+                {
+                    "source": "value1.output",
+                    "target": "multiply3.first.output1"
+                },
+                {
+                    "source": "multiply2.output",
+                    "target": "scalar_field.value"
+                },
+                {
+                    "source": "multiply3.output",
+                    "target": "scalar_field1.value"
+                },
+                {
+                    "source": "modulate_influence.out_influence",
+                    "target": "vorticity_influence.influence"
+                },
+                {
+                    "source": "value2.output",
+                    "target": "multiply4.first.output1"
+                },
+                {
+                    "source": "value3.output",
+                    "target": "multiply4.first.output2"
+                },
+                {
+                    "source": ".fine_turbulence",
+                    "target": "value2.value"
+                },
+                {
+                    "source": ".fine_turbulence_speed",
+                    "target": "value.value"
+                },
+                {
+                    "source": ".master_magnitude",
+                    "target": "value3.value"
+                },
+                {
+                    "source": "multiply4.output",
+                    "target": "fractal_turbulence_field.magnitude"
+                },
+                {
+                    "source": "value4.output",
+                    "target": "multiply5.first.output1"
+                },
+                {
+                    "source": "value3.output",
+                    "target": "multiply5.first.output2"
+                },
+                {
+                    "source": "multiply5.output",
+                    "target": "fractal_turbulence_field1.magnitude"
+                },
+                {
+                    "source": ".coarse_turbulence",
+                    "target": "value4.value"
+                },
+                {
+                    "source": ".coarse_turbulence_speed",
+                    "target": "value1.value"
+                },
+                {
+                    "source": "value5.output",
+                    "target": "multiply6.first.output1"
+                },
+                {
+                    "source": "value3.output",
+                    "target": "multiply6.first.output2"
+                },
+                {
+                    "source": ".vorticity",
+                    "target": "value5.value"
+                },
+                {
+                    "source": "multiply6.output",
+                    "target": "vorticity_influence.vorticity"
+                },
+                {
+                    "source": ".velocity_threshold",
+                    "target": "modulate_influence.max"
+                },
+                {
+                    "source": "value6.output",
+                    "target": "multiply7.first.output1"
+                },
+                {
+                    "source": "value7.output",
+                    "target": "multiply7.first.output2"
+                },
+                {
+                    "source": "multiply7.output",
+                    "target": "fractal_turbulence_field.frequency"
+                },
+                {
+                    "source": "value8.output",
+                    "target": "multiply8.first.output1"
+                },
+                {
+                    "source": "value7.output",
+                    "target": "multiply8.first.output2"
+                },
+                {
+                    "source": "multiply8.output",
+                    "target": "fractal_turbulence_field1.frequency"
+                },
+                {
+                    "source": ".frequency_scale",
+                    "target": "value7.value"
+                },
+                {
+                    "source": "value9.output",
+                    "target": "if.condition"
+                },
+                {
+                    "source": ".enable",
+                    "target": "value9.value"
+                },
+                {
+                    "source": "voxel_proxy_field1.voxel_field",
+                    "target": "add.first.voxel_field"
+                },
+                {
+                    "source": "voxel_proxy_field1.voxel_field",
+                    "target": "clamp.value"
+                },
+                {
+                    "source": "clamp.clamped",
+                    "target": "multiply.first.voxel_field"
+                },
+                {
+                    "source": "clamp.clamped",
+                    "target": "multiply1.first.voxel_field"
+                },
+                {
+                    "source": "advect_field.advected_field",
+                    "target": "multiply.first.noise_field"
+                },
+                {
+                    "source": "influence_set_property.out_influence",
+                    "target": "append_influence.influence"
+                },
+                {
+                    "source": ".influence",
+                    "target": "append_influence.insert"
+                },
+                {
+                    "source": "append_influence.output",
+                    "target": "if.true_case"
+                },
+                {
+                    "source": ".influence",
+                    "target": "if.false_case"
+                },
+                {
+                    "source": "value10.output",
+                    "target": "if1.condition"
+                },
+                {
+                    "source": ".enable",
+                    "target": "value10.value"
+                },
+                {
+                    "source": ".influence",
+                    "target": "if1.false_case"
+                },
+                {
+                    "source": "vorticity_influence.out_influence",
+                    "target": "if1.true_case"
+                },
+                {
+                    "source": "if.output",
+                    "target": ".out_turbulence"
+                },
+                {
+                    "source": "if1.output",
+                    "target": ".out_vorticity"
+                },
+                {
+                    "source": "time1.frame_length",
+                    "target": "multiply9.first.frame_length"
+                },
+                {
+                    "source": "value11.output",
+                    "target": "multiply9.first.output1"
+                },
+                {
+                    "source": "multiply9.output",
+                    "target": "advect_field.time_step"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "modulate_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "modulate_influence.property",
+                    "valueType": "string",
+                    "value": "voxel_velocity"
+                },
+                {
+                    "valueName": "modulate_influence.use_gradient",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "modulate_influence.min",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "modulate_influence.max",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "modulate_influence.invert",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "advect_field.time_step",
+                    "valueType": "float",
+                    "value": "0.100000001f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field.magnitude",
+                    "valueType": "float",
+                    "value": "0.75f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field.num_frequencies",
+                    "valueType": "float",
+                    "value": "3f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field.frequency",
+                    "valueType": "float",
+                    "value": "30f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field.ratio",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field.frequency_ratio",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field1.magnitude",
+                    "valueType": "float",
+                    "value": "0.0299999993f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field1.num_frequencies",
+                    "valueType": "float",
+                    "value": "3f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field1.frequency",
+                    "valueType": "float",
+                    "value": "0.25f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field1.ratio",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "fractal_turbulence_field1.frequency_ratio",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "influence_set_property.key",
+                    "valueType": "string",
+                    "value": "voxel_velocity"
+                },
+                {
+                    "valueName": "influence_set_property1.key",
+                    "valueType": "string",
+                    "value": "voxel_velocity"
+                },
+                {
+                    "valueName": "scalar_field.value",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "scalar_field1.value",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "value.value",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "value1.value",
+                    "valueType": "float",
+                    "value": "0.25f"
+                },
+                {
+                    "valueName": "vorticity_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "vorticity_influence.vorticity",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "voxel_proxy_field1.property",
+                    "valueType": "string",
+                    "value": "voxel_velocity"
+                },
+                {
+                    "valueName": "voxel_proxy_field1.interpolation",
+                    "valueType": "Geometry::Query::SamplerType",
+                    "value": "kCubicC0"
+                },
+                {
+                    "valueName": "voxel_proxy_field1.field_type",
+                    "valueType": "Core::Fields::VectorField",
+                    "value": {}
+                },
+                {
+                    "valueName": "value2.value",
+                    "valueType": "float",
+                    "value": "0.75f"
+                },
+                {
+                    "valueName": "value3.value",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "value4.value",
+                    "valueType": "float",
+                    "value": "0.0299999993f"
+                },
+                {
+                    "valueName": "value5.value",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "value6.value",
+                    "valueType": "float",
+                    "value": "30f"
+                },
+                {
+                    "valueName": "value7.value",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "value8.value",
+                    "valueType": "float",
+                    "value": "0.25f"
+                },
+                {
+                    "valueName": "value9.value",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "clamp.max",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "1f",
+                        "y": "1f",
+                        "z": "1f"
+                    }
+                },
+                {
+                    "valueName": "append_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "value10.value",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "value11.value",
+                    "valueType": "float",
+                    "value": "2.4000001f"
+                }
+            ]
+        }
+    ]
+}

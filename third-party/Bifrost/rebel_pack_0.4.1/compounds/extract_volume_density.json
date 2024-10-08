@@ -1,0 +1,1772 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///volume_types.json"
+        },
+        {
+            "uri": "file:///volume_nodedefs.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///fluids_types.json"
+        },
+        {
+            "uri": "file:///fluids_nodedefs.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///set_geo_property_data.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Modeling::Volume::extract_volume_density",
+            "uriImported": "file:///extract_volume_density.json",
+            "metadata": [
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"in_volume\"\n            },\n            {\n                \"port\": \"min_voxel_density\"\n            },\n            {\n                \"port\": \"max_voxel_density\"\n            },\n            {\n                \"expanded\": true,\n                \"group\": \"Density_Curve\",\n                \"items\": [\n                    {\n                        \"port\": \"use_density_curve\"\n                    },\n                    {\n                        \"port\": \"density_magnitude\"\n                    },\n                    {\n                        \"port\": \"density_curve\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": true,\n                \"group\": \"Soften_Volume\",\n                \"items\": [\n                    {\n                        \"port\": \"soften\"\n                    },\n                    {\n                        \"port\": \"property\"\n                    },\n                    {\n                        \"port\": \"voxel_standard_deviation\"\n                    },\n                    {\n                        \"port\": \"voxel_filter_width\"\n                    },\n                    {\n                        \"port\": \"smoothing_width\"\n                    },\n                    {\n                        \"port\": \"num_resolution_levels\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-341 205"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "in_volume"
+                                                },
+                                                {
+                                                    "metaName": "use_density_curve"
+                                                },
+                                                {
+                                                    "metaName": "density_curve"
+                                                },
+                                                {
+                                                    "metaName": "density_magnitude"
+                                                },
+                                                {
+                                                    "metaName": "min_voxel_density"
+                                                },
+                                                {
+                                                    "metaName": "max_voxel_density"
+                                                },
+                                                {
+                                                    "metaName": "smoothing_width"
+                                                },
+                                                {
+                                                    "metaName": "soften"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "945.616 364.067"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_volume"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Type_Conversion,to_int"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Logic,if"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Geometry::Volume,smooth_volume"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,BifrostExp,set_geo_property_data"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPackExperimental.svg"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-421 -44.7112 1673 821.422"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-185.5 -303"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "in_volume",
+                    "portDirection": "input",
+                    "portType": "Amino::Object",
+                    "portDefault": {}
+                },
+                {
+                    "portName": "use_density_curve",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "density_curve",
+                    "portDirection": "input",
+                    "portType": "Amino::FCurve",
+                    "portDefault": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "-0.27723599999999998",
+                                        "yp": "0.0035715299999999998",
+                                        "x": "0.0032520299999999999",
+                                        "y": "0",
+                                        "xn": "0.28373999999999999",
+                                        "yn": "-0.00357143"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.265295",
+                                        "yp": "0.99648099999999995",
+                                        "x": "0.5",
+                                        "y": "1",
+                                        "xn": "0.734707",
+                                        "yn": "1.0035700000000001"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "0.71951200000000004",
+                                        "yp": "0.00714286",
+                                        "x": "1",
+                                        "y": "0",
+                                        "xn": "1.2804899999999999",
+                                        "yn": "-0.0071411799999999996"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "portName": "density_magnitude",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "min_voxel_density",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "max_voxel_density",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "20f"
+                },
+                {
+                    "portName": "smoothing_width",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "2f"
+                },
+                {
+                    "portName": "soften",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "out_volume",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "sample_density",
+                    "uriImported": "file:///extract_volume_density.json",
+                    "metadata": [
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Array,array_bounds"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Math,multiply"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::FCurve,evaluate_fcurve"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Geometry::Properties,get_point_position"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Geometry::Volume,smooth_volume"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_metadata",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "-581 629"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "in_volume"
+                                                        },
+                                                        {
+                                                            "metaName": "use_fcurve"
+                                                        },
+                                                        {
+                                                            "metaName": "inputCurve"
+                                                        },
+                                                        {
+                                                            "metaName": "magnitude"
+                                                        },
+                                                        {
+                                                            "metaName": "min_voxel_density"
+                                                        },
+                                                        {
+                                                            "metaName": "max_voxel_density"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "out_volume"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "io_metadata",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "1852.91 483.181"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-1076.91 -228 3102.66 1858.85"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "in_volume",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "use_fcurve",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "inputCurve",
+                            "portDirection": "input",
+                            "portType": "Amino::FCurve"
+                        },
+                        {
+                            "portName": "magnitude",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "min_voxel_density",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "max_voxel_density",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "out_volume",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compounds": [
+                        {
+                            "name": "find_range",
+                            "uriImported": "file:///extract_volume_density.json",
+                            "metadata": [
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-70 -109.723 1301 779.446"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "min_voxel_density"
+                                                                },
+                                                                {
+                                                                    "metaName": "max_voxel_density"
+                                                                },
+                                                                {
+                                                                    "metaName": "output"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "density_range"
+                                                                },
+                                                                {
+                                                                    "metaName": "normalized_range"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "min_voxel_density",
+                                    "portDirection": "input",
+                                    "portType": "float"
+                                },
+                                {
+                                    "portName": "max_voxel_density",
+                                    "portDirection": "input",
+                                    "portType": "float"
+                                },
+                                {
+                                    "portName": "output",
+                                    "portDirection": "input"
+                                },
+                                {
+                                    "portName": "density_range",
+                                    "portDirection": "output"
+                                },
+                                {
+                                    "portName": "normalized_range",
+                                    "portDirection": "output"
+                                }
+                            ],
+                            "compounds": [
+                                {
+                                    "name": "evaluate_density_range",
+                                    "uriImported": "file:///extract_volume_density.json",
+                                    "metadata": [
+                                        {
+                                            "metaName": "icon",
+                                            "metaType": "string",
+                                            "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                                        },
+                                        {
+                                            "metaName": "icon",
+                                            "metaType": "string",
+                                            "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                                        },
+                                        {
+                                            "metaName": "icon",
+                                            "metaType": "string",
+                                            "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                                        },
+                                        {
+                                            "metaName": "ViewportRect",
+                                            "metaType": "string",
+                                            "metaValue": "-679.104 -373.799 1897.43 771.917"
+                                        },
+                                        {
+                                            "metaName": "io_nodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_inodes",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "input",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "io_ports",
+                                                                    "metadata": [
+                                                                        {
+                                                                            "metaName": "output"
+                                                                        },
+                                                                        {
+                                                                            "metaName": "min_voxel_density"
+                                                                        },
+                                                                        {
+                                                                            "metaName": "max_voxel_density"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "io_onodes",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "io_ports",
+                                                                    "metadata": [
+                                                                        {
+                                                                            "metaName": "output1"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "ports": [
+                                        {
+                                            "portName": "output",
+                                            "portDirection": "input",
+                                            "portIterationTarget": "true"
+                                        },
+                                        {
+                                            "portName": "min_voxel_density",
+                                            "portDirection": "input",
+                                            "portType": "float"
+                                        },
+                                        {
+                                            "portName": "max_voxel_density",
+                                            "portDirection": "input",
+                                            "portType": "float"
+                                        },
+                                        {
+                                            "portName": "output1",
+                                            "portDirection": "output",
+                                            "portIterationTarget": "true"
+                                        }
+                                    ],
+                                    "compoundNodes": [
+                                        {
+                                            "nodeName": "and",
+                                            "nodeType": "Core::Logic::and",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "256.436 -203.802"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "nodeName": "greater",
+                                            "nodeType": "Core::Logic::greater",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-70.9427 27.6568"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "nodeName": "if",
+                                            "nodeType": "Core::Logic::if",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "590.175 -104.722"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "nodeName": "less_or_equal",
+                                            "nodeType": "Core::Logic::less_or_equal",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-71.8247 -192.722"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "connections": [
+                                        {
+                                            "source": "and.output",
+                                            "target": "if.condition"
+                                        },
+                                        {
+                                            "source": "greater.output",
+                                            "target": "and.second"
+                                        },
+                                        {
+                                            "source": "if.output",
+                                            "target": ".output1"
+                                        },
+                                        {
+                                            "source": "less_or_equal.output",
+                                            "target": "and.first"
+                                        },
+                                        {
+                                            "source": ".output",
+                                            "target": "greater.first"
+                                        },
+                                        {
+                                            "source": ".output",
+                                            "target": "if.true_case"
+                                        },
+                                        {
+                                            "source": ".output",
+                                            "target": "less_or_equal.first"
+                                        },
+                                        {
+                                            "source": ".min_voxel_density",
+                                            "target": "greater.second"
+                                        },
+                                        {
+                                            "source": ".max_voxel_density",
+                                            "target": "less_or_equal.second"
+                                        }
+                                    ],
+                                    "values": [
+                                        {
+                                            "valueName": "greater.second",
+                                            "valueType": "float",
+                                            "value": "0.0250000004f"
+                                        },
+                                        {
+                                            "valueName": "if.false_case",
+                                            "valueType": "float",
+                                            "value": "0f"
+                                        }
+                                    ],
+                                    "forEachCompound": {
+                                        "ports": [],
+                                        "grainSize": "1"
+                                    }
+                                },
+                                {
+                                    "name": "normalize_range",
+                                    "uriImported": "file:///extract_volume_density.json",
+                                    "metadata": [
+                                        {
+                                            "metaName": "_recentNode_",
+                                            "metaType": "string",
+                                            "metaValue": "BifrostBoard,Core::Math,divide"
+                                        },
+                                        {
+                                            "metaName": "_recentNode_",
+                                            "metaType": "string",
+                                            "metaValue": "BifrostBoard,Core::Math,subtract"
+                                        },
+                                        {
+                                            "metaName": "_recentNode_",
+                                            "metaType": "string",
+                                            "metaValue": "BifrostBoard,BifrostExp,get_property_any"
+                                        },
+                                        {
+                                            "metaName": "_recentNode_",
+                                            "metaType": "string",
+                                            "metaValue": "BifrostBoard,Core::Math,multiply"
+                                        },
+                                        {
+                                            "metaName": "_recentNode_",
+                                            "metaType": "string",
+                                            "metaValue": "BifrostBoard,Core::FCurve,evaluate_fcurve"
+                                        },
+                                        {
+                                            "metaName": "ViewportRect",
+                                            "metaType": "string",
+                                            "metaValue": "-1673.71 139 1789.38 727.962"
+                                        },
+                                        {
+                                            "metaName": "io_nodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_inodes",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "input",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "io_ports",
+                                                                    "metadata": [
+                                                                        {
+                                                                            "metaName": "output1"
+                                                                        },
+                                                                        {
+                                                                            "metaName": "min_voxel_density"
+                                                                        },
+                                                                        {
+                                                                            "metaName": "max_voxel_density"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "io_onodes",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "io_ports",
+                                                                    "metadata": [
+                                                                        {
+                                                                            "metaName": "output"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "ports": [
+                                        {
+                                            "portName": "output1",
+                                            "portDirection": "input"
+                                        },
+                                        {
+                                            "portName": "min_voxel_density",
+                                            "portDirection": "input",
+                                            "portType": "float"
+                                        },
+                                        {
+                                            "portName": "max_voxel_density",
+                                            "portDirection": "input",
+                                            "portType": "float"
+                                        },
+                                        {
+                                            "portName": "output",
+                                            "portDirection": "output"
+                                        }
+                                    ],
+                                    "compoundNodes": [
+                                        {
+                                            "nodeName": "centered_value",
+                                            "nodeType": "Core::Math::subtract",
+                                            "multiInPortNames": [
+                                                "output1",
+                                                "min_voxel_density"
+                                            ],
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-940.361 303.382"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "nodeName": "subtract_new_range",
+                                            "nodeType": "Core::Math::subtract",
+                                            "multiInPortNames": [
+                                                "max_voxel_density",
+                                                "min_voxel_density"
+                                            ],
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-946.505 555.68"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "nodeName": "divide",
+                                            "nodeType": "Core::Math::divide",
+                                            "multiInPortNames": [
+                                                "output1",
+                                                "output2"
+                                            ],
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-538.392 425.338"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "connections": [
+                                        {
+                                            "source": "centered_value.output",
+                                            "target": "divide.first.output1"
+                                        },
+                                        {
+                                            "source": "subtract_new_range.output",
+                                            "target": "divide.first.output2"
+                                        },
+                                        {
+                                            "source": "divide.output",
+                                            "target": ".output"
+                                        },
+                                        {
+                                            "source": ".output1",
+                                            "target": "centered_value.first.output1"
+                                        },
+                                        {
+                                            "source": ".min_voxel_density",
+                                            "target": "centered_value.first.min_voxel_density"
+                                        },
+                                        {
+                                            "source": ".min_voxel_density",
+                                            "target": "subtract_new_range.first.min_voxel_density"
+                                        },
+                                        {
+                                            "source": ".max_voxel_density",
+                                            "target": "subtract_new_range.first.max_voxel_density"
+                                        }
+                                    ],
+                                    "values": []
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "evaluate_density_range",
+                                    "nodeType": "evaluate_density_range",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "315 9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "normalize_range",
+                                    "nodeType": "normalize_range",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "592.81 241.169"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "evaluate_density_range.output1",
+                                    "target": ".density_range"
+                                },
+                                {
+                                    "source": "evaluate_density_range.output1",
+                                    "target": "normalize_range.output1"
+                                },
+                                {
+                                    "source": "normalize_range.output",
+                                    "target": ".normalized_range"
+                                },
+                                {
+                                    "source": ".min_voxel_density",
+                                    "target": "evaluate_density_range.min_voxel_density"
+                                },
+                                {
+                                    "source": ".min_voxel_density",
+                                    "target": "normalize_range.min_voxel_density"
+                                },
+                                {
+                                    "source": ".max_voxel_density",
+                                    "target": "evaluate_density_range.max_voxel_density"
+                                },
+                                {
+                                    "source": ".max_voxel_density",
+                                    "target": "normalize_range.max_voxel_density"
+                                },
+                                {
+                                    "source": ".output",
+                                    "target": "evaluate_density_range.output"
+                                }
+                            ],
+                            "values": [
+                                {
+                                    "valueName": "evaluate_density_range.min_voxel_density",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                },
+                                {
+                                    "valueName": "evaluate_density_range.max_voxel_density",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                },
+                                {
+                                    "valueName": "normalize_range.min_voxel_density",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                }
+                            ]
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "create_voxelpos_channel",
+                            "nodeType": "Geometry::Volume::update_voxel_position",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-195 507"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "evaluate_density_fcurve",
+                            "nodeType": "Core::FCurve::evaluate_fcurve",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "673 580"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "get_geo_property",
+                            "nodeType": "Geometry::Properties::get_geo_property",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "52 770"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "multiply1",
+                            "nodeType": "Core::Math::multiply",
+                            "multiInPortNames": [
+                                "y",
+                                "output1",
+                                "magnitude"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "990 605"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value",
+                            "valueType": "array<float>",
+                            "metadata": [
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-211.025 962.773"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "if",
+                            "nodeType": "Core::Logic::if",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1296 555"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "set_geo_property_data",
+                            "nodeType": "Geometry::Properties::set_geo_property_data",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1556 483"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "find_range",
+                            "nodeType": "find_range",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "334 592"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "create_voxelpos_channel.out_volume",
+                            "target": "get_geo_property.geometry"
+                        },
+                        {
+                            "source": "create_voxelpos_channel.out_volume",
+                            "target": "set_geo_property_data.geometry"
+                        },
+                        {
+                            "source": "evaluate_density_fcurve.y",
+                            "target": "multiply1.first.y"
+                        },
+                        {
+                            "source": "get_geo_property.data",
+                            "target": "find_range.output"
+                        },
+                        {
+                            "source": "multiply1.output",
+                            "target": "if.true_case"
+                        },
+                        {
+                            "source": "value.output",
+                            "target": "get_geo_property.type"
+                        },
+                        {
+                            "source": "if.output",
+                            "target": "set_geo_property_data.data"
+                        },
+                        {
+                            "source": "set_geo_property_data.out_geometry",
+                            "target": ".out_volume"
+                        },
+                        {
+                            "source": "find_range.density_range",
+                            "target": "multiply1.first.output1"
+                        },
+                        {
+                            "source": "find_range.density_range",
+                            "target": "if.false_case"
+                        },
+                        {
+                            "source": "find_range.normalized_range",
+                            "target": "evaluate_density_fcurve.x"
+                        },
+                        {
+                            "source": ".in_volume",
+                            "target": "create_voxelpos_channel.volume"
+                        },
+                        {
+                            "source": ".use_fcurve",
+                            "target": "if.condition"
+                        },
+                        {
+                            "source": ".inputCurve",
+                            "target": "evaluate_density_fcurve.fcurve"
+                        },
+                        {
+                            "source": ".magnitude",
+                            "target": "multiply1.first.magnitude"
+                        },
+                        {
+                            "source": ".min_voxel_density",
+                            "target": "find_range.min_voxel_density"
+                        },
+                        {
+                            "source": ".max_voxel_density",
+                            "target": "find_range.max_voxel_density"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "evaluate_density_fcurve.fcurve",
+                            "valueType": "Amino::FCurve",
+                            "value": {
+                                "version": "1",
+                                "preExtrapolation": "0",
+                                "postExtrapolation": "0",
+                                "points": [
+                                    {
+                                        "point": {
+                                            "locked": "1",
+                                            "interpolation": "2",
+                                            "pcn": {
+                                                "xp": "-0.98890699999999998",
+                                                "yp": "-39.696899999999999",
+                                                "x": "0.0016643599999999999",
+                                                "y": "0",
+                                                "xn": "0.99219299999999999",
+                                                "yn": "39.696899999999999"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "point": {
+                                            "locked": "0",
+                                            "interpolation": "2",
+                                            "pcn": {
+                                                "xp": "5.7748799999999996",
+                                                "yp": "-130.66",
+                                                "x": "6.85229",
+                                                "y": "164.49000000000001",
+                                                "xn": "7.5369299999999999",
+                                                "yn": "6.0737300000000003"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "point": {
+                                            "locked": "1",
+                                            "interpolation": "2",
+                                            "pcn": {
+                                                "xp": "12.5844",
+                                                "yp": "-397.30900000000003",
+                                                "x": "19.7987",
+                                                "y": "-390.19600000000003",
+                                                "xn": "27.0124",
+                                                "yn": "-383.084"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "valueName": "get_geo_property.property",
+                            "valueType": "string",
+                            "value": "voxel_fog_density"
+                        },
+                        {
+                            "valueName": "value.value",
+                            "valueType": "array<float>",
+                            "value": []
+                        },
+                        {
+                            "valueName": "if.condition",
+                            "valueType": "bool",
+                            "value": "true"
+                        },
+                        {
+                            "valueName": "set_geo_property_data.property",
+                            "valueType": "string",
+                            "value": "voxel_fog_density"
+                        },
+                        {
+                            "valueName": "find_range.min_voxel_density",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "find_range.max_voxel_density",
+                            "valueType": "float",
+                            "value": "0f"
+                        }
+                    ]
+                },
+                {
+                    "name": "smooth_volume",
+                    "uriImported": "file:///extract_volume_density.json",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-548 619"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "volume"
+                                                        },
+                                                        {
+                                                            "metaName": "smoothing_width"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "653.338 378.544"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "out_volume"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-628 240.901 1587 779.198"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "volume",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "smoothing_width",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "out_volume",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "round_to_ceiling",
+                            "nodeType": "Core::Math::round_to_ceiling",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-154.764 709.407"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "smooth_volume",
+                            "nodeType": "Geometry::Volume::smooth_voxel_property",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "367 376"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "to_int",
+                            "nodeType": "Core::Type_Conversion::to_int",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "110.442 684.367"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "round_to_ceiling.ceiling",
+                            "target": "to_int.from"
+                        },
+                        {
+                            "source": "smooth_volume.out_volume",
+                            "target": ".out_volume"
+                        },
+                        {
+                            "source": "to_int.int",
+                            "target": "smooth_volume.voxel_filter_width"
+                        },
+                        {
+                            "source": ".smoothing_width",
+                            "target": "round_to_ceiling.value"
+                        },
+                        {
+                            "source": ".smoothing_width",
+                            "target": "smooth_volume.voxel_standard_deviation"
+                        },
+                        {
+                            "source": ".volume",
+                            "target": "smooth_volume.volume"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "smooth_volume.property",
+                            "valueType": "string",
+                            "value": "voxel_fog_density"
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "if_smoothing_needed",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "679.129 361.127"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "sample_density",
+                    "nodeType": "sample_density",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "51.1769 146.607"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "smooth_volume",
+                    "nodeType": "smooth_volume",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "362.957 259.897"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "if_smoothing_needed.output",
+                    "target": ".out_volume"
+                },
+                {
+                    "source": "sample_density.out_volume",
+                    "target": "if_smoothing_needed.false_case"
+                },
+                {
+                    "source": "sample_density.out_volume",
+                    "target": "smooth_volume.volume"
+                },
+                {
+                    "source": "smooth_volume.out_volume",
+                    "target": "if_smoothing_needed.true_case"
+                },
+                {
+                    "source": ".in_volume",
+                    "target": "sample_density.in_volume"
+                },
+                {
+                    "source": ".use_density_curve",
+                    "target": "sample_density.use_fcurve"
+                },
+                {
+                    "source": ".density_curve",
+                    "target": "sample_density.inputCurve"
+                },
+                {
+                    "source": ".density_magnitude",
+                    "target": "sample_density.magnitude"
+                },
+                {
+                    "source": ".min_voxel_density",
+                    "target": "sample_density.min_voxel_density"
+                },
+                {
+                    "source": ".smoothing_width",
+                    "target": "smooth_volume.smoothing_width"
+                },
+                {
+                    "source": ".soften",
+                    "target": "if_smoothing_needed.condition"
+                },
+                {
+                    "source": ".max_voxel_density",
+                    "target": "sample_density.max_voxel_density"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "sample_density.in_volume",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "sample_density.use_fcurve",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "sample_density.inputCurve",
+                    "valueType": "Amino::FCurve",
+                    "value": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "-0.98890699999999998",
+                                        "yp": "-39.696899999999999",
+                                        "x": "0.0016643599999999999",
+                                        "y": "0",
+                                        "xn": "0.99219299999999999",
+                                        "yn": "39.696899999999999"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "0",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "5.7748799999999996",
+                                        "yp": "-130.66",
+                                        "x": "6.85229",
+                                        "y": "164.49000000000001",
+                                        "xn": "7.5369299999999999",
+                                        "yn": "6.0737300000000003"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "2",
+                                    "pcn": {
+                                        "xp": "12.5844",
+                                        "yp": "-397.30900000000003",
+                                        "x": "19.7987",
+                                        "y": "-390.19600000000003",
+                                        "xn": "27.0124",
+                                        "yn": "-383.084"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "valueName": "sample_density.magnitude",
+                    "valueType": "float",
+                    "value": "0.00999999978f"
+                },
+                {
+                    "valueName": "smooth_volume.volume",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "smooth_volume.smoothing_width",
+                    "valueType": "float",
+                    "value": "0f"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

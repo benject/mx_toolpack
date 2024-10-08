@@ -1,0 +1,54 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [
+        {
+            "structName": "MJCG::LSystem::TurtleState",
+            "structMembers": [
+                {
+                    "memberName": "position",
+                    "memberType": "Math::float3"
+                },
+                {
+                    "memberName": "orientation",
+                    "memberType": "Math::float4"
+                },
+                {
+                    "memberName": "color",
+                    "memberType": "Math::float3"
+                },
+                {
+                    "memberName": "instance_id",
+                    "memberType": "uint"
+                },
+                {
+                    "memberName": "length",
+                    "memberType": "float"
+                },
+                {
+                    "memberName": "absolute_length",
+                    "memberType": "float"
+                },
+                {
+                    "memberName": "angle",
+                    "memberType": "float"
+                },
+                {
+                    "memberName": "size",
+                    "memberType": "float"
+                }, 
+                {
+                    "memberName": "branch_state",
+                    "memberType": "bool"
+                }
+            ]
+        }
+    ]
+}

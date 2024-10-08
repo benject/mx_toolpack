@@ -1,0 +1,1145 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///CoreStringOps.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///validate_mesh.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Modeling::Growth::Internal::ivy_default_leaf_mesh",
+            "uriImported": "file:///ivy_default_leaf_mesh.json",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-266.259 373.416"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1132.29 552.543"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "mesh"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::String,build_string"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,build_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Geometry::Points,construct_points"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Geometry::Strands,construct_strands"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Type_Conversion,to_unsigned_int"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-1147.78 -519.059 3025.87 1853.81"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-1261 67.1086"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "mesh",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "for_each",
+                    "uriImported": "file:///ivy_default_leaf_mesh.json",
+                    "metadata": [
+                        {
+                            "metaName": "icon",
+                            "metaType": "string",
+                            "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                        },
+                        {
+                            "metaName": "icon",
+                            "metaType": "string",
+                            "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                        },
+                        {
+                            "metaName": "icon",
+                            "metaType": "string",
+                            "metaValue": "<NATIVE>../icons/LoopForEach.svg"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Conversion,scalar_to_vector3"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Array,get_from_array"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Iterators,for_each"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::String,string_to_array"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::String,string_replace"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-105.27 394.789"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "stripped"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "2450 228"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "positions"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-617.532 -17.1035 1874.85 1194.86"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "stripped",
+                            "portDirection": "input",
+                            "portType": "array<string>",
+                            "portIterationTarget": "true"
+                        },
+                        {
+                            "portName": "positions",
+                            "portDirection": "output",
+                            "portType": "array<Math::float3>",
+                            "portIterationTarget": "true"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "split_string_comma_space",
+                            "nodeType": "Core::String::split_string",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "984.257 240.4"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "get_from_array",
+                            "nodeType": "Core::Array::get_from_array",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1535 9"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "get_from_array1",
+                            "nodeType": "Core::Array::get_from_array",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1535 228"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "get_from_array2",
+                            "nodeType": "Core::Array::get_from_array",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1535 447"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_to_float",
+                            "nodeType": "Core::String::string_to_float",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1840 32"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_to_float1",
+                            "nodeType": "Core::String::string_to_float",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1840 227"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_to_float2",
+                            "nodeType": "Core::String::string_to_float",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1840 422"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "scalar_to_vector3",
+                            "nodeType": "Core::Conversion::scalar_to_vector3",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "2137.91 178.359"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_strip_open_bracket",
+                            "nodeType": "Core::String::string_strip",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "504.971 244.278"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_strip_f",
+                            "nodeType": "Core::String::string_strip",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1230 252"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_strip_close_bracket",
+                            "nodeType": "Core::String::string_strip",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "748.127 241.743"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_strip_whitespace",
+                            "nodeType": "Core::String::string_strip",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "231.397 253.322"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "to_unsigned_int1",
+                            "nodeType": "Core::Type_Conversion::to_unsigned_int",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "747.894 727.778"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_to_int2",
+                            "nodeType": "Core::String::string_to_int",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "506.206 755.007"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "to_unsigned_int",
+                            "nodeType": "Core::Type_Conversion::to_unsigned_int",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "746.097 498.088"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_to_int1",
+                            "nodeType": "Core::String::string_to_int",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "497.59 514.024"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_strip_whitespace2",
+                            "nodeType": "Core::String::string_strip",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "254.863 752.637"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "string_strip_whitespace1",
+                            "nodeType": "Core::String::string_strip",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "240.723 517.178"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "split_string_comma_space.split",
+                            "target": "string_strip_f.string"
+                        },
+                        {
+                            "source": "get_from_array.value",
+                            "target": "string_to_float.string"
+                        },
+                        {
+                            "source": "get_from_array1.value",
+                            "target": "string_to_float1.string"
+                        },
+                        {
+                            "source": "get_from_array2.value",
+                            "target": "string_to_float2.string"
+                        },
+                        {
+                            "source": "string_to_float.float",
+                            "target": "scalar_to_vector3.x"
+                        },
+                        {
+                            "source": "string_to_float1.float",
+                            "target": "scalar_to_vector3.y"
+                        },
+                        {
+                            "source": "string_to_float2.float",
+                            "target": "scalar_to_vector3.z"
+                        },
+                        {
+                            "source": "scalar_to_vector3.vector3",
+                            "target": ".positions"
+                        },
+                        {
+                            "source": "string_strip_open_bracket.stripped",
+                            "target": "string_strip_close_bracket.string"
+                        },
+                        {
+                            "source": "string_strip_f.stripped",
+                            "target": "get_from_array2.array"
+                        },
+                        {
+                            "source": "string_strip_f.stripped",
+                            "target": "get_from_array1.array"
+                        },
+                        {
+                            "source": "string_strip_f.stripped",
+                            "target": "get_from_array.array"
+                        },
+                        {
+                            "source": "string_strip_close_bracket.stripped",
+                            "target": "split_string_comma_space.string"
+                        },
+                        {
+                            "source": ".stripped",
+                            "target": "string_strip_whitespace.string"
+                        },
+                        {
+                            "source": "string_strip_whitespace.stripped",
+                            "target": "string_strip_open_bracket.string"
+                        },
+                        {
+                            "source": "string_to_int2.int",
+                            "target": "to_unsigned_int1.from"
+                        },
+                        {
+                            "source": "string_to_int1.int",
+                            "target": "to_unsigned_int.from"
+                        },
+                        {
+                            "source": "string_strip_whitespace2.stripped",
+                            "target": "string_to_int2.string"
+                        },
+                        {
+                            "source": "string_strip_whitespace1.stripped",
+                            "target": "string_to_int1.string"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "split_string_comma_space.separator",
+                            "valueType": "string",
+                            "value": ", "
+                        },
+                        {
+                            "valueName": "get_from_array1.index",
+                            "valueType": "long",
+                            "value": "1"
+                        },
+                        {
+                            "valueName": "get_from_array2.index",
+                            "valueType": "long",
+                            "value": "2"
+                        },
+                        {
+                            "valueName": "string_strip_open_bracket.characters",
+                            "valueType": "string",
+                            "value": "{"
+                        },
+                        {
+                            "valueName": "string_strip_f.characters",
+                            "valueType": "string",
+                            "value": "f"
+                        },
+                        {
+                            "valueName": "string_strip_close_bracket.characters",
+                            "valueType": "string",
+                            "value": "}"
+                        },
+                        {
+                            "valueName": "string_strip_whitespace.characters",
+                            "valueType": "string",
+                            "value": " "
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ],
+                    "forEachCompound": {
+                        "ports": [],
+                        "grainSize": "1"
+                    }
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "for_each",
+                    "nodeType": "for_each",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "558.881 298.824"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "split_string",
+                    "nodeType": "Core::String::split_string",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "320.373 346.497"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "point_position_string_A",
+                    "valueType": "string",
+                    "metadata": [
+                        {
+                            "metaName": "NodeValueDisplay",
+                            "metadata": [
+                                {
+                                    "metaName": "format",
+                                    "metaType": "string",
+                                    "metaValue": "{value}"
+                                },
+                                {
+                                    "metaName": "show",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "{-0.0143572f, 0.029066f, 0.883202f}, {-0.0179204f, 0.0274715f, 0.854586f}, {-0.0220326f, 0.0253793f, 0.82779f}, {-0.0265637f, 0.0234616f, 0.801981f}, {-0.0313597f, 0.0221647f, 0.776847f}, {-0.0360509f, 0.0214541f, 0.752265f}, {-0.0402254f, 0.0213893f, 0.728541f}, {-0.0438174f, 0.0213582f, 0.705216f}, {-0.0468768f, 0.0210429f, 0.681968f}, {-0.0493985f, 0.0203061f, 0.658544f}, {-0.0513608f, 0.0194021f, 0.635041f}, {-0.0527699f, 0.0182364f, 0.611382f}, {-0.0536239f, 0.0171524f, 0.587551f}, {-0.0539386f, 0.0161642f, 0.563516f}, {-0.0537228f, 0.0153684f, 0.539394f}, {-0.053047f, 0.0146654f, 0.515254f}, {-0.0520094f, 0.0140859f, 0.491175f}, {-0.0507298f, 0.0135992f, 0.467194f}, {-0.0493272f, 0.0131133f, 0.443272f}, {-0.0479052f, 0.01274f, 0.419401f}, {-0.0465408f, 0.0124983f, 0.395616f}, {-0.0452835f, 0.0122502f, 0.372012f}, {-0.0441611f, 0.0120048f, 0.348752f}, {-0.0431796f, 0.0117352f, 0.325958f}, {-0.0423206f, 0.0113382f, 0.303614f}, {-0.0415569f, 0.0107312f, 0.281571f}, {-0.0408657f, 0.0098632f, 0.259605f}, {-0.0402303f, 0.00866329f, 0.237435f}, {-0.0396504f, 0.00714736f, 0.214722f}, {-0.0391383f, 0.00536372f, 0.19107f}, {-0.0368795f, 0.0254938f, 0.830596f}, {-0.0444616f, 0.0235365f, 0.805196f}, {-0.0525247f, 0.0223191f, 0.780269f}, {-0.0605003f, 0.0218826f, 0.755796f}, {-0.0677426f, 0.0220039f, 0.731894f}, {-0.0739996f, 0.0222487f, 0.708413f}, {-0.07948f, 0.0221713f, 0.684971f}, {-0.084195f, 0.0217567f, 0.661432f}, {-0.0881929f, 0.0209859f, 0.637738f}, {-0.0914341f, 0.0200111f, 0.6138f}, {-0.093852f, 0.018987f, 0.589614f}, {-0.0954246f, 0.0179903f, 0.565192f}, {-0.0961041f, 0.0170838f, 0.540705f}, {-0.0959686f, 0.016292f, 0.516272f}, {-0.0951544f, 0.0155629f, 0.492002f}, {-0.0938337f, 0.0149024f, 0.467925f}, {-0.0922072f, 0.0142381f, 0.443948f}, {-0.0904405f, 0.0136633f, 0.420006f}, {-0.0886593f, 0.0132465f, 0.39609f}, {-0.0869434f, 0.0129541f, 0.372319f}, {-0.085341f, 0.0127565f, 0.348932f}, {-0.0838665f, 0.0126219f, 0.32612f}, {-0.0824939f, 0.0124584f, 0.303859f}, {-0.0811851f, 0.0121359f, 0.281939f}, {-0.079916f, 0.011575f, 0.260107f}, {-0.0721348f, 0.023641f, 0.786448f}, {-0.083635f, 0.0233359f, 0.762111f}, {-0.0942342f, 0.0236769f, 0.73809f}, {-0.103261f, 0.0243051f, 0.714551f}, {-0.111259f, 0.0245628f, 0.690978f}, {-0.118212f, 0.0243638f, 0.667322f}, {-0.124327f, 0.0238711f, 0.643391f}, {-0.129536f, 0.0230388f, 0.619047f}, {-0.133693f, 0.0218904f, 0.594323f}, {-0.136737f, 0.0207835f, 0.569287f}, {-0.138566f, 0.019564f, 0.544146f}, {-0.13923f, 0.018489f, 0.519135f}, {-0.138857f, 0.0176522f, 0.494436f}, {-0.137647f, 0.016732f, 0.470074f}, {-0.135869f, 0.0157194f, 0.44587f}, {-0.133771f, 0.0147867f, 0.421683f}, {-0.131563f, 0.0140145f, 0.397411f}, {-0.129392f, 0.0134347f, 0.37321f}, {-0.127357f, 0.0130492f, 0.349498f}, {-0.125453f, 0.0128517f, 0.326598f}, {-0.118912f, 0.0265606f, 0.747027f}, {-0.130755f, 0.0273994f, 0.72358f}, {-0.141117f, 0.0279347f, 0.700167f}, {-0.150243f, 0.0280012f, 0.676587f}, {-0.158572f, 0.0279987f, 0.652447f}, {-0.165968f, 0.0275842f, 0.627648f}, {-0.172087f, 0.0266551f, 0.602418f}, {-0.176917f, 0.0259022f, 0.576701f}, {-0.180329f, 0.0244322f, 0.550772f}, {-0.182315f, 0.0233676f, 0.524924f}, {-0.182953f, 0.0222771f, 0.499519f}, {-0.182312f, 0.0209796f, 0.474544f}, {-0.180715f, 0.0192956f, 0.449797f}, {-0.178495f, 0.0174716f, 0.425095f}, {-0.175977f, 0.0157901f, 0.40018f}, {-0.168107f, 0.0305236f, 0.712004f}, {-0.179433f, 0.0307093f, 0.688752f}, {-0.189913f, 0.031448f, 0.664666f}, {-0.199514f, 0.0320977f, 0.639779f}, {-0.208124f, 0.031932f, 0.614282f}, {-0.215423f, 0.0322215f, 0.588162f}, {-0.221147f, 0.031559f, 0.561535f}, {-0.225292f, 0.0314675f, 0.534763f}, {-0.22774f, 0.0313861f, 0.508175f}, {-0.228319f, 0.0306673f, 0.481851f}, {-0.218079f, 0.031193f, 0.67885f}, {-0.229998f, 0.0323282f, 0.654308f}, {-0.241485f, 0.0334495f, 0.629028f}, {-0.252157f, 0.0334807f, 0.602948f}, {-0.261318f, 0.0336293f, 0.575626f}, {-0.0100621f, 0.0271045f, 0.951862f}, {-0.011617f, 0.029186f, 0.915112f}, {-0.0166239f, 0.0273243f, 0.949936f}, {-0.0193736f, 0.0291855f, 0.915096f}, {-0.0240298f, 0.02907f, 0.884478f}, {-0.0300097f, 0.0275795f, 0.856749f}, {-0.023298f, 0.0276723f, 0.947273f}, {-0.0270225f, 0.0294674f, 0.915305f}, {-0.0332381f, 0.0295483f, 0.886671f}, {-0.0412609f, 0.028419f, 0.860469f}, {-0.0505408f, 0.0265705f, 0.83551f}, {-0.0608785f, 0.0247461f, 0.810933f}, {-0.0299904f, 0.0281529f, 0.944327f}, {-0.0344758f, 0.0298937f, 0.915804f}, {-0.0419081f, 0.030271f, 0.889627f}, {-0.0516355f, 0.0295333f, 0.865436f}, {-0.0629975f, 0.0281601f, 0.842018f}, {-0.0757693f, 0.026872f, 0.818537f}, {-0.0900051f, 0.0260153f, 0.794713f}, {-0.1049f, 0.0260864f, 0.770829f}, {-0.0743584f, 0.0297831f, 0.849694f}, {-0.0893384f, 0.0292122f, 0.827428f}, {-0.106055f, 0.0293116f, 0.804498f}, {-0.124032f, 0.0297156f, 0.781334f}, {-0.141062f, 0.0298882f, 0.758145f}, {-0.155425f, 0.0302303f, 0.735072f}, {-0.177152f, 0.0307013f, 0.747838f}, {-0.191936f, 0.0301908f, 0.725329f}, {-0.205519f, 0.0304107f, 0.702689f}, {-0.0366319f, 0.0284961f, 0.941434f}, {-0.0416368f, 0.0302118f, 0.916744f}, {-0.0499557f, 0.0308116f, 0.893313f}, {-0.0611103f, 0.0305249f, 0.871352f}, {-0.042421f, 0.0286798f, 0.938903f}, {-0.0478973f, 0.0303007f, 0.917903f}, {-0.056923f, 0.0310147f, 0.897126f}, {-0.0694351f, 0.0309771f, 0.877406f}, {-0.0847178f, 0.0308578f, 0.857614f}, {-0.101919f, 0.0308551f, 0.83666f}, {-0.120859f, 0.0319104f, 0.814884f}, {-0.141582f, 0.0319122f, 0.792799f}, {-0.16093f, 0.0314332f, 0.770357f}, {-0.606021f, 0.0227564f, 0.178472f}, {-0.588379f, 0.0228844f, 0.157354f}, {-0.569975f, 0.0197158f, 0.135676f}, {-0.630661f, 0.0237899f, 0.159798f}, {-0.612666f, 0.0242498f, 0.137332f}, {-0.593407f, 0.0210608f, 0.115725f}, {-0.574105f, 0.0141255f, 0.0946912f}, {-0.555777f, 0.00518816f, 0.0737936f}, {-0.538101f, -0.00220305f, 0.0524722f}, {-0.520284f, -0.00661333f, 0.0310916f}, {-0.65724f, 0.0211904f, 0.140691f}, {-0.637247f, 0.0220501f, 0.116773f}, {-0.616522f, 0.0188153f, 0.0949953f}, {-0.596394f, 0.0122766f, 0.0752412f}, {-0.578459f, 0.00441191f, 0.0556473f}, {-0.561639f, -0.00242037f, 0.0341462f}, {-0.544179f, -0.00673704f, 0.0118805f}, {-0.525558f, -0.00766047f, -0.00995254f}, {-0.505693f, -0.00477079f, -0.0310607f}, {-0.483998f, 0.0034001f, -0.0514239f}, {-0.0384882f, 0.00133315f, 0.139052f}, {-0.0385827f, 0.000238937f, 0.109588f}, {-0.0755107f, 0.00712514f, 0.168251f}, {-0.0749819f, 0.00579463f, 0.14246f}, {-0.075105f, 0.00496629f, 0.114718f}, {-0.116044f, 0.0114283f, 0.21713f}, {-0.114271f, 0.0107138f, 0.194603f}, {-0.112746f, 0.0099768f, 0.171392f}, {-0.111706f, 0.00921507f, 0.147207f}, {-0.111533f, 0.0087094f, 0.121748f}, {-0.112848f, 0.00860418f, 0.0948955f}, {-0.158599f, 0.0113197f, 0.24036f}, {-0.155729f, 0.0111988f, 0.218521f}, {-0.152928f, 0.0110023f, 0.196531f}, {-0.150351f, 0.0109956f, 0.174299f}, {-0.148233f, 0.0107264f, 0.151669f}, {-0.146987f, 0.0105043f, 0.128469f}, {-0.147358f, 0.0103868f, 0.10476f}, {-0.209322f, 0.00957368f, 0.284938f}, {-0.205214f, 0.00883567f, 0.262902f}, {-0.200874f, 0.00861365f, 0.240888f}, {-0.196415f, 0.00869136f, 0.218955f}, {-0.19195f, 0.00893941f, 0.197172f}, {-0.187596f, 0.00931026f, 0.175547f}, {-0.183494f, 0.00955675f, 0.154012f}, {-0.179931f, 0.00974144f, 0.132536f}, {-0.177656f, 0.00984227f, 0.111547f}, {-0.262727f, 0.0127433f, 0.308486f}, {-0.256562f, 0.00921186f, 0.285312f}, {-0.250011f, 0.00679505f, 0.262377f}, {-0.243264f, 0.0056157f, 0.239649f}, {-0.236452f, 0.00540248f, 0.217256f}, {-0.229636f, 0.00573527f, 0.195314f}, {-0.22282f, 0.00627753f, 0.173862f}, {-0.215958f, 0.00688814f, 0.152871f}, {-0.208993f, 0.00756544f, 0.13242f}, {-0.202139f, 0.00824049f, 0.113396f}, {-0.0393301f, 0.000779485f, 0.0772424f}, {-0.0414597f, 0.00318124f, 0.041967f}, {-0.0465796f, 0.00731218f, 0.0046275f}, {-0.0568554f, 0.0125356f, -0.032335f}, {-0.0695304f, 0.0186972f, -0.0643076f}, {-0.0843538f, 0.0244244f, -0.0932531f}, {-0.101948f, 0.0266999f, -0.121384f}, {-0.122267f, 0.028163f, -0.148782f}, {-0.147563f, 0.0279241f, -0.174947f}, {-0.177396f, 0.0235615f, -0.196923f}, {-0.210187f, 0.0171421f, -0.212772f}, {-0.245139f, 0.01436f, -0.22138f}, {-0.276723f, 0.0146702f, -0.225187f}, {-0.305398f, 0.0171041f, -0.225482f}, {-0.0763604f, 0.00511173f, 0.0847902f}, {-0.0795549f, 0.00635353f, 0.0529289f}, {-0.0858305f, 0.00881589f, 0.0202393f}, {-0.0960295f, 0.011925f, -0.0112836f}, {-0.109282f, 0.0154226f, -0.0398621f}, {-0.124925f, 0.0180792f, -0.0657319f}, {-0.142678f, 0.0188829f, -0.089622f}, {-0.162342f, 0.0179324f, -0.11195f}, {-0.184435f, 0.0166438f, -0.132382f}, {-0.209001f, 0.0157789f, -0.14978f}, {-0.235402f, 0.0162915f, -0.163426f}, {-0.116561f, 0.00910501f, 0.0669788f}, {-0.123655f, 0.0103626f, 0.0388788f}, {-0.134311f, 0.0119414f, 0.0118414f}, {-0.147892f, 0.0134656f, -0.0130015f}, {-0.163635f, 0.0144779f, -0.035418f}, {-0.180995f, 0.0149066f, -0.0556934f}, {-0.199623f, 0.0151696f, -0.0741985f}, {-0.219431f, 0.0157192f, -0.0909718f}, {-0.150636f, 0.0105099f, 0.0810625f}, {-0.158352f, 0.0107155f, 0.0579132f}, {-0.169729f, 0.0110426f, 0.0353848f}, {-0.183595f, 0.0111841f, 0.0142576f}, {-0.199106f, 0.0112129f, -0.00501795f}, {-0.17864f, 0.00984331f, 0.09231f}, {-0.187217f, 0.00957597f, 0.075247f}, {-0.199955f, 0.00901126f, 0.0577439f}, {-0.319672f, 0.0181555f, 0.335244f}, {-0.310515f, 0.0144701f, 0.30824f}, {-0.30074f, 0.0103769f, 0.28324f}, {-0.291231f, 0.00676017f, 0.259151f}, {-0.281885f, 0.00430515f, 0.235632f}, {-0.272654f, 0.00329036f, 0.212683f}, {-0.263491f, 0.00330349f, 0.190416f}, {-0.254261f, 0.00384919f, 0.168865f}, {-0.244698f, 0.00458717f, 0.14796f}, {-0.234368f, 0.00549396f, 0.127649f}, {-0.36003f, 0.0154219f, 0.330879f}, {-0.347601f, 0.012879f, 0.303811f}, {-0.336099f, 0.00942004f, 0.278034f}, {-0.324951f, 0.0059687f, 0.253155f}, {-0.313981f, 0.00317148f, 0.229019f}, {-0.303112f, 0.0017778f, 0.205593f}, {-0.292257f, 0.00163956f, 0.182972f}, {-0.281209f, 0.00218266f, 0.161162f}, {-0.269597f, 0.00295052f, 0.140016f}, {-0.387989f, 0.011992f, 0.323095f}, {-0.376158f, 0.010679f, 0.296156f}, {-0.364273f, 0.00790781f, 0.270172f}, {-0.352415f, 0.00469589f, 0.244961f}, {-0.340559f, 0.00189839f, 0.22047f}, {-0.328669f, 0.000477151f, 0.196705f}, {-0.316663f, 0.00040088f, 0.173775f}, {-0.304324f, 0.00101177f, 0.151652f}, {-0.414093f, 0.00909969f, 0.312511f}, {-0.401451f, 0.00886929f, 0.285961f}, {-0.388946f, 0.00673658f, 0.260145f}, {-0.376444f, 0.00362751f, 0.234953f}, {-0.36386f, 0.000877674f, 0.210372f}, {-0.35114f, -0.000499872f, 0.186473f}, {-0.338207f, -0.000535184f, 0.163371f}, {-0.438998f, 0.00734495f, 0.298904f}, {-0.425577f, 0.00762763f, 0.273515f}, {-0.412295f, 0.00596786f, 0.24826f}, {-0.399007f, 0.00297814f, 0.223359f}, {-0.3856f, 0.000133439f, 0.198942f}, {-0.37201f, -0.00135103f, 0.175127f}, {-0.463412f, 0.00701046f, 0.284046f}, {-0.449291f, 0.00736124f, 0.25956f}, {-0.435191f, 0.0059491f, 0.234908f}, {-0.421016f, 0.00293919f, 0.210431f}, {-0.40669f, -0.000273414f, 0.186356f}, {-0.487374f, 0.00785522f, 0.268711f}, {-0.472714f, 0.00820984f, 0.244693f}, {-0.457832f, 0.00675232f, 0.220514f}, {-0.442762f, 0.00335813f, 0.196481f}, {-0.511256f, 0.00951842f, 0.253067f}, {-0.495976f, 0.00988993f, 0.229174f}, {-0.480289f, 0.00814046f, 0.205346f}, {-0.535413f, 0.0118767f, 0.236533f}, {-0.519161f, 0.0122334f, 0.212885f}, {-0.559358f, 0.0152185f, 0.218388f}, {-0.222631f, 0.00660767f, 0.108255f}, {-0.208327f, 0.00792072f, 0.0907521f}, {-0.256822f, 0.00392219f, 0.119293f}, {-0.241973f, 0.00521082f, 0.0988098f}, {-0.223704f, 0.00689012f, 0.0784677f}, {-0.291257f, 0.0018171f, 0.130101f}, {-0.276835f, 0.00283193f, 0.108725f}, {-0.260116f, 0.00418496f, 0.0870223f}, {-0.239835f, 0.00603524f, 0.0644262f}, {-0.324854f, 0.000121788f, 0.141007f}, {-0.310698f, 0.000971996f, 0.119081f}, {-0.295136f, 0.00208691f, 0.0970883f}, {-0.277272f, 0.00361199f, 0.0743596f}, {-0.255963f, 0.00566048f, 0.0501334f}, {-0.358187f, -0.00139022f, 0.152032f}, {-0.343948f, -0.000656614f, 0.129581f}, {-0.328922f, 0.000338073f, 0.107433f}, {-0.312531f, 0.00164917f, 0.0850178f}, {-0.293955f, 0.00355347f, 0.0615857f}, {-0.272178f, 0.00602448f, 0.0362791f}, {-0.392169f, -0.00206513f, 0.162803f}, {-0.377459f, -0.00221327f, 0.139882f}, {-0.36241f, -0.00134388f, 0.117511f}, {-0.346648f, -0.00016964f, 0.0953282f}, {-0.329622f, 0.00150117f, 0.0727306f}, {-0.310582f, 0.00406625f, 0.0489335f}, {-0.288622f, 0.00738697f, 0.0230203f}, {-0.427503f, -0.000501859f, 0.172827f}, {-0.41206f, -0.00283743f, 0.149628f}, {-0.396506f, -0.00311798f, 0.126981f}, {-0.38072f, -0.00207628f, 0.104821f}, {-0.364319f, -0.000568736f, 0.0827768f}, {-0.346774f, 0.0017118f, 0.0602327f}, {-0.327399f, 0.00543288f, 0.0364235f}, {-0.305363f, 0.00996539f, 0.0103392f}, {-0.280044f, 0.0138237f, -0.0191946f}, {-0.464348f, 0.00404893f, 0.181737f}, {-0.448223f, -0.000720923f, 0.158513f}, {-0.431936f, -0.00370514f, 0.135679f}, {-0.415619f, -0.00416869f, 0.113342f}, {-0.399178f, -0.00292285f, 0.0914722f}, {-0.382219f, -0.000817096f, 0.0697108f}, {-0.364233f, 0.00251311f, 0.0474582f}, {-0.344577f, 0.00769242f, 0.0239799f}, {-0.322485f, 0.0135496f, -0.00189831f}, {-0.297534f, 0.0180752f, -0.0316228f}, {-0.502607f, 0.0100144f, 0.189444f}, {-0.485855f, 0.00512189f, 0.166241f}, {-0.468997f, -0.000682665f, 0.143412f}, {-0.452021f, -0.00477838f, 0.120948f}, {-0.435044f, -0.0052719f, 0.0989014f}, {-0.418027f, -0.00382016f, 0.0773613f}, {-0.400578f, -0.000911881f, 0.0559923f}, {-0.382202f, 0.0037766f, 0.0342485f}, {-0.362286f, 0.0105526f, 0.0113968f}, {-0.340125f, 0.0177368f, -0.0139561f}, {-0.315525f, 0.0228265f, -0.0435081f}, {-0.542184f, 0.0154326f, 0.195514f}, {-0.524837f, 0.0127264f, 0.172627f}, {-0.507403f, 0.00702206f, 0.149847f}, {-0.489993f, 0.000139015f, 0.127385f}, {-0.472535f, -0.00508656f, 0.105271f}, {-0.455022f, -0.00642909f, 0.0835355f}, {-0.43751f, -0.00469988f, 0.0623256f}, {-0.419587f, -0.00115489f, 0.0413818f}, {-0.400873f, 0.00528186f, 0.0203542f}, {-0.380685f, 0.0136002f, -0.00166341f}, {-0.358407f, 0.021959f, -0.0262478f}, {-0.334085f, 0.0274843f, -0.0552377f}, {-0.583051f, 0.0191375f, 0.198647f}, {-0.565116f, 0.0193822f, 0.176945f}, {-0.547154f, 0.0163236f, 0.154721f}, {-0.529198f, 0.00976244f, 0.132415f}, {-0.511388f, 0.00184275f, 0.110332f}, {-0.493654f, -0.00451975f, 0.088559f}, {-0.475803f, -0.00691447f, 0.0671139f}, {-0.457837f, -0.00563836f, 0.0461726f}, {-0.439471f, -0.00131961f, 0.0256553f}, {-0.420357f, 0.00638357f, 0.00533866f}, {-0.399846f, 0.0161621f, -0.0157016f}, {-0.377341f, 0.0253629f, -0.0393273f}, {-0.353165f, 0.0311893f, -0.067293f}, {-0.551409f, 0.0128583f, 0.113904f}, {-0.533301f, 0.00399969f, 0.0923176f}, {-0.515482f, -0.0032898f, 0.0708556f}, {-0.497528f, -0.0068502f, 0.049597f}, {-0.479218f, -0.00625588f, 0.0287746f}, {-0.460355f, -0.00176976f, 0.00850692f}, {-0.440697f, 0.00671238f, -0.0112395f}, {-0.419635f, 0.0174107f, -0.031314f}, {-0.396698f, 0.0271879f, -0.0537041f}, {-0.372517f, 0.0332088f, -0.0801041f}, {-0.501758f, -0.00688015f, 0.0100484f}, {-0.482354f, -0.0028132f, -0.0103475f}, {-0.461863f, 0.00581295f, -0.0299146f}, {-0.439715f, 0.0168671f, -0.0489661f}, {-0.415972f, 0.0270767f, -0.0696802f}, {-0.391665f, 0.0333987f, -0.0939292f}, {-0.368763f, 0.0354372f, -0.122317f}, {-0.459628f, 0.0145025f, -0.0688871f}, {-0.434276f, 0.0250545f, -0.0870301f}, {-0.409712f, 0.0319009f, -0.108491f}, {-0.387434f, 0.0343498f, -0.133593f}, {-0.329078f, 0.0186931f, -0.224607f}, {-0.349486f, 0.0189795f, -0.225834f}, {-0.288475f, 0.0213665f, -0.180068f}, {-0.31295f, 0.0244289f, -0.18493f}, {-0.336042f, 0.0261212f, -0.189232f}, {-0.358973f, 0.025982f, -0.194756f}, {-0.240353f, 0.0172809f, -0.105752f}, {-0.262141f, 0.0203035f, -0.118395f}, {-0.284328f, 0.0244832f, -0.129032f}, {-0.306359f, 0.0287454f, -0.138201f}, {-0.328136f, 0.0317749f, -0.146495f}, {-0.349697f, 0.0330138f, -0.154661f}, {-0.371119f, 0.0323114f, -0.163169f}, {-0.233266f, 0.0129156f, -0.0384513f}, {-0.251372f, 0.0154134f, -0.053004f}, {-0.269996f, 0.0191725f, -0.0662302f}, {-0.289147f, 0.0237282f, -0.0783032f}, {-0.308779f, 0.0284748f, -0.0895156f}, {-0.328749f, 0.0324572f, -0.100308f}, {-0.348859f, 0.0348531f, -0.111119f}, {-0.214547f, 0.00846045f, 0.0402959f}, {-0.230069f, 0.0082504f, 0.0237339f}, {-0.246255f, 0.00883013f, 0.0083412f}, {-0.262954f, 0.0106035f, -0.00593608f}, {-0.0387216f, 0.00334631f, 0.166024f}, {-0.0786741f, 0.0108037f, 0.23811f}, {-0.0774847f, 0.00977157f, 0.215681f}, {-0.0764032f, 0.0085003f, 0.192517f}, {-0.123603f, 0.0127485f, 0.304433f}, {-0.12174f, 0.0126118f, 0.282667f}, {-0.119848f, 0.0123521f, 0.260993f}, {-0.117933f, 0.0119573f, 0.239202f}, {-0.17348f, 0.0143427f, 0.375188f}, {-0.171201f, 0.0132341f, 0.35083f}, {-0.168996f, 0.0124791f, 0.327657f}, {-0.166666f, 0.0120183f, 0.305474f}, {-0.164133f, 0.0116964f, 0.283739f}, {-0.161426f, 0.011476f, 0.262083f}, {-0.227489f, 0.0285953f, 0.455923f}, {-0.225674f, 0.0255423f, 0.430401f}, {-0.223199f, 0.0220827f, 0.404721f}, {-0.22082f, 0.0186704f, 0.378899f}, {-0.218683f, 0.0155273f, 0.353547f}, {-0.216243f, 0.0128497f, 0.329675f}, {-0.213063f, 0.0107733f, 0.307071f}, {-0.268764f, 0.0339871f, 0.547818f}, {-0.274212f, 0.0347594f, 0.51981f}, {-0.277006f, 0.0351397f, 0.491824f}, {-0.278016f, 0.0336027f, 0.464432f}, {-0.277662f, 0.0304262f, 0.437884f}, {-0.275534f, 0.0268245f, 0.411214f}, {-0.273957f, 0.0235303f, 0.385819f}, {-0.270853f, 0.0201642f, 0.358525f}, {-0.268054f, 0.0165098f, 0.33252f}, {-0.377011f, 0.0153081f, 0.359757f}, {-0.399122f, 0.0112963f, 0.351483f}, {-0.427348f, 0.00689098f, 0.340662f}, {-0.452859f, 0.00519902f, 0.324327f}, {-0.477855f, 0.00522727f, 0.308124f}, {-0.501887f, 0.00619691f, 0.292384f}, {-0.525955f, 0.00759185f, 0.27725f}, {-0.551534f, 0.0094654f, 0.260964f}, {-0.576505f, 0.0125857f, 0.241728f}, {-0.601895f, 0.0167236f, 0.219542f}, {-0.215775f, 0.0116543f, -0.0225008f}, "
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "25.2109 348.135"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "construct_mesh",
+                    "nodeType": "Geometry::Mesh::construct_mesh",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "866.712 523.213"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "to_unsigned_int",
+                    "nodeType": "Core::Type_Conversion::to_unsigned_int",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "556.89 568.825"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "to_unsigned_int1",
+                    "nodeType": "Core::Type_Conversion::to_unsigned_int",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "560.343 793.548"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "face_offset_string",
+                    "valueType": "string",
+                    "metadata": [
+                        {
+                            "metaName": "NodeValueDisplay",
+                            "metadata": [
+                                {
+                                    "metaName": "format",
+                                    "metaType": "string",
+                                    "metaValue": "{value}"
+                                },
+                                {
+                                    "metaName": "show",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-504.19 620.986"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284, 288, 292, 296, 300, 304, 308, 312, 316, 320, 324, 328, 332, 336, 340, 344, 348, 352, 356, 360, 364, 368, 372, 376, 380, 384, 388, 392, 396, 400, 404, 408, 412, 416, 420, 424, 428, 432, 436, 440, 444, 448, 452, 456, 460, 464, 468, 472, 476, 480, 484, 488, 492, 496, 500, 504, 508, 512, 516, 520, 524, 528, 532, 536, 540, 544, 548, 552, 556, 560, 564, 568, 572, 576, 580, 584, 588, 592, 596, 600, 604, 608, 612, 616, 620, 624, 628, 632, 636, 640, 644, 648, 652, 656, 660, 664, 668, 672, 676, 680, 684, 688, 692, 696, 700, 704, 708, 712, 716, 720, 724, 728, 732, 736, 740, 744, 748, 752, 756, 760, 764, 768, 772, 776, 780, 784, 788, 792, 796, 800, 804, 808, 812, 816, 820, 824, 828, 832, 836, 840, 844, 848, 852, 856, 860, 864, 868, 872, 876, 880, 884, 888, 892, 896, 900, 904, 908, 912, 916, 920, 924, 928, 932, 936, 940, 944, 948, 952, 956, 960, 964, 968, 972, 976, 980, 984, 988, 992, 996, 1000, 1004, 1008, 1012, 1016, 1020, 1024, 1028, 1032, 1036, 1040, 1044, 1048, 1052, 1056, 1060, 1064, 1068, 1072, 1076, 1080, 1084, 1088, 1092, 1096, 1100, 1104, 1108, 1112, 1116, 1120, 1124, 1128, 1132, 1136, 1140, 1144, 1148, 1152, 1156, 1160, 1164, 1168, 1172, 1176, 1180, 1184, 1188, 1192, 1196, 1200, 1204, 1208, 1212, 1216, 1220, 1224, 1228, 1232, 1236, 1240, 1244, 1248, 1252, 1256, 1260, 1264, 1268, 1272, 1276, 1280, 1284, 1288, 1292, 1296, 1300, 1304, 1308, 1312, 1316, 1320, 1324, 1328, 1332, 1336, 1340, 1344, 1348, 1352, 1356, 1360, 1364, 1368, 1372, 1376, 1380, 1384, 1388, 1392, 1396, 1400, 1404, 1408, 1412, 1416, 1420, 1424, 1428, 1432, 1436, 1440, 1444, 1448, 1452, 1456, 1460, 1464, 1468, 1472, 1476, 1480, 1484, 1488, 1492, 1496, 1500, 1504, 1508, 1512, 1516, 1520, 1524, 1528, 1532, 1536, 1540, 1544, 1548, 1552, 1556, 1560, 1564, 1568, 1572, 1576, 1580, 1584, 1588, 1592, 1596, 1600, 1604, 1608, 1612, 1616, 1620, 1624, 1628, 1632, 1636, 1640, 1644, 1648, 1652, 1656, 1660, 1664, 1668, 1672, 1676, 1680, 1684, 1688, 1692, 1696, 1700, 1704, 1708, 1712, 1716, 1720, 1724, 1728, 1732, 1736, 1740, 1744, 1748, 1752, 1756, 1760, 1764, 1768, 1772, 1776, 1780, 1784, 1788, 1792, 1796, 1800, 1804, 1808, 1812, 1816, 1820, 1824, 1828, 1832, 1836, 1840, 1844, 1848, 1852, 1856, 1860, 1864, 1868, 1872, 1876, 1880, 1884, 1888, 1892, 1896, 1900, 1904, 1908, 1912, 1916, 1920, 1924, 1928, 1932, 1936, 1940, 1944, 1948, 1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024, 2028, 2032, 2036, 2040, 2044, 2048, 2052, 2056, 2060, 2064, 2068, 2072, 2076, 2080, 2084, 2088, 2092, 2096, 2100, 2104, 2108, 2112, 2116, 2120, 2124, 2128, 2132, 2136, 2140, 2144, 2148, 2152, 2156, 2160, 2164, 2168, 2172, 2176, 2180, 2184, 2188, 2192, 2196, 2200, 2204, 2208, 2212, 2216, 2220, 2224, 2228, 2232, 2236, 2240, 2244, 2248, 2252, 2256, 2260, 2264, 2268, 2272, 2276, 2280, 2284, 2288, 2292, 2296, 2300, 2304, 2308, 2312, 2316, 2320, 2324, 2328, 2332, 2336, 2340, 2344, 2348, 2352, 2356, 2360, 2364, 2368, 2372, 2376, 2380, 2384, 2388, 2392, 2396, 2400, 2404, 2408, 2412, 2416, 2420, 2424, 2428, 2432, 2436, 2440, 2444, 2448, 2452, 2456, 2460, 2464, 2468, 2472, 2476, 2480, 2484, 2488, 2492, 2496, 2500, 2504, 2508, 2512, 2516, 2520, 2524, 2528, 2532, 2536, 2540, 2544, 2548, 2552, 2556, 2560, 2564, 2568, 2572, 2576, 2580, 2584, 2588, 2592, 2596, 2600, 2604, 2608, 2612, 2616, 2620, 2624, 2628, 2632, 2636, 2640, 2644, 2648, 2652, 2656, 2660, 2664, 2668, 2672, 2676, 2680, 2684, 2688, 2692, 2696, 2700, 2704, 2708, 2712, 2716, 2720, 2724, 2728, 2732, 2736, 2740, 2744, 2748, 2752, 2756, 2760, 2764, 2768, 2772, 2776, 2780, 2784, 2788, 2792, 2796, 2800, 2804, 2808, 2812, 2816, 2820, 2824, 2828, 2832, 2836, 2840, 2844, 2848, 2852, 2856, 2860, 2864, 2868, 2872, 2876, 2880, 2884, 2888, 2892, 2896, 2900, 2904, 2908, 2912, 2916, 2920, 2924, 2928, 2932, 2936, 2940, 2944, 2948, 2952, 2956, 2960, 2964, 2968, 2972, 2976, 2980, 2984, 2988, 2992, 2996, 3000, 3004, 3008, 3012, 3016, 3020, 3024, 3028, 3032, 3036, 3040, 3044, 3048, 3052, 3056, 3060, 3064, 3068, 3072, 3076, 3080, 3084, 3088, 3092, 3096, 3100, 3104, 3108, 3112, 3116, 3120, 3124, 3128, 3132, 3136, 3140, 3144, 3148, 3152, 3156, 3160, 3164, 3168, 3172, 3176, 3180, 3184, 3188, 3192, 3196, 3200, 3204, 3208, 3212, 3216, 3220, 3224, 3228, 3232, 3236, 3240, 3244, 3248, 3252, 3256, 3260, 3264, 3268, 3272, 3276, 3280, 3284, 3288, 3292, 3296, 3300, 3304, 3308, 3312, 3316, 3320, 3324, 3328, 3332, 3336, 3340, 3344, 3348, 3352, 3356, 3360, 3364, 3368, 3372, 3376, 3380, 3384, 3388, 3392, 3396, 3400, 3404, 3408, 3412, 3416, 3420, 3424, 3428, 3432, 3436, 3440, 3444, 3448, 3452, 3456, 3460, 3464, 3468, 3472, 3476, 3480, 3484, 3488, 3492, 3496, 3500, 3504, 3508, 3512, 3516, 3520, 3524, 3528, 3532, 3536, 3540, 3544, 3548, 3552, 3556, 3560, 3564, 3568, 3572, 3576, 3580, 3584, 3588, 3592, 3596, 3600, 3604, 3608, 3612, 3616, 3620, 3624, 3628, 3632, 3636, 3640, 3644, 3648, 3652, 3656, 3660, 3664, 3668, 3672, 3676, 3680, 3684, 3688, 3692, 3696, 3700, 3704, 3708, 3712, 3716, 3720, 3724, 3728, 3732, 3736, 3740, 3744, 3748, 3752, 3756, 3760, 3764, 3768, 3772, 3776, 3780, 3784, 3788, 3792, 3796, 3800, 3804, 3808, 3812, 3816, 3820, 3824, 3828, 3832, 3836, 3840, 3844, 3848, 3852, 3856, 3860, 3864, 3868, 3872, 3876, 3880, 3884, 3888, 3892, 3896, 3900, 3904, 3908, 3912, 3916, 3920, 3924, 3928, 3932, 3936, 3940, 3944, 3948, 3952, 3956, 3960, 3964, 3968, 3972, 3976, 3980, 3984, 3988, 3992, 3996, 4000, 4004, 4008, 4012, 4016, 4020, 4024, 4028, 4032, 4036, 4040, 4044, 4048, 4052, 4056, 4060, 4064, 4068, 4072, 4076, 4080, 4084, 4088, 4092, 4096, 4100, 4104, 4108, 4112, 4116, 4120, 4124, 4128, 4132, 4136"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "face_vertex_string",
+                    "valueType": "string",
+                    "metadata": [
+                        {
+                            "metaName": "NodeValueDisplay",
+                            "metadata": [
+                                {
+                                    "metaName": "format",
+                                    "metaType": "string",
+                                    "metaValue": "{value}"
+                                },
+                                {
+                                    "metaName": "show",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-502.197 854.625"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0, 1, 110, 109, 0, 109, 108, 106, 0, 106, 536, 537, 0, 537, 538, 1, 1, 2, 30, 110, 1, 538, 539, 2, 2, 3, 31, 30, 2, 539, 540, 3, 3, 4, 32, 31, 3, 540, 541, 4, 4, 5, 33, 32, 4, 541, 542, 5, 5, 6, 34, 33, 5, 542, 543, 6, 6, 7, 35, 34, 6, 543, 544, 7, 7, 8, 36, 35, 7, 544, 545, 8, 8, 9, 37, 36, 8, 545, 546, 9, 9, 10, 38, 37, 9, 546, 547, 10, 10, 11, 39, 38, 10, 547, 548, 11, 11, 12, 40, 39, 11, 548, 549, 12, 12, 13, 41, 40, 12, 549, 550, 13, 13, 14, 42, 41, 13, 550, 551, 14, 14, 15, 43, 42, 14, 551, 552, 15, 15, 16, 44, 43, 15, 552, 553, 16, 16, 17, 45, 44, 16, 553, 554, 17, 17, 18, 46, 45, 17, 554, 555, 18, 18, 19, 47, 46, 18, 555, 556, 19, 19, 20, 48, 47, 19, 556, 557, 20, 20, 21, 49, 48, 20, 557, 558, 21, 21, 22, 50, 49, 21, 558, 559, 22, 22, 23, 51, 50, 22, 559, 560, 23, 23, 24, 52, 51, 23, 560, 561, 24, 24, 25, 53, 52, 24, 561, 562, 25, 25, 26, 54, 53, 25, 562, 563, 26, 26, 27, 428, 54, 26, 563, 564, 27, 27, 28, 429, 428, 27, 564, 565, 28, 28, 29, 430, 429, 28, 565, 566, 29, 29, 427, 169, 430, 29, 566, 567, 427, 30, 31, 116, 115, 30, 115, 114, 110, 31, 32, 55, 116, 32, 33, 56, 55, 33, 34, 57, 56, 34, 35, 58, 57, 35, 36, 59, 58, 36, 37, 60, 59, 37, 38, 61, 60, 38, 39, 62, 61, 39, 40, 63, 62, 40, 41, 64, 63, 41, 42, 65, 64, 42, 43, 66, 65, 43, 44, 67, 66, 44, 45, 68, 67, 45, 46, 69, 68, 46, 47, 70, 69, 47, 48, 71, 70, 48, 49, 72, 71, 49, 50, 73, 72, 50, 51, 74, 73, 51, 52, 431, 74, 52, 53, 432, 431, 53, 54, 433, 432, 54, 428, 434, 433, 55, 56, 124, 123, 55, 123, 122, 116, 56, 57, 75, 124, 57, 58, 76, 75, 58, 59, 77, 76, 59, 60, 78, 77, 60, 61, 79, 78, 61, 62, 80, 79, 62, 63, 81, 80, 63, 64, 82, 81, 64, 65, 83, 82, 65, 66, 84, 83, 66, 67, 85, 84, 67, 68, 86, 85, 68, 69, 87, 86, 69, 70, 88, 87, 70, 71, 89, 88, 71, 72, 435, 89, 72, 73, 436, 435, 73, 74, 437, 436, 74, 431, 438, 437, 75, 76, 130, 129, 75, 129, 128, 124, 76, 77, 90, 130, 77, 78, 91, 90, 78, 79, 92, 91, 79, 80, 93, 92, 80, 81, 94, 93, 81, 82, 95, 94, 82, 83, 96, 95, 83, 84, 97, 96, 84, 85, 98, 97, 85, 86, 99, 98, 86, 87, 441, 99, 87, 88, 442, 441, 88, 89, 443, 442, 89, 435, 444, 443, 90, 91, 133, 132, 90, 132, 131, 130, 91, 92, 100, 133, 92, 93, 101, 100, 93, 94, 102, 101, 94, 95, 103, 102, 95, 96, 104, 103, 96, 97, 448, 104, 97, 98, 449, 448, 98, 99, 450, 449, 99, 441, 451, 450, 100, 101, 482, 481, 100, 481, 480, 133, 101, 102, 503, 482, 102, 103, 504, 503, 103, 104, 505, 504, 104, 448, 506, 505, 105, 106, 108, 107, 105, 107, 486, 485, 105, 485, 570, 535, 105, 535, 536, 106, 107, 108, 112, 111, 107, 111, 487, 486, 108, 109, 113, 112, 109, 110, 114, 113, 111, 112, 118, 117, 111, 117, 488, 487, 112, 113, 119, 118, 113, 114, 120, 119, 114, 115, 121, 120, 115, 116, 122, 121, 117, 118, 135, 134, 117, 134, 483, 488, 118, 119, 136, 135, 119, 120, 137, 136, 120, 121, 125, 137, 121, 122, 126, 125, 122, 123, 127, 126, 123, 124, 128, 127, 125, 126, 143, 142, 125, 142, 141, 137, 126, 127, 144, 143, 127, 128, 145, 144, 128, 129, 146, 145, 129, 130, 131, 146, 131, 132, 479, 478, 131, 478, 477, 146, 132, 133, 480, 479, 134, 135, 139, 138, 134, 138, 484, 483, 135, 136, 140, 139, 136, 137, 141, 140, 138, 139, 470, 469, 138, 469, 575, 484, 139, 140, 471, 470, 140, 141, 472, 471, 141, 142, 473, 472, 142, 143, 474, 473, 143, 144, 475, 474, 144, 145, 476, 475, 145, 146, 477, 476, 147, 148, 151, 150, 147, 150, 514, 513, 147, 513, 466, 369, 147, 369, 370, 148, 148, 149, 152, 151, 148, 370, 371, 149, 149, 371, 372, 382, 149, 382, 153, 152, 150, 151, 158, 157, 150, 157, 515, 514, 151, 152, 159, 158, 152, 153, 160, 159, 153, 154, 161, 160, 153, 382, 383, 154, 154, 155, 162, 161, 154, 383, 384, 155, 155, 156, 163, 162, 155, 384, 385, 156, 156, 385, 386, 392, 156, 392, 164, 163, 157, 158, 490, 489, 157, 489, 573, 515, 158, 159, 491, 490, 159, 160, 492, 491, 160, 161, 493, 492, 161, 162, 494, 493, 162, 163, 495, 494, 163, 164, 496, 495, 164, 165, 497, 496, 164, 392, 393, 165, 165, 166, 498, 497, 165, 393, 394, 166, 166, 394, 395, 399, 166, 399, 499, 498, 167, 170, 169, 427, 167, 427, 567, 568, 167, 568, 569, 168, 167, 168, 171, 170, 168, 204, 218, 171, 168, 569, 516, 204, 169, 170, 175, 174, 169, 174, 173, 430, 170, 171, 176, 175, 171, 218, 177, 176, 172, 179, 178, 434, 172, 434, 428, 429, 172, 429, 430, 173, 172, 173, 180, 179, 173, 174, 181, 180, 174, 175, 182, 181, 175, 176, 183, 182, 176, 177, 184, 183, 177, 229, 237, 184, 177, 218, 219, 229, 178, 179, 188, 187, 178, 187, 186, 440, 178, 440, 433, 434, 179, 180, 189, 188, 180, 181, 190, 189, 181, 182, 191, 190, 182, 183, 192, 191, 183, 184, 193, 192, 184, 237, 242, 193, 185, 195, 194, 447, 185, 447, 438, 439, 185, 439, 440, 186, 185, 186, 196, 195, 186, 187, 197, 196, 187, 188, 198, 197, 188, 189, 199, 198, 189, 190, 200, 199, 190, 191, 201, 200, 191, 192, 202, 201, 192, 193, 203, 202, 193, 242, 572, 203, 194, 195, 247, 246, 194, 246, 245, 456, 194, 456, 446, 447, 195, 196, 248, 247, 196, 197, 249, 248, 197, 198, 250, 249, 198, 199, 251, 250, 199, 200, 252, 251, 200, 201, 253, 252, 201, 202, 254, 253, 202, 203, 300, 254, 203, 572, 301, 300, 204, 205, 219, 218, 204, 516, 517, 205, 205, 206, 220, 219, 205, 517, 518, 206, 206, 207, 221, 220, 206, 518, 519, 207, 207, 208, 222, 221, 207, 519, 520, 208, 208, 209, 223, 222, 208, 520, 521, 209, 209, 210, 224, 223, 209, 521, 522, 210, 210, 211, 225, 224, 210, 522, 523, 211, 211, 212, 226, 225, 211, 523, 524, 212, 212, 213, 227, 226, 212, 524, 525, 213, 213, 214, 228, 227, 213, 525, 526, 214, 214, 215, 468, 228, 214, 526, 527, 215, 215, 216, 405, 468, 215, 527, 528, 216, 216, 217, 406, 405, 216, 528, 529, 217, 217, 403, 407, 406, 217, 529, 530, 403, 219, 220, 230, 229, 220, 221, 231, 230, 221, 222, 232, 231, 222, 223, 233, 232, 223, 224, 234, 233, 224, 225, 235, 234, 225, 226, 236, 235, 226, 227, 409, 236, 227, 228, 410, 409, 228, 468, 411, 410, 229, 230, 238, 237, 230, 231, 239, 238, 231, 232, 240, 239, 232, 233, 241, 240, 233, 234, 467, 241, 234, 235, 416, 467, 235, 236, 417, 416, 236, 409, 418, 417, 237, 238, 243, 242, 238, 239, 244, 243, 239, 240, 423, 244, 240, 241, 424, 423, 241, 467, 425, 424, 242, 243, 301, 572, 243, 244, 304, 301, 244, 423, 308, 304, 245, 246, 256, 255, 245, 255, 457, 574, 245, 574, 455, 456, 246, 247, 257, 256, 247, 248, 258, 257, 248, 249, 259, 258, 249, 250, 260, 259, 250, 251, 261, 260, 251, 252, 262, 261, 252, 253, 263, 262, 253, 254, 302, 263, 254, 300, 303, 302, 255, 256, 265, 264, 255, 264, 458, 457, 256, 257, 266, 265, 257, 258, 267, 266, 258, 259, 268, 267, 259, 260, 269, 268, 260, 261, 270, 269, 261, 262, 271, 270, 262, 263, 305, 271, 263, 302, 306, 305, 264, 265, 273, 272, 264, 272, 459, 458, 265, 266, 274, 273, 266, 267, 275, 274, 267, 268, 276, 275, 268, 269, 277, 276, 269, 270, 278, 277, 270, 271, 309, 278, 271, 305, 310, 309, 272, 273, 280, 279, 272, 279, 460, 459, 273, 274, 281, 280, 274, 275, 282, 281, 275, 276, 283, 282, 276, 277, 284, 283, 277, 278, 314, 284, 278, 309, 315, 314, 279, 280, 286, 285, 279, 285, 461, 460, 280, 281, 287, 286, 281, 282, 288, 287, 282, 283, 289, 288, 283, 284, 320, 289, 284, 314, 321, 320, 285, 286, 291, 290, 285, 290, 462, 461, 286, 287, 292, 291, 287, 288, 293, 292, 288, 289, 327, 293, 289, 320, 328, 327, 290, 291, 295, 294, 290, 294, 463, 462, 291, 292, 296, 295, 292, 293, 336, 296, 293, 327, 337, 336, 294, 295, 298, 297, 294, 297, 464, 463, 295, 296, 346, 298, 296, 336, 347, 346, 297, 298, 357, 299, 297, 299, 465, 464, 298, 346, 358, 357, 299, 357, 370, 369, 299, 369, 466, 465, 300, 301, 304, 303, 302, 303, 307, 306, 303, 304, 308, 307, 305, 306, 311, 310, 306, 307, 312, 311, 307, 308, 313, 312, 308, 423, 424, 313, 309, 310, 316, 315, 310, 311, 317, 316, 311, 312, 318, 317, 312, 313, 319, 318, 313, 424, 425, 319, 314, 315, 322, 321, 315, 316, 323, 322, 316, 317, 324, 323, 317, 318, 325, 324, 318, 319, 326, 325, 319, 425, 426, 326, 320, 321, 329, 328, 321, 322, 330, 329, 322, 323, 331, 330, 323, 324, 332, 331, 324, 325, 333, 332, 325, 326, 334, 333, 326, 426, 335, 334, 327, 328, 338, 337, 328, 329, 339, 338, 329, 330, 340, 339, 330, 331, 341, 340, 331, 332, 342, 341, 332, 333, 343, 342, 333, 334, 344, 343, 334, 335, 345, 344, 335, 417, 418, 345, 335, 426, 416, 417, 336, 337, 348, 347, 337, 338, 349, 348, 338, 339, 350, 349, 339, 340, 351, 350, 340, 341, 352, 351, 341, 342, 353, 352, 342, 343, 354, 353, 343, 344, 355, 354, 344, 345, 356, 355, 345, 418, 419, 356, 346, 347, 359, 358, 347, 348, 360, 359, 348, 349, 361, 360, 349, 350, 362, 361, 350, 351, 363, 362, 351, 352, 364, 363, 352, 353, 365, 364, 353, 354, 366, 365, 354, 355, 367, 366, 355, 356, 368, 367, 356, 419, 420, 368, 357, 358, 371, 370, 358, 359, 372, 371, 359, 360, 373, 372, 360, 361, 374, 373, 361, 362, 375, 374, 362, 363, 376, 375, 363, 364, 377, 376, 364, 365, 378, 377, 365, 366, 379, 378, 366, 367, 380, 379, 367, 368, 381, 380, 368, 420, 421, 381, 372, 373, 383, 382, 373, 374, 384, 383, 374, 375, 385, 384, 375, 376, 386, 385, 376, 377, 387, 386, 377, 378, 388, 387, 378, 379, 389, 388, 379, 380, 390, 389, 380, 381, 391, 390, 381, 421, 422, 391, 386, 387, 393, 392, 387, 388, 394, 393, 388, 389, 395, 394, 389, 390, 396, 395, 390, 391, 397, 396, 391, 422, 398, 397, 395, 396, 400, 399, 396, 397, 401, 400, 397, 398, 402, 401, 398, 414, 415, 402, 398, 422, 413, 414, 399, 400, 500, 499, 400, 401, 501, 500, 401, 402, 502, 501, 402, 415, 534, 502, 403, 404, 408, 407, 403, 530, 531, 404, 404, 532, 533, 408, 404, 531, 571, 532, 405, 406, 413, 412, 405, 412, 411, 468, 406, 407, 414, 413, 407, 408, 415, 414, 408, 533, 534, 415, 409, 410, 419, 418, 410, 411, 420, 419, 411, 412, 421, 420, 412, 413, 422, 421, 416, 426, 425, 467, 431, 432, 439, 438, 432, 433, 440, 439, 435, 436, 445, 444, 436, 437, 446, 445, 437, 438, 447, 446, 441, 442, 452, 451, 442, 443, 453, 452, 443, 444, 454, 453, 444, 445, 455, 454, 445, 446, 456, 455, 448, 449, 507, 506, 449, 450, 508, 507, 450, 451, 509, 508, 451, 452, 510, 509, 452, 453, 511, 510, 453, 454, 512, 511, 454, 455, 574, 512, 576, 685, 686, 577, 576, 682, 684, 685, 576, 537, 536, 682, 576, 577, 538, 537, 577, 686, 606, 578, 577, 578, 539, 538, 578, 606, 607, 579, 578, 579, 540, 539, 579, 607, 608, 580, 579, 580, 541, 540, 580, 608, 609, 581, 580, 581, 542, 541, 581, 609, 610, 582, 581, 582, 543, 542, 582, 610, 611, 583, 582, 583, 544, 543, 583, 611, 612, 584, 583, 584, 545, 544, 584, 612, 613, 585, 584, 585, 546, 545, 585, 613, 614, 586, 585, 586, 547, 546, 586, 614, 615, 587, 586, 587, 548, 547, 587, 615, 616, 588, 587, 588, 549, 548, 588, 616, 617, 589, 588, 589, 550, 549, 589, 617, 618, 590, 589, 590, 551, 550, 590, 618, 619, 591, 590, 591, 552, 551, 591, 619, 620, 592, 591, 592, 553, 552, 592, 620, 621, 593, 592, 593, 554, 553, 593, 621, 622, 594, 593, 594, 555, 554, 594, 622, 623, 595, 594, 595, 556, 555, 595, 623, 624, 596, 595, 596, 557, 556, 596, 624, 625, 597, 596, 597, 558, 557, 597, 625, 626, 598, 597, 598, 559, 558, 598, 626, 627, 599, 598, 599, 560, 559, 599, 627, 628, 600, 599, 600, 561, 560, 600, 628, 629, 601, 600, 601, 562, 561, 601, 629, 630, 602, 601, 602, 563, 562, 602, 630, 1004, 603, 602, 603, 564, 563, 603, 1004, 1005, 604, 603, 604, 565, 564, 604, 1005, 1006, 605, 604, 605, 566, 565, 605, 1006, 745, 1003, 605, 1003, 567, 566, 606, 691, 692, 607, 606, 686, 690, 691, 607, 692, 631, 608, 608, 631, 632, 609, 609, 632, 633, 610, 610, 633, 634, 611, 611, 634, 635, 612, 612, 635, 636, 613, 613, 636, 637, 614, 614, 637, 638, 615, 615, 638, 639, 616, 616, 639, 640, 617, 617, 640, 641, 618, 618, 641, 642, 619, 619, 642, 643, 620, 620, 643, 644, 621, 621, 644, 645, 622, 622, 645, 646, 623, 623, 646, 647, 624, 624, 647, 648, 625, 625, 648, 649, 626, 626, 649, 650, 627, 627, 650, 1007, 628, 628, 1007, 1008, 629, 629, 1008, 1009, 630, 630, 1009, 1010, 1004, 631, 699, 700, 632, 631, 692, 698, 699, 632, 700, 651, 633, 633, 651, 652, 634, 634, 652, 653, 635, 635, 653, 654, 636, 636, 654, 655, 637, 637, 655, 656, 638, 638, 656, 657, 639, 639, 657, 658, 640, 640, 658, 659, 641, 641, 659, 660, 642, 642, 660, 661, 643, 643, 661, 662, 644, 644, 662, 663, 645, 645, 663, 664, 646, 646, 664, 665, 647, 647, 665, 1011, 648, 648, 1011, 1012, 649, 649, 1012, 1013, 650, 650, 1013, 1014, 1007, 651, 705, 706, 652, 651, 700, 704, 705, 652, 706, 666, 653, 653, 666, 667, 654, 654, 667, 668, 655, 655, 668, 669, 656, 656, 669, 670, 657, 657, 670, 671, 658, 658, 671, 672, 659, 659, 672, 673, 660, 660, 673, 674, 661, 661, 674, 675, 662, 662, 675, 1017, 663, 663, 1017, 1018, 664, 664, 1018, 1019, 665, 665, 1019, 1020, 1011, 666, 708, 709, 667, 666, 706, 707, 708, 667, 709, 676, 668, 668, 676, 677, 669, 669, 677, 678, 670, 670, 678, 679, 671, 671, 679, 680, 672, 672, 680, 1024, 673, 673, 1024, 1025, 674, 674, 1025, 1026, 675, 675, 1026, 1027, 1017, 676, 1057, 1058, 677, 676, 709, 1056, 1057, 677, 1058, 1079, 678, 678, 1079, 1080, 679, 679, 1080, 1081, 680, 680, 1081, 1082, 1024, 681, 683, 684, 682, 681, 1061, 1062, 683, 681, 535, 570, 1061, 681, 682, 536, 535, 683, 687, 688, 684, 683, 1062, 1063, 687, 684, 688, 689, 685, 685, 689, 690, 686, 687, 693, 694, 688, 687, 1063, 1064, 693, 688, 694, 695, 689, 689, 695, 696, 690, 690, 696, 697, 691, 691, 697, 698, 692, 693, 710, 711, 694, 693, 1064, 1059, 710, 694, 711, 712, 695, 695, 712, 713, 696, 696, 713, 701, 697, 697, 701, 702, 698, 698, 702, 703, 699, 699, 703, 704, 700, 701, 718, 719, 702, 701, 713, 717, 718, 702, 719, 720, 703, 703, 720, 721, 704, 704, 721, 722, 705, 705, 722, 707, 706, 707, 1054, 1055, 708, 707, 722, 1053, 1054, 708, 1055, 1056, 709, 710, 714, 715, 711, 710, 1059, 1060, 714, 711, 715, 716, 712, 712, 716, 717, 713, 714, 1045, 1046, 715, 714, 1060, 1112, 1045, 715, 1046, 1047, 716, 716, 1047, 1048, 717, 717, 1048, 1049, 718, 718, 1049, 1050, 719, 719, 1050, 1051, 720, 720, 1051, 1052, 721, 721, 1052, 1053, 722, 723, 726, 727, 724, 723, 1089, 1090, 726, 723, 945, 1042, 1089, 723, 724, 946, 945, 724, 727, 728, 725, 724, 725, 947, 946, 725, 958, 948, 947, 725, 728, 729, 958, 726, 733, 734, 727, 726, 1090, 1091, 733, 727, 734, 735, 728, 728, 735, 736, 729, 729, 736, 737, 730, 729, 730, 959, 958, 730, 737, 738, 731, 730, 731, 960, 959, 731, 738, 739, 732, 731, 732, 961, 960, 732, 968, 962, 961, 732, 739, 740, 968, 733, 1065, 1066, 734, 733, 1091, 1110, 1065, 734, 1066, 1067, 735, 735, 1067, 1068, 736, 736, 1068, 1069, 737, 737, 1069, 1070, 738, 738, 1070, 1071, 739, 739, 1071, 1072, 740, 740, 1072, 1073, 741, 740, 741, 969, 968, 741, 1073, 1074, 742, 741, 742, 970, 969, 742, 975, 971, 970, 742, 1074, 1075, 975, 743, 1003, 745, 746, 743, 568, 567, 1003, 743, 744, 569, 568, 743, 746, 747, 744, 744, 747, 794, 780, 744, 780, 516, 569, 745, 750, 751, 746, 745, 1006, 749, 750, 746, 751, 752, 747, 747, 752, 753, 794, 748, 1010, 754, 755, 748, 1005, 1004, 1010, 748, 749, 1006, 1005, 748, 755, 756, 749, 749, 756, 757, 750, 750, 757, 758, 751, 751, 758, 759, 752, 752, 759, 760, 753, 753, 760, 813, 805, 753, 805, 795, 794, 754, 763, 764, 755, 754, 1016, 762, 763, 754, 1010, 1009, 1016, 755, 764, 765, 756, 756, 765, 766, 757, 757, 766, 767, 758, 758, 767, 768, 759, 759, 768, 769, 760, 760, 769, 818, 813, 761, 1023, 770, 771, 761, 1015, 1014, 1023, 761, 762, 1016, 1015, 761, 771, 772, 762, 762, 772, 773, 763, 763, 773, 774, 764, 764, 774, 775, 765, 765, 775, 776, 766, 766, 776, 777, 767, 767, 777, 778, 768, 768, 778, 779, 769, 769, 779, 1109, 818, 770, 822, 823, 771, 770, 1032, 821, 822, 770, 1023, 1022, 1032, 771, 823, 824, 772, 772, 824, 825, 773, 773, 825, 826, 774, 774, 826, 827, 775, 775, 827, 828, 776, 776, 828, 829, 777, 777, 829, 830, 778, 778, 830, 876, 779, 779, 876, 877, 1109, 780, 794, 795, 781, 780, 781, 517, 516, 781, 795, 796, 782, 781, 782, 518, 517, 782, 796, 797, 783, 782, 783, 1092, 518, 783, 797, 798, 784, 783, 784, 1093, 1092, 784, 798, 799, 785, 784, 785, 1094, 1093, 785, 799, 800, 786, 785, 786, 1095, 1094, 786, 800, 801, 787, 786, 787, 1096, 1095, 787, 801, 802, 788, 787, 788, 1097, 1096, 788, 802, 803, 789, 788, 789, 1098, 1097, 789, 803, 804, 790, 789, 790, 1099, 1098, 790, 804, 1044, 791, 790, 791, 1100, 1099, 791, 1044, 981, 792, 791, 792, 1101, 1100, 792, 981, 982, 793, 792, 793, 1102, 1101, 793, 982, 983, 979, 793, 979, 1103, 1102, 795, 805, 806, 796, 796, 806, 807, 797, 797, 807, 808, 798, 798, 808, 809, 799, 799, 809, 810, 800, 800, 810, 811, 801, 801, 811, 812, 802, 802, 812, 985, 803, 803, 985, 986, 804, 804, 986, 987, 1044, 805, 813, 814, 806, 806, 814, 815, 807, 807, 815, 816, 808, 808, 816, 817, 809, 809, 817, 1043, 810, 810, 1043, 992, 811, 811, 992, 993, 812, 812, 993, 994, 985, 813, 818, 819, 814, 814, 819, 820, 815, 815, 820, 999, 816, 816, 999, 1000, 817, 817, 1000, 1001, 1043, 818, 1109, 877, 819, 819, 877, 880, 820, 820, 880, 884, 999, 821, 831, 832, 822, 821, 1111, 1033, 831, 821, 1032, 1031, 1111, 822, 832, 833, 823, 823, 833, 834, 824, 824, 834, 835, 825, 825, 835, 836, 826, 826, 836, 837, 827, 827, 837, 838, 828, 828, 838, 839, 829, 829, 839, 878, 830, 830, 878, 879, 876, 831, 840, 841, 832, 831, 1033, 1034, 840, 832, 841, 842, 833, 833, 842, 843, 834, 834, 843, 844, 835, 835, 844, 845, 836, 836, 845, 846, 837, 837, 846, 847, 838, 838, 847, 881, 839, 839, 881, 882, 878, 840, 848, 849, 841, 840, 1034, 1035, 848, 841, 849, 850, 842, 842, 850, 851, 843, 843, 851, 852, 844, 844, 852, 853, 845, 845, 853, 854, 846, 846, 854, 885, 847, 847, 885, 886, 881, 848, 855, 856, 849, 848, 1035, 1036, 855, 849, 856, 857, 850, 850, 857, 858, 851, 851, 858, 859, 852, 852, 859, 860, 853, 853, 860, 890, 854, 854, 890, 891, 885, 855, 861, 862, 856, 855, 1036, 1037, 861, 856, 862, 863, 857, 857, 863, 864, 858, 858, 864, 865, 859, 859, 865, 896, 860, 860, 896, 897, 890, 861, 866, 867, 862, 861, 1037, 1038, 866, 862, 867, 868, 863, 863, 868, 869, 864, 864, 869, 903, 865, 865, 903, 904, 896, 866, 870, 871, 867, 866, 1038, 1039, 870, 867, 871, 872, 868, 868, 872, 912, 869, 869, 912, 913, 903, 870, 873, 874, 871, 870, 1039, 1040, 873, 871, 874, 922, 872, 872, 922, 923, 912, 873, 875, 933, 874, 873, 1040, 1041, 875, 874, 933, 934, 922, 875, 945, 946, 933, 875, 1041, 1042, 945, 876, 879, 880, 877, 878, 882, 883, 879, 879, 883, 884, 880, 881, 886, 887, 882, 882, 887, 888, 883, 883, 888, 889, 884, 884, 889, 1000, 999, 885, 891, 892, 886, 886, 892, 893, 887, 887, 893, 894, 888, 888, 894, 895, 889, 889, 895, 1001, 1000, 890, 897, 898, 891, 891, 898, 899, 892, 892, 899, 900, 893, 893, 900, 901, 894, 894, 901, 902, 895, 895, 902, 1002, 1001, 896, 904, 905, 897, 897, 905, 906, 898, 898, 906, 907, 899, 899, 907, 908, 900, 900, 908, 909, 901, 901, 909, 910, 902, 902, 910, 911, 1002, 903, 913, 914, 904, 904, 914, 915, 905, 905, 915, 916, 906, 906, 916, 917, 907, 907, 917, 918, 908, 908, 918, 919, 909, 909, 919, 920, 910, 910, 920, 921, 911, 911, 921, 994, 993, 911, 993, 992, 1002, 912, 923, 924, 913, 913, 924, 925, 914, 914, 925, 926, 915, 915, 926, 927, 916, 916, 927, 928, 917, 917, 928, 929, 918, 918, 929, 930, 919, 919, 930, 931, 920, 920, 931, 932, 921, 921, 932, 995, 994, 922, 934, 935, 923, 923, 935, 936, 924, 924, 936, 937, 925, 925, 937, 938, 926, 926, 938, 939, 927, 927, 939, 940, 928, 928, 940, 941, 929, 929, 941, 942, 930, 930, 942, 943, 931, 931, 943, 944, 932, 932, 944, 996, 995, 933, 946, 947, 934, 934, 947, 948, 935, 935, 948, 949, 936, 936, 949, 950, 937, 937, 950, 951, 938, 938, 951, 952, 939, 939, 952, 953, 940, 940, 953, 954, 941, 941, 954, 955, 942, 942, 955, 956, 943, 943, 956, 957, 944, 944, 957, 997, 996, 948, 958, 959, 949, 949, 959, 960, 950, 950, 960, 961, 951, 951, 961, 962, 952, 952, 962, 963, 953, 953, 963, 964, 954, 954, 964, 965, 955, 955, 965, 966, 956, 956, 966, 967, 957, 957, 967, 998, 997, 962, 968, 969, 963, 963, 969, 970, 964, 964, 970, 971, 965, 965, 971, 972, 966, 966, 972, 973, 967, 967, 973, 974, 998, 971, 975, 976, 972, 972, 976, 977, 973, 973, 977, 978, 974, 974, 978, 991, 990, 974, 990, 989, 998, 975, 1075, 1076, 976, 976, 1076, 1077, 977, 977, 1077, 1078, 978, 978, 1078, 1107, 991, 979, 983, 984, 980, 979, 980, 1104, 1103, 980, 984, 1106, 1105, 980, 1105, 1108, 1104, 981, 988, 989, 982, 981, 1044, 987, 988, 982, 989, 990, 983, 983, 990, 991, 984, 984, 991, 1107, 1106, 985, 994, 995, 986, 986, 995, 996, 987, 987, 996, 997, 988, 988, 997, 998, 989, 992, 1043, 1001, 1002, 1007, 1014, 1015, 1008, 1008, 1015, 1016, 1009, 1011, 1020, 1021, 1012, 1012, 1021, 1022, 1013, 1013, 1022, 1023, 1014, 1017, 1027, 1028, 1018, 1018, 1028, 1029, 1019, 1019, 1029, 1030, 1020, 1020, 1030, 1031, 1021, 1021, 1031, 1032, 1022, 1024, 1082, 1083, 1025, 1025, 1083, 1084, 1026, 1026, 1084, 1085, 1027, 1027, 1085, 1086, 1028, 1028, 1086, 1087, 1029, 1029, 1087, 1088, 1030, 1030, 1088, 1111, 1031"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "split_string1",
+                    "nodeType": "Core::String::split_string",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-250.088 595.865"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "string_to_int1",
+                    "nodeType": "Core::String::string_to_int",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "320.801 564.066"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "string_strip_whitespace1",
+                    "nodeType": "Core::String::string_strip",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "51.5159 585.432"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "split_string2",
+                    "nodeType": "Core::String::split_string",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-235.948 831.32"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "string_to_int2",
+                    "nodeType": "Core::String::string_to_int",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "319.483 796.77"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "string_strip_whitespace2",
+                    "nodeType": "Core::String::string_strip",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "65.6559 820.891"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "to_unsigned_int.unsigned_int",
+                    "target": "construct_mesh.face_offset"
+                },
+                {
+                    "source": "for_each.positions",
+                    "target": "construct_mesh.point_position"
+                },
+                {
+                    "source": "to_unsigned_int1.unsigned_int",
+                    "target": "construct_mesh.face_vertex"
+                },
+                {
+                    "source": "construct_mesh.mesh",
+                    "target": ".mesh"
+                },
+                {
+                    "source": "string_strip_whitespace1.stripped",
+                    "target": "string_to_int1.string"
+                },
+                {
+                    "source": "split_string1.split",
+                    "target": "string_strip_whitespace1.string"
+                },
+                {
+                    "source": "face_offset_string.output",
+                    "target": "split_string1.string"
+                },
+                {
+                    "source": "string_to_int1.int",
+                    "target": "to_unsigned_int.from"
+                },
+                {
+                    "source": "string_strip_whitespace2.stripped",
+                    "target": "string_to_int2.string"
+                },
+                {
+                    "source": "split_string2.split",
+                    "target": "string_strip_whitespace2.string"
+                },
+                {
+                    "source": "face_vertex_string.output",
+                    "target": "split_string2.string"
+                },
+                {
+                    "source": "string_to_int2.int",
+                    "target": "to_unsigned_int1.from"
+                },
+                {
+                    "source": "split_string.split",
+                    "target": "for_each.stripped"
+                },
+                {
+                    "source": "point_position_string_A.output",
+                    "target": "split_string.string"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "split_string.separator",
+                    "valueType": "string",
+                    "value": "},"
+                },
+                {
+                    "valueName": "point_position_string_A.value",
+                    "valueType": "string",
+                    "value": "{0.00612271f, 0.00919775f, 0.952078f}, {-0.00517574f, 0.0162383f, 0.914216f}, {-0.027695f, 0.017725f, 0.918912f}, {-0.0449775f, 0.0262911f, 0.862435f}, {-0.0682151f, 0.0252068f, 0.873431f}, {-0.0770058f, 0.0365525f, 0.800903f}, {-0.108716f, 0.0361974f, 0.813204f}, {-0.104535f, 0.0441088f, 0.746101f}, {-0.14479f, 0.0448111f, 0.755948f}, {-0.12764f, 0.0515433f, 0.696755f}, {-0.172383f, 0.0533353f, 0.705586f}, {-0.147395f, 0.0592702f, 0.651926f}, {-0.166062f, 0.0638081f, 0.610169f}, {-0.183637f, 0.0684459f, 0.570326f}, {-0.194958f, 0.0705267f, 0.528683f}, {-0.202463f, 0.0662458f, 0.48335f}, {-0.0370395f, 0.00890271f, 0.120192f}, {-0.0873664f, 0.0177832f, 0.117069f}, {0.0947054f, 0.0185793f, 0.121381f}, {0.0602491f, 0.0101811f, 0.105039f}, {0.022361f, 0.00508054f, 0.0862389f}, {-0.0250647f, 0.00571573f, 0.0686469f}, {0.166335f, 0.0204768f, 0.814218f}, {0.133716f, 0.0101566f, 0.84637f}, {0.107427f, 0.00639592f, 0.866424f}, {0.0861747f, 0.00355336f, 0.877903f}, {0.0669424f, 0.00300945f, 0.887188f}, {0.0486793f, 0.0048938f, 0.897066f}, {0.0267741f, 0.00918313f, 0.907326f}, {0.146153f, 0.021891f, 0.769875f}, {0.11615f, 0.0125665f, 0.795998f}, {0.0906084f, 0.00820322f, 0.814423f}, {0.0681987f, 0.00679477f, 0.826089f}, {0.0461555f, 0.00762196f, 0.835513f}, {0.0219926f, 0.013814f, 0.844642f}, {-0.00884748f, 0.023781f, 0.853658f}, {0.105771f, 0.0166456f, 0.734212f}, {0.0799761f, 0.0095539f, 0.748973f}, {0.0537408f, 0.00720986f, 0.76091f}, {0.0259421f, 0.0115088f, 0.771237f}, {-0.00450189f, 0.0213603f, 0.781057f}, {-0.0393058f, 0.0318676f, 0.790642f}, {0.0983244f, 0.0199947f, 0.682042f}, {0.0702017f, 0.0110192f, 0.693565f}, {0.0402626f, 0.0110416f, 0.704581f}, {0.00854405f, 0.0193991f, 0.715312f}, {-0.0251006f, 0.0341389f, 0.72599f}, {-0.0630979f, 0.0429093f, 0.736294f}, {0.0936432f, 0.0218006f, 0.63482f}, {0.0629157f, 0.0117114f, 0.644204f}, {0.02911f, 0.0144683f, 0.654607f}, {-0.00591444f, 0.0271421f, 0.665601f}, {-0.0427629f, 0.0418504f, 0.676752f}, {-0.0834039f, 0.0498264f, 0.687285f}, {0.0557551f, 0.0121373f, 0.599251f}, {0.0189095f, 0.0188475f, 0.609186f}, {-0.0193302f, 0.0337957f, 0.61995f}, {-0.0584604f, 0.0483508f, 0.630901f}, {-0.101012f, 0.0545964f, 0.641477f}, {0.0477392f, 0.0127808f, 0.557862f}, {0.00928807f, 0.0214781f, 0.566819f}, {-0.0312807f, 0.0384887f, 0.576937f}, {-0.0723252f, 0.0518561f, 0.587238f}, {-0.117589f, 0.0586663f, 0.598523f}, {0.00136738f, 0.0240293f, 0.526252f}, {-0.0398406f, 0.0404216f, 0.53487f}, {-0.083116f, 0.0531495f, 0.544524f}, {-0.133087f, 0.0622741f, 0.55704f}, {-0.00534401f, 0.0248268f, 0.486314f}, {-0.0473613f, 0.0412148f, 0.493491f}, {-0.0919446f, 0.0531942f, 0.50209f}, {-0.144262f, 0.0623261f, 0.514653f}, {-0.0550818f, 0.0405818f, 0.451936f}, {-0.101201f, 0.0509029f, 0.459263f}, {-0.151087f, 0.0597905f, 0.469486f}, {-0.0612624f, 0.0390429f, 0.409068f}, {-0.108741f, 0.0476138f, 0.414436f}, {-0.158165f, 0.0573196f, 0.42212f}, {-0.112217f, 0.043406f, 0.366821f}, {-0.162637f, 0.0520478f, 0.371111f}, {-0.111612f, 0.0386286f, 0.316568f}, {-0.161764f, 0.0444186f, 0.316248f}, {-0.153719f, 0.0367698f, 0.259652f}, {-0.138914f, 0.0297346f, 0.207236f}, {0.287736f, 0.0526799f, 0.692466f}, {0.269261f, 0.050077f, 0.704644f}, {0.249745f, 0.0459887f, 0.721593f}, {0.227825f, 0.0385692f, 0.744739f}, {0.285097f, 0.0560759f, 0.675556f}, {0.259676f, 0.0538237f, 0.684558f}, {0.233992f, 0.050109f, 0.698372f}, {0.207358f, 0.0431811f, 0.717221f}, {0.285148f, 0.059589f, 0.656001f}, {0.254357f, 0.0576482f, 0.660919f}, {0.224172f, 0.053681f, 0.670447f}, {0.287799f, 0.0630756f, 0.634121f}, {0.253326f, 0.0608684f, 0.63454f}, {0.220334f, 0.0563361f, 0.63957f}, {0.292544f, 0.0669178f, 0.608499f}, {0.255233f, 0.0643997f, 0.605592f}, {0.220257f, 0.0592302f, 0.60702f}, {0.298409f, 0.070944f, 0.578131f}, {0.258621f, 0.068299f, 0.573904f}, {0.221596f, 0.062766f, 0.573414f}, {0.304318f, 0.0744873f, 0.543695f}, {0.26273f, 0.0712587f, 0.539676f}, {0.310328f, 0.0770172f, 0.507112f}, {0.267108f, 0.0737646f, 0.503904f}, {0.316591f, 0.0795276f, 0.469316f}, {0.271483f, 0.0764495f, 0.467398f}, {0.322813f, 0.0810398f, 0.431205f}, {0.275459f, 0.0780158f, 0.430758f}, {0.327406f, 0.081626f, 0.394094f}, {0.330382f, 0.0798949f, 0.3574f}, {0.331095f, 0.075617f, 0.319294f}, {0.329511f, 0.0706443f, 0.280024f}, {0.0966699f, 0.0141093f, -0.0138051f}, {0.113435f, 0.010022f, -0.0350955f}, {0.140539f, 0.01113f, -0.0225848f}, {0.173545f, 0.0123727f, -0.00857058f}, {0.208341f, 0.0142857f, 0.00934631f}, {-0.194087f, 0.060694f, 0.661225f}, {-0.212147f, 0.0678497f, 0.619925f}, {-0.226611f, 0.0711008f, 0.581024f}, {-0.238945f, 0.0713293f, 0.542852f}, {-0.249993f, 0.0695002f, 0.500454f}, {-0.210221f, 0.062087f, 0.433586f}, {-0.262456f, 0.0618398f, 0.449778f}, {-0.216651f, 0.0527795f, 0.378949f}, {-0.271999f, 0.050636f, 0.390751f}, {-0.215505f, 0.0448666f, 0.317141f}, {-0.271953f, 0.0411763f, 0.321063f}, {-0.203825f, 0.0355024f, 0.251138f}, {-0.25951f, 0.0310018f, 0.242259f}, {-0.178721f, 0.0284934f, 0.186862f}, {-0.226349f, 0.0229357f, 0.156743f}, {-0.139471f, 0.023729f, 0.137557f}, {-0.165026f, 0.02011f, 0.0850716f}, {-0.0843524f, 0.0149712f, 0.0563334f}, {0.0731744f, 0.0125121f, 0.0106304f}, {0.101963f, 0.0162512f, 0.0330688f}, {0.123605f, 0.0165359f, 0.00468999f}, {0.131621f, 0.0211007f, 0.0528162f}, {0.153532f, 0.0192082f, 0.022278f}, {0.161329f, 0.0253515f, 0.0710919f}, {0.184434f, 0.021774f, 0.0401888f}, {0.189277f, 0.0311409f, 0.0906691f}, {0.214594f, 0.0266137f, 0.0627515f}, {0.243597f, 0.0190163f, 0.0330051f}, {0.211178f, 0.0379783f, 0.11365f}, {0.241109f, 0.0352105f, 0.093181f}, {0.278076f, 0.0288335f, 0.0676549f}, {0.199915f, 0.0302899f, 0.776748f}, {0.177939f, 0.0330751f, 0.741488f}, {0.162792f, 0.0375977f, 0.699677f}, {0.132968f, 0.026632f, 0.717013f}, {0.155564f, 0.0428435f, 0.658447f}, {0.126201f, 0.0315837f, 0.669946f}, {0.1522f, 0.0463582f, 0.618644f}, {0.121942f, 0.0350364f, 0.626382f}, {0.14984f, 0.0493666f, 0.580014f}, {0.11754f, 0.0375863f, 0.585239f}, {0.0882917f, 0.0225826f, 0.591382f}, {0.148582f, 0.0516146f, 0.542461f}, {0.114337f, 0.0391169f, 0.546048f}, {0.0818306f, 0.024463f, 0.551196f}, {0.14817f, 0.0532389f, 0.506221f}, {0.112243f, 0.0404947f, 0.508816f}, {0.0772651f, 0.0252208f, 0.512969f}, {0.0409802f, 0.0137253f, 0.518558f}, {0.146871f, 0.0536019f, 0.470669f}, {0.110097f, 0.0411445f, 0.472614f}, {0.0740225f, 0.0248492f, 0.475571f}, {0.0354363f, 0.0132561f, 0.480054f}, {0.144405f, 0.053916f, 0.435285f}, {0.106814f, 0.0412268f, 0.436707f}, {0.0706209f, 0.0244346f, 0.438534f}, {0.0306619f, 0.0136209f, 0.44181f}, {-0.0114765f, 0.0243406f, 0.446343f}, {0.143448f, 0.0531897f, 0.399274f}, {0.104739f, 0.0406117f, 0.40017f}, {0.0678642f, 0.0237743f, 0.401092f}, {0.0272236f, 0.0151014f, 0.403008f}, {-0.0160706f, 0.0238331f, 0.405563f}, {0.144221f, 0.0513964f, 0.362465f}, {0.104883f, 0.0393773f, 0.362658f}, {0.0667579f, 0.0230976f, 0.362765f}, {0.0254576f, 0.0144128f, 0.363185f}, {-0.0183246f, 0.0209406f, 0.363522f}, {-0.0641343f, 0.0363804f, 0.364302f}, {0.146165f, 0.0485296f, 0.324879f}, {0.106047f, 0.0371199f, 0.324405f}, {0.0665691f, 0.0219398f, 0.323627f}, {0.0255208f, 0.0122464f, 0.322253f}, {-0.0182809f, 0.0201099f, 0.319778f}, {-0.0641118f, 0.0314842f, 0.317678f}, {0.147093f, 0.0451054f, 0.287269f}, {0.1069f, 0.0341414f, 0.285863f}, {0.0675668f, 0.0199097f, 0.283589f}, {0.0269916f, 0.0121502f, 0.279761f}, {-0.0159557f, 0.0161695f, 0.274603f}, {-0.0607765f, 0.0250457f, 0.269534f}, {-0.106523f, 0.0324138f, 0.264992f}, {0.147777f, 0.0438784f, 0.249376f}, {0.108584f, 0.032402f, 0.246803f}, {0.0702543f, 0.0182385f, 0.242653f}, {0.0307779f, 0.0105154f, 0.236198f}, {-0.0109289f, 0.012766f, 0.228136f}, {-0.0542966f, 0.0188414f, 0.220682f}, {-0.0976852f, 0.0253851f, 0.214652f}, {0.150235f, 0.0398346f, 0.212177f}, {0.112418f, 0.0297544f, 0.20795f}, {0.0751588f, 0.0176984f, 0.201236f}, {0.0372449f, 0.00864735f, 0.191867f}, {-0.00322026f, 0.00971608f, 0.180695f}, {-0.0460798f, 0.012731f, 0.17143f}, {-0.0889168f, 0.0190255f, 0.167469f}, {0.15405f, 0.036741f, 0.176369f}, {0.118494f, 0.0283439f, 0.170061f}, {0.0829776f, 0.0177735f, 0.160385f}, {0.0465704f, 0.00981982f, 0.147512f}, {0.00744709f, 0.00726782f, 0.132722f}, {0.160207f, 0.0349888f, 0.14389f}, {0.127952f, 0.0276037f, 0.134373f}, {0.190861f, 0.0406605f, 0.148166f}, {0.222655f, 0.0438214f, 0.142055f}, {0.259848f, 0.0437689f, 0.129071f}, {0.304432f, 0.0415319f, 0.113693f}, {0.190166f, 0.043457f, 0.178427f}, {0.228309f, 0.0480472f, 0.175143f}, {0.270439f, 0.0516157f, 0.168154f}, {0.317469f, 0.0512388f, 0.160419f}, {0.189446f, 0.047835f, 0.213487f}, {0.231149f, 0.0534108f, 0.211614f}, {0.275852f, 0.0574819f, 0.207405f}, {0.323699f, 0.0583545f, 0.202762f}, {0.188983f, 0.0516702f, 0.250262f}, {0.232378f, 0.0584728f, 0.248986f}, {0.278541f, 0.0631468f, 0.245864f}, {0.326991f, 0.0647817f, 0.241553f}, {0.188808f, 0.0551041f, 0.287452f}, {0.232894f, 0.0638375f, 0.286217f}, {0.280062f, 0.0685374f, 0.283809f}, {0.188626f, 0.0580141f, 0.324563f}, {0.233285f, 0.0666751f, 0.323382f}, {0.280737f, 0.0733473f, 0.321489f}, {0.187219f, 0.0618304f, 0.361355f}, {0.232964f, 0.069213f, 0.359908f}, {0.28027f, 0.0763519f, 0.358411f}, {0.185665f, 0.0641997f, 0.397741f}, {0.231838f, 0.0707603f, 0.395916f}, {0.27847f, 0.0779049f, 0.394552f}, {0.185724f, 0.0637382f, 0.43352f}, {0.230042f, 0.0718583f, 0.431725f}, {0.186355f, 0.0635366f, 0.468931f}, {0.22809f, 0.0702991f, 0.467625f}, {0.186366f, 0.0621807f, 0.504464f}, {0.225557f, 0.0696544f, 0.503496f}, {0.185857f, 0.0601446f, 0.540074f}, {0.223482f, 0.0659819f, 0.538834f}, {0.185717f, 0.0571861f, 0.575786f}, {0.186059f, 0.0530968f, 0.611699f}, {0.187482f, 0.0504882f, 0.648059f}, {0.193639f, 0.0472051f, 0.683887f}, {0.223018f, 0.0271185f, 0.799731f}, {0.187863f, 0.0182989f, 0.84213f}, {0.15363f, 0.00763332f, 0.876514f}, {0.127096f, 0.00477869f, 0.897832f}, {0.106553f, 0.00327212f, 0.913242f}, {0.0912994f, 0.00288632f, 0.925755f}, {0.0775657f, 0.00312651f, 0.937866f}, {0.0633964f, 0.0035545f, 0.95051f}, {0.293574f, 0.0500376f, 0.705142f}, {0.28177f, 0.0466879f, 0.720314f}, {0.269862f, 0.0419895f, 0.738423f}, {0.251634f, 0.0349986f, 0.763841f}, {0.17034f, 0.0334794f, 0.116282f}, {0.141933f, 0.026814f, 0.101915f}, {0.111032f, 0.0200194f, 0.0854754f}, {0.0788361f, 0.0125393f, 0.0665231f}, {0.0427342f, 0.00675337f, 0.0452935f}, {0.303808f, 0.0540041f, 0.684688f}, {0.309955f, 0.0569113f, 0.669891f}, {0.316431f, 0.059967f, 0.654805f}, {0.323516f, 0.0632663f, 0.639039f}, {0.331695f, 0.0664614f, 0.616906f}, {0.340168f, 0.0695252f, 0.586478f}, {0.346462f, 0.0733897f, 0.550296f}, {0.352067f, 0.0765857f, 0.513149f}, {0.359028f, 0.0799076f, 0.474471f}, {0.368459f, 0.082343f, 0.434514f}, {0.374794f, 0.0844091f, 0.395699f}, {0.379803f, 0.0826124f, 0.357718f}, {0.381462f, 0.0762425f, 0.316779f}, {0.378921f, 0.070651f, 0.274699f}, {0.375811f, 0.0644357f, 0.236692f}, {0.373417f, 0.0562445f, 0.200293f}, {0.368381f, 0.0486335f, 0.156286f}, {0.358112f, 0.0370073f, 0.0986427f}, {0.121994f, 0.0020802f, -0.0585431f}, {0.150201f, 0.000861503f, -0.0539324f}, {0.18955f, 0.000295054f, -0.0440999f}, {0.23008f, 0.0025049f, -0.0265597f}, {0.271094f, 0.0068615f, -0.00516972f}, {0.318598f, 0.0177996f, 0.0330077f}, {0.0479247f, 0.0139294f, -0.0196251f}, {0.0750353f, 0.0135628f, -0.0374476f}, {0.0940024f, 0.00958958f, -0.0486281f}, {-0.0360143f, 0.0153474f, 0.927927f}, {-0.0820117f, 0.0214579f, 0.890216f}, {-0.133535f, 0.0343266f, 0.828436f}, {-0.1845f, 0.0465652f, 0.76519f}, {-0.217711f, 0.0547642f, 0.714033f}, {-0.240389f, 0.0604369f, 0.671311f}, {-0.259582f, 0.0651848f, 0.629418f}, {-0.272075f, 0.069235f, 0.593999f}, {-0.282982f, 0.0702106f, 0.561891f}, {-0.293893f, 0.0670865f, 0.52407f}, {-0.310347f, 0.0592435f, 0.468333f}, {-0.324797f, 0.0493442f, 0.404191f}, {-0.326146f, 0.0375587f, 0.329269f}, {-0.32204f, 0.0247224f, 0.241903f}, {-0.288799f, 0.0126132f, 0.124283f}, {-0.202818f, 0.00741154f, 0.0179754f}, {-0.0694666f, 0.01015f, -0.0144129f}, {0.302276f, 0.0517701f, 0.694632f}, {0.0415589f, 0.0046442f, 0.959867f}, {0.190792f, 0.0377781f, 0.126442f}, {0.105451f, 0.00613716f, -0.0550245f}, {-0.0122778f, 0.00355519f, 0.0279984f}, {-0.12284f, 0.0245623f, 0.170095f}"
+                },
+                {
+                    "valueName": "face_offset_string.value",
+                    "valueType": "string",
+                    "value": "0, 3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99, 103, 107, 111, 115, 119, 123, 127, 131, 135, 139, 143, 147, 151, 155, 159, 163, 167, 171, 175, 179, 183, 187, 191, 195, 199, 203, 207, 211, 215, 219, 223, 227, 231, 235, 239, 243, 247, 251, 255, 259, 263, 267, 271, 275, 279, 283, 287, 291, 295, 299, 303, 307, 311, 315, 319, 323, 327, 331, 335, 339, 343, 347, 351, 355, 359, 363, 367, 371, 375, 379, 383, 387, 391, 395, 399, 403, 407, 411, 415, 419, 423, 427, 431, 435, 439, 443, 447, 451, 455, 459, 463, 467, 471, 475, 479, 483, 487, 491, 495, 499, 503, 507, 511, 515, 519, 523, 527, 531, 535, 539, 543, 547, 551, 555, 559, 563, 567, 571, 575, 579, 583, 587, 591, 595, 599, 603, 607, 611, 615, 619, 623, 627, 631, 635, 639, 643, 647, 651, 655, 659, 663, 667, 671, 675, 679, 683, 687, 691, 695, 699, 703, 707, 711, 715, 719, 723, 727, 731, 735, 739, 743, 747, 751, 755, 759, 763, 767, 771, 775, 779, 783, 787, 791, 795, 799, 803, 807, 811, 815, 819, 823, 827, 831, 835, 839, 843, 847, 851, 855, 859, 863, 867, 871, 875, 879, 883, 887, 891, 895, 899, 903, 907, 911, 915, 919, 923, 927, 931, 935, 939, 943, 947, 951, 955, 959, 963, 967, 971, 975, 979, 983, 987, 991, 995, 999, 1003, 1007, 1011, 1015, 1019, 1023, 1027, 1031, 1035, 1039, 1043, 1047, 1051, 1055, 1059, 1063, 1067, 1071, 1075, 1079, 1083, 1087, 1091, 1095, 1099, 1103, 1107, 1111, 1115, 1119, 1123, 1127, 1131, 1135, 1139, 1143, 1147, 1151, 1155, 1159, 1163, 1167, 1171, 1175, 1179, 1183, 1187, 1191, 1195, 1199"
+                },
+                {
+                    "valueName": "face_vertex_string.value",
+                    "valueType": "string",
+                    "value": "0, 2, 308, 0, 326, 1, 2, 1, 28, 35, 3, 1, 326, 271, 28, 1, 3, 4, 2, 2, 4, 309, 308, 3, 35, 41, 5, 3, 5, 6, 4, 4, 6, 310, 309, 5, 41, 47, 7, 5, 7, 8, 6, 6, 8, 311, 310, 7, 47, 53, 9, 7, 9, 10, 8, 8, 10, 312, 311, 9, 11, 121, 10, 9, 53, 58, 11, 10, 121, 313, 312, 11, 12, 122, 121, 11, 58, 63, 12, 12, 13, 123, 122, 12, 63, 67, 13, 13, 14, 124, 123, 13, 67, 71, 14, 14, 15, 125, 124, 14, 71, 74, 15, 15, 126, 127, 125, 15, 74, 77, 126, 16, 21, 138, 17, 16, 221, 20, 21, 16, 215, 214, 221, 16, 17, 216, 215, 17, 138, 137, 136, 17, 136, 330, 216, 18, 19, 220, 219, 18, 278, 279, 19, 18, 223, 277, 278, 18, 219, 218, 223, 19, 279, 280, 20, 19, 20, 221, 220, 20, 280, 329, 21, 21, 329, 324, 138, 22, 29, 30, 23, 22, 152, 153, 29, 22, 265, 264, 152, 22, 23, 266, 265, 23, 30, 31, 24, 23, 24, 267, 266, 24, 31, 32, 25, 24, 25, 268, 267, 25, 32, 33, 26, 25, 26, 269, 268, 26, 33, 34, 27, 26, 27, 270, 269, 27, 34, 35, 28, 27, 28, 271, 270, 29, 155, 36, 30, 29, 153, 154, 155, 30, 36, 37, 31, 31, 37, 38, 32, 32, 38, 39, 33, 33, 39, 40, 34, 34, 40, 41, 35, 36, 42, 43, 37, 36, 155, 157, 42, 37, 43, 44, 38, 38, 44, 45, 39, 39, 45, 46, 40, 40, 46, 47, 41, 42, 48, 49, 43, 42, 157, 159, 48, 43, 49, 50, 44, 44, 50, 51, 45, 45, 51, 52, 46, 46, 52, 53, 47, 48, 159, 161, 162, 48, 162, 54, 49, 49, 54, 55, 50, 50, 55, 56, 51, 51, 56, 57, 52, 52, 57, 58, 53, 54, 59, 60, 55, 54, 162, 165, 59, 55, 60, 61, 56, 56, 61, 62, 57, 57, 62, 63, 58, 59, 165, 168, 169, 59, 169, 64, 60, 60, 64, 65, 61, 61, 65, 66, 62, 62, 66, 67, 63, 64, 68, 69, 65, 64, 169, 173, 68, 65, 69, 70, 66, 66, 70, 71, 67, 68, 173, 177, 178, 68, 178, 72, 69, 69, 72, 73, 70, 70, 73, 74, 71, 72, 75, 76, 73, 72, 178, 183, 75, 73, 76, 77, 74, 75, 189, 78, 76, 75, 183, 188, 189, 76, 78, 79, 77, 77, 79, 128, 126, 78, 80, 81, 79, 78, 189, 195, 80, 79, 81, 130, 128, 80, 202, 82, 81, 80, 195, 201, 202, 81, 82, 132, 130, 82, 202, 209, 83, 82, 83, 134, 132, 83, 330, 136, 134, 83, 209, 216, 330, 84, 88, 89, 85, 84, 281, 282, 88, 84, 272, 325, 281, 84, 85, 273, 272, 85, 89, 90, 86, 85, 86, 274, 273, 86, 90, 91, 87, 86, 87, 275, 274, 87, 91, 153, 152, 87, 152, 264, 275, 88, 92, 93, 89, 88, 282, 283, 92, 89, 93, 94, 90, 90, 94, 263, 91, 91, 263, 154, 153, 92, 95, 96, 93, 92, 283, 284, 95, 93, 96, 97, 94, 94, 97, 262, 263, 95, 98, 99, 96, 95, 284, 285, 98, 96, 99, 100, 97, 97, 100, 261, 262, 98, 101, 102, 99, 98, 285, 286, 101, 99, 102, 103, 100, 100, 103, 260, 261, 101, 104, 105, 102, 101, 286, 287, 104, 102, 105, 259, 103, 103, 259, 258, 260, 104, 106, 107, 105, 104, 287, 288, 106, 105, 107, 257, 259, 106, 108, 109, 107, 106, 288, 289, 108, 107, 109, 255, 257, 108, 110, 111, 109, 108, 289, 290, 110, 109, 111, 253, 255, 110, 112, 251, 111, 110, 290, 291, 112, 111, 251, 250, 253, 112, 113, 248, 251, 112, 291, 292, 113, 113, 114, 245, 248, 113, 292, 293, 114, 114, 115, 242, 245, 114, 293, 294, 115, 115, 239, 238, 242, 115, 294, 295, 239, 116, 141, 118, 117, 116, 139, 140, 141, 116, 306, 305, 139, 116, 117, 307, 306, 117, 118, 300, 299, 117, 299, 328, 307, 118, 119, 301, 300, 118, 141, 143, 119, 119, 120, 302, 301, 119, 143, 145, 120, 120, 145, 147, 148, 120, 148, 303, 302, 121, 122, 314, 313, 122, 123, 315, 314, 123, 124, 316, 315, 124, 125, 317, 316, 125, 127, 318, 317, 126, 128, 129, 127, 127, 129, 319, 318, 128, 130, 131, 129, 129, 131, 320, 319, 130, 132, 133, 131, 131, 133, 321, 320, 132, 134, 135, 133, 133, 135, 322, 321, 134, 136, 137, 135, 135, 137, 323, 322, 137, 138, 324, 323, 139, 280, 279, 140, 139, 305, 329, 280, 140, 142, 143, 141, 140, 279, 278, 142, 142, 144, 145, 143, 142, 278, 277, 144, 144, 146, 147, 145, 144, 277, 276, 146, 146, 149, 150, 147, 146, 276, 327, 149, 147, 150, 151, 148, 148, 151, 304, 303, 149, 225, 226, 150, 149, 327, 224, 225, 150, 226, 227, 151, 151, 227, 298, 304, 154, 156, 157, 155, 154, 263, 262, 156, 156, 158, 159, 157, 156, 262, 261, 158, 158, 160, 161, 159, 158, 261, 260, 160, 160, 163, 164, 161, 160, 260, 258, 163, 161, 164, 165, 162, 163, 166, 167, 164, 163, 258, 256, 166, 164, 167, 168, 165, 166, 170, 171, 167, 166, 256, 254, 170, 167, 171, 172, 168, 168, 172, 173, 169, 170, 174, 175, 171, 170, 254, 252, 174, 171, 175, 176, 172, 172, 176, 177, 173, 174, 179, 180, 175, 174, 252, 249, 179, 175, 180, 181, 176, 176, 181, 182, 177, 177, 182, 183, 178, 179, 184, 185, 180, 179, 249, 246, 184, 180, 185, 186, 181, 181, 186, 187, 182, 182, 187, 188, 183, 184, 190, 191, 185, 184, 246, 243, 190, 185, 191, 192, 186, 186, 192, 193, 187, 187, 193, 194, 188, 188, 194, 195, 189, 190, 196, 197, 191, 190, 243, 240, 196, 191, 197, 198, 192, 192, 198, 199, 193, 193, 199, 200, 194, 194, 200, 201, 195, 196, 203, 204, 197, 196, 240, 236, 203, 197, 204, 205, 198, 198, 205, 206, 199, 199, 206, 207, 200, 200, 207, 208, 201, 201, 208, 209, 202, 203, 210, 211, 204, 203, 236, 232, 210, 204, 211, 212, 205, 205, 212, 213, 206, 206, 213, 214, 207, 207, 214, 215, 208, 208, 215, 216, 209, 210, 217, 218, 211, 210, 232, 228, 217, 211, 218, 219, 212, 212, 219, 220, 213, 213, 220, 221, 214, 217, 222, 223, 218, 217, 228, 224, 222, 222, 276, 277, 223, 222, 224, 327, 276, 224, 228, 229, 225, 225, 229, 230, 226, 226, 230, 231, 227, 227, 231, 297, 298, 228, 232, 233, 229, 229, 233, 234, 230, 230, 234, 235, 231, 231, 235, 296, 297, 232, 236, 237, 233, 233, 237, 238, 234, 234, 238, 239, 235, 235, 239, 295, 296, 236, 240, 241, 237, 237, 241, 242, 238, 240, 243, 244, 241, 241, 244, 245, 242, 243, 246, 247, 244, 244, 247, 248, 245, 246, 249, 250, 247, 247, 250, 251, 248, 249, 252, 253, 250, 252, 254, 255, 253, 254, 256, 257, 255, 256, 258, 259, 257"
+                },
+                {
+                    "valueName": "split_string1.string",
+                    "valueType": "string",
+                    "value": "0, 4, 6"
+                },
+                {
+                    "valueName": "split_string1.separator",
+                    "valueType": "string",
+                    "value": ","
+                },
+                {
+                    "valueName": "split_string2.string",
+                    "valueType": "string",
+                    "value": "0, 4, 6"
+                },
+                {
+                    "valueName": "split_string2.separator",
+                    "valueType": "string",
+                    "value": ","
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "output"
+                },
+                {
+                    "name": "input"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [
+        {
+            "structName": "MJCG::Ivy::Branch",
+            "structMembers": [
+                {
+                    "memberName": "index",
+                    "memberType": "uint"
+                },
+                {
+                    "memberName": "parent_node_index",
+                    "memberType": "uint"
+                },
+                {
+                    "memberName": "first_node_index",
+                    "memberType": "uint"
+                },
+                {
+                    "memberName": "last_node_index",
+                    "memberType": "uint"
+                },
+                {
+                    "memberName": "node_count",
+                    "memberType": "uint"
+                },
+                {
+                    "memberName": "child_count",
+                    "memberType": "uint"
+                }
+            ]
+        }
+    ]
+}

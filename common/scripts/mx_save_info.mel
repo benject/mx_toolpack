@@ -1,0 +1,47 @@
+
+
+global proc saveInfoUI(){
+
+    if (`window -exists info_ui`)
+    {deleteUI info_ui;}
+
+    window -t info_ui -wh 320 280  info_ui;
+
+    columnLayout -cat "left" 5;
+    text " ";
+    text -font "boldLabelFont"  " Information ";
+    text " ";
+
+    scrollField -w 300 -h 120 -ww true info_field;
+
+    button -w 300 -h 30 -l "save info to file" -c "createScriptNode";
+
+    showWindow info_ui;
+
+};
+
+
+global proc createScriptNode(){
+
+    string $buf[];
+
+
+    string $infoText =`scrollField -q -text info_field`;
+
+    int $numOfLine=`tokenize $infoText "\r" $buf`;
+
+    string $scriptText;
+    $scriptText=stringArrayToString ($buf ,"");
+
+    $scriptText=`encodeString $scriptText`;
+
+    string $text="if (`window -exists info_ui`)"+"\n"+"{deleteUI info_ui;}"+"\n"+"window -t infos -wh 320 280 info_ui;"+"\n"+"columnLayout -cat \"left\" 5;"+"\n"+"scrollField -editable false -wordWrap true -w 300 -h 120 -text " +"\""+$scriptText+"\""+";"+"\n" + "button -w 300 -h 30 -l \"delete info\" -c (\"delete info_node\");" +"showWindow info_ui;";
+
+    $infoNode=`createNode script -n info_node`;
+
+    setAttr ($infoNode+".st") 1;
+    setAttr ($infoNode+".b") -type "string" $text;
+
+}
+
+saveInfoUI;

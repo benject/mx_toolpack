@@ -1,0 +1,1374 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::shortest_path_between_segments",
+            "uriImported": "stream:/bifrostGraphShape1",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-67.0324 -859.225"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "first_line_start"
+                                                },
+                                                {
+                                                    "metaName": "first_line_end"
+                                                },
+                                                {
+                                                    "metaName": "second_line_start"
+                                                },
+                                                {
+                                                    "metaName": "second_line_end"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "3093.27 -391.11"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#4a6d49"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Construct a strands object to draw the two segments we start with, and a 3rd segment representing the shortest path between the two segments, then set render settings and color."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "1266.06 -892.904 1551.65 536.109"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d4444"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Construct a point object to draw the two points which are closest from each other's segments, then set render settings and color."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "1265.12 -341.751 1247.61 410.025"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#44536d"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "We get the segment ratios defining where on each segments\nis the closest location to the opposite segment."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "227.119 -409.413 537.956 423.887"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop3",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d6947"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "We use the ratios to get the closest position along each segments.\n"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "853.458 -659.139 383.057 426.613"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Core::Math,closest_line_to_line_ratios"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,get_from_interpolated_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Logic,almost_equal"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Modeling::Strands,create_arrow_strands"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Modeling::Strands,create_strands_along_normals"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-88.8026 -1284.06 3148.02 1817"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "Finds the shortest path between two segments using ratios."
+                },
+                {
+                    "metaName": "example_scene",
+                    "metaType": "string",
+                    "metaValue": "shortest_path_between_segments_example.ma"
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "shortest_path_between_segments_thumb.png"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "first_line_start",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "1.46471107f",
+                        "y": "-0.163179204f",
+                        "z": "3.72862387f"
+                    }
+                },
+                {
+                    "portName": "first_line_end",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "-0.878012896f",
+                        "y": "5.178545f",
+                        "z": "-4.97883272f"
+                    }
+                },
+                {
+                    "portName": "second_line_start",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "-4.48554611f",
+                        "y": "4.1258831f",
+                        "z": "1.07741249f"
+                    }
+                },
+                {
+                    "portName": "second_line_end",
+                    "portDirection": "input",
+                    "portType": "Math::float3",
+                    "portDefault": {
+                        "x": "7.27669573f",
+                        "y": "4.90613937f",
+                        "z": "1.08361411f"
+                    }
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "get_closest_points",
+                    "uriImported": "stream:/bifrostGraphShape1",
+                    "metadata": [
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,subtract"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,MJCG::Core::Math,distance_between_vectors"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "output"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "input"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Graph,terminal"
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-1121 -673 2242 1346"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-824.742 -137.548"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "first_line_start"
+                                                        },
+                                                        {
+                                                            "metaName": "first_line_end"
+                                                        },
+                                                        {
+                                                            "metaName": "second_line_start"
+                                                        },
+                                                        {
+                                                            "metaName": "second_line_end"
+                                                        },
+                                                        {
+                                                            "metaName": "first_ratio"
+                                                        },
+                                                        {
+                                                            "metaName": "second_ratio"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "423.87 -146.264"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "first_line_position"
+                                                        },
+                                                        {
+                                                            "metaName": "second_line_position"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "first_line_start",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "first_line_end",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "second_line_start",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "second_line_end",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "first_ratio",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "second_ratio",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "first_line_position",
+                            "portDirection": "output"
+                        },
+                        {
+                            "portName": "second_line_position",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "lerp",
+                            "nodeType": "Core::Math::lerp",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-462.732 -196.637"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "lerp1",
+                            "nodeType": "Core::Math::lerp",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-453.344 38.5378"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "subtract",
+                            "nodeType": "Core::Math::subtract",
+                            "multiInPortNames": [
+                                "interpolated1",
+                                "interpolated"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-176.943 -89.4961"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "vector_length",
+                            "nodeType": "Core::Math::length",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "110.257 21.9108"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "lerp.interpolated",
+                            "target": ".first_line_position"
+                        },
+                        {
+                            "source": "lerp.interpolated",
+                            "target": "subtract.first.interpolated"
+                        },
+                        {
+                            "source": "lerp1.interpolated",
+                            "target": ".second_line_position"
+                        },
+                        {
+                            "source": "lerp1.interpolated",
+                            "target": "subtract.first.interpolated1"
+                        },
+                        {
+                            "source": "subtract.output",
+                            "target": "vector_length.vector"
+                        },
+                        {
+                            "source": ".first_line_start",
+                            "target": "lerp.first"
+                        },
+                        {
+                            "source": ".first_line_end",
+                            "target": "lerp.second"
+                        },
+                        {
+                            "source": ".second_line_start",
+                            "target": "lerp1.first"
+                        },
+                        {
+                            "source": ".second_line_end",
+                            "target": "lerp1.second"
+                        },
+                        {
+                            "source": ".first_ratio",
+                            "target": "lerp.fraction"
+                        },
+                        {
+                            "source": ".second_ratio",
+                            "target": "lerp1.fraction"
+                        }
+                    ],
+                    "values": [],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "get_closest_points",
+                    "nodeType": "get_closest_points",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "934 -621"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "assign_diagnostic_material",
+                    "nodeType": "Diagnostic::Display::assign_diagnostic_material",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2572.99 -873.649"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "build_array",
+                    "nodeType": "Core::Array::build_array",
+                    "multiInPortNames": [
+                        "output",
+                        "output1",
+                        "output2",
+                        "output3",
+                        "output4",
+                        "output5"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2305.83 -739.965"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "build_array1",
+                    "nodeType": "Core::Array::build_array",
+                    "multiInPortNames": [
+                        "output",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2014.41 -195.316"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "construct_points",
+                    "nodeType": "Geometry::Points::construct_points",
+                    "fanInPortNames": {
+                        "point_position": [
+                            "first_line_position",
+                            "second_line_position"
+                        ]
+                    },
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "point_position",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1295.24 -266.842"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "construct_strands",
+                    "nodeType": "Geometry::Strands::construct_strands",
+                    "fanInPortNames": {
+                        "point_position": [
+                            "first_line_start",
+                            "first_line_end",
+                            "second_line_start",
+                            "second_line_end",
+                            "first_line_position",
+                            "second_line_position"
+                        ],
+                        "strand_offset": [
+                            "output",
+                            "output1",
+                            "output2",
+                            "output3"
+                        ]
+                    },
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "point_position",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1586.2 -835.28"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "set_point_shape",
+                    "nodeType": "Geometry::Properties::set_point_shape",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1545.29 -290.843"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "set_strands_shape",
+                    "nodeType": "Geometry::Strands::set_strands_shape",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1832.5 -853.614"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "terminal",
+                    "nodeType": "Core::Graph::terminal",
+                    "fanInPortNames": {
+                        "final": [],
+                        "proxy": [
+                            "geometry_with_material",
+                            "geometry_with_material1"
+                        ],
+                        "diagnostic": []
+                    },
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::final",
+                        "Core::Graph::terminal::diagnostic"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2865.51 -419.297"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value",
+                    "valueType": "uint",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1301.32 -857.298"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value1",
+                    "valueType": "uint",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1297.85 -728.526"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value2",
+                    "valueType": "uint",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "4"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1297.95 -622.316"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value3",
+                    "valueType": "uint",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "6"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1298.06 -503.49"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value5",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2048.06 -765.368"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value6",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2049.06 -642.368"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value7",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2048.06 -524.368"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value8",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1765.96 -191.211"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value9",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1762.96 -75.2112"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "assign_diagnostic_material2",
+                    "nodeType": "Diagnostic::Display::assign_diagnostic_material",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2270.54 -313.597"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value10",
+                    "valueType": "MJCG::LineSegmentType",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "239.774 -179.575"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "closest_line_to_line_ratios",
+                    "nodeType": "MJCG::Core::Math::closest_line_to_line_ratios",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "497.329 -354.733"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".second_line_end",
+                    "target": "get_closest_points.second_line_end"
+                },
+                {
+                    "source": ".second_line_start",
+                    "target": "get_closest_points.second_line_start"
+                },
+                {
+                    "source": ".first_line_end",
+                    "target": "get_closest_points.first_line_end"
+                },
+                {
+                    "source": ".first_line_start",
+                    "target": "get_closest_points.first_line_start"
+                },
+                {
+                    "source": "set_strands_shape.out_strands",
+                    "target": "assign_diagnostic_material.geometry"
+                },
+                {
+                    "source": "build_array.array",
+                    "target": "assign_diagnostic_material.emission_color"
+                },
+                {
+                    "source": "value5.output",
+                    "target": "build_array.first.output"
+                },
+                {
+                    "source": "value5.output",
+                    "target": "build_array.first.output1"
+                },
+                {
+                    "source": "value6.output",
+                    "target": "build_array.first.output2"
+                },
+                {
+                    "source": "value6.output",
+                    "target": "build_array.first.output3"
+                },
+                {
+                    "source": "value7.output",
+                    "target": "build_array.first.output4"
+                },
+                {
+                    "source": "value7.output",
+                    "target": "build_array.first.output5"
+                },
+                {
+                    "source": "value8.output",
+                    "target": "build_array1.first.output"
+                },
+                {
+                    "source": "value9.output",
+                    "target": "build_array1.first.output2"
+                },
+                {
+                    "source": "value.output",
+                    "target": "construct_strands.strand_offset.output"
+                },
+                {
+                    "source": "value1.output",
+                    "target": "construct_strands.strand_offset.output1"
+                },
+                {
+                    "source": "value2.output",
+                    "target": "construct_strands.strand_offset.output2"
+                },
+                {
+                    "source": "value3.output",
+                    "target": "construct_strands.strand_offset.output3"
+                },
+                {
+                    "source": "construct_points.points",
+                    "target": "set_point_shape.points"
+                },
+                {
+                    "source": "construct_strands.strands",
+                    "target": "set_strands_shape.strands"
+                },
+                {
+                    "source": "assign_diagnostic_material.geometry_with_material",
+                    "target": "terminal.proxy.geometry_with_material"
+                },
+                {
+                    "source": "set_point_shape.out_points",
+                    "target": "assign_diagnostic_material2.geometry"
+                },
+                {
+                    "source": "build_array1.array",
+                    "target": "assign_diagnostic_material2.emission_color"
+                },
+                {
+                    "source": ".first_line_start",
+                    "target": "construct_strands.point_position.first_line_start"
+                },
+                {
+                    "source": ".first_line_end",
+                    "target": "construct_strands.point_position.first_line_end"
+                },
+                {
+                    "source": ".second_line_start",
+                    "target": "construct_strands.point_position.second_line_start"
+                },
+                {
+                    "source": ".second_line_end",
+                    "target": "construct_strands.point_position.second_line_end"
+                },
+                {
+                    "source": "get_closest_points.first_line_position",
+                    "target": "construct_strands.point_position.first_line_position"
+                },
+                {
+                    "source": "get_closest_points.first_line_position",
+                    "target": "construct_points.point_position.first_line_position"
+                },
+                {
+                    "source": "get_closest_points.second_line_position",
+                    "target": "construct_strands.point_position.second_line_position"
+                },
+                {
+                    "source": "get_closest_points.second_line_position",
+                    "target": "construct_points.point_position.second_line_position"
+                },
+                {
+                    "source": "assign_diagnostic_material2.geometry_with_material",
+                    "target": "terminal.proxy.geometry_with_material1"
+                },
+                {
+                    "source": ".first_line_start",
+                    "target": "closest_line_to_line_ratios.first_line_start"
+                },
+                {
+                    "source": ".first_line_end",
+                    "target": "closest_line_to_line_ratios.first_line_end"
+                },
+                {
+                    "source": ".second_line_start",
+                    "target": "closest_line_to_line_ratios.second_line_start"
+                },
+                {
+                    "source": ".second_line_end",
+                    "target": "closest_line_to_line_ratios.second_line_end"
+                },
+                {
+                    "source": "value10.output",
+                    "target": "closest_line_to_line_ratios.proximity_method"
+                },
+                {
+                    "source": "closest_line_to_line_ratios.second_ratio",
+                    "target": "get_closest_points.second_ratio"
+                },
+                {
+                    "source": "closest_line_to_line_ratios.first_ratio",
+                    "target": "get_closest_points.first_ratio"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "assign_diagnostic_material.emission_color",
+                    "valueType": "string",
+                    "value": "color"
+                },
+                {
+                    "valueName": "assign_diagnostic_material.specular",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "assign_diagnostic_material.emission",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "set_point_shape.points",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "set_point_shape.shape",
+                    "valueType": "Geometry::PointShapes",
+                    "value": "Disk"
+                },
+                {
+                    "valueName": "set_point_shape.screen_aligned",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "set_point_shape.numeric_property",
+                    "valueType": "string",
+                    "value": "point_position"
+                },
+                {
+                    "valueName": "set_point_shape.default_size",
+                    "valueType": "float",
+                    "value": "0.200000003f"
+                },
+                {
+                    "valueName": "set_strands_shape.strands",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "set_strands_shape.shape",
+                    "valueType": "Geometry::StrandShapes",
+                    "value": "Ribbon"
+                },
+                {
+                    "valueName": "set_strands_shape.screen_aligned",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "set_strands_shape.default_size",
+                    "valueType": "float",
+                    "value": "0.0500000007f"
+                },
+                {
+                    "valueName": "value.value",
+                    "valueType": "uint",
+                    "value": "0U"
+                },
+                {
+                    "valueName": "value1.value",
+                    "valueType": "uint",
+                    "value": "2U"
+                },
+                {
+                    "valueName": "value2.value",
+                    "valueType": "uint",
+                    "value": "4U"
+                },
+                {
+                    "valueName": "value3.value",
+                    "valueType": "uint",
+                    "value": "6U"
+                },
+                {
+                    "valueName": "value5.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "1f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "value6.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "1f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "value7.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "1f"
+                    }
+                },
+                {
+                    "valueName": "value8.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "1f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "value9.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "1f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "assign_diagnostic_material2.specular",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "assign_diagnostic_material2.emission",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "value10.value",
+                    "valueType": "MJCG::LineSegmentType",
+                    "value": "segment"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

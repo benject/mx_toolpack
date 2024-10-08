@@ -1,0 +1,786 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_matrix.json"
+        },
+        {
+            "uri": "file:///Math_compose_transform_matrix.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///Math_matrix_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_length_squared.json"
+        },
+        {
+            "uri": "file:///normal_and_tangent_to_orientation.json"
+        },
+        {
+            "uri": "file:///resize_vector.json"
+        },
+        {
+            "uri": "file:///Math_vector3_to_vector4.json"
+        },
+        {
+            "uri": "file:///Math_vector4_to_vector3.json"
+        },
+        {
+            "uri": "file:///multiply_vector_by_matrix.json"
+        },
+        {
+            "uri": "file:///Core_Constants_default_value.json"
+        },
+        {
+            "uri": "file:///Math_change_range.json"
+        },
+        {
+            "uri": "file:///change_range.json"
+        },
+        {
+            "uri": "file:///Math_radians_to_degrees.json"
+        },
+        {
+            "uri": "file:///angle_between_vectors.json"
+        },
+        {
+            "uri": "file:///fill_interpolated_array.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_almost_equal.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_euler.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///arc_length.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///noise_nodedefs.json"
+        },
+        {
+            "uri": "file:///point_nodedefs.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds.json"
+        },
+        {
+            "uri": "file:///eyelid_solver.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::eyelid_rig",
+            "uriImported": "stream:/bifrostGraph_R_mjEyelid_low",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-910 -60.5"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "elevation_inheritance"
+                                                },
+                                                {
+                                                    "metaName": "azimuthal_inheritance"
+                                                },
+                                                {
+                                                    "metaName": "medial_elevation_weight"
+                                                },
+                                                {
+                                                    "metaName": "medial_azimuthal_weight"
+                                                },
+                                                {
+                                                    "metaName": "lateral_elevation_weight"
+                                                },
+                                                {
+                                                    "metaName": "lateral_azimuthal_weight"
+                                                },
+                                                {
+                                                    "metaName": "use_fCurve"
+                                                },
+                                                {
+                                                    "metaName": "num_deformers"
+                                                },
+                                                {
+                                                    "metaName": "is_right_side"
+                                                },
+                                                {
+                                                    "metaName": "is_low_side"
+                                                },
+                                                {
+                                                    "metaName": "eyeball_npo"
+                                                },
+                                                {
+                                                    "metaName": "eyeball_ctl"
+                                                },
+                                                {
+                                                    "metaName": "lid_inward_npo"
+                                                },
+                                                {
+                                                    "metaName": "lid_medial_npo"
+                                                },
+                                                {
+                                                    "metaName": "lid_center_npo"
+                                                },
+                                                {
+                                                    "metaName": "lid_center_ctl"
+                                                },
+                                                {
+                                                    "metaName": "lid_lateral_npo"
+                                                },
+                                                {
+                                                    "metaName": "lid_outward_npo"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_matrix"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-226 123.5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Core::Math,quaternion_from_direction_and_up_vector"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Rigging,eyelid_solver"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,MJCG::Rigging,mjEyelid_solver"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Math,SRT_to_matrix"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,BIF::Core,update_bif_component"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-1167.67 -299.177 1578.48 943.444"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "This scene shows how Bifrost can be used to create rigging solver. The attached scenes contains 3 different rigging solvers (blend_space, look_at, eyelid) deployed multiple time in order to drive a simple bone based eyelid rig. LOAD THE ATTACHED SCENE !!"
+                },
+                {
+                    "metaName": "example_scene",
+                    "metaType": "string",
+                    "metaValue": "eyelid_rig_example.ma"
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "eyelid_rig_thumb.png"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "out_matrix",
+                    "portDirection": "output",
+                    "portType": "array<Math::float4x4>"
+                },
+                {
+                    "portName": "elevation_inheritance",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.800000012f"
+                },
+                {
+                    "portName": "azimuthal_inheritance",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.5f"
+                },
+                {
+                    "portName": "medial_elevation_weight",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.150000006f"
+                },
+                {
+                    "portName": "medial_azimuthal_weight",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.150000006f"
+                },
+                {
+                    "portName": "lateral_elevation_weight",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.5f"
+                },
+                {
+                    "portName": "lateral_azimuthal_weight",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.400000006f"
+                },
+                {
+                    "portName": "use_fCurve",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "num_deformers",
+                    "portDirection": "input",
+                    "portType": "short",
+                    "portDefault": "10"
+                },
+                {
+                    "portName": "is_right_side",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "is_low_side",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "eyeball_npo",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.321999997f",
+                            "y": "15.5f",
+                            "z": "0.389999986f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "eyeball_ctl",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "0.997653663f",
+                            "y": "0f",
+                            "z": "-0.068461895f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "-0.00348682795f",
+                            "y": "0.998702109f",
+                            "z": "-0.0508114286f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0.0683730468f",
+                            "y": "0.0509309284f",
+                            "z": "0.996358931f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.321999997f",
+                            "y": "15.5f",
+                            "z": "0.389999986f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "lid_inward_npo",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.167999998f",
+                            "y": "15.4449997f",
+                            "z": "0.519999981f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "lid_medial_npo",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.239999995f",
+                            "y": "15.4499998f",
+                            "z": "0.495000005f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "lid_center_npo",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.321999997f",
+                            "y": "15.434f",
+                            "z": "0.610000014f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "lid_center_ctl",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.321999997f",
+                            "y": "15.4156027f",
+                            "z": "0.610000014f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "lid_lateral_npo",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.412999988f",
+                            "y": "15.4399996f",
+                            "z": "0.529999971f",
+                            "w": "1f"
+                        }
+                    }
+                },
+                {
+                    "portName": "lid_outward_npo",
+                    "portDirection": "input",
+                    "portType": "Math::float4x4",
+                    "portDefault": {
+                        "c0": {
+                            "x": "1f",
+                            "y": "0f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c1": {
+                            "x": "0f",
+                            "y": "1f",
+                            "z": "0f",
+                            "w": "0f"
+                        },
+                        "c2": {
+                            "x": "0f",
+                            "y": "0f",
+                            "z": "1f",
+                            "w": "0f"
+                        },
+                        "c3": {
+                            "x": "-0.465000004f",
+                            "y": "15.4700003f",
+                            "z": "0.465000004f",
+                            "w": "1f"
+                        }
+                    }
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "eyelid_solver",
+                    "nodeType": "MJCG::Rigging::eyelid_solver",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Rig Settings.Azimuthal",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Rig Settings.Elevation",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Rig Settings.Blink Edge",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Rig Settings",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Rig Objects",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Rig Setup",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-516 96"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".elevation_inheritance",
+                    "target": "eyelid_solver.elevation_inheritance"
+                },
+                {
+                    "source": ".azimuthal_inheritance",
+                    "target": "eyelid_solver.azimuthal_inheritance"
+                },
+                {
+                    "source": ".medial_elevation_weight",
+                    "target": "eyelid_solver.medial_elevation_weight"
+                },
+                {
+                    "source": ".lateral_elevation_weight",
+                    "target": "eyelid_solver.lateral_elevation_weight"
+                },
+                {
+                    "source": ".medial_azimuthal_weight",
+                    "target": "eyelid_solver.medial_azimuthal_weight"
+                },
+                {
+                    "source": ".lateral_azimuthal_weight",
+                    "target": "eyelid_solver.lateral_azimuthal_weight"
+                },
+                {
+                    "source": ".use_fCurve",
+                    "target": "eyelid_solver.use_fcurve"
+                },
+                {
+                    "source": ".is_right_side",
+                    "target": "eyelid_solver.is_right_side"
+                },
+                {
+                    "source": ".is_low_side",
+                    "target": "eyelid_solver.is_low_side"
+                },
+                {
+                    "source": ".eyeball_npo",
+                    "target": "eyelid_solver.eyeball_npo"
+                },
+                {
+                    "source": ".eyeball_ctl",
+                    "target": "eyelid_solver.eyeball_ctl"
+                },
+                {
+                    "source": ".lid_inward_npo",
+                    "target": "eyelid_solver.lid_inward_npo"
+                },
+                {
+                    "source": ".lid_medial_npo",
+                    "target": "eyelid_solver.lid_medial_npo"
+                },
+                {
+                    "source": ".lid_center_npo",
+                    "target": "eyelid_solver.lid_center_npo"
+                },
+                {
+                    "source": ".lid_center_ctl",
+                    "target": "eyelid_solver.lid_center_ctl"
+                },
+                {
+                    "source": ".lid_lateral_npo",
+                    "target": "eyelid_solver.lid_lateral_npo"
+                },
+                {
+                    "source": ".lid_outward_npo",
+                    "target": "eyelid_solver.lid_outward_npo"
+                },
+                {
+                    "source": ".num_deformers",
+                    "target": "eyelid_solver.deformer_count"
+                },
+                {
+                    "source": "eyelid_solver.out_matrix",
+                    "target": ".out_matrix"
+                }
+            ],
+            "values": [],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

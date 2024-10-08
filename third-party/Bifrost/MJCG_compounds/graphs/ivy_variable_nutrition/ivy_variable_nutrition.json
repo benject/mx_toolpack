@@ -1,0 +1,1189 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///ivy_surface_diagnostic_type.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_is_empty.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///get_geo_target_count.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///Math_vector4_to_vector3.json"
+        },
+        {
+            "uri": "file:///get_geo_property_check.json"
+        },
+        {
+            "uri": "file:///get_geo_schema_type.json"
+        },
+        {
+            "uri": "file:///volume_types.json"
+        },
+        {
+            "uri": "file:///volume_nodedefs.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_vector.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///create_volume_geo_prop.json"
+        },
+        {
+            "uri": "file:///is_a.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///is_a_mesh.json"
+        },
+        {
+            "uri": "file:///is_a_strands.json"
+        },
+        {
+            "uri": "file:///is_a_points.json"
+        },
+        {
+            "uri": "file:///is_a_volume.json"
+        },
+        {
+            "uri": "file:///switch_is_a.json"
+        },
+        {
+            "uri": "file:///get_target_component.json"
+        },
+        {
+            "uri": "file:///create_data_geo_prop.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///set_geo_property.array.json"
+        },
+        {
+            "uri": "file:///set_geo_property.scalar.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///materials.json"
+        },
+        {
+            "uri": "file:///standard_surface_mat.json"
+        },
+        {
+            "uri": "file:///assign_diagnostic_material.json"
+        },
+        {
+            "uri": "file:///erase_property.json"
+        },
+        {
+            "uri": "file:///get_sub_object.json"
+        },
+        {
+            "uri": "file:///get_point_count.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///get_point_position.json"
+        },
+        {
+            "uri": "file:///set_point_position.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///get_point_normal.json"
+        },
+        {
+            "uri": "file:///Math_array.json"
+        },
+        {
+            "uri": "file:///Core_Array_slice_array.json"
+        },
+        {
+            "uri": "file:///update_mesh_normals.json"
+        },
+        {
+            "uri": "file:///object_terminal.json"
+        },
+        {
+            "uri": "file:///ivy_surface.json"
+        },
+        {
+            "uri": "file:///add_points_to_points.json"
+        },
+        {
+            "uri": "file:///validate_points.json"
+        },
+        {
+            "uri": "file:///construct_points.json"
+        },
+        {
+            "uri": "file:///set_point_shape.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds.json"
+        },
+        {
+            "uri": "file:///increment_decrement.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///validate_mesh.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_matrix.json"
+        },
+        {
+            "uri": "file:///Math_compose_transform_matrix.json"
+        },
+        {
+            "uri": "file:///Math_vector3_to_vector4.json"
+        },
+        {
+            "uri": "file:///Math_axis_angle_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_length_squared.json"
+        },
+        {
+            "uri": "file:///Math_almost_equal.json"
+        },
+        {
+            "uri": "file:///rotation_between_vectors.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_rotate_by_quaternion.json"
+        },
+        {
+            "uri": "file:///set_point_normal.json"
+        },
+        {
+            "uri": "file:///create_mesh_sphere.json"
+        },
+        {
+            "uri": "file:///half_of.json"
+        },
+        {
+            "uri": "file:///ivy_seeds.json"
+        },
+        {
+            "uri": "file:///processing_type.json"
+        },
+        {
+            "uri": "file:///CoreStringOps.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_scalar.json"
+        },
+        {
+            "uri": "file:///ivy_node_type.json"
+        },
+        {
+            "uri": "file:///ivy_branch_type.json"
+        },
+        {
+            "uri": "file:///get_ivy_solver_settings.json"
+        },
+        {
+            "uri": "file:///merge_meshes.json"
+        },
+        {
+            "uri": "file:///merge_points.json"
+        },
+        {
+            "uri": "file:///merge_strands.json"
+        },
+        {
+            "uri": "file:///merge_geometry.json"
+        },
+        {
+            "uri": "file:///build_closest_accelerator.json"
+        },
+        {
+            "uri": "file:///build_raycast_accelerator.json"
+        },
+        {
+            "uri": "file:///access_offset_array.json"
+        },
+        {
+            "uri": "file:///get_mesh_structure.json"
+        },
+        {
+            "uri": "file:///Core_Array_flatten_nested_array.json"
+        },
+        {
+            "uri": "file:///mesh_nodedefs.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        },
+        {
+            "uri": "file:///fluids_types.json"
+        },
+        {
+            "uri": "file:///fluids_nodedefs.json"
+        },
+        {
+            "uri": "file:///jotun_rand.json"
+        },
+        {
+            "uri": "file:///random_value.json"
+        },
+        {
+            "uri": "file:///Core_Constants_default_value.json"
+        },
+        {
+            "uri": "file:///Math_change_range.json"
+        },
+        {
+            "uri": "file:///one_minus.json"
+        },
+        {
+            "uri": "file:///Core_Array_sum_array_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_sum_array.json"
+        },
+        {
+            "uri": "file:///sample_closest_in_radius_accelerator.json"
+        },
+        {
+            "uri": "file:///array_average.json"
+        },
+        {
+            "uri": "file:///sample_raycast_accelerator.json"
+        },
+        {
+            "uri": "file:///Core_Array_all_any_array.json"
+        },
+        {
+            "uri": "file:///sample_closest_accelerator.json"
+        },
+        {
+            "uri": "file:///Profiler.json"
+        },
+        {
+            "uri": "file:///object_profiler.json"
+        },
+        {
+            "uri": "file:///resize_vector.json"
+        },
+        {
+            "uri": "file:///distance_between_vectors.json"
+        },
+        {
+            "uri": "file:///twice_of.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///set_point_length.json"
+        },
+        {
+            "uri": "file:///instances.json"
+        },
+        {
+            "uri": "file:///change_range.json"
+        },
+        {
+            "uri": "file:///Core_Array_reverse_array.json"
+        },
+        {
+            "uri": "file:///string_to_array.json"
+        },
+        {
+            "uri": "file:///create_mesh_cube.json"
+        },
+        {
+            "uri": "file:///randomize_selection.json"
+        },
+        {
+            "uri": "file:///delete_points_in_points.json"
+        },
+        {
+            "uri": "file:///delete_points.json"
+        },
+        {
+            "uri": "file:///find_all_in_array.json"
+        },
+        {
+            "uri": "file:///cull_points.json"
+        },
+        {
+            "uri": "file:///create_mesh_plane.json"
+        },
+        {
+            "uri": "file:///create_instances.json"
+        },
+        {
+            "uri": "file:///set_point_scale.json"
+        },
+        {
+            "uri": "file:///set_point_orientation.json"
+        },
+        {
+            "uri": "file:///Math_matrix_to_quaternion.json"
+        },
+        {
+            "uri": "file:///normal_and_tangent_to_orientation.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///set_orientation_value.json"
+        },
+        {
+            "uri": "file:///set_point_size.json"
+        },
+        {
+            "uri": "file:///set_strands_shape.json"
+        },
+        {
+            "uri": "file:///validate_strands.json"
+        },
+        {
+            "uri": "file:///construct_strands.json"
+        },
+        {
+            "uri": "file:///cumulative_sum_array.json"
+        },
+        {
+            "uri": "file:///get_strands_structure.json"
+        },
+        {
+            "uri": "file:///get_strands_end_points.json"
+        },
+        {
+            "uri": "file:///set_strand_length.json"
+        },
+        {
+            "uri": "file:///get_points_in_radius.json"
+        },
+        {
+            "uri": "file:///int_filter.json"
+        },
+        {
+            "uri": "file:///get_array_indices.json"
+        },
+        {
+            "uri": "file:///update_point_strand_index.json"
+        },
+        {
+            "uri": "file:///check_point_strand_index.json"
+        },
+        {
+            "uri": "file:///update_strands_ratio.json"
+        },
+        {
+            "uri": "file:///get_geo_property_or_default.json"
+        },
+        {
+            "uri": "file:///simulation_types_2.json"
+        },
+        {
+            "uri": "file:///insert_child_object.json"
+        },
+        {
+            "uri": "file:///add_influence_property.json"
+        },
+        {
+            "uri": "file:///influence_set_property.json"
+        },
+        {
+            "uri": "file:///euler_to_rotation_vector.json"
+        },
+        {
+            "uri": "file:///influence_set_spin.json"
+        },
+        {
+            "uri": "file:///influence_fields_types.json"
+        },
+        {
+            "uri": "file:///Core_Array_empty_array.json"
+        },
+        {
+            "uri": "file:///set_has_animated_properties.json"
+        },
+        {
+            "uri": "file:///remap_source_to_property_name.json"
+        },
+        {
+            "uri": "file:///source_to_property_name.json"
+        },
+        {
+            "uri": "file:///vary_source_property.json"
+        },
+        {
+            "uri": "file:///set_spin_value.json"
+        },
+        {
+            "uri": "file:///remove_from_array.json"
+        },
+        {
+            "uri": "file:///array_conversion_type.json"
+        },
+        {
+            "uri": "file:///flatten_2D_array.json"
+        },
+        {
+            "uri": "file:///transpose_2D_array.json"
+        },
+        {
+            "uri": "file:///Math_within_bounds.json"
+        },
+        {
+            "uri": "file:///generate_ivy_core.json"
+        },
+        {
+            "uri": "file:///set_point_ratio.json"
+        },
+        {
+            "uri": "file:///set_point_tangent.json"
+        },
+        {
+            "uri": "file:///convert_to_points.json"
+        },
+        {
+            "uri": "file:///ivy_default_leaf_mesh.json"
+        },
+        {
+            "uri": "file:///get_strands_start_points.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_euler.json"
+        },
+        {
+            "uri": "file:///Math_radians_to_degrees.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_invert.json"
+        },
+        {
+            "uri": "file:///Math_lerp_with_clamp.json"
+        },
+        {
+            "uri": "file:///Math_nlerp.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_slerp.json"
+        },
+        {
+            "uri": "file:///generate_ivy.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::ivy_variable_nutrition",
+            "uriImported": "file:///__duplicateCompoundURIHelper__",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "89.2868 216.96"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "93.7068 383.356"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#456d4e"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Init seeds and leaf settings. The seeds are the positions from where the ivy will start growing."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-898.595 -70.4902 543.972 356.551"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#36606d"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-761.354 318.546 410.789 379.969"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Init a surface for the ivy to grow onto.\nThe point_nutrition property is set to the same as the one we've created.\n\nDiagnostic is set to display the per-point nutrition values."
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d3f3f"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Generates the ivy growth. Processing mode is set to \"iteration\", \nso only the final result is generated."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-280.316 121.989 337.987 448.317"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop3",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d4a62"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "We use a noise field to drive the point_nutrion. Areas with low nutrition values makes the ivy  to grow slower. The growth stop when a surface with 0 nutrition is reached."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-2088.08 320.715 1292.23 676.973"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Fields,fractal_noise_field"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Fields,sample_field"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,change_range"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,array_bounds"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Conversion,vector3_to_scalar"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-2186.76 -271.413 2585.93 1492.56"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "Generates ivy growth on a surface with variable nutrition."
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "ivy_variable_nutrition_thumb.png"
+                }
+            ],
+            "ports": [],
+            "compoundNodes": [
+                {
+                    "nodeName": "ivy_surface",
+                    "nodeType": "MJCG::Modeling::Growth::ivy_surface",
+                    "fanInPortNames": {
+                        "mesh": [
+                            "out_geometry"
+                        ]
+                    },
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-658.08 405.258"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value2",
+                    "valueType": "Math::float3",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-880.14 -1.8051"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "ivy_seeds",
+                    "nodeType": "MJCG::Modeling::Growth::ivy_seeds",
+                    "fanInPortNames": {
+                        "positions": [
+                            "output"
+                        ],
+                        "leaf_geometries": []
+                    },
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-613.328 -25.2623"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "generate_ivy",
+                    "nodeType": "MJCG::Modeling::Growth::generate_ivy",
+                    "fanInPortNames": {
+                        "surfaces": [
+                            "surface"
+                        ],
+                        "Lights": [],
+                        "seeds": [
+                            "seeds"
+                        ]
+                    },
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::final",
+                        "Core::Graph::terminal::diagnostic"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-231.424 183.704"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "create_mesh_plane",
+                    "nodeType": "Modeling::Primitive::create_mesh_plane",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-2070.26 389.213"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "set_geo_property",
+                    "nodeType": "Geometry::Properties::set_geo_property",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1040.01 371.753"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "sample_field",
+                    "nodeType": "Core::Fields::sample_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1284.96 485.943"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "fractal_noise_field",
+                    "nodeType": "Core::Fields::fractal_noise_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1551.82 619.188"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "get_point_position",
+                    "nodeType": "Geometry::Properties::get_point_position",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1787.15 530.512"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "value2.output",
+                    "target": "ivy_seeds.positions.output"
+                },
+                {
+                    "source": "ivy_surface.surface",
+                    "target": "generate_ivy.surfaces.surface"
+                },
+                {
+                    "source": "ivy_seeds.seeds",
+                    "target": "generate_ivy.seeds.seeds"
+                },
+                {
+                    "source": "create_mesh_plane.plane_mesh",
+                    "target": "set_geo_property.geometry"
+                },
+                {
+                    "source": "set_geo_property.out_geometry",
+                    "target": "ivy_surface.mesh.out_geometry"
+                },
+                {
+                    "source": "fractal_noise_field.noise_field",
+                    "target": "sample_field.field"
+                },
+                {
+                    "source": "sample_field.result",
+                    "target": "set_geo_property.data"
+                },
+                {
+                    "source": "get_point_position.point_position",
+                    "target": "sample_field.position"
+                },
+                {
+                    "source": "create_mesh_plane.plane_mesh",
+                    "target": "get_point_position.geometry"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "ivy_surface.display_property",
+                    "valueType": "MJCG::ivySurfaceDiagnosticType",
+                    "value": "Nutrition"
+                },
+                {
+                    "valueName": "value2.value",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "ivy_seeds.tilt_angle",
+                    "valueType": "float",
+                    "value": "5f"
+                },
+                {
+                    "valueName": "ivy_seeds.random_scale",
+                    "valueType": "float",
+                    "value": "0.200000003f"
+                },
+                {
+                    "valueName": "ivy_seeds.size_profile",
+                    "valueType": "Amino::FCurve",
+                    "value": {
+                        "version": "1",
+                        "preExtrapolation": "0",
+                        "postExtrapolation": "0",
+                        "points": [
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "1",
+                                    "pcn": {
+                                        "xp": "-0.10000000000000001",
+                                        "yp": "1",
+                                        "x": "0",
+                                        "y": "1",
+                                        "xn": "0.10000000000000001",
+                                        "yn": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "1",
+                                    "pcn": {
+                                        "xp": "0.85721800000000004",
+                                        "yp": "1",
+                                        "x": "0.90000000000000002",
+                                        "y": "1",
+                                        "xn": "0.94278300000000004",
+                                        "yn": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "point": {
+                                    "locked": "1",
+                                    "interpolation": "1",
+                                    "pcn": {
+                                        "xp": "0.90000000000000002",
+                                        "yp": "0.10000000000000001",
+                                        "x": "1",
+                                        "y": "0.10000000000000001",
+                                        "xn": "1.1000000000000001",
+                                        "yn": "0.10000000000000001"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "valueName": "generate_ivy.max_iterations",
+                    "valueType": "long",
+                    "value": "400"
+                },
+                {
+                    "valueName": "generate_ivy.max_self_shadow",
+                    "valueType": "float",
+                    "value": "20f"
+                },
+                {
+                    "valueName": "generate_ivy.apical_dominance",
+                    "valueType": "float",
+                    "value": "0.200000003f"
+                },
+                {
+                    "valueName": "create_mesh_plane.length",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "create_mesh_plane.width",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "create_mesh_plane.length_segments",
+                    "valueType": "int",
+                    "value": "100L"
+                },
+                {
+                    "valueName": "create_mesh_plane.width_segments",
+                    "valueType": "int",
+                    "value": "100L"
+                },
+                {
+                    "valueName": "create_mesh_plane.up_axis",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "1f"
+                    }
+                },
+                {
+                    "valueName": "create_mesh_plane.position",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "5f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "set_geo_property.property",
+                    "valueType": "string",
+                    "value": "point_nutrition"
+                },
+                {
+                    "valueName": "fractal_noise_field.magnitude",
+                    "valueType": "float",
+                    "value": "5f"
+                },
+                {
+                    "valueName": "fractal_noise_field.num_frequencies",
+                    "valueType": "float",
+                    "value": "3f"
+                },
+                {
+                    "valueName": "fractal_noise_field.frequency",
+                    "valueType": "float",
+                    "value": "0.100000001f"
+                },
+                {
+                    "valueName": "fractal_noise_field.seed",
+                    "valueType": "long",
+                    "value": "125"
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

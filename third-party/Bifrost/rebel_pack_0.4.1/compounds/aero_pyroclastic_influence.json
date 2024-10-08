@@ -1,0 +1,3031 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///insert_child_object.json"
+        },
+        {
+            "uri": "file:///drag_influence.json"
+        },
+        {
+            "uri": "file:///create_tagged_object.json"
+        },
+        {
+            "uri": "file:///vorticity_force.json"
+        },
+        {
+            "uri": "file:///vorticity_influence.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Simulation::Influence::aero_pyroclastic_influence",
+            "uriImported": "file:///aero_pyroclastic_influence.json",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../docs/${language}/aero_pyroclastic_influence.md"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,multiply"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,build_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Simulation::Aero,source_air"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Simulation::Aero,simulate_aero"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-846.192 221.584"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "influence"
+                                                },
+                                                {
+                                                    "metaName": "enable"
+                                                },
+                                                {
+                                                    "metaName": "drag"
+                                                },
+                                                {
+                                                    "metaName": "vorticity"
+                                                },
+                                                {
+                                                    "metaName": "static_noise_dampening"
+                                                },
+                                                {
+                                                    "metaName": "min_fog_density"
+                                                },
+                                                {
+                                                    "metaName": "max_fog_density"
+                                                },
+                                                {
+                                                    "metaName": "frequency"
+                                                },
+                                                {
+                                                    "metaName": "num_frequencies"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "928.954 11.1346"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_vorticity"
+                                                },
+                                                {
+                                                    "metaName": "out_drag"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-840.5 -416 1681.5 832"
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"General\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Drag\",\n                \"items\": [\n                    {\n                        \"port\": \"drag\"\n                    },\n                    {\n                        \"port\": \"frequency\"\n                    },\n                    {\n                        \"port\": \"num_frequencies\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Vorticity\",\n                \"items\": [\n                    {\n                        \"port\": \"vorticity\"\n                    },\n                    {\n                        \"port\": \"min_fog_density\"\n                    },\n                    {\n                        \"port\": \"max_fog_density\"\n                    },\n                    {\n                        \"port\": \"static_noise_dampening\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "PortExpandedState",
+                    "metadata": [
+                        {
+                            "metaName": "General",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "Drag",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        },
+                        {
+                            "metaName": "Vorticity",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "1295.13 492.558"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPackExperimental.svg"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "influence",
+                    "portDirection": "input",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "enable",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "drag",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "vorticity",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "static_noise_dampening",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "2.5f"
+                },
+                {
+                    "portName": "min_fog_density",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "max_fog_density",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.899999976f"
+                },
+                {
+                    "portName": "frequency",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "40f"
+                },
+                {
+                    "portName": "num_frequencies",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "out_vorticity",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "out_drag",
+                    "portDirection": "output"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "compute_drag_mask_influence",
+                    "uriImported": "file:///aero_pyroclastic_influence.json",
+                    "metadata": [
+                        {
+                            "metaName": "documentation",
+                            "metaType": "string",
+                            "metaValue": "../docs/${language}/mask_influence.md"
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-131.5 -265"
+                        },
+                        {
+                            "metaName": "UILayout",
+                            "metaType": "string",
+                            "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"port\": \"geometry\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"General\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    },\n                    {\n                        \"port\": \"geo_shape\"\n                    },\n                    {\n                        \"port\": \"resolution_mode\"\n                    },\n                    {\n                        \"port\": \"geo_detail_size\"\n                    },\n                    {\n                        \"port\": \"geo_volume_mode\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Mask Properties\",\n                \"items\": [\n                    {\n                        \"port\": \"shape\"\n                    },\n                    {\n                        \"port\": \"detail_size\"\n                    },\n                    {\n                        \"port\": \"magnitude\"\n                    },\n                    {\n                        \"port\": \"min_distance\"\n                    },\n                    {\n                        \"port\": \"max_distance\"\n                    },\n                    {\n                        \"port\": \"dropoff\"\n                    },\n                    {\n                        \"port\": \"invert\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Fields,fcurve_field"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Fields,switch_fields"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Fields,scalar_field"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,divide"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,subtract"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "General",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Mask Properties",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "10 517"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "influence"
+                                                        },
+                                                        {
+                                                            "metaName": "enable"
+                                                        },
+                                                        {
+                                                            "metaName": "fractal_noise_field"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "out_influence"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "1038.02 522.888"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-827.843 -321.606 2755.38 1363.35"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "influence",
+                            "portDirection": "input",
+                            "portType": "Amino::Object",
+                            "metadata": [
+                                {
+                                    "metaName": "quick_create",
+                                    "metaType": "string",
+                                    "metaValue": "Simulation::Influence::dissipation_influence;Simulation::Influence::modifier_influence;Simulation::Influence::modulate_influence;Simulation::Influence::turbulence_influence;Simulation::Influence::wind_influence"
+                                }
+                            ]
+                        },
+                        {
+                            "portName": "enable",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "fractal_noise_field",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "out_influence",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compounds": [
+                        {
+                            "name": "append_influence",
+                            "uriImported": "file:///aero_pyroclastic_influence.json",
+                            "metadata": [
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-70 -204.66 1301 714.32"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "10 72"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "enable"
+                                                                },
+                                                                {
+                                                                    "metaName": "influence"
+                                                                },
+                                                                {
+                                                                    "metaName": "insert"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "925 70"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "output"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "enable",
+                                    "portDirection": "input",
+                                    "portType": "bool"
+                                },
+                                {
+                                    "portName": "influence",
+                                    "portDirection": "input",
+                                    "portType": "Amino::Object"
+                                },
+                                {
+                                    "portName": "insert",
+                                    "portDirection": "input",
+                                    "portType": "Amino::Object"
+                                },
+                                {
+                                    "portName": "output",
+                                    "portDirection": "output"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "if",
+                                    "nodeType": "Core::Logic::if",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "620 49"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "insert_child_object",
+                                    "nodeType": "Simulation::Influence::Internal::Object_Link_List::insert_child_object",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "315 9"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "if.output",
+                                    "target": ".output"
+                                },
+                                {
+                                    "source": "insert_child_object.out",
+                                    "target": "if.true_case"
+                                },
+                                {
+                                    "source": ".enable",
+                                    "target": "if.condition"
+                                },
+                                {
+                                    "source": ".influence",
+                                    "target": "if.false_case"
+                                },
+                                {
+                                    "source": ".influence",
+                                    "target": "insert_child_object.child"
+                                },
+                                {
+                                    "source": ".insert",
+                                    "target": "insert_child_object.in"
+                                }
+                            ],
+                            "values": []
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "set_property",
+                            "nodeType": "Core::Object::set_property",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "384.12 417.633"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "append_influence",
+                            "nodeType": "append_influence",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "733.023 517.888"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "set_property.out_object",
+                            "target": "append_influence.insert"
+                        },
+                        {
+                            "source": "append_influence.output",
+                            "target": ".out_influence"
+                        },
+                        {
+                            "source": ".influence",
+                            "target": "append_influence.influence"
+                        },
+                        {
+                            "source": ".enable",
+                            "target": "append_influence.enable"
+                        },
+                        {
+                            "source": ".fractal_noise_field",
+                            "target": "set_property.value"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "set_property.key",
+                            "valueType": "string",
+                            "value": "mask"
+                        },
+                        {
+                            "valueName": "append_influence.enable",
+                            "valueType": "bool",
+                            "value": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "compute_vorticity_mask_influence",
+                    "uriImported": "file:///aero_pyroclastic_influence.json",
+                    "metadata": [
+                        {
+                            "metaName": "documentation",
+                            "metaType": "string",
+                            "metaValue": "../docs/${language}/mask_influence.md"
+                        },
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-131.5 -265"
+                        },
+                        {
+                            "metaName": "UILayout",
+                            "metaType": "string",
+                            "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"port\": \"geometry\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"General\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    },\n                    {\n                        \"port\": \"geo_shape\"\n                    },\n                    {\n                        \"port\": \"resolution_mode\"\n                    },\n                    {\n                        \"port\": \"geo_detail_size\"\n                    },\n                    {\n                        \"port\": \"geo_volume_mode\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Mask Properties\",\n                \"items\": [\n                    {\n                        \"port\": \"shape\"\n                    },\n                    {\n                        \"port\": \"detail_size\"\n                    },\n                    {\n                        \"port\": \"magnitude\"\n                    },\n                    {\n                        \"port\": \"min_distance\"\n                    },\n                    {\n                        \"port\": \"max_distance\"\n                    },\n                    {\n                        \"port\": \"dropoff\"\n                    },\n                    {\n                        \"port\": \"invert\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Constants,float"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,max"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,divide"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,add"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,power"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "General",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "Mask Properties",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "10 517"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "influence"
+                                                        },
+                                                        {
+                                                            "metaName": "enable"
+                                                        },
+                                                        {
+                                                            "metaName": "noise_offset"
+                                                        },
+                                                        {
+                                                            "metaName": "air_mask_field"
+                                                        },
+                                                        {
+                                                            "metaName": "noise_dampening"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "out_influence"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "1742.27 493.774"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-71.5081 76.5839 2795.45 1383.18"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "influence",
+                            "portDirection": "input",
+                            "portType": "Amino::Object",
+                            "metadata": [
+                                {
+                                    "metaName": "quick_create",
+                                    "metaType": "string",
+                                    "metaValue": "Simulation::Influence::dissipation_influence;Simulation::Influence::modifier_influence;Simulation::Influence::modulate_influence;Simulation::Influence::turbulence_influence;Simulation::Influence::wind_influence"
+                                }
+                            ]
+                        },
+                        {
+                            "portName": "enable",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "noise_offset",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "air_mask_field",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "noise_dampening",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "out_influence",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compounds": [
+                        {
+                            "name": "append_influence",
+                            "uriImported": "file:///aero_pyroclastic_influence.json",
+                            "metadata": [
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-70 -204.66 1301 714.32"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "10 72"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "enable"
+                                                                },
+                                                                {
+                                                                    "metaName": "influence"
+                                                                },
+                                                                {
+                                                                    "metaName": "insert"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "925 70"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "output"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "enable",
+                                    "portDirection": "input",
+                                    "portType": "bool"
+                                },
+                                {
+                                    "portName": "influence",
+                                    "portDirection": "input",
+                                    "portType": "Amino::Object"
+                                },
+                                {
+                                    "portName": "insert",
+                                    "portDirection": "input",
+                                    "portType": "Amino::Object"
+                                },
+                                {
+                                    "portName": "output",
+                                    "portDirection": "output"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "if",
+                                    "nodeType": "Core::Logic::if",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "620 49"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "insert_child_object",
+                                    "nodeType": "Simulation::Influence::Internal::Object_Link_List::insert_child_object",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "315 9"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "if.output",
+                                    "target": ".output"
+                                },
+                                {
+                                    "source": "insert_child_object.out",
+                                    "target": "if.true_case"
+                                },
+                                {
+                                    "source": ".enable",
+                                    "target": "if.condition"
+                                },
+                                {
+                                    "source": ".influence",
+                                    "target": "if.false_case"
+                                },
+                                {
+                                    "source": ".influence",
+                                    "target": "insert_child_object.child"
+                                },
+                                {
+                                    "source": ".insert",
+                                    "target": "insert_child_object.in"
+                                }
+                            ],
+                            "values": []
+                        },
+                        {
+                            "name": "compute_velocity_mask",
+                            "uriImported": "file:///aero_pyroclastic_influence.json",
+                            "metadata": [
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Constants,float"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Fields,scalar_field"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,multiply"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,divide"
+                                },
+                                {
+                                    "metaName": "_recentNode_",
+                                    "metaType": "string",
+                                    "metaValue": "BifrostGraph,Core::Math,max"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "1.61447 310.696"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "magnitude"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "1444.93 116.548"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "clamped"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-317.5 -167.5 1681.5 832"
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "magnitude",
+                                    "portDirection": "input",
+                                    "portType": "float"
+                                },
+                                {
+                                    "portName": "clamped",
+                                    "portDirection": "output"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "clamp",
+                                    "nodeType": "Core::Math::clamp",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1115.25 146.129"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "length",
+                                    "nodeType": "Core::Math::length",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "414.63 92.6049"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "multiply",
+                                    "nodeType": "Core::Math::multiply",
+                                    "multiInPortNames": [
+                                        "scalar_field",
+                                        "length"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "837.8 173.256"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "scalar_field",
+                                    "nodeType": "Core::Fields::scalar_field",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "413.619 336.63"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "voxel_proxy_field",
+                                    "nodeType": "Core::Fields::voxel_proxy_field",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "39.6549 -40.7618"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "value1",
+                                    "valueType": "Core::Fields::VectorField",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-289.075 23.6062"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "clamp.clamped",
+                                    "target": ".clamped"
+                                },
+                                {
+                                    "source": "length.length",
+                                    "target": "multiply.first.length"
+                                },
+                                {
+                                    "source": "multiply.output",
+                                    "target": "clamp.value"
+                                },
+                                {
+                                    "source": "scalar_field.scalar_field",
+                                    "target": "multiply.first.scalar_field"
+                                },
+                                {
+                                    "source": "voxel_proxy_field.voxel_field",
+                                    "target": "length.vector"
+                                },
+                                {
+                                    "source": "value1.output",
+                                    "target": "voxel_proxy_field.field_type"
+                                },
+                                {
+                                    "source": ".magnitude",
+                                    "target": "scalar_field.value"
+                                }
+                            ],
+                            "values": [
+                                {
+                                    "valueName": "clamp.max",
+                                    "valueType": "float",
+                                    "value": "1f"
+                                },
+                                {
+                                    "valueName": "scalar_field.value",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                },
+                                {
+                                    "valueName": "voxel_proxy_field.property",
+                                    "valueType": "string",
+                                    "value": "voxel_velocity"
+                                },
+                                {
+                                    "valueName": "voxel_proxy_field.interpolation",
+                                    "valueType": "Geometry::Query::SamplerType",
+                                    "value": "kLinear"
+                                },
+                                {
+                                    "valueName": "value1.value",
+                                    "valueType": "Core::Fields::VectorField",
+                                    "value": {}
+                                }
+                            ]
+                        },
+                        {
+                            "name": "compute_velocity_magnitude",
+                            "uriImported": "file:///aero_pyroclastic_influence.json",
+                            "metadata": [
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "-449.5 -60.5"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "noise_dampening"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "magnitude"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "1350.62 -107.465"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "ViewportRect",
+                                    "metaType": "string",
+                                    "metaValue": "-240.798 -277.346 1881.98 931.195"
+                                }
+                            ],
+                            "ports": [
+                                {
+                                    "portName": "noise_dampening",
+                                    "portDirection": "input",
+                                    "portType": "float"
+                                },
+                                {
+                                    "portName": "magnitude",
+                                    "portDirection": "output"
+                                }
+                            ],
+                            "compoundNodes": [
+                                {
+                                    "nodeName": "add",
+                                    "nodeType": "Core::Math::add",
+                                    "multiInPortNames": [
+                                        "output1",
+                                        "power"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "702.58 -39.3095"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "divide",
+                                    "nodeType": "Core::Math::divide",
+                                    "multiInPortNames": [
+                                        "output1",
+                                        "output2"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "1034.03 -107.429"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "max",
+                                    "nodeType": "Core::Math::max",
+                                    "multiInPortNames": [
+                                        "noise_dampening",
+                                        "output"
+                                    ],
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-105.996 25.6615"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "power",
+                                    "nodeType": "Core::Math::power",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "430.329 14.1956"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "value",
+                                    "valueType": "float",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "valuenode_defaultvalue",
+                                            "metaType": "string",
+                                            "metaValue": "1"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "391.352 -195.066"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "value1",
+                                    "valueType": "float",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "valuenode_defaultvalue",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "170.666 144.814"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "nodeName": "value2",
+                                    "valueType": "float",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "valuenode_defaultvalue",
+                                            "metaType": "string",
+                                            "metaValue": "0"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-242.588 239.307"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "connections": [
+                                {
+                                    "source": "add.output",
+                                    "target": "divide.first.output2"
+                                },
+                                {
+                                    "source": "divide.output",
+                                    "target": ".magnitude"
+                                },
+                                {
+                                    "source": "max.maximum",
+                                    "target": "power.base"
+                                },
+                                {
+                                    "source": "power.power",
+                                    "target": "add.first.power"
+                                },
+                                {
+                                    "source": "value.output",
+                                    "target": "add.first.output1"
+                                },
+                                {
+                                    "source": "value.output",
+                                    "target": "divide.first.output1"
+                                },
+                                {
+                                    "source": "value1.output",
+                                    "target": "power.exponent"
+                                },
+                                {
+                                    "source": "value2.output",
+                                    "target": "max.first.output"
+                                },
+                                {
+                                    "source": ".noise_dampening",
+                                    "target": "max.first.noise_dampening"
+                                }
+                            ],
+                            "values": [
+                                {
+                                    "valueName": "value.value",
+                                    "valueType": "float",
+                                    "value": "1f"
+                                },
+                                {
+                                    "valueName": "value1.value",
+                                    "valueType": "float",
+                                    "value": "2f"
+                                },
+                                {
+                                    "valueName": "value2.value",
+                                    "valueType": "float",
+                                    "value": "0f"
+                                }
+                            ]
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "set_property",
+                            "nodeType": "Core::Object::set_property",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1049.83 517.161"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "append_influence",
+                            "nodeType": "append_influence",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1437.27 488.774"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "compute_velocity_mask",
+                            "nodeType": "compute_velocity_mask",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "743.369 346.4"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "compute_velocity_magnitude",
+                            "nodeType": "compute_velocity_magnitude",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "408.13 392.697"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "set_property.out_object",
+                            "target": "append_influence.insert"
+                        },
+                        {
+                            "source": "append_influence.output",
+                            "target": ".out_influence"
+                        },
+                        {
+                            "source": "compute_velocity_mask.clamped",
+                            "target": "set_property.value"
+                        },
+                        {
+                            "source": "compute_velocity_magnitude.magnitude",
+                            "target": "compute_velocity_mask.magnitude"
+                        },
+                        {
+                            "source": ".influence",
+                            "target": "append_influence.influence"
+                        },
+                        {
+                            "source": ".enable",
+                            "target": "append_influence.enable"
+                        },
+                        {
+                            "source": ".noise_dampening",
+                            "target": "compute_velocity_magnitude.noise_dampening"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "set_property.key",
+                            "valueType": "string",
+                            "value": "mask"
+                        },
+                        {
+                            "valueName": "append_influence.enable",
+                            "valueType": "bool",
+                            "value": "true"
+                        },
+                        {
+                            "valueName": "compute_velocity_mask.magnitude",
+                            "valueType": "float",
+                            "value": "0.5f"
+                        },
+                        {
+                            "valueName": "compute_velocity_magnitude.noise_dampening",
+                            "valueType": "float",
+                            "value": "0f"
+                        }
+                    ]
+                },
+                {
+                    "name": "compute_fractal_noise_field",
+                    "uriImported": "file:///aero_pyroclastic_influence.json",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-987 195"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "frequency"
+                                                        },
+                                                        {
+                                                            "metaName": "num_frequencies"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "noise_field"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-60 -22.5"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-1315.5 -350 1681.5 832"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "frequency",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "num_frequencies",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "noise_field",
+                            "portDirection": "output",
+                            "portType": "Core::Fields::ScalarField"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "fractal_noise_field",
+                            "nodeType": "Core::Fields::fractal_noise_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-376.94 -12.582"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "scalar_field1",
+                            "nodeType": "Core::Fields::scalar_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-727.792 -62.089"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "time",
+                            "nodeType": "Core::Time::time",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-1021.6 -89.6366"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "fractal_noise_field.noise_field",
+                            "target": ".noise_field"
+                        },
+                        {
+                            "source": "scalar_field1.scalar_field",
+                            "target": "fractal_noise_field.time"
+                        },
+                        {
+                            "source": "time.seconds",
+                            "target": "scalar_field1.value"
+                        },
+                        {
+                            "source": ".frequency",
+                            "target": "fractal_noise_field.frequency"
+                        },
+                        {
+                            "source": ".num_frequencies",
+                            "target": "fractal_noise_field.num_frequencies"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "fractal_noise_field.magnitude",
+                            "valueType": "float",
+                            "value": "1f"
+                        },
+                        {
+                            "valueName": "fractal_noise_field.num_frequencies",
+                            "valueType": "float",
+                            "value": "1f"
+                        },
+                        {
+                            "valueName": "fractal_noise_field.frequency",
+                            "valueType": "float",
+                            "value": "40f"
+                        },
+                        {
+                            "valueName": "fractal_noise_field.ratio",
+                            "valueType": "float",
+                            "value": "0.560000002f"
+                        },
+                        {
+                            "valueName": "fractal_noise_field.frequency_ratio",
+                            "valueType": "float",
+                            "value": "0.5f"
+                        },
+                        {
+                            "valueName": "fractal_noise_field.time_ratio",
+                            "valueType": "float",
+                            "value": "1.5f"
+                        },
+                        {
+                            "valueName": "scalar_field1.value",
+                            "valueType": "float",
+                            "value": "0f"
+                        }
+                    ]
+                },
+                {
+                    "name": "compute_fog_density_air_mask",
+                    "uriImported": "file:///aero_pyroclastic_influence.json",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-495 -61"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "min_fog_density"
+                                                        },
+                                                        {
+                                                            "metaName": "max_fog_density"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "1412.39 -6.986"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "air_mask_field"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-163 -337 1681.5 832"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "min_fog_density",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "max_fog_density",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "air_mask_field",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "divide",
+                            "nodeType": "Core::Math::divide",
+                            "multiInPortNames": [
+                                "output1",
+                                "output2"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "818.735 -94.3882"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "fcurve_field2",
+                            "nodeType": "Core::Fields::fcurve_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1101.32 218.862"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "scalar_field_max_fog_density",
+                            "nodeType": "Core::Fields::scalar_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-41.5031 379.265"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "scalar_field_min_fog_density",
+                            "nodeType": "Core::Fields::scalar_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-58.2411 113.135"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "subtract",
+                            "nodeType": "Core::Math::subtract",
+                            "multiInPortNames": [
+                                "voxel_field",
+                                "scalar_field"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "414.272 -112.584"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "subtract__fog_density_range",
+                            "nodeType": "Core::Math::subtract",
+                            "multiInPortNames": [
+                                "scalar_field",
+                                "scalar_field1"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "402.665 236.557"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "voxel_proxy_field",
+                            "nodeType": "Core::Fields::voxel_proxy_field",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "127.185 -283.701"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "divide.output",
+                            "target": "fcurve_field2.field"
+                        },
+                        {
+                            "source": "fcurve_field2.out_field",
+                            "target": ".air_mask_field"
+                        },
+                        {
+                            "source": "scalar_field_max_fog_density.scalar_field",
+                            "target": "subtract__fog_density_range.first.scalar_field"
+                        },
+                        {
+                            "source": "scalar_field_min_fog_density.scalar_field",
+                            "target": "subtract.first.scalar_field"
+                        },
+                        {
+                            "source": "scalar_field_min_fog_density.scalar_field",
+                            "target": "subtract__fog_density_range.first.scalar_field1"
+                        },
+                        {
+                            "source": "subtract.output",
+                            "target": "divide.first.output1"
+                        },
+                        {
+                            "source": "subtract__fog_density_range.output",
+                            "target": "divide.first.output2"
+                        },
+                        {
+                            "source": "voxel_proxy_field.voxel_field",
+                            "target": "subtract.first.voxel_field"
+                        },
+                        {
+                            "source": ".min_fog_density",
+                            "target": "scalar_field_min_fog_density.value"
+                        },
+                        {
+                            "source": ".max_fog_density",
+                            "target": "scalar_field_max_fog_density.value"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "fcurve_field2.fcurve",
+                            "valueType": "Amino::FCurve",
+                            "value": {
+                                "version": "1",
+                                "preExtrapolation": "0",
+                                "postExtrapolation": "0",
+                                "points": [
+                                    {
+                                        "point": {
+                                            "locked": "1",
+                                            "interpolation": "1",
+                                            "pcn": {
+                                                "xp": "-0.34135300000000002",
+                                                "yp": "0.98324199999999995",
+                                                "x": "0.010999999999999999",
+                                                "y": "0.99516099999999996",
+                                                "xn": "0.36335299999999998",
+                                                "yn": "1.00708"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "point": {
+                                            "locked": "1",
+                                            "interpolation": "2",
+                                            "pcn": {
+                                                "xp": "0.76895899999999995",
+                                                "yp": "1.1096239999999999",
+                                                "x": "1",
+                                                "y": "1",
+                                                "xn": "1.2310410000000001",
+                                                "yn": "0.89037599999999995"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "point": {
+                                            "locked": "1",
+                                            "interpolation": "2",
+                                            "pcn": {
+                                                "xp": "-1.425978",
+                                                "yp": "-0.015125",
+                                                "x": "1.01",
+                                                "y": "0",
+                                                "xn": "3.4461309999999998",
+                                                "yn": "0.015127"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "valueName": "scalar_field_max_fog_density.value",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "scalar_field_min_fog_density.value",
+                            "valueType": "float",
+                            "value": "0f"
+                        },
+                        {
+                            "valueName": "voxel_proxy_field.property",
+                            "valueType": "string",
+                            "value": "voxel_fog_density"
+                        },
+                        {
+                            "valueName": "voxel_proxy_field.interpolation",
+                            "valueType": "Geometry::Query::SamplerType",
+                            "value": "kLinear"
+                        }
+                    ]
+                },
+                {
+                    "name": "normalize_vorticity",
+                    "uriImported": "file:///aero_pyroclastic_influence.json",
+                    "metadata": [
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Constants,float"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,max"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,multiply"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Array,build_array"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Simulation::Aero,source_air"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-621 -60.5"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "vorticity"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "189 -171.5"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-840.5 -416 1681.5 832"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "vorticity",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "output",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "max",
+                            "nodeType": "Core::Math::max",
+                            "multiInPortNames": [
+                                "vorticity",
+                                "output"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-116.5 -300"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value1",
+                            "valueType": "float",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-434.5 -170"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "value1.output",
+                            "target": "max.first.output"
+                        },
+                        {
+                            "source": ".vorticity",
+                            "target": "max.first.vorticity"
+                        },
+                        {
+                            "source": "max.maximum",
+                            "target": ".output"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "value1.value",
+                            "valueType": "float",
+                            "value": "0f"
+                        }
+                    ]
+                },
+                {
+                    "name": "normalize_drag",
+                    "uriImported": "file:///aero_pyroclastic_influence.json",
+                    "metadata": [
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Constants,float"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Math,multiply"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Array,build_array"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Simulation::Aero,source_air"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Simulation::Aero,simulate_aero"
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-840.5 -416 1681.5 832"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-621 -60.5"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "drag"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "633 -149.5"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "drag",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "output",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "multiply",
+                            "nodeType": "Core::Math::multiply",
+                            "multiInPortNames": [
+                                "drag",
+                                "output1"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "338.481 -172.344"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value",
+                            "valueType": "float",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "31.262 19.862"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "5"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value1",
+                            "valueType": "float",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-410.072 -223.27"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "max",
+                            "nodeType": "Core::Math::max",
+                            "multiInPortNames": [
+                                "output",
+                                "drag"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-80.7392 -325"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "multiply.output",
+                            "target": ".output"
+                        },
+                        {
+                            "source": "value.output",
+                            "target": "multiply.first.output1"
+                        },
+                        {
+                            "source": "value1.output",
+                            "target": "max.first.output"
+                        },
+                        {
+                            "source": "max.maximum",
+                            "target": "multiply.first.drag"
+                        },
+                        {
+                            "source": ".drag",
+                            "target": "max.first.drag"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "value.value",
+                            "valueType": "float",
+                            "value": "5f"
+                        },
+                        {
+                            "valueName": "value1.value",
+                            "valueType": "float",
+                            "value": "0f"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "compute_drag_mask_influence",
+                    "nodeType": "compute_drag_mask_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "UILayout",
+                            "metaType": "string",
+                            "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"General\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    }\n                ]\n            },\n            {\n                \"port\": \"min_fog_density\"\n            },\n            {\n                \"port\": \"max_fog_density\"\n            },\n            {\n                \"port\": \"max_noise\"\n            }\n        ]\n    }\n}\n"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-19.0548 -167.207"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "drag_influence",
+                    "nodeType": "Simulation::Influence::drag_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "278.544 -139.721"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Drag Properties",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "vorticity_influence",
+                    "nodeType": "Simulation::Influence::vorticity_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "PortExpandedState",
+                            "metadata": [
+                                {
+                                    "metaName": "Vorticity Properties",
+                                    "metaType": "string",
+                                    "metaValue": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "299.305 287.088"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "compute_vorticity_mask_influence",
+                    "nodeType": "compute_vorticity_mask_influence",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "UILayout",
+                            "metaType": "string",
+                            "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"influence\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"General\",\n                \"items\": [\n                    {\n                        \"port\": \"enable\"\n                    }\n                ]\n            },\n            {\n                \"port\": \"min_fog_density\"\n            },\n            {\n                \"port\": \"max_fog_density\"\n            },\n            {\n                \"port\": \"max_noise\"\n            }\n        ]\n    }\n}\n"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-27.3083 323.775"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "compute_fractal_noise_field",
+                    "nodeType": "compute_fractal_noise_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-383.542 -185.047"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "compute_fog_density_air_mask",
+                    "nodeType": "compute_fog_density_air_mask",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-394.613 650.57"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize_vorticity",
+                    "nodeType": "normalize_vorticity",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-399.611 392.239"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize_drag",
+                    "nodeType": "normalize_drag",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-392.936 127.517"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if_enabled_drag",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "620.648 -69.1972"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if_enabled_vorticity",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "626.611 195.277"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "compute_drag_mask_influence.out_influence",
+                    "target": "drag_influence.influence"
+                },
+                {
+                    "source": "compute_vorticity_mask_influence.out_influence",
+                    "target": "vorticity_influence.influence"
+                },
+                {
+                    "source": "compute_fractal_noise_field.noise_field",
+                    "target": "compute_drag_mask_influence.fractal_noise_field"
+                },
+                {
+                    "source": "compute_fog_density_air_mask.air_mask_field",
+                    "target": "compute_vorticity_mask_influence.air_mask_field"
+                },
+                {
+                    "source": "normalize_vorticity.output",
+                    "target": "vorticity_influence.vorticity"
+                },
+                {
+                    "source": "normalize_drag.output",
+                    "target": "drag_influence.drag"
+                },
+                {
+                    "source": "if_enabled_drag.output",
+                    "target": ".out_drag"
+                },
+                {
+                    "source": ".influence",
+                    "target": "if_enabled_drag.false_case"
+                },
+                {
+                    "source": ".influence",
+                    "target": "compute_drag_mask_influence.influence"
+                },
+                {
+                    "source": ".influence",
+                    "target": "compute_vorticity_mask_influence.influence"
+                },
+                {
+                    "source": ".enable",
+                    "target": "if_enabled_drag.condition"
+                },
+                {
+                    "source": ".drag",
+                    "target": "normalize_drag.drag"
+                },
+                {
+                    "source": ".static_noise_dampening",
+                    "target": "compute_vorticity_mask_influence.noise_dampening"
+                },
+                {
+                    "source": ".min_fog_density",
+                    "target": "compute_fog_density_air_mask.min_fog_density"
+                },
+                {
+                    "source": ".max_fog_density",
+                    "target": "compute_fog_density_air_mask.max_fog_density"
+                },
+                {
+                    "source": ".frequency",
+                    "target": "compute_fractal_noise_field.frequency"
+                },
+                {
+                    "source": ".num_frequencies",
+                    "target": "compute_fractal_noise_field.num_frequencies"
+                },
+                {
+                    "source": ".vorticity",
+                    "target": "normalize_vorticity.vorticity"
+                },
+                {
+                    "source": "drag_influence.out_influence",
+                    "target": "if_enabled_drag.true_case"
+                },
+                {
+                    "source": ".enable",
+                    "target": "if_enabled_vorticity.condition"
+                },
+                {
+                    "source": ".influence",
+                    "target": "if_enabled_vorticity.false_case"
+                },
+                {
+                    "source": "if_enabled_vorticity.output",
+                    "target": ".out_vorticity"
+                },
+                {
+                    "source": "vorticity_influence.out_influence",
+                    "target": "if_enabled_vorticity.true_case"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "compute_drag_mask_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "drag_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "drag_influence.drag",
+                    "valueType": "float",
+                    "value": "5f"
+                },
+                {
+                    "valueName": "vorticity_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "vorticity_influence.vorticity",
+                    "valueType": "float",
+                    "value": "2f"
+                },
+                {
+                    "valueName": "compute_vorticity_mask_influence.enable",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "compute_vorticity_mask_influence.noise_offset",
+                    "valueType": "float",
+                    "value": "0.0500000007f"
+                },
+                {
+                    "valueName": "compute_vorticity_mask_influence.noise_dampening",
+                    "valueType": "float",
+                    "value": "2.07999992f"
+                },
+                {
+                    "valueName": "compute_fractal_noise_field.frequency",
+                    "valueType": "float",
+                    "value": "40f"
+                },
+                {
+                    "valueName": "compute_fractal_noise_field.num_frequencies",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "compute_fog_density_air_mask.min_fog_density",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "compute_fog_density_air_mask.max_fog_density",
+                    "valueType": "float",
+                    "value": "0.899999976f"
+                },
+                {
+                    "valueName": "normalize_vorticity.vorticity",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "normalize_drag.drag",
+                    "valueType": "float",
+                    "value": "0f"
+                }
+            ]
+        }
+    ]
+}

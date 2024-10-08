@@ -1,0 +1,223 @@
+global proc autoWalkMain()
+{
+
+
+	int $i; 
+	float $firstCV[];
+	string $tempLoc[],$nameLoc[],$CTRL[];
+	
+	//nurbs curve selection mask
+	
+	$selectList=`filterExpand -sm 9`;
+	select -r $selectList;
+	$selectList=`ls -sl`;
+
+	//curve(s) selected
+	
+	if (`size($selectList)`)
+	{ 
+		for( $curves in $selectList)
+		{ 
+			$firstCV=`pointPosition ($curves+".cv[0]")`;
+			
+			select -cl ; 	
+			//create 5 locators
+
+			for ($i=0; $i<5;$i++)			
+			{
+				$tempLoc=`spaceLocator -n ("autoWalk_"+$curves+"_Loc") `;
+				move -rpr $firstCV[0] $firstCV[1] $firstCV[2] ;					
+				$nameLoc[$i]=$tempLoc[0];
+			}
+			//create ctrl
+			
+			$CTRL=`circle -ch off -n ("autoWalk_"+$curves+"_CTRL") -nr 0 1 0 `;
+			move -rpr  $firstCV[0] $firstCV[1] $firstCV[2] ;
+			makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+			//Group and Build Hierarchy
+			
+			for ($locs in $nameLoc)
+			{ select -add $locs;}
+			$nameGrp=`group -n ("autoWalk_"+$curves+"_Grp")`;
+			
+			parent $nameLoc[3] $nameLoc[1];
+			parent $nameLoc[4] $nameLoc[2];
+
+			move -r -os -wd 1 0 0 $nameLoc[3];
+			move -r -os -wd -1 0 0 $nameLoc[4];
+
+			select -r $nameGrp;
+			makeIdentity -apply true -t 1 -r 1 -s 1 -n 0;
+
+			//creat Motion Path and Expressions
+				
+			autoWalkExp($curves,$nameLoc,$CTRL);		
+    	}
+
+ 	}
+
+	//no curve was selected
+
+	else 
+	{  
+		error "please select a least One curve as walk path!";
+	} 
+	// Success!
+  	print ("success!");
+
+}
+
+
+
+global proc autoWalkExp(string $curve ,string $locator[] ,string $controller[])
+{
+	string $ctrl[],$loc[],$pathCurve,$nameArcLength,$nameMotionPath[],$nameMultiNode;
+	int $i;
+
+	//create Nodes
+
+	 $ctrl= $controller;
+	 $loc=$locator;
+	 $pathCurve=$curve;
+	 $nameArcLength=`createNode curveInfo -n ("autoWalk_"+$curve+"_Info")`;
+	 $nameMultiNode=`createNode multiplyDivide -n ("autoWalk_"+$curve+"_MultiNode")`;
+
+
+
+	// create motionPath 
+	int $stFrame=`intField -q -v stField`;
+	int $edFrame=`intField -q -v edField`;
+ 
+	for ($i=0; $i<3;$i++)
+	{ 
+		$nameMotionPath[$i]=`pathAnimation -c $curve  -fractionMode true -follow true -followAxis z -upAxis y -worldUpType "vector" -worldUpVector 0 1 0 -inverseUp false -inverseFront false -bank false -startTimeU $stFrame -endTimeU $edFrame  $loc[$i]`;
+ 	}	
+
+
+	//delete the animation Curve
+	for ($i=1;$i<=2;$i++)
+	{
+		string $tempAttr=`connectionInfo -sourceFromDestination ($nameMotionPath[$i]+".u")`;
+		string $buffer[];
+
+		$numToken=` tokenize $tempAttr "." $buffer`;
+		$animCurve=$buffer[0];
+
+		delete $animCurve ;
+	}
+
+
+	// add Attributes
+
+	addAttr -ln distance -at double  $loc[0];
+	setAttr -e -keyable true ($loc[0]+".distance");
+	connectAttr -f  ( $curve+".ws" )  ($nameArcLength+".ic");
+
+	connectAttr -f  ( $nameArcLength+".arcLength") ($nameMultiNode+".input1X");
+
+	addAttr -ln step_Height -at double -min 0.01 -max 100  -dv 1 $ctrl[0];
+	setAttr -e -keyable true ($ctrl[0]+".step_Height");
+
+	addAttr -ln step -at double -min 0.01 -max 100  -dv 1 $ctrl[0];
+	setAttr -e -keyable true ($ctrl[0]+".step");
+
+	connectAttr ($nameMotionPath[0]+".u") ($nameMultiNode+".input2X");
+	connectAttr ($nameMultiNode+".outputX") ($loc[0]+".distance");
+
+
+	//create Expression
+	string $expText[];
+
+
+	$expText[0]="float $pi=deg_to_rad(180);" ;
+	$expText[1]="float $dist=`getAttr  " + $loc[0] + ".distance `*1/" + $ctrl[0] + ".step;";
+	$expText[2]="float $length=`getAttr  " + $nameArcLength + ".arcLength `;";
+	$expText[3]="float $uValue= " + $ctrl[0] + ".step/($length/$pi);";
+	$expText[4]=$loc[3]+".translateY=clamp(0,sin($dist),sin($dist))*"+ $ctrl[0] +".step_Height;";
+	$expText[5]="if("+ $loc[3] +".translateY>0&&$dist<$pi)";
+	$expText[6]="{ ";
+	$expText[7]=$nameMotionPath[1]+ ".uValue=" + $nameMotionPath[0] +".uValue*3/2;";
+	$expText[8]="}"; 
+	$expText[9]="if("+ $loc[3] +".translateY>0&&$dist>$pi)";
+	$expText[10]="{";
+	$expText[11]=$nameMotionPath[1]+".uValue=" + $nameMotionPath[0] +".uValue-$uValue*1/4+$uValue*sin(($dist%$pi)/2);";
+	$expText[12]="}";
+	$expText[13]=$loc[4]+".translateY=clamp(0,sin($dist+$pi),sin($dist+$pi))*"+$ctrl[0]+".step_Height;";
+	$expText[14]="if("+$loc[4]+".translateY>0&&$dist<($pi*2))";
+	$expText[15]="{ ";
+	$expText[16]=$nameMotionPath[2]+".uValue=sin((($dist-$pi)%$pi)/2)*2.5*$uValue;";
+	$expText[17]="}";
+	$expText[18]="if("+$loc[4]+".translateY>0&&$dist>$pi*2)";
+	$expText[19]="{ ";
+	$expText[20]=$nameMotionPath[2]+".uValue="+$nameMotionPath[0]+".uValue-$uValue/4+sin(($dist% $pi)/2) *$uValue;";
+	$expText[21]="}";
+	$expText[22]="if ("+$nameMotionPath[0]+".uValue==0)";
+	$expText[23]="{";
+	$expText[24]=$nameMotionPath[1]+".uValue=0;";
+	$expText[25]=$nameMotionPath[2]+".uValue=0;";
+	$expText[26]="}";
+
+
+	string $exp=stringArrayToString ($expText , "\n");
+
+	expression -s $exp -ae 1 -n ( "autoWalk_"+$curve+"_Exp") ;
+}
+
+
+
+
+global proc createWindow()
+{
+
+	if (`window -exists autoWalkWin`)
+	deleteUI autoWalkWin;
+	window -t autoWalkWindow -wh 200 200 autoWalkWin;
+	columnLayout;
+	text " ";
+	text "   Please Input Start Frame";
+	rowLayout -numberOfColumns 2 ;
+	text "   StartFrame " ;
+
+	$min=`playbackOptions -q -min`;
+	intField  -v $min stField ;
+
+	setParent..; // Start Frame Field End
+
+
+	text " ";
+	text "   Please Input End Frame";
+	rowLayout -numberOfColumns 2 ;
+	text "   EndFrame " ;
+	$max=`playbackOptions -q -max`;
+	intField -v $max  edField;
+
+	setParent..; // End Frame Field End
+
+
+	text " "; 
+
+	columnLayout ;
+	text "   Select walk path curve \r\n" ;
+	text "   Click to create foot steps " ;
+	setParent..;
+
+	columnLayout ;
+	text " ";
+
+	button  -w 120 -l " click" -align "center" -c "autoWalkMain";
+	setParent..; //Button End
+
+	showWindow autoWalkWin;
+
+}
+
+
+
+
+
+global proc autoWalk()
+{
+	createWindow();
+}
+
+autoWalk();

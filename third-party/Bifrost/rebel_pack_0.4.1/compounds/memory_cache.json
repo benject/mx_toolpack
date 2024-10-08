@@ -1,0 +1,723 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        },
+        {
+            "uri": "file:///CoreStringOps.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///force_pull_port.json"
+        },
+        {
+            "uri": "file:///memory_frame_cache.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Simulation::Common::memory_cache",
+            "uriImported": "file:///bifrostBoard1",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "object"
+                                                },
+                                                {
+                                                    "metaName": "active_frame_range"
+                                                },
+                                                {
+                                                    "metaName": "start_frame"
+                                                },
+                                                {
+                                                    "metaName": "last_frame"
+                                                },
+                                                {
+                                                    "metaName": "invert_frame_range"
+                                                },
+                                                {
+                                                    "metaName": "only_in_order"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-10.3611 221.762"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "1586.15 200.619"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_objects"
+                                                },
+                                                {
+                                                    "metaName": "first_object"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Simulation::Internal,memory_frame_cache"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Array,first_in_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Simulation::Common,force_pull_port"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Logic,if"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostBoard,Core::Constants,float"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-173.756 200 1791.67 571.154"
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"object\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Settings\",\n                \"items\": [\n                    {\n                        \"port\": \"mode\"\n                    },\n                    {\n                        \"port\": \"write_mode\"\n                    },\n                    {\n                        \"port\": \"filename\"\n                    },\n                    {\n                        \"port\": \"directory\"\n                    },\n                    {\n                        \"port\": \"properties\"\n                    },\n                    {\n                        \"expanded\": true,\n                        \"group\": \"Alembic\"\n                    },\n                    {\n                        \"expanded\": false,\n                        \"group\": \"Volumes\",\n                        \"items\": [\n                            {\n                                \"port\": \"threshold\"\n                            }\n                        ]\n                    },\n                    {\n                        \"port\": \"interpolation\"\n                    },\n                    {\n                        \"port\": \"tile_tree_traits\"\n                    },\n                    {\n                        \"port\": \"filter_voxels_using_property\"\n                    },\n                    {\n                        \"port\": \"filter_min_value\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": true,\n                \"group\": \"Frame Range\",\n                \"items\": [\n                    {\n                        \"port\": \"active_frame_range\"\n                    },\n                    {\n                        \"port\": \"start_frame\"\n                    },\n                    {\n                        \"port\": \"last_frame\"\n                    },\n                    {\n                        \"port\": \"invert\"\n                    },\n                    {\n                        \"port\": \"invert_frame_range\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": true,\n                \"group\": \"Diagnostics\",\n                \"items\": [\n                    {\n                        \"port\": \"use_diagnostic_colors\"\n                    }\n                ]\n            },\n            {\n                \"group\": \"Reset Mechanism\",\n                \"items\": [\n                    {\n                        \"port\": \"only_in_order\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPackExperimental.svg"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "object",
+                    "portDirection": "input",
+                    "portType": "array<Amino::Object>",
+                    "isDefaultFanIn": "true"
+                },
+                {
+                    "portName": "active_frame_range",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "start_frame",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "last_frame",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "120f"
+                },
+                {
+                    "portName": "invert_frame_range",
+                    "portDirection": "input",
+                    "portType": "bool"
+                },
+                {
+                    "portName": "out_objects",
+                    "portDirection": "output",
+                    "portType": "array<Amino::Object>"
+                },
+                {
+                    "portName": "first_object",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "only_in_order",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "caching_active_this_frame",
+                    "uriImported": "file:///bifrostBoard1",
+                    "metadata": [
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Logic,not"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Logic,or"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Logic,and"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Logic,if"
+                        },
+                        {
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostBoard,Core::Logic,xor"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_metadata",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "-37 273"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "active_frame_range"
+                                                        },
+                                                        {
+                                                            "metaName": "start_frame"
+                                                        },
+                                                        {
+                                                            "metaName": "last_frame"
+                                                        },
+                                                        {
+                                                            "metaName": "invert"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_metadata",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "DisplayMode",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
+                                                            "metaName": "LayoutPos",
+                                                            "metaType": "string",
+                                                            "metaValue": "1602.75 20.5656"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "active"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-676.577 -346 3101.54 1090.38"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "active_frame_range",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "start_frame",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "last_frame",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "invert",
+                            "portDirection": "input",
+                            "portType": "bool"
+                        },
+                        {
+                            "portName": "active",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "and",
+                            "nodeType": "Core::Logic::and",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "722 193"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "greater_or_equal",
+                            "nodeType": "Core::Logic::greater_or_equal",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "451 88"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "less_or_equal",
+                            "nodeType": "Core::Logic::less_or_equal",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "446 287"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "xor",
+                            "nodeType": "Core::Logic::xor",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "938 309"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "or",
+                            "nodeType": "Core::Logic::or",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "1166 -190"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "not",
+                            "nodeType": "Core::Logic::not",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "878 -176"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "time",
+                            "nodeType": "Core::Time::time",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "162.484 -132.371"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "and.output",
+                            "target": "xor.first"
+                        },
+                        {
+                            "source": "greater_or_equal.output",
+                            "target": "and.first"
+                        },
+                        {
+                            "source": "less_or_equal.output",
+                            "target": "and.second"
+                        },
+                        {
+                            "source": "xor.output",
+                            "target": "or.second"
+                        },
+                        {
+                            "source": "or.output",
+                            "target": ".active"
+                        },
+                        {
+                            "source": "not.output",
+                            "target": "or.first"
+                        },
+                        {
+                            "source": "time.frame",
+                            "target": "greater_or_equal.first"
+                        },
+                        {
+                            "source": "time.frame",
+                            "target": "less_or_equal.first"
+                        },
+                        {
+                            "source": ".active_frame_range",
+                            "target": "not.value"
+                        },
+                        {
+                            "source": ".start_frame",
+                            "target": "greater_or_equal.second"
+                        },
+                        {
+                            "source": ".last_frame",
+                            "target": "less_or_equal.second"
+                        },
+                        {
+                            "source": ".invert",
+                            "target": "xor.second"
+                        }
+                    ],
+                    "values": []
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "caching_active_this_frame",
+                    "nodeType": "caching_active_this_frame",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "371.039 -68.4081"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "946.383 154.221"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "first_in_array",
+                    "nodeType": "Core::Array::first_in_array",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1216.17 236.779"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "time",
+                    "nodeType": "Core::Time::time",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "199.424 470.111"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "memory_frame_cache1",
+                    "nodeType": "Simulation::Internal::memory_frame_cache",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "559.652 338.01"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "caching_active_this_frame.active",
+                    "target": "if.condition"
+                },
+                {
+                    "source": ".object",
+                    "target": "if.false_case"
+                },
+                {
+                    "source": ".active_frame_range",
+                    "target": "caching_active_this_frame.active_frame_range"
+                },
+                {
+                    "source": ".start_frame",
+                    "target": "caching_active_this_frame.start_frame"
+                },
+                {
+                    "source": ".last_frame",
+                    "target": "caching_active_this_frame.last_frame"
+                },
+                {
+                    "source": ".invert_frame_range",
+                    "target": "caching_active_this_frame.invert"
+                },
+                {
+                    "source": "if.output",
+                    "target": ".out_objects"
+                },
+                {
+                    "source": "if.output",
+                    "target": "first_in_array.array"
+                },
+                {
+                    "source": "first_in_array.first",
+                    "target": ".first_object"
+                },
+                {
+                    "source": ".object",
+                    "target": "memory_frame_cache1.current_value"
+                },
+                {
+                    "source": ".only_in_order",
+                    "target": "memory_frame_cache1.only_in_order"
+                },
+                {
+                    "source": "time.frame",
+                    "target": "memory_frame_cache1.current_frame"
+                },
+                {
+                    "source": "memory_frame_cache1.out_current_value",
+                    "target": "if.true_case"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "caching_active_this_frame.invert",
+                    "valueType": "bool",
+                    "value": "false"
+                }
+            ]
+        }
+    ]
+}

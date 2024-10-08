@@ -1,0 +1,1002 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///insert_child_object.json"
+        },
+        {
+            "uri": "file:///add_influence_property.json"
+        },
+        {
+            "uri": "file:///influence_set_property.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///to_field.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Simulation::Influence::aero_noise_transport_influence",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../docs/${language}/aero_noise_transport_influence.md"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "259.073 1073.77"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "influence"
+                                                },
+                                                {
+                                                    "metaName": "enable"
+                                                },
+                                                {
+                                                    "metaName": "signed_noise"
+                                                },
+                                                {
+                                                    "metaName": "magnitude"
+                                                },
+                                                {
+                                                    "metaName": "use_temperature_gradient"
+                                                },
+                                                {
+                                                    "metaName": "frequency"
+                                                },
+                                                {
+                                                    "metaName": "offset"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "3102.84 210.338"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_influence"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Logic,if"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,build_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,multiply"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Fields,to_field"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-98.6725 -342.734 2954.22 2014.12"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "174.5 -23"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPackExperimental.svg"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "influence",
+                    "portDirection": "input",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "enable",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "signed_noise",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "magnitude",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0.400000006f"
+                },
+                {
+                    "portName": "use_temperature_gradient",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                },
+                {
+                    "portName": "frequency",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "13f"
+                },
+                {
+                    "portName": "offset",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "out_influence",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "absolute_value",
+                    "nodeType": "Core::Math::absolute_value",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "925 298"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "advect_field",
+                    "nodeType": "Core::Fields::advect_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2180.83 62.2312"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "fractal_noise_field",
+                    "nodeType": "Core::Fields::fractal_noise_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "542.965 568.373"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "gradient_field",
+                    "nodeType": "Core::Fields::gradient_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1619.87 -118.965"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "influence_set_property1",
+                    "nodeType": "Simulation::Influence::influence_set_property",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2455.45 181.31"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "length",
+                    "nodeType": "Core::Math::length",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1535 467"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply1",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "gradient",
+                        "out_field",
+                        "length"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1940.67 298.144"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "negate",
+                    "nodeType": "Core::Math::negate",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1535 272"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize",
+                    "nodeType": "Core::Math::normalize",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1869.43 -25.3753"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "scalar_field",
+                    "nodeType": "Core::Fields::scalar_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "967.656 515.181"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "subtract",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "absolute_value",
+                        "scalar_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 289"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "time",
+                    "nodeType": "Core::Time::time",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "10 552"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "to_field1",
+                    "nodeType": "Core::Fields::to_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "315 529"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "voxel_proxy_field",
+                    "nodeType": "Core::Fields::voxel_proxy_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "460.264 -67.3861"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "voxel_proxy_field1",
+                    "nodeType": "Core::Fields::voxel_proxy_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1230 532"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1527.82 865.058"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "668.999 1015.36"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.22"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply2",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "magnitude",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "846.396 764.587"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if1",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "867.205 -186.115"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "voxel_proxy_field2",
+                    "nodeType": "Core::Fields::voxel_proxy_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "457.044 232.313"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "vector_field",
+                    "nodeType": "Core::Fields::vector_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "921.831 1196.43"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "subtract1",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "output1",
+                        "out_field"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1918.31 887.37"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "magnitude",
+                        "port"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1289.39 1282.27"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "to_field",
+                    "nodeType": "Core::Fields::to_field",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1699.49 1276.59"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "multiply3",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "seconds",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "183.5 746"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value1",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-128.5 993"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "0.4"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if2",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2797.39 6.47812"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "absolute_value.absolute_value",
+                    "target": "subtract.first.absolute_value"
+                },
+                {
+                    "source": "advect_field.advected_field",
+                    "target": "influence_set_property1.value"
+                },
+                {
+                    "source": "fractal_noise_field.noise_field",
+                    "target": "absolute_value.value"
+                },
+                {
+                    "source": "fractal_noise_field.noise_field",
+                    "target": "if.false_case"
+                },
+                {
+                    "source": "gradient_field.gradient",
+                    "target": "normalize.value"
+                },
+                {
+                    "source": "length.length",
+                    "target": "multiply1.first.length"
+                },
+                {
+                    "source": "multiply1.output",
+                    "target": "advect_field.velocity_field"
+                },
+                {
+                    "source": "negate.negated",
+                    "target": "if.true_case"
+                },
+                {
+                    "source": "normalize.normalized",
+                    "target": "multiply1.first.gradient"
+                },
+                {
+                    "source": "scalar_field.scalar_field",
+                    "target": "subtract.first.scalar_field"
+                },
+                {
+                    "source": "subtract.output",
+                    "target": "negate.value"
+                },
+                {
+                    "source": "time.seconds",
+                    "target": "multiply3.first.seconds"
+                },
+                {
+                    "source": "to_field1.out_field",
+                    "target": "fractal_noise_field.time"
+                },
+                {
+                    "source": "voxel_proxy_field.voxel_field",
+                    "target": "advect_field.field"
+                },
+                {
+                    "source": "voxel_proxy_field.voxel_field",
+                    "target": "if1.false_case"
+                },
+                {
+                    "source": "voxel_proxy_field1.voxel_field",
+                    "target": "length.vector"
+                },
+                {
+                    "source": "if.output",
+                    "target": "subtract1.first.output1"
+                },
+                {
+                    "source": "value.output",
+                    "target": "multiply2.first.output1"
+                },
+                {
+                    "source": "multiply2.output",
+                    "target": "scalar_field.value"
+                },
+                {
+                    "source": "if1.output",
+                    "target": "gradient_field.scalar_field"
+                },
+                {
+                    "source": "voxel_proxy_field2.voxel_field",
+                    "target": "if1.true_case"
+                },
+                {
+                    "source": "vector_field.vector_field",
+                    "target": "voxel_proxy_field1.field_type"
+                },
+                {
+                    "source": "subtract1.output",
+                    "target": "multiply1.first.out_field"
+                },
+                {
+                    "source": "multiply.output",
+                    "target": "to_field.value"
+                },
+                {
+                    "source": "to_field.out_field",
+                    "target": "subtract1.first.out_field"
+                },
+                {
+                    "source": "multiply3.output",
+                    "target": "to_field1.value"
+                },
+                {
+                    "source": "value1.output",
+                    "target": "multiply3.first.output1"
+                },
+                {
+                    "source": ".influence",
+                    "target": "influence_set_property1.influence"
+                },
+                {
+                    "source": ".signed_noise",
+                    "target": "if.condition"
+                },
+                {
+                    "source": ".magnitude",
+                    "target": "fractal_noise_field.magnitude"
+                },
+                {
+                    "source": ".magnitude",
+                    "target": "multiply2.first.magnitude"
+                },
+                {
+                    "source": ".magnitude",
+                    "target": "multiply.first.magnitude"
+                },
+                {
+                    "source": ".use_temperature_gradient",
+                    "target": "if1.condition"
+                },
+                {
+                    "source": ".frequency",
+                    "target": "fractal_noise_field.frequency"
+                },
+                {
+                    "source": ".offset",
+                    "target": "multiply.first.port"
+                },
+                {
+                    "source": ".enable",
+                    "target": "if2.condition"
+                },
+                {
+                    "source": "influence_set_property1.out_influence",
+                    "target": "if2.true_case"
+                },
+                {
+                    "source": "if2.output",
+                    "target": ".out_influence"
+                },
+                {
+                    "source": ".influence",
+                    "target": "if2.false_case"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "advect_field.time_step",
+                    "valueType": "float",
+                    "value": "0.0399999991f"
+                },
+                {
+                    "valueName": "fractal_noise_field.magnitude",
+                    "valueType": "float",
+                    "value": "1.20000005f"
+                },
+                {
+                    "valueName": "fractal_noise_field.num_frequencies",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "fractal_noise_field.frequency",
+                    "valueType": "float",
+                    "value": "4f"
+                },
+                {
+                    "valueName": "fractal_noise_field.ratio",
+                    "valueType": "float",
+                    "value": "0.699999988f"
+                },
+                {
+                    "valueName": "fractal_noise_field.frequency_ratio",
+                    "valueType": "float",
+                    "value": "0.5f"
+                },
+                {
+                    "valueName": "fractal_noise_field.time_ratio",
+                    "valueType": "float",
+                    "value": "1.5f"
+                },
+                {
+                    "valueName": "influence_set_property1.key",
+                    "valueType": "string",
+                    "value": "voxel_fog_density"
+                },
+                {
+                    "valueName": "scalar_field.value",
+                    "valueType": "float",
+                    "value": "0.25f"
+                },
+                {
+                    "valueName": "voxel_proxy_field.property",
+                    "valueType": "string",
+                    "value": "voxel_fog_density"
+                },
+                {
+                    "valueName": "voxel_proxy_field.interpolation",
+                    "valueType": "Geometry::Query::SamplerType",
+                    "value": "kLinear"
+                },
+                {
+                    "valueName": "voxel_proxy_field1.property",
+                    "valueType": "string",
+                    "value": "voxel_velocity"
+                },
+                {
+                    "valueName": "voxel_proxy_field1.interpolation",
+                    "valueType": "Geometry::Query::SamplerType",
+                    "value": "kLinear"
+                },
+                {
+                    "valueName": "value.value",
+                    "valueType": "float",
+                    "value": "0.219999999f"
+                },
+                {
+                    "valueName": "voxel_proxy_field2.property",
+                    "valueType": "string",
+                    "value": "voxel_temperature"
+                },
+                {
+                    "valueName": "voxel_proxy_field2.interpolation",
+                    "valueType": "Geometry::Query::SamplerType",
+                    "value": "kLinear"
+                },
+                {
+                    "valueName": "value1.value",
+                    "valueType": "float",
+                    "value": "0.400000006f"
+                }
+            ]
+        }
+    ]
+}

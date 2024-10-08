@@ -1,0 +1,19 @@
+global proc swapName(){
+	$sel1 = `ls -sl`;
+	int $i;
+	int $j;
+	string $temp1[] ;
+	$j = `size($sel1)`;
+	for ($i=0;$i<$j/2;$i++)
+	{
+		//$sel2[$i]= $sel1[$i];
+		$replace = $sel1[$i] + $i;
+
+		rename $sel1[$i] $replace ;	
+		
+		rename $sel1[$j-1-$i] $sel1[$i] ;
+		rename $replace $sel1[$j-1-$i] ;
+		
+	}
+}
+swapName;

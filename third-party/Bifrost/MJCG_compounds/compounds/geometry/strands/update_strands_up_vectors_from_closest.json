@@ -1,0 +1,1073 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///build_closest_accelerator.json"
+        },
+        {
+            "uri": "file:///sample_closest_accelerator.json"
+        },
+        {
+            "uri": "file:///get_closest_locations.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///create_volume_geo_prop.json"
+        },
+        {
+            "uri": "file:///is_a.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///is_a_mesh.json"
+        },
+        {
+            "uri": "file:///is_a_strands.json"
+        },
+        {
+            "uri": "file:///is_a_points.json"
+        },
+        {
+            "uri": "file:///is_a_volume.json"
+        },
+        {
+            "uri": "file:///get_geo_schema_type.json"
+        },
+        {
+            "uri": "file:///switch_is_a.json"
+        },
+        {
+            "uri": "file:///get_target_component.json"
+        },
+        {
+            "uri": "file:///create_data_geo_prop.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///set_geo_property.array.json"
+        },
+        {
+            "uri": "file:///set_geo_property.scalar.json"
+        },
+        {
+            "uri": "file:///set_strand_up_vector.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///get_indexer_element.json"
+        },
+        {
+            "uri": "file:///math_util.json"
+        },
+        {
+            "uri": "file:///get_loc_element.json"
+        },
+        {
+            "uri": "file:///invalid_index.json"
+        },
+        {
+            "uri": "file:///get_mesh_geo_loc_data.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///max_weight.json"
+        },
+        {
+            "uri": "file:///mesh_v_interp.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///is_a_range_geo_property.json"
+        },
+        {
+            "uri": "file:///get_range_geo_property.json"
+        },
+        {
+            "uri": "file:///mesh_fv_interp.json"
+        },
+        {
+            "uri": "file:///mesh_f_interp.json"
+        },
+        {
+            "uri": "file:///Core_Array_empty_array.json"
+        },
+        {
+            "uri": "file:///choose_mesh_values.json"
+        },
+        {
+            "uri": "file:///get_sub_object.json"
+        },
+        {
+            "uri": "file:///get_point_count.json"
+        },
+        {
+            "uri": "file:///get_mesh_structure.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///get_point_geo_loc_data.json"
+        },
+        {
+            "uri": "file:///point_p_interp.json"
+        },
+        {
+            "uri": "file:///sample_volume_property.json"
+        },
+        {
+            "uri": "file:///get_strands_structure.json"
+        },
+        {
+            "uri": "file:///get_strand_geo_loc_data.json"
+        },
+        {
+            "uri": "file:///Core_Constants_default_value.json"
+        },
+        {
+            "uri": "file:///strand_p_interp.json"
+        },
+        {
+            "uri": "file:///strand_s_interp.json"
+        },
+        {
+            "uri": "file:///choose_strand_values.json"
+        },
+        {
+            "uri": "file:///sample_property.json"
+        },
+        {
+            "uri": "file:///get_point_position.json"
+        },
+        {
+            "uri": "file:///get_strands_start_points.json"
+        },
+        {
+            "uri": "file:///construct_points.json"
+        },
+        {
+            "uri": "file:///point_transform_scope.json"
+        },
+        {
+            "uri": "file:///create_arrow_strands.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Geometry::Strands::update_strands_up_vectors_from_closest",
+            "uriImported": "file:///update_strands_up_vectors_from_closest.json",
+            "metadata": [
+                {
+                    "metaName": "documentation",
+                    "metaType": "string",
+                    "metaValue": "../strands/docs/update_strands_up_vectors_from_closest.md"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../../icons/mjcg.png"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "strands"
+                                                },
+                                                {
+                                                    "metaName": "geometry"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-953.054 -104.543"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "input1",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "use_cutoff_distance"
+                                                },
+                                                {
+                                                    "metaName": "cutoff_distance"
+                                                },
+                                                {
+                                                    "metaName": "property_to_query"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "-526.636 189.768"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_strands"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "964.451 -123.444"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"strands\"\n            },\n            {\n                \"port\": \"geometry\"\n            },\n            {\n                \"expanded\": false,\n                \"group\": \"Queries\",\n                \"items\": [\n                    {\n                        \"port\": \"property_to_query\"\n                    },\n                    {\n                        \"port\": \"use_cutoff_distance\"\n                    },\n                    {\n                        \"port\": \"cutoff_distance\"\n                    },\n                    {\n                        \"port\": \"method\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                },
+                {
+                    "metaName": "PortExpandedState",
+                    "metadata": [
+                        {
+                            "metaName": "Queries",
+                            "metaType": "string",
+                            "metaValue": "0"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Modeling::Strands,create_arrow_strands"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,add"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Graph,terminal"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Diagnostic::Display,point_transform_scope"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Geometry::Properties,set_geo_property"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-1033 -177.162 2303.15 854.57"
+                },
+                {
+                    "metaName": "DisplayMode",
+                    "metaType": "string",
+                    "metaValue": "2"
+                },
+                {
+                    "metaName": "LayoutPos",
+                    "metaType": "string",
+                    "metaValue": "-2906.79 -21.0723"
+                },
+                {
+                    "metaName": "terminal_node_disabled_flags",
+                    "metaType": "string",
+                    "metaValue": "Core::Graph::terminal::diagnostic"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "strands",
+                    "portDirection": "input",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "geometry",
+                    "portDirection": "input",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "out_strands",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "use_cutoff_distance",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
+                },
+                {
+                    "portName": "cutoff_distance",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "10f"
+                },
+                {
+                    "portName": "property_to_query",
+                    "portDirection": "input",
+                    "portType": "string",
+                    "portDefault": "point_normal"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "sample_property",
+                    "uriImported": "file:///update_strands_up_vectors_from_closest.json",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "10 9"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "mesh"
+                                                        },
+                                                        {
+                                                            "metaName": "locations"
+                                                        },
+                                                        {
+                                                            "metaName": "property"
+                                                        },
+                                                        {
+                                                            "metaName": "method"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "sampled_data"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "595.213 137.652"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-276.769 -31 1409.54 523"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "mesh",
+                            "portDirection": "input",
+                            "portType": "Amino::Object"
+                        },
+                        {
+                            "portName": "locations",
+                            "portDirection": "input",
+                            "portType": "array<Geometry::Common::GeoLocation>"
+                        },
+                        {
+                            "portName": "property",
+                            "portDirection": "input",
+                            "portType": "string"
+                        },
+                        {
+                            "portName": "method",
+                            "portDirection": "input",
+                            "portType": "BifrostExp::Geometry::SampleMethod"
+                        },
+                        {
+                            "portName": "sampled_data",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "sample_property",
+                            "nodeType": "Geometry::Query::sample_property",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "315 65"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "value",
+                            "valueType": "Math::float3",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "10 276"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": ".mesh",
+                            "target": "sample_property.geometry"
+                        },
+                        {
+                            "source": "value.output",
+                            "target": "sample_property.default"
+                        },
+                        {
+                            "source": ".property",
+                            "target": "sample_property.property"
+                        },
+                        {
+                            "source": ".method",
+                            "target": "sample_property.method"
+                        },
+                        {
+                            "source": "sample_property.sampled_data",
+                            "target": ".sampled_data"
+                        },
+                        {
+                            "source": ".locations",
+                            "target": "sample_property.locations"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "sample_property.property",
+                            "valueType": "string",
+                            "value": "point_position"
+                        },
+                        {
+                            "valueName": "sample_property.method",
+                            "valueType": "BifrostExp::Geometry::SampleMethod",
+                            "value": "interpolated"
+                        },
+                        {
+                            "valueName": "value.value",
+                            "valueType": "Math::float3",
+                            "value": {
+                                "x": "0f",
+                                "y": "0f",
+                                "z": "0f"
+                            }
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                },
+                {
+                    "name": "prepare_diagnostic_geo",
+                    "uriImported": "file:///__duplicateCompoundURIHelper__",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "point_position"
+                                                        },
+                                                        {
+                                                            "metaName": "sampled_data"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "16.0998 42.964"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "strands"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "925 10"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-69.7705 -80.0562 1300.78 482.647"
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "point_position",
+                            "portDirection": "input",
+                            "portType": "array<Math::float3>"
+                        },
+                        {
+                            "portName": "sampled_data",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "strands",
+                            "portDirection": "output",
+                            "portType": "Amino::Object"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "add",
+                            "nodeType": "Core::Math::add",
+                            "multiInPortNames": [
+                                "point_position",
+                                "sampled_data"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "322.625 119.649"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "create_arrow_strands",
+                            "nodeType": "Modeling::Strands::create_arrow_strands",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "620 17"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": ".point_position",
+                            "target": "add.first.point_position"
+                        },
+                        {
+                            "source": "add.output",
+                            "target": "create_arrow_strands.end_positions"
+                        },
+                        {
+                            "source": "create_arrow_strands.strands",
+                            "target": ".strands"
+                        },
+                        {
+                            "source": ".point_position",
+                            "target": "create_arrow_strands.start_positions"
+                        },
+                        {
+                            "source": ".sampled_data",
+                            "target": "add.first.sampled_data"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "create_arrow_strands.arrowhead_size",
+                            "valueType": "float",
+                            "value": "0.100000001f"
+                        },
+                        {
+                            "valueName": "create_arrow_strands.stem_width_ratio",
+                            "valueType": "float",
+                            "value": "0.100000001f"
+                        }
+                    ],
+                    "reservedNodeNames": [
+                        {
+                            "name": "input"
+                        },
+                        {
+                            "name": "output"
+                        }
+                    ]
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "get_closest_locations",
+                    "nodeType": "Geometry::Query::get_closest_locations",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-192.02 13.8034"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "set_strand_up_vector",
+                    "nodeType": "MJCG::Geometry::Properties::set_strand_up_vector",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "697.102 -121.916"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "sample_property",
+                    "nodeType": "sample_property",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "123.645 143.637"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "422.406 17.6832"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "get_strands_roots",
+                    "nodeType": "MJCG::Geometry::Strands::get_strands_start_points",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-529.131 423.482"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "terminal",
+                    "nodeType": "Core::Graph::terminal",
+                    "fanInPortNames": {
+                        "final": [],
+                        "proxy": [],
+                        "diagnostic": [
+                            "strands"
+                        ]
+                    },
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::final",
+                        "Core::Graph::terminal::proxy"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "701.107 384.957"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "prepare_diagnostic_geo",
+                    "nodeType": "prepare_diagnostic_geo",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "426.964 370.93"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".geometry",
+                    "target": "get_closest_locations.geometry"
+                },
+                {
+                    "source": ".strands",
+                    "target": "set_strand_up_vector.strands"
+                },
+                {
+                    "source": ".use_cutoff_distance",
+                    "target": "get_closest_locations.use_cutoff_distance"
+                },
+                {
+                    "source": ".cutoff_distance",
+                    "target": "get_closest_locations.cutoff_distance"
+                },
+                {
+                    "source": ".geometry",
+                    "target": "sample_property.mesh"
+                },
+                {
+                    "source": ".property_to_query",
+                    "target": "sample_property.property"
+                },
+                {
+                    "source": "set_strand_up_vector.out_strands",
+                    "target": ".out_strands"
+                },
+                {
+                    "source": "get_closest_locations.found",
+                    "target": "if.condition"
+                },
+                {
+                    "source": "sample_property.sampled_data",
+                    "target": "if.true_case"
+                },
+                {
+                    "source": "if.output",
+                    "target": "set_strand_up_vector.up_vectors"
+                },
+                {
+                    "source": "get_closest_locations.locations",
+                    "target": "sample_property.locations"
+                },
+                {
+                    "source": ".strands",
+                    "target": "get_strands_roots.strands"
+                },
+                {
+                    "source": "get_strands_roots.positions",
+                    "target": "get_closest_locations.positions"
+                },
+                {
+                    "source": "get_strands_roots.positions",
+                    "target": "prepare_diagnostic_geo.point_position"
+                },
+                {
+                    "source": "prepare_diagnostic_geo.strands",
+                    "target": "terminal.diagnostic.strands"
+                },
+                {
+                    "source": "sample_property.sampled_data",
+                    "target": "prepare_diagnostic_geo.sampled_data"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "sample_property.mesh",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "sample_property.property",
+                    "valueType": "string",
+                    "value": ""
+                },
+                {
+                    "valueName": "sample_property.method",
+                    "valueType": "BifrostExp::Geometry::SampleMethod",
+                    "value": "interpolated"
+                },
+                {
+                    "valueName": "if.false_case",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "1f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "prepare_diagnostic_geo.point_position",
+                    "valueType": "array<Math::float3>",
+                    "value": []
+                },
+                {
+                    "valueName": "prepare_diagnostic_geo.sampled_data",
+                    "valueType": "array<Math::float3>",
+                    "value": []
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "input1"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

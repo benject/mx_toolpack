@@ -1,0 +1,19 @@
+{
+  "AminoConfigurations": [
+    {
+      "vendorName": "bing chen",
+      "libraryVersion": "0.0.1",
+      "libraryName": "MX_Pack",
+      "jsonLibs": [
+        {
+          "path": "compounds",
+          "files": [ ]
+        },
+        {
+          "path": "graphs",
+          "files": [ ]
+        }
+      ]
+    }
+  ]
+}

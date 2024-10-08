@@ -1,0 +1,1029 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///validate_mesh.json"
+        },
+        {
+            "uri": "file:///riv_types.json"
+        },
+        {
+            "uri": "file:///point_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///riv_ops.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        },
+        {
+            "uri": "file:///Math_vector3_to_vector4.json"
+        },
+        {
+            "uri": "file:///Math_vector4_to_vector3.json"
+        },
+        {
+            "uri": "file:///Math_quaternion_to_matrix.json"
+        },
+        {
+            "uri": "file:///Math_compose_transform_matrix.json"
+        },
+        {
+            "uri": "file:///Math_array.json"
+        },
+        {
+            "uri": "file:///Core_Array_slice_array.json"
+        },
+        {
+            "uri": "file:///Core_Array_reverse_array.json"
+        },
+        {
+            "uri": "file:///Core_Array_sum_array_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_sum_array.json"
+        },
+        {
+            "uri": "file:///Math_bool.json"
+        },
+        {
+            "uri": "file:///fluids_types.json"
+        },
+        {
+            "uri": "file:///volume_types.json"
+        },
+        {
+            "uri": "file:///fluids_nodedefs.json"
+        },
+        {
+            "uri": "file:///CoreStringOps.json"
+        },
+        {
+            "uri": "file:///string_to_array.json"
+        },
+        {
+            "uri": "file:///increment_decrement.json"
+        },
+        {
+            "uri": "file:///half_of.json"
+        },
+        {
+            "uri": "file:///Math_axis_angle_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_length_squared.json"
+        },
+        {
+            "uri": "file:///Math_almost_equal.json"
+        },
+        {
+            "uri": "file:///rotation_between_vectors.json"
+        },
+        {
+            "uri": "file:///access_offset_array.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_rotate_by_quaternion.json"
+        },
+        {
+            "uri": "file:///create_mesh_cube.json"
+        },
+        {
+            "uri": "file:///ivy_surface_diagnostic_type.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_is_empty.json"
+        },
+        {
+            "uri": "file:///get_geo_target_count.json"
+        },
+        {
+            "uri": "file:///get_geo_property_check.json"
+        },
+        {
+            "uri": "file:///get_geo_schema_type.json"
+        },
+        {
+            "uri": "file:///volume_nodedefs.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_vector.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///create_volume_geo_prop.json"
+        },
+        {
+            "uri": "file:///is_a.json"
+        },
+        {
+            "uri": "file:///is_a_mesh.json"
+        },
+        {
+            "uri": "file:///is_a_strands.json"
+        },
+        {
+            "uri": "file:///is_a_points.json"
+        },
+        {
+            "uri": "file:///is_a_volume.json"
+        },
+        {
+            "uri": "file:///switch_is_a.json"
+        },
+        {
+            "uri": "file:///get_target_component.json"
+        },
+        {
+            "uri": "file:///create_data_geo_prop.json"
+        },
+        {
+            "uri": "file:///set_geo_property.array.json"
+        },
+        {
+            "uri": "file:///set_geo_property.scalar.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///materials.json"
+        },
+        {
+            "uri": "file:///standard_surface_mat.json"
+        },
+        {
+            "uri": "file:///assign_diagnostic_material.json"
+        },
+        {
+            "uri": "file:///erase_property.json"
+        },
+        {
+            "uri": "file:///get_sub_object.json"
+        },
+        {
+            "uri": "file:///get_point_count.json"
+        },
+        {
+            "uri": "file:///get_point_position.json"
+        },
+        {
+            "uri": "file:///set_point_position.json"
+        },
+        {
+            "uri": "file:///get_point_normal.json"
+        },
+        {
+            "uri": "file:///update_mesh_normals.json"
+        },
+        {
+            "uri": "file:///object_terminal.json"
+        },
+        {
+            "uri": "file:///ivy_surface.json"
+        },
+        {
+            "uri": "file:///add_points_to_points.json"
+        },
+        {
+            "uri": "file:///validate_points.json"
+        },
+        {
+            "uri": "file:///construct_points.json"
+        },
+        {
+            "uri": "file:///set_point_shape.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds_impl.json"
+        },
+        {
+            "uri": "file:///Core_Array_array_bounds.json"
+        },
+        {
+            "uri": "file:///set_point_normal.json"
+        },
+        {
+            "uri": "file:///create_mesh_sphere.json"
+        },
+        {
+            "uri": "file:///ivy_seeds.json"
+        },
+        {
+            "uri": "file:///processing_type.json"
+        },
+        {
+            "uri": "file:///interpret_auto_port_as_scalar.json"
+        },
+        {
+            "uri": "file:///ivy_node_type.json"
+        },
+        {
+            "uri": "file:///ivy_branch_type.json"
+        },
+        {
+            "uri": "file:///get_ivy_solver_settings.json"
+        },
+        {
+            "uri": "file:///merge_meshes.json"
+        },
+        {
+            "uri": "file:///merge_points.json"
+        },
+        {
+            "uri": "file:///merge_strands.json"
+        },
+        {
+            "uri": "file:///merge_geometry.json"
+        },
+        {
+            "uri": "file:///build_closest_accelerator.json"
+        },
+        {
+            "uri": "file:///build_raycast_accelerator.json"
+        },
+        {
+            "uri": "file:///get_mesh_structure.json"
+        },
+        {
+            "uri": "file:///Core_Array_flatten_nested_array.json"
+        },
+        {
+            "uri": "file:///mesh_nodedefs.json"
+        },
+        {
+            "uri": "file:///simulation_types.json"
+        },
+        {
+            "uri": "file:///simulation_nodedefs.json"
+        },
+        {
+            "uri": "file:///jotun_rand.json"
+        },
+        {
+            "uri": "file:///random_value.json"
+        },
+        {
+            "uri": "file:///Core_Constants_default_value.json"
+        },
+        {
+            "uri": "file:///Math_change_range.json"
+        },
+        {
+            "uri": "file:///one_minus.json"
+        },
+        {
+            "uri": "file:///sample_closest_in_radius_accelerator.json"
+        },
+        {
+            "uri": "file:///array_average.json"
+        },
+        {
+            "uri": "file:///sample_raycast_accelerator.json"
+        },
+        {
+            "uri": "file:///Core_Array_all_any_array.json"
+        },
+        {
+            "uri": "file:///sample_closest_accelerator.json"
+        },
+        {
+            "uri": "file:///Profiler.json"
+        },
+        {
+            "uri": "file:///object_profiler.json"
+        },
+        {
+            "uri": "file:///resize_vector.json"
+        },
+        {
+            "uri": "file:///distance_between_vectors.json"
+        },
+        {
+            "uri": "file:///twice_of.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///set_point_length.json"
+        },
+        {
+            "uri": "file:///instances.json"
+        },
+        {
+            "uri": "file:///change_range.json"
+        },
+        {
+            "uri": "file:///randomize_selection.json"
+        },
+        {
+            "uri": "file:///delete_points_in_points.json"
+        },
+        {
+            "uri": "file:///delete_points.json"
+        },
+        {
+            "uri": "file:///find_all_in_array.json"
+        },
+        {
+            "uri": "file:///cull_points.json"
+        },
+        {
+            "uri": "file:///create_mesh_plane.json"
+        },
+        {
+            "uri": "file:///create_instances.json"
+        },
+        {
+            "uri": "file:///set_point_scale.json"
+        },
+        {
+            "uri": "file:///set_point_orientation.json"
+        },
+        {
+            "uri": "file:///Math_matrix_to_quaternion.json"
+        },
+        {
+            "uri": "file:///normal_and_tangent_to_orientation.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///set_orientation_value.json"
+        },
+        {
+            "uri": "file:///set_point_size.json"
+        },
+        {
+            "uri": "file:///set_strands_shape.json"
+        },
+        {
+            "uri": "file:///validate_strands.json"
+        },
+        {
+            "uri": "file:///construct_strands.json"
+        },
+        {
+            "uri": "file:///cumulative_sum_array.json"
+        },
+        {
+            "uri": "file:///get_strands_structure.json"
+        },
+        {
+            "uri": "file:///get_strands_end_points.json"
+        },
+        {
+            "uri": "file:///set_strand_length.json"
+        },
+        {
+            "uri": "file:///get_points_in_radius.json"
+        },
+        {
+            "uri": "file:///int_filter.json"
+        },
+        {
+            "uri": "file:///get_array_indices.json"
+        },
+        {
+            "uri": "file:///update_point_strand_index.json"
+        },
+        {
+            "uri": "file:///check_point_strand_index.json"
+        },
+        {
+            "uri": "file:///update_strands_ratio.json"
+        },
+        {
+            "uri": "file:///get_geo_property_or_default.json"
+        },
+        {
+            "uri": "file:///simulation_types_2.json"
+        },
+        {
+            "uri": "file:///insert_child_object.json"
+        },
+        {
+            "uri": "file:///add_influence_property.json"
+        },
+        {
+            "uri": "file:///influence_set_property.json"
+        },
+        {
+            "uri": "file:///euler_to_rotation_vector.json"
+        },
+        {
+            "uri": "file:///influence_set_spin.json"
+        },
+        {
+            "uri": "file:///influence_fields_types.json"
+        },
+        {
+            "uri": "file:///Core_Array_empty_array.json"
+        },
+        {
+            "uri": "file:///set_has_animated_properties.json"
+        },
+        {
+            "uri": "file:///remap_source_to_property_name.json"
+        },
+        {
+            "uri": "file:///source_to_property_name.json"
+        },
+        {
+            "uri": "file:///vary_source_property.json"
+        },
+        {
+            "uri": "file:///set_spin_value.json"
+        },
+        {
+            "uri": "file:///remove_from_array.json"
+        },
+        {
+            "uri": "file:///array_conversion_type.json"
+        },
+        {
+            "uri": "file:///flatten_2D_array.json"
+        },
+        {
+            "uri": "file:///transpose_2D_array.json"
+        },
+        {
+            "uri": "file:///Math_within_bounds.json"
+        },
+        {
+            "uri": "file:///generate_ivy_core.json"
+        },
+        {
+            "uri": "file:///set_point_ratio.json"
+        },
+        {
+            "uri": "file:///set_point_tangent.json"
+        },
+        {
+            "uri": "file:///convert_to_points.json"
+        },
+        {
+            "uri": "file:///ivy_default_leaf_mesh.json"
+        },
+        {
+            "uri": "file:///get_strands_start_points.json"
+        },
+        {
+            "uri": "file:///generate_ivy.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "MJCG::Graphs::ivy_seed_array",
+            "uriImported": "file:///__duplicateCompoundURIHelper__",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "69.2572 223.939"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
+                                        },
+                                        {
+                                            "metaName": "io_ports"
+                                        },
+                                        {
+                                            "metaName": "LayoutPos",
+                                            "metaType": "string",
+                                            "metaValue": "73.6772 390.335"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#456d4e"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-887.676 -13.8718 530.855 340.936"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Init seeds and leaf settings. In this case, we use an array of positions as seeds.\nconform_to_surface is OFF so that the leaves are oriented against the wall."
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#36606d"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Init a surface for the ivy to grow onto."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-891.4 352.596 528.219 303.846"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "color",
+                            "metaType": "string",
+                            "metaValue": "#6d3f3f"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Generates the ivy growth. Processing mode is set to \"iteration\", \nso only the final result is generated."
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-308.762 132.928 339.859 425.588"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Modeling::Growth,generate_ivy"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,sequence_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Modeling::Growth,ivy_seeds"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Modeling::Growth,ivy_light"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,MJCG::Modeling::Growth,ivy_surface"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-958.677 -89.2673 1337.74 817.34"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                },
+                {
+                    "metaName": "author",
+                    "metaType": "string",
+                    "metaValue": "Maxime Jeanmougin"
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "MJCG"
+                },
+                {
+                    "metaName": "description",
+                    "metaType": "string",
+                    "metaValue": "A basic generation on a surface, using multiple start positions as seeds."
+                },
+                {
+                    "metaName": "thumbnail",
+                    "metaType": "string",
+                    "metaValue": "ivy_seed_array_thumb.png"
+                }
+            ],
+            "ports": [],
+            "compoundNodes": [
+                {
+                    "nodeName": "create_mesh_cube",
+                    "nodeType": "Modeling::Primitive::create_mesh_cube",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-878.487 407.71"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "ivy_surface",
+                    "nodeType": "MJCG::Modeling::Growth::ivy_surface",
+                    "fanInPortNames": {
+                        "mesh": [
+                            "cube_mesh"
+                        ]
+                    },
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-611.543 384.049"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "ivy_seeds",
+                    "nodeType": "MJCG::Modeling::Growth::ivy_seeds",
+                    "fanInPortNames": {
+                        "positions": [
+                            "sequence"
+                        ],
+                        "leaf_geometries": []
+                    },
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-610.888 31.1063"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "generate_ivy",
+                    "nodeType": "MJCG::Modeling::Growth::generate_ivy",
+                    "fanInPortNames": {
+                        "surfaces": [
+                            "surface"
+                        ],
+                        "Lights": [],
+                        "seeds": [
+                            "seeds"
+                        ]
+                    },
+                    "deactivatedTerminals": [
+                        "Core::Graph::terminal::final",
+                        "Core::Graph::terminal::diagnostic"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-249.766 184.897"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "sequence_array",
+                    "nodeType": "Core::Array::sequence_array",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-868.803 53.7427"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "create_mesh_cube.cube_mesh",
+                    "target": "ivy_surface.mesh.cube_mesh"
+                },
+                {
+                    "source": "ivy_surface.surface",
+                    "target": "generate_ivy.surfaces.surface"
+                },
+                {
+                    "source": "ivy_seeds.seeds",
+                    "target": "generate_ivy.seeds.seeds"
+                },
+                {
+                    "source": "sequence_array.sequence",
+                    "target": "ivy_seeds.positions.sequence"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "create_mesh_cube.length",
+                    "valueType": "float",
+                    "value": "2f"
+                },
+                {
+                    "valueName": "create_mesh_cube.width",
+                    "valueType": "float",
+                    "value": "20f"
+                },
+                {
+                    "valueName": "create_mesh_cube.height",
+                    "valueType": "float",
+                    "value": "20f"
+                },
+                {
+                    "valueName": "create_mesh_cube.position",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "-1.04999995f"
+                    }
+                },
+                {
+                    "valueName": "create_mesh_cube.base_to_pivot",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "ivy_surface.display_property",
+                    "valueType": "MJCG::ivySurfaceDiagnosticType",
+                    "value": "Off"
+                },
+                {
+                    "valueName": "ivy_seeds.seed_size",
+                    "valueType": "float",
+                    "value": "0.400000006f"
+                },
+                {
+                    "valueName": "ivy_seeds.conform_to_surface",
+                    "valueType": "bool",
+                    "value": "false"
+                },
+                {
+                    "valueName": "ivy_seeds.turn_angle",
+                    "valueType": "float",
+                    "value": "45f"
+                },
+                {
+                    "valueName": "ivy_seeds.tilt_angle",
+                    "valueType": "float",
+                    "value": "50f"
+                },
+                {
+                    "valueName": "ivy_seeds.roll_angle",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "ivy_seeds.random_turn",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "ivy_seeds.random_tilt",
+                    "valueType": "float",
+                    "value": "15f"
+                },
+                {
+                    "valueName": "ivy_seeds.random_roll",
+                    "valueType": "float",
+                    "value": "10f"
+                },
+                {
+                    "valueName": "ivy_seeds.random_offset",
+                    "valueType": "float",
+                    "value": "0.0500000007f"
+                },
+                {
+                    "valueName": "ivy_seeds.random_scale",
+                    "valueType": "float",
+                    "value": "3f"
+                },
+                {
+                    "valueName": "generate_ivy.max_iterations",
+                    "valueType": "long",
+                    "value": "250"
+                },
+                {
+                    "valueName": "generate_ivy.display_leaves",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "generate_ivy.max_leaf_size",
+                    "valueType": "float",
+                    "value": "0.100000001f"
+                },
+                {
+                    "valueName": "generate_ivy.min_leaf_nutrition",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "generate_ivy.max_leaf_nutrition",
+                    "valueType": "float",
+                    "value": "50f"
+                },
+                {
+                    "valueName": "generate_ivy.max_stem_size",
+                    "valueType": "float",
+                    "value": "0.0799999982f"
+                },
+                {
+                    "valueName": "sequence_array.size",
+                    "valueType": "long",
+                    "value": "10"
+                },
+                {
+                    "valueName": "sequence_array.start",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "-9f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                },
+                {
+                    "valueName": "sequence_array.step",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "2f",
+                        "y": "0f",
+                        "z": "0f"
+                    }
+                }
+            ],
+            "reservedNodeNames": [
+                {
+                    "name": "input"
+                },
+                {
+                    "name": "output"
+                }
+            ]
+        }
+    ]
+}

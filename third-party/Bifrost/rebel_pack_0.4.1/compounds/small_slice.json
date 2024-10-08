@@ -1,0 +1,162 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "Core::Array::small_slice",
+            "uriImported": "file:///small_slice.json",
+            "metadata": [
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,get_from_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Iterators,iterate"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,slice_array"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,decrement"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Array,array_size"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-640.828 -205.24 1199.41 538.235"
+                },
+                {
+                    "metaName": "icon",
+                    "metaType": "string",
+                    "metaValue": "../icons/rebelPack.svg"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "array"
+                                                },
+                                                {
+                                                    "metaName": "start"
+                                                },
+                                                {
+                                                    "metaName": "length"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "slice"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "array",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "start",
+                    "portDirection": "input",
+                    "portType": "long",
+                    "portIterationCounter": "true"
+                },
+                {
+                    "portName": "length",
+                    "portDirection": "input",
+                    "portType": "long",
+                    "portDefault": "10",
+                    "portIterationLimit": "true"
+                },
+                {
+                    "portName": "slice",
+                    "portDirection": "output",
+                    "portIterationTarget": "true"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "get_from_array",
+                    "nodeType": "Core::Array::get_from_array",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-172 -60"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "get_from_array.value",
+                    "target": ".slice"
+                },
+                {
+                    "source": ".array",
+                    "target": "get_from_array.array"
+                },
+                {
+                    "source": ".start",
+                    "target": "get_from_array.index"
+                }
+            ],
+            "values": [],
+            "iterateCompound": {
+                "ports": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "AminoConfigurations": [
+    {
+      "vendorName": "Maxime Jeanmougin",
+      "libraryName": "MJCG",
+      "libraryVersion": "2.1.0",
+      "libraryDependencies": [
+        "Amino"
+      ],
+      "sharedLibs": [
+        {
+          "path": "bin",
+          "files": [
+            "mjcg" 
+          ]
+        }
+      ],
+      "jsonLibs": [
+        {
+          "path": "compounds",
+          "files": [ ]
+        },
+        {
+          "path": "graphs",
+          "files": [ ]
+        }
+      ]
+    }
+  ]
+}
