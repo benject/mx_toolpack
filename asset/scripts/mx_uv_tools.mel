@@ -1,0 +1,76 @@
+///////////////////////////////////////////////////////////////////////////////////
+// UV tools
+///////////////////////////////////////////////////////////////////////////////////
+
+global proc mx_uv_tools() {
+    if (`window -q -ex UVTools`)
+        deleteUI UVTools;
+    
+    window -rtf true -tb 1 -s 0 -minimizeButton false -maximizeButton false 
+           -w 240 -h 200 -t "UV Tools" UVTools;
+
+    columnLayout;
+
+    gridLayout -nc 4 -cwh 60 30;
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+    shelfButton -i "textureEditor"                             	  	 -c "TextureViewWindow";  
+    shelfButton -i "UVtoolKit"                                   	 -c "toggleUVToolkit";   	
+    shelfButton -i "polyAutoProjLarge"         		  				 -c "UVAutomaticProjectionOptions";   
+    shelfButton -i "hypershadeIcon"                                  -c "HypershadeWindow";
+	
+	button -l "To\nShell"                                            -c "ConvertSelectionToUVs;polySelectBorderShell 0";
+    button -l "All\nBorder"                                          -c "dR_modeObject;ConvertSelectionToUVs;SelectUVBorder";
+    button -l "All\nInner"                                           -c "dR_modeObject;ConvertSelectionToUVs;ShrinkPolygonSelectionRegion";
+    button -l "All\nShell"                                           -c "dR_modeObject;ConvertSelectionToUVs;";
+
+    button -l "Move\nUp"                -bgc 0.1  0.3  0.3           -c "polyEditUV -v 0.03;";   
+    button -l "Move\nDown"        		-bgc 0.1  0.3  0.3           -c "polyEditUV -v -0.03;";   
+    button -l "Move\nRight"          	-bgc 0.1  0.3  0.3           -c "polyEditUV -u 1 -v 0 -r 1;"; 
+    button -l "Move\nLeft"            	-bgc 0.1  0.3  0.3           -c "polyEditUV -u -1 -v 0 -r 1;"; 
+
+    button -l "Rotate\n 45 "            -bgc 0.0 0.3 0.5             -c "polyRotateUVs 45 1"; 
+    button -l "Rotate\n 90 "            -bgc 0.0 0.3 0.5             -c "polyRotateUVs 90 1"; 	          
+    button -l "Scale\n0.95"             -bgc 0.0 0.3 0.5             -c "polyEditUV -pu 0.5 -pv 0.5 -su 0.95 -sv 0.95";  
+    button -l "Scale\n1.1"              -bgc 0.0 0.3 0.5             -c "polyEditUV -pu 0.5 -pv 0.5 -su 1.1 -sv 1.1 ";  
+
+	button -l "To\nFirstUV"             -bgc .0 .5 .1            -c "texGatherShells;";
+    button -l "Layout\nUV"              -bgc .0 .5 .1     	     -c "u3dLayout -res 256 -scl 1 -box 0 1 0 1 "; 
+    button -l "Shell \n Orient"         -bgc .0 .5 .1            -c "UVOrientShells";
+    button -l "Flip \n UV "             -bgc .0 .5 .1            -c "FlipUVs";
+
+	button -l "Unfold\nUV"            	-bgc .5 .0 .2              -c "u3dUnfold -ite 1 -p 0 -bi 1 -tf 1 -ms 1024 -rs 0 ;"; 
+    button -l "Inner\nRelax"            -bgc .5 .0 .2              -c "dR_modeObject;ConvertSelectionToUVs;ShrinkPolygonSelectionRegion;performUnfold 0;";
+	button -l "Straighten"              -bgc .5 .0 .2              -c "uvTkDoStraightenUVs;texStraightenUVs \"UV\" 30;"; 
+	button -l "Straighten\nShell"       -bgc .5 .0 .2              -c "texStraightenShell;"; 
+
+	shelfButton -i "polyCutUVLarge"                          -c "polyPerformAction polyMapCut e 0"; 
+	shelfButton -i "UV_Cut_ToolLarge"                        -c "setToolTo texCutUVContext; texCutContext -edit -mode Cut -i1 \"UV_Cut_ToolLarge\" texCutUVContext; txtWndUpdateEditor(\"polyTexturePlacementPanel1\", \"textureWindow\", \"null\", 101);"; 	   
+    shelfButton -i "polySewUVLarge"                          -c "polyPerformAction polyMapSew e 0"; 
+    shelfButton -i "UV_Sew_ToolLarge"                        -c "setToolTo texCutUVContext; texCutContext -edit -mode Sew -i1 \"UV_Sew_ToolLarge\" texCutUVContext; txtWndUpdateEditor(\"polyTexturePlacementPanel1\", \"textureWindow\", \"null\", 101);";
+	
+    shelfButton -i "polyCreateUVShell"                       -c "CreateUVShellAlongBorder";
+    shelfButton -i "polyMoveSew"                             -c "performPolyMapSewMove 0"; 
+	shelfButton -i "polyMergeUV"                             -c "MergeUV"; 
+	shelfButton -i "polyUVMultiStitch"                       -c "StitchTogether;"; 
+    
+    // 修改 rowLayout，让最后一行有6个按钮
+    setParent ..;
+
+    rowLayout -nc 6 -adjustableColumn 1 -cw6 40 40 40 40 40 40;
+
+	shelfButton -i "UVTkAlignLeft"              -c "performAlignUV minU;"; 
+	shelfButton -i "UVTkAlignMiddleU"           -c "alignUV avgU;"; 
+	shelfButton -i "UVTkAlignRight"             -c "performAlignUV maxU;"; 
+	shelfButton -i "UVTkAlignTop"               -c "performAlignUV maxV;"; 
+	shelfButton -i "UVTkAlignMiddleV"           -c "alignUV avgV;"; 
+	shelfButton -i "UVTkAlignBottom"            -c "performAlignUV minV;";
+    
+    setParent ..; // 退出rowLayout
+
+
+    showWindow UVTools;
+}
+
+mx_uv_tools();

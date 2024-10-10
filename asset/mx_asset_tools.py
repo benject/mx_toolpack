@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os,sys
-import re
 import maya.cmds as cmds
 import maya.mel as mel
 
@@ -69,28 +68,25 @@ class MX_AssetTools(QWidget):
         self.ui.pushButton_5.clicked.connect(self.move_vtx)
         self.ui.pushButton_6.clicked.connect(self.multi_loop_to_curve)
         self.ui.pushButton_7.clicked.connect(self.separate_by_mtl)
-        self.ui.pushButton_8.clicked.connect(self.mov_uv_to_first)
+        self.ui.pushButton_8.clicked.connect(self.uv_tools)
         
         self.ui.pushButton_9.clicked.connect(self.grow_ring)
         self.ui.pushButton_10.clicked.connect(self.transfer_uv)
 
+        self.ui.pushButton_11.clicked.connect(self.poly_tools)
         self.show()
 
 
 
     @Slot()
-    def poly_haven(self):
-        
+    def poly_haven(self):        
         unload_pkgs.unload_packages(True, ['assets.scripts.mx_poly_haven.MX_PolyHaven'])
-
         from asset.scripts import mx_poly_haven
         ph = mx_poly_haven.MX_PolyHaven(os.path.join(self.root_path,"assets"))
 
     @Slot()
-    def texture_haven(self):
-        
+    def texture_haven(self):        
         unload_pkgs.unload_packages(True, ['assets.scripts.mx_texture_haven.MX_TextureHaven'])
-
         from asset.scripts import mx_texture_haven
         th = mx_texture_haven.MX_TextureHaven(os.path.join(self.root_path,"assets"))    
 
@@ -115,14 +111,7 @@ class MX_AssetTools(QWidget):
         mx_separate_by_mtl.separate_by_mtl()
 
     @Slot()
-    def mov_uv_to_first(self):
-
-        from asset.scripts import mx_move_uv_to_first_uv
-        mx_move_uv_to_first_uv.move_uv_to_first_uv()
-
-    @Slot()
     def grow_ring(self):
-
         from asset.scripts import mx_select_next_ring
         mx_select_next_ring.select_next_ring()
 
@@ -130,3 +119,15 @@ class MX_AssetTools(QWidget):
     def transfer_uv(self):
         from asset.scripts import mx_transferUV
         mx_transferUV.transferUV()
+
+    @Slot()
+    def uv_tools(self):
+        mel_path =  os.path.join(self.root_path, "scripts", "mx_uv_tools.mel")
+        mel_path = mel_path.replace("\\","/")
+        mel.eval( "source " +'"' + mel_path + '"')
+    
+    @Slot()
+    def poly_tools(self):
+        mel_path =  os.path.join(self.root_path, "scripts", "mx_poly_tools.mel")
+        mel_path = mel_path.replace("\\","/")
+        mel.eval( "source " +'"' + mel_path + '"')

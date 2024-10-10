@@ -142,7 +142,6 @@ class MX_CommonTools(QWidget):
         
         mel_path =  os.path.join(self.root_path, "scripts", "mx_selection.mel")
         mel_path = mel_path.replace("\\","/")
-
         mel.eval( "source " +'"' + mel_path + '"')
 
     @Slot()

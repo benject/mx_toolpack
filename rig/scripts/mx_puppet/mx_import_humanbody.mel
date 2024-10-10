@@ -1,0 +1,7 @@
+global proc import_humanbody(){
+
+	string $mayaLocation = `getenv "MAYA_LOCATION" `;
+	//print("\"" +  $mayaLocation +  "/Examples/Modeling/Sculpting_Base_Meshes/Bipeds/HumanBody.ma" + "\"");
+	file -import -type "mayaAscii"  -ignoreVersion -mergeNamespacesOnClash false -rpr "HumanBody" -options "v=0;"  -pr  -importFrameRate true  -importTimeRange "override"  ( $mayaLocation +  "/Examples/Modeling/Sculpting_Base_Meshes/Bipeds/HumanBody.ma" );
+}
+import_humanbody();

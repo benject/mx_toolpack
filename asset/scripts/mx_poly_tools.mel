@@ -1,0 +1,76 @@
+///////////////////////////////////////////////////////////////////////////////////
+// UV tools
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+global proc mx_poly_tools() {
+
+	if (`window -q -ex PolyTools`)
+		deleteUI PolyTools;
+	//else
+
+	window -rtf true    -tb 1  -s  0    -minimizeButton false -maximizeButton false 	-w 240 	-h 300
+	-t "Poly Tools" PolyTools;
+
+	///////////////////////////////////////////////////////////////////////////////////////////
+	gridLayout  -nc 4 -cwh 60 40; 
+
+
+	shelfButton  -i  "menuIconPolygons"          -c    "ToggleModelingToolkit"; 
+
+	shelfButton  -i  "polyBooleansIntersection" 	       -c    "PolygonBooleanIntersection";  
+	shelfButton  -i  "polyBooleansUnion.png"               -c    "PolygonBooleanUnion";   
+	shelfButton  -i  "polyBooleansDifference.png"          -c    "PolygonBooleanDifference"; 
+
+
+
+	shelfButton  -i  "polyUnite.png"                 -bgc   .0  .2 .2         -c    "polyPerformAction polyUnite o 0 ";     
+	shelfButton  -i  "polySeparate.png"              -bgc   .0  .2 .2        -c    "SeparatePolygon "; 
+
+	shelfButton  -i  "symmetrize.png"             -bgc   .0  .3 .4   	 -c    "Symmetrize"; 
+	shelfButton  -i  "polyFlip.png"               -bgc   .0  .3 .4 		 -c    "FlipMesh"; 
+
+
+
+
+	shelfButton  -i  "weld_NEX32.png"                -bgc   .1  .25  .3         -c    "MergeVertexTool"; 
+	shelfButton  -i  "polyCollapseEdge.png"          -bgc   .1  .25 .3         -c    "PolygonCollapse"; 
+	shelfButton  -i  "polyEditEdgeFlow.png"         -bgc   .1  .25  .3        -c    "PolyEditEdgeFlow;";
+	shelfButton  -i  "quadDraw_NEX32.png"           -bgc 0.1  0.25  0.3    -c    "QuadDrawTool";  
+
+
+	button       -l  "Re\nMesh"                     -bgc .1  .25  .2          	-c    "PolyRemeshOptions";  
+	button       -l  "Re\nTopo"                     -bgc .1  .25  .2            -c    "PolyRetopoOptions";  
+	button       -l  "Replace"                    	-bgc .1  .25  .2            -c    "ReplaceObjectsOptions"; 
+	button       -l  "Cleanup"                    	-bgc .1  .25  .2          	-c    "CleanupPolygonOptions";  
+
+
+	button       -l  "Edge\nCollapse"                 -bgc  .5   .0    .2          -c "polyCollapseEdge";  
+	button        -l "Flatten\nX"                     -bgc  .5   .0    .2       	-c "CenterPivot;scale  -r 0 1 1 ;move -ws -x 0; makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;";
+	button        -l "Flatten\nY"                     -bgc  .5   .0    .2       	-c "CenterPivot;scale  -r 1 0 1 ;move -ws -y 0; makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;";
+	button        -l "Flatten\nZ"                     -bgc  .5   .0    .2       	-c "CenterPivot;scale  -r 1 1 0 ;move -ws -z 0; makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;";
+	
+
+	button       -l  "Connect\nComp"       		   		-bgc    .1  .2    .3      	  -c    "ConnectComponents;"; 
+	button       -l  "Bridge"       					-bgc    .1   .2   .3          -c    "performPolyBridgeEdge 0";
+	button       -l  "FillHole"							-bgc    .1   .2   .3          -c    "FillHole"; 	
+	button       -l  "Delete\nElements"                 -bgc    .1   .2   .3          -c    "DeletePolyElements;"; 
+
+
+	shelfButton  -i  "polyNormalAverage.png"      			-bgc 0.4 0.1 0.1            -c    "expandPolyGroupSelection; polyAverageNormal -prenormalize 1 -allowZeroNormal 0 -postnormalize 0 -distance 0.1 -replaceNormalXYZ 1 0 0 "; 
+	shelfButton  -i  "polyNormalSetToFace.png"      		-bgc 0.4 0.1 0.1            -c    "polySetToFaceNormal "; 
+	shelfButton  -i  "polyNormalsConform.png"       		-bgc 0.4 0.1 0.1            -c    "ConformPolygonNormals"; 
+	shelfButton  -i  "polyNormal.png"               		-bgc 0.4 0.1 0.1        	-c    "ReversePolygonNormals";
+
+	button  -l  "Soften\nHarden"          				-bgc  .4  .3  .1           -c    "PolygonSoftenHardenOptions"; 
+	button  -l  "Soften\nEdge"                          -bgc  .4  .3  .1           -c    "ConformPolygonNormals;SetToFaceNormals;PolygonSoftenEdge;";
+	button  -l  "Harden\nEdge"                          -bgc  .4  .3  .1           -c    "ConformPolygonNormals;SetToFaceNormals;PolygonHardenEdge;";
+
+
+
+	showWindow PolyTools;
+}
+
+
+mx_poly_tools();
