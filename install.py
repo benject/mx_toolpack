@@ -285,16 +285,16 @@ def create_mx_shelf(root_path,icon_path):
     command8 += """
     import os,sys
     sys.path.append("%s"%root_path)
-    anim_path = os.path.join(root_path,'anim')
+    settings_path = os.path.join(root_path,'settings')
 
     import unload_pkgs
-    unload_pkgs.unload_packages(True, ['anim'])
+    unload_pkgs.unload_packages(True, ['settings'])
     
-    import anim    
-    import anim.mx_anim_tools
+    import settings    
+    import settings.mx_settings
 
-    anim_tools = anim.mx_anim_tools.MX_AnimTools("%s"%anim_path)
-    anim_tools.initUI()
+    settings = settings.mx_settings.MX_Settings("%s"%settings_path)
+    settings.initUI()
     """
     #remove the indent
     command8 = inspect.cleandoc(command8)
