@@ -71,7 +71,9 @@ class MX_CommonTools(QWidget):
         self.ui.pushButton_10.clicked.connect(self.fix_nopoly)
         self.ui.pushButton_11.clicked.connect(self.selection)
         self.ui.pushButton_12.clicked.connect(self.fix_tex_lock)
+        self.ui.pushButton_13.clicked.connect(self.allUVTile)
         self.ui.pushButton_14.clicked.connect(self.mirror_objects)
+        self.ui.pushButton_15.clicked.connect(self.remove_unload_ref)
         self.show()
 
 
@@ -156,3 +158,15 @@ class MX_CommonTools(QWidget):
         unload_pkgs.unload_packages(True, ['common.scripts.mx_mirror_objects'])
         from common.scripts import mx_mirror_objects
         mmo = mx_mirror_objects.MX_MirrorObjects()
+
+    @Slot()
+    def allUVTile(self):        
+        unload_pkgs.unload_packages(True, ['common.scripts.mx_generate_allUV'])
+        from common.scripts import mx_generate_allUV
+        mx_generate_allUV.generate_allUV()
+
+    @Slot()
+    def remove_unload_ref(self):        
+        unload_pkgs.unload_packages(True, ['common.scripts.mx_remove_unload_ref'])
+        from common.scripts import mx_remove_unload_ref
+        mx_remove_unload_ref.remove_unloaded_reference_nodes()
