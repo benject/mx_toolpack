@@ -3,7 +3,7 @@
 import os,sys
 import inspect
 import maya.cmds as cmds
-
+import maya.mel as mel
 
 def reload_pkg(pkg):
 
@@ -28,6 +28,7 @@ class Commands():
 cmds_list = Commands()
 
 
+
 class Shelf(object):
     '''A simple class to build shelves in maya. Since the build method is empty,
     it should be extended by the derived class to build the necessary shelf elements.
@@ -40,11 +41,34 @@ class Shelf(object):
 
         self.labelBackground = (0, 0, 0, 0)
         self.labelColour = (.9, .9, .9)
-
+        
+        # Clean old shelf if it exists
         self._cleanOldShelf()
-        cmds.setParent(self.name)
-        self.build()
-    
+
+        # Delay shelf creation until Maya's UI is fully initialized
+        self._initializeShelf()
+
+
+    def _initializeShelf(self):
+        """Initialize the shelf by creating a new tab and setting its parent."""
+        try:
+            self._addNewShelf()
+            # Set parent to the new shelf for further customization      
+            cmds.setParent(self.name)
+            # Build the shelf contents
+            self.build()
+        except RuntimeError as e:
+            pass
+
+    def _addNewShelf(self):        
+
+        """Add a new shelf tab with the specified name."""
+        try:          
+            cmds.shelfLayout(self.name, parent="ShelfLayout")            
+        except  RuntimeError as e:
+            print("Error: failed to add new shelf:{}".format(e))
+
+
     def _null(self):
         pass
 
@@ -73,14 +97,14 @@ class Shelf(object):
         return cmds.menuItem(p=parent, l=label, i=icon, subMenu=1)
 
     def _cleanOldShelf(self):
-        '''Checks if the shelf exists and empties it if it does or creates it if it does not.'''
-        if cmds.shelfLayout(self.name, ex=1):
-            if cmds.shelfLayout(self.name, q=1, ca=1):
-                for each in cmds.shelfLayout(self.name, q=1, ca=1):
-                    cmds.deleteUI(each)
-        else:
-            cmds.shelfLayout(self.name, p="ShelfLayout")
 
+        try:
+            '''Checks if the shelf exists and empties it if it does or creates it if it does not.'''
+            if cmds.shelfLayout(self.name, ex=1):
+                cmds.deleteUI(self.name, layout=True)
+        except Exception as e:
+            # 捕获所有异常，但不提示用户
+            print("Error cleaning old shelf: {}".format(e))
 
 ###################################################################################
 '''This is an example shelf.'''
@@ -361,6 +385,21 @@ def onMayaDroppedPythonFile(*args):
             file.write("\n" + bifrost_conf)  # 在文件末尾添加配置，并确保前面有换行
             print("Bifrost configuration added to the file.")
 
+    #creating mod file
+    mod_file = os.path.join(prefs_dir, 'modules', 'mx_toolpack.mod')
+
+    # 检查文件是否存在
+    if os.path.exists(mod_file):
+        os.remove(mod_file)
+    # 创建新的 mx_toolpack.mod 文件
+    mod_content = """+ Mx Toolpack 1.0 {}\r\nscripts: {}""".format(root_path,root_path)
+
+    try:
+        # 写入 .mod 文件
+        with open(mod_file, "w") as file:
+            file.write(mod_content)
+    except Exception as e:
+        print("error creating mod file")
 
     create_mx_shelf(root_path,icon_path)
 
