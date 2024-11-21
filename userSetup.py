@@ -25,4 +25,4 @@ def initPlugin():
     # 调用自定义安装函数
     install.create_mx_shelf(root_path, icon_path)
 
-cmds.evalDeferred(initPlugin())
+cmds.evalDeferred(initPlugin)

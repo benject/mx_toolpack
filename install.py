@@ -63,10 +63,11 @@ class Shelf(object):
     def _addNewShelf(self):        
 
         """Add a new shelf tab with the specified name."""
-        try:          
-            cmds.shelfLayout(self.name, parent="ShelfLayout")            
+        try:      
+            main_shelf = mel.eval('global string $gShelfTopLevel;$tempMelVar=$gShelfTopLevel;')
+            cmds.shelfLayout(self.name, parent=main_shelf)    
         except  RuntimeError as e:
-            print("Error: failed to add new shelf:{}".format(e))
+            print("Error: failed to add new shelf{}:{}".format(main_shelf,e))
 
 
     def _null(self):
