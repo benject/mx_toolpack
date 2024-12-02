@@ -73,7 +73,9 @@ class MX_RigTools(QWidget):
         self.ui.pushButton_7.clicked.connect(self.create_rivet)
         self.ui.pushButton_8.clicked.connect(self.closest_point_on_surface)
         self.ui.pushButton_8.setToolTip(u"create a nurbs surface and a locator, select surface first and then locator")
- 
+        self.ui.pushButton_9.clicked.connect(self.show_hide_joint)
+
+
         self.show()
 
 
@@ -138,4 +140,11 @@ class MX_RigTools(QWidget):
 
         from rig.scripts import mx_closest_locator_on_surface
         mx_closest_locator_on_surface.closest_locator_on_surface()
+
+    @Slot()
+    def show_hide_joint(self):
+
+        unload_pkgs.unload_packages(True,['rig.scripts.mx_show_hide_joints'])
+        from rig.scripts import mx_show_hide_joints
+        mx_show_hide_joints.create_ui()
 
