@@ -64,6 +64,8 @@ class MX_RigTools(QWidget):
         # Call function if user click button
 
         self.ui.pushButton.clicked.connect(self.collide_deformer)
+        self.ui.pushButton.setToolTip(u"select soft body first and then rigid body")
+
         self.ui.pushButton_1.clicked.connect( self.transfer_weight )
         self.ui.pushButton_2.clicked.connect( self.metahuman_motionbuilder )        
         self.ui.pushButton_3.clicked.connect(self.fit_ground)

@@ -356,9 +356,7 @@ def onMayaDroppedPythonFile(*args):
     
     # 使用inspect.cleandoc去掉多余的缩进和不必要的换行
     bifrost_conf = inspect.cleandoc(""" 
-        BIFROST_LIB_CONFIG_FILES={}/third-party/Bifrost/MJCG_compounds/bifrost_lib_config.json;
-        {}/third-party/Bifrost/rebel_pack_0.4.1/bifrost_lib_config.json;
-        {}/third-party/Bifrost/mx_pack/bifrost_lib_config.json
+        BIFROST_LIB_CONFIG_FILES={}/third-party/Bifrost/MJCG_compounds/bifrost_lib_config.json;{}/third-party/Bifrost/rebel_pack_0.4.1/bifrost_lib_config.json;{}/third-party/Bifrost/mx_pack/bifrost_lib_config.json
         """.format(root_path, root_path, root_path))
 
     ver = cmds.about(version=True)
