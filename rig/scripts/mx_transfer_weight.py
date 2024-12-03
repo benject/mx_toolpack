@@ -240,7 +240,7 @@ class MX_TransferWeight(QWidget):
         cmds.select(sel[0])
         mel.eval("CopyVertexWeights;")
 
-        cmds.select(sel[1:-1])
+        cmds.select(sel[1:])
         mel.eval("PasteVertexWeights;")
 
         print("transfered.")
