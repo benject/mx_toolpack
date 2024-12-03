@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>163</width>
-    <height>614</height>
+    <width>161</width>
+    <height>571</height>
    </rect>
   </property>
   <property name="font">
@@ -31,7 +31,7 @@
     <property name="spacing">
      <number>6</number>
     </property>
-    <item row="4" column="0">
+    <item row="5" column="0">
      <widget class="QPushButton" name="pushButton_1">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -93,89 +93,6 @@
       </property>
      </widget>
     </item>
-    <item row="7" column="0">
-     <widget class="QPushButton" name="pushButton_8">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string/>
-      </property>
-      <property name="text">
-       <string>表面最近定位</string>
-      </property>
-     </widget>
-    </item>
-    <item row="13" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="minimumSize">
-       <size>
-        <width>80</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>变形器</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QPushButton" name="pushButton_7">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>跟随表面</string>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="0">
      <widget class="QPushButton" name="pushButton_6">
       <property name="sizePolicy">
@@ -207,45 +124,8 @@
       </property>
      </widget>
     </item>
-    <item row="9" column="0">
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Fit Ground</string>
-      </property>
-     </widget>
-    </item>
-    <item row="14" column="0">
-     <widget class="QPushButton" name="pushButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
+    <item row="8" column="0">
+     <widget class="QPushButton" name="pushButton_8">
       <property name="minimumSize">
        <size>
         <width>100</width>
@@ -265,14 +145,69 @@
        </font>
       </property>
       <property name="toolTip">
-       <string>先选软体，再选刚体</string>
+       <string/>
       </property>
       <property name="text">
-       <string>建立碰撞</string>
+       <string>表面最近定位</string>
       </property>
      </widget>
     </item>
-    <item row="11" column="0">
+    <item row="7" column="0">
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>跟随表面</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>变形器</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
      <widget class="QPushButton" name="pushButton_2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -337,6 +272,98 @@
      </widget>
     </item>
     <item row="10" column="0">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Fit Ground</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>先选软体，再选刚体</string>
+      </property>
+      <property name="text">
+       <string>建立碰撞</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Puppet：Auto Rigging Tool</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
      <widget class="QLabel" name="label_5">
       <property name="minimumSize">
        <size>
@@ -366,7 +393,20 @@
       </property>
      </widget>
     </item>
-    <item row="12" column="0">
+    <item row="6" column="0">
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>骨骼显示隐藏</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0">
      <widget class="QPushButton" name="pushButton_5">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -400,35 +440,8 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Puppet：Auto Rigging Tool</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QPushButton" name="pushButton_9">
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButton_10">
       <property name="font">
        <font>
         <family>Arial</family>
@@ -436,7 +449,7 @@
        </font>
       </property>
       <property name="text">
-       <string>骨骼显示隐藏</string>
+       <string>替换形状</string>
       </property>
      </widget>
     </item>
