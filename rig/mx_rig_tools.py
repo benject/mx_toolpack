@@ -80,6 +80,10 @@ class MX_RigTools(QWidget):
         self.ui.pushButton_10.clicked.connect(self.replace_shape)
         self.ui.pushButton_10.setToolTip(u"control shape will be placed by last selection")
 
+        self.ui.pushButton_11.clicked.connect(self.create_vertex_joints)
+        self.ui.pushButton_11.setToolTip(u"create joint for each vertex of selected meshes")
+
+
         self.show()
 
 
@@ -157,3 +161,11 @@ class MX_RigTools(QWidget):
         unload_pkgs.unload_packages(True,['rig.scripts.mx_replace_shape'])
         from rig.scripts import mx_replace_shape
         mx_replace_shape.replace_shape()
+
+
+    @Slot()
+    def create_vertex_joints(self):
+
+        unload_pkgs.unload_packages(True,['rig.scripts.mx_create_vertex_joints'])
+        from rig.scripts import mx_create_vertex_joints
+        mx_create_vertex_joints.create_vertex_joints()
