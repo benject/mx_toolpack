@@ -74,6 +74,7 @@ class MX_CommonTools(QWidget):
         self.ui.pushButton_13.clicked.connect(self.allUVTile)
         self.ui.pushButton_14.clicked.connect(self.mirror_objects)
         self.ui.pushButton_15.clicked.connect(self.remove_unload_ref)
+        self.ui.pushButton_16.clicked.connect(self.clear_display_layers)
         self.show()
 
 
@@ -170,3 +171,9 @@ class MX_CommonTools(QWidget):
         unload_pkgs.unload_packages(True, ['common.scripts.mx_remove_unload_ref'])
         from common.scripts import mx_remove_unload_ref
         mx_remove_unload_ref.remove_unloaded_reference_nodes()
+
+    @Slot()
+    def clear_display_layers(self):
+        unload_pkgs.unload_packages(True, ['common.scripts.mx_remove_unload_ref'])
+        from common.scripts import mx_clear_display_layers
+        mx_clear_display_layers.clear_display_layers()

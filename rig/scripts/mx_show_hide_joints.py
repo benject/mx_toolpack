@@ -4,7 +4,7 @@ import maya.cmds as cmds
 
 def hide_jnts():
     cmds.select(hi=True)
-    jnts = cmds.ls(sl=True)
+    jnts = cmds.ls(sl=True,type='joint')
     
     for jnt in jnts:
         
@@ -12,7 +12,7 @@ def hide_jnts():
         
 def show_jnts():
     cmds.select(hi=True)
-    jnts = cmds.ls(sl=True)
+    jnts = cmds.ls(sl=True,type='joint')
     
     for jnt in jnts:
         
@@ -35,3 +35,4 @@ def create_ui():
     cmds.setParent(layout)
     cmds.window(window_name, e=True, widthHeight=(200, 100))
     cmds.showWindow(window)
+    
