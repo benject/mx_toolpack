@@ -91,40 +91,41 @@ class MX_TransferWeight(QWidget):
             sel = cmds.ls(sl=True)
 
             source = sel[0]
-            destination = sel[1]
+            destinations = sel[1:]
 
         sourceSkin = mel.eval('findRelatedSkinCluster '+source)
 
         influences = cmds.skinCluster(sourceSkin,query=True,inf=True)
 
         #print(influences)
+        for destination in destinations:
 
-        cmds.skinCluster(influences,destination,tsb=True)
+            cmds.skinCluster(influences,destination,tsb=True)
 
-        destSkin = mel.eval('findRelatedSkinCluster '+ destination)
+            destSkin = mel.eval('findRelatedSkinCluster '+ destination)
 
 
-        shape_type = cmds.nodeType(cmds.listRelatives(destination, shapes=True)[0])
-        if shape_type in ["nurbsSurface", "nurbsCurve"]:
-            # 对于 nurbsSurface 和 nurbsCurve 类型的对象，使用 cv 参数
-            cmds.copySkinWeights(
-                sourceSkin=sourceSkin, 
-                destSkin=destination + ".cv[*]", 
-                noMirror=True, 
-                surfaceAssociation='closestPoint', 
-                influenceAssociation='oneToOne'
-            )
-        else:
-            # 对于其他对象，直接使用目标对象
-            cmds.copySkinWeights(
-                sourceSkin=sourceSkin, 
-                destinationSkin= destSkin, 
-                noMirror=True, 
-                surfaceAssociation='closestPoint', 
-                influenceAssociation='oneToOne'
-            )
+            shape_type = cmds.nodeType(cmds.listRelatives(destination, shapes=True)[0])
+            if shape_type in ["nurbsSurface", "nurbsCurve"]:
+                # 对于 nurbsSurface 和 nurbsCurve 类型的对象，使用 cv 参数
+                cmds.copySkinWeights(
+                    sourceSkin=sourceSkin, 
+                    destinationSkin=destination + ".cv[*]", 
+                    noMirror=True, 
+                    surfaceAssociation='closestPoint', 
+                    influenceAssociation='oneToOne'
+                )
+            else:
+                # 对于其他对象，直接使用目标对象
+                cmds.copySkinWeights(
+                    sourceSkin=sourceSkin, 
+                    destinationSkin=destSkin, 
+                    noMirror=True, 
+                    surfaceAssociation='closestPoint', 
+                    influenceAssociation='oneToOne'
+                )
 
-        cmds.skinCluster( destSkin, forceNormalizeWeights=True, e = True )
+            cmds.skinCluster( destSkin, forceNormalizeWeights=True, e = True )
 
 
 
