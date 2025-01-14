@@ -87,11 +87,12 @@ class MX_TransferWeight(QWidget):
 
     def transfer_weights(self, source = '', destination = ''):
 
+        destinations = [destination]
         if(source=='' and destination==''):
             sel = cmds.ls(sl=True)
 
             source = sel[0]
-            destinations = sel[1:]
+            destinations = sel[1:]      
 
         sourceSkin = mel.eval('findRelatedSkinCluster '+source)
 

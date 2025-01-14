@@ -58,11 +58,13 @@ class MX_AnimTools(QWidget):
         self.ui.pushButton_1.clicked.connect(self.mirror)
         self.ui.pushButton_2.clicked.connect(self.a2f_to_mh)
         self.ui.pushButton_3.clicked.connect(self.a2f_to_adv)
-
-        self.ui.pushButton_6.clicked.connect(self.auto_walk)
+        
         self.ui.pushButton_4.clicked.connect(self.delay_anim)
+        self.ui.pushButton_6.clicked.connect(self.auto_walk)
+
         
         self.ui.pushButton_7.clicked.connect(self.bake_mesh)
+        self.ui.pushButton_8.clicked.connect(self.one_to_many_constraint)
 
         self.show()
 
@@ -111,9 +113,7 @@ class MX_AnimTools(QWidget):
         print( bs_weight_filename )
         from anim.scripts import mx_a2f_to_adv
         mx_a2f_to_adv.process(bs_weight_filename)
-    
-
-        
+            
     @Slot()
     def bake_mesh(self):
 
@@ -121,3 +121,10 @@ class MX_AnimTools(QWidget):
         from anim.scripts import mx_bake_mesh
         bm = mx_bake_mesh.MX_BakeMesh(os.path.join(self.root_path,"scripts"))
         bm.initUI()
+
+    @Slot()
+    def one_to_many_constraint(self):
+
+        unload_pkgs.unload_packages(True,['anim.scripts.mx_one_to_many_constraint'])
+        from anim.scripts import mx_one_to_many_constraint        
+        mx_one_to_many_constraint.one_to_multi_constraint()

@@ -83,6 +83,8 @@ class MX_RigTools(QWidget):
         self.ui.pushButton_11.clicked.connect(self.create_vertex_joints)
         self.ui.pushButton_11.setToolTip(u"create joint for each vertex of selected meshes")
 
+        self.ui.pushButton_12.clicked.connect(self.add_ctrl_to_jnts)
+        self.ui.pushButton_12.setToolTip(u"add ctrls to joint chain, select joint root and click button")
 
         self.show()
 
@@ -169,3 +171,10 @@ class MX_RigTools(QWidget):
         unload_pkgs.unload_packages(True,['rig.scripts.mx_create_vertex_joints'])
         from rig.scripts import mx_create_vertex_joints
         mx_create_vertex_joints.create_vertex_joints()
+
+    @Slot()
+    def add_ctrl_to_jnts(self):
+
+        unload_pkgs.unload_packages(True,['rig.scripts.mx_add_ctrl_to_jnts'])
+        from rig.scripts import mx_add_ctrl_to_jnts
+        mx_add_ctrl_to_jnts.add_ctrl_to_jnts()
