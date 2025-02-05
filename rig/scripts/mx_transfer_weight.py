@@ -107,7 +107,7 @@ class MX_TransferWeight(QWidget):
 
 
             shape_type = cmds.nodeType(cmds.listRelatives(destination, shapes=True)[0])
-            if shape_type in ["nurbsSurface", "nurbsCurve"]:
+            if shape_type == "nurbsCurve":
                 # 对于 nurbsSurface 和 nurbsCurve 类型的对象，使用 cv 参数
                 cmds.copySkinWeights(
                     sourceSkin=sourceSkin, 
@@ -115,15 +115,15 @@ class MX_TransferWeight(QWidget):
                     noMirror=True, 
                     surfaceAssociation='closestPoint', 
                     influenceAssociation='oneToOne'
-                )
+                )          
             else:
                 # 对于其他对象，直接使用目标对象
                 cmds.copySkinWeights(
                     sourceSkin=sourceSkin, 
                     destinationSkin=destSkin, 
                     noMirror=True, 
-                    surfaceAssociation='closestPoint', 
-                    influenceAssociation='oneToOne'
+                    surfaceAssociation='closestComponent', 
+                    influenceAssociation='closestJoint'
                 )
 
             cmds.skinCluster( destSkin, forceNormalizeWeights=True, e = True )
