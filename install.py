@@ -145,32 +145,28 @@ class MX_ToolPackShelf(Shelf):
 
     def create_dock_shelf(self):
         
-        # 删除已存在的工具架（防止重复）
-        shelf_name = "MXToolPackDockShelf"
-        dock_name = shelf_name + "Dock"
+        dock_name = "MXToolPackDock"
         
+        # 删除已存在的UI
         if cmds.dockControl(dock_name, ex=True):
             cmds.deleteUI(dock_name, control=True)
-        if cmds.control(shelf_name, ex=True):
-            cmds.deleteUI(shelf_name, control=True)
         
-        # 创建主工具架的滚动窗口，使其可以垂直排列按钮
-        # 创建列布局时限制宽度
-        main_shelf = cmds.columnLayout(
-            parent="ShelfLayout",
-            adjustableColumn=True,
-            width=40  # 直接控制布局宽度
-        )
-        
-        # 设置停靠属性（默认停靠在右侧）
+        # 1. 创建 `paneLayout` 来限制宽度
+        main_pane = cmds.paneLayout(configuration='single', width=40, parent="ShelfLayout")
+
+        # 2. 在 `paneLayout` 里面创建 `columnLayout`
+        main_shelf = cmds.columnLayout(parent=main_pane, adjustableColumn=True)
+
+        # 3. 创建 `dockControl`，并附加 `paneLayout`
         cmds.dockControl(
             dock_name,
             area='right',
-            content=main_shelf,
+            content=main_pane,
             allowedArea='all',
             floating=False,
             label="",
-            width = 40, 
+            width=40,  # 这里的宽度不会直接生效
+            fixedWidth=True, #必须加上fixwidth参数
             ret=True
         )
 
@@ -183,6 +179,8 @@ class MX_ToolPackShelf(Shelf):
             self.addButon(parent=main_shelf, label="render tool", command = cmds_list.commands[5],icon="render.png", toolTip="render tool") 
             self.addButon(parent=main_shelf, label="ai", command = cmds_list.commands[6],icon="ai.png", toolTip="ai tool") 
         cmds.evalDeferred(add_Button)
+
+
 
 
 ##################################################################################
