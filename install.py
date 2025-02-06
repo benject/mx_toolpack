@@ -121,12 +121,11 @@ class MX_ToolPackShelf(Shelf):
         self.addButon(parent=self.name, label="asset tool", command = cmds_list.commands[1], icon="asset.png", toolTip="asset tool") 
         self.addButon(parent=self.name, label="rigging tool", command = cmds_list.commands[2], icon="rigging.png", toolTip="rigging tool") 
         self.addButon(parent=self.name, label="animation tool", command = cmds_list.commands[3], icon="animation.png", toolTip="animation tool") 
-
         self.addButon(parent=self.name, label="lighting tool", command = cmds_list.commands[4], icon="lighting.png", toolTip="lighting tool") 
         self.addButon(parent=self.name, label="render tool", command = cmds_list.commands[5], icon="render.png", toolTip="render tool") 
         self.addButon(parent=self.name, label="ai", command = cmds_list.commands[6], icon="ai.png", toolTip="ai tool") 
         self.addButon(parent=self.name, label="settings", command = cmds_list.commands[7], icon="settings.png", toolTip="settings") 
-        self.addButon(parent=self.name, label="dock", command = self.show_dock, icon="dock.png", toolTip="dock") 
+        self.addButon(parent=self.name, label="dock", command = self.create_dock_shelf, icon="dock.png", toolTip="dock") 
 
         
         '''
@@ -143,18 +142,9 @@ class MX_ToolPackShelf(Shelf):
         self.addMenuItem(p, "popupMenuItem3")
         self.addButon("button3")
         '''
-    def show_dock(self):
-
-        parent_shelf = self.create_dock_shelf()
-        self.addButon(parent=parent_shelf, label="common tool", command = cmds_list.commands[0],icon="common.png", toolTip="common tool")
-        self.addButon(parent=parent_shelf, label="asset tool", command = cmds_list.commands[1],icon="asset.png", toolTip="asset tool") 
-        self.addButon(parent=parent_shelf, label="rigging tool", command = cmds_list.commands[2],icon="rigging.png", toolTip="rigging tool") 
-        self.addButon(parent=parent_shelf, label="animation tool", command = cmds_list.commands[3],icon="animation.png", toolTip="animation tool") 
-        self.addButon(parent=parent_shelf, label="lighting tool", command = cmds_list.commands[4],icon="lighting.png", toolTip="lighting tool") 
-        self.addButon(parent=parent_shelf, label="render tool", command = cmds_list.commands[5],icon="render.png", toolTip="render tool") 
-        self.addButon(parent=parent_shelf, label="ai", command = cmds_list.commands[6],icon="ai.png", toolTip="ai tool") 
 
     def create_dock_shelf(self):
+        
         # 删除已存在的工具架（防止重复）
         shelf_name = "MXToolPackDockShelf"
         dock_name = shelf_name + "Dock"
@@ -165,7 +155,12 @@ class MX_ToolPackShelf(Shelf):
             cmds.deleteUI(shelf_name, control=True)
         
         # 创建主工具架的滚动窗口，使其可以垂直排列按钮
-        main_shelf = cmds.columnLayout(parent="ShelfLayout", adjustableColumn=True)
+        # 创建列布局时限制宽度
+        main_shelf = cmds.columnLayout(
+            parent="ShelfLayout",
+            adjustableColumn=True,
+            width=40  # 直接控制布局宽度
+        )
         
         # 设置停靠属性（默认停靠在右侧）
         cmds.dockControl(
@@ -175,11 +170,19 @@ class MX_ToolPackShelf(Shelf):
             allowedArea='all',
             floating=False,
             label="",
+            width = 40, 
             ret=True
         )
-        return main_shelf
 
-
+        def add_Button():            
+            self.addButon(parent=main_shelf, label="common tool", command = cmds_list.commands[0],icon="common.png", toolTip="common tool")
+            self.addButon(parent=main_shelf, label="asset tool", command = cmds_list.commands[1],icon="asset.png", toolTip="asset tool") 
+            self.addButon(parent=main_shelf, label="rigging tool", command = cmds_list.commands[2],icon="rigging.png", toolTip="rigging tool") 
+            self.addButon(parent=main_shelf, label="animation tool", command = cmds_list.commands[3],icon="animation.png", toolTip="animation tool") 
+            self.addButon(parent=main_shelf, label="lighting tool", command = cmds_list.commands[4],icon="lighting.png", toolTip="lighting tool") 
+            self.addButon(parent=main_shelf, label="render tool", command = cmds_list.commands[5],icon="render.png", toolTip="render tool") 
+            self.addButon(parent=main_shelf, label="ai", command = cmds_list.commands[6],icon="ai.png", toolTip="ai tool") 
+        cmds.evalDeferred(add_Button)
 
 
 ##################################################################################

@@ -7,7 +7,7 @@ import install
 
 print("Loading Mx Toolpack")
 
-def initPlugin():
+def mx_initPlugin():
 
     # 动态获取 root_path 和 icon_path
     try:
@@ -25,4 +25,4 @@ def initPlugin():
     # 调用自定义安装函数
     install.create_mx_shelf(root_path, icon_path)
 
-cmds.evalDeferred(initPlugin)
+cmds.evalDeferred("mx_initPlugin()")
