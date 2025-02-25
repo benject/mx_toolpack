@@ -70,7 +70,6 @@ class MX_Puppet(QWidget):
         self.ui.pushButton_4.clicked.connect(self.belt_rig)
         self.ui.pushButton_5.clicked.connect(self.spring_rig)     
         self.ui.pushButton_6.clicked.connect(self.import_humanbody)
-
         
         self.show()
 
@@ -100,6 +99,7 @@ class MX_Puppet(QWidget):
         unload_pkgs.unload_packages(True, ['rig.scripts.mx_puppet.mx_spring_rig'])
         from rig.scripts.mx_puppet import mx_spring_rig 
         sr = mx_spring_rig.MX_SpringRig()
+        
 
     
     @Slot()
