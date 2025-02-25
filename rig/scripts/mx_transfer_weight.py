@@ -23,6 +23,9 @@ class MX_TransferWeight(QWidget):
             self.mayaMainWindow = wrapInstance(int(self.mayaMainWindowPtr), QWidget)  #for maya2022 and later long has been change to int
         else:
             self.mayaMainWindow = wrapInstance(long(self.mayaMainWindowPtr), QWidget)  #for maya2020 and earlier
+
+        #set track select order to true
+        cmds.selectPref(tso=True) 
         
         #Parent widget under Maya main window        
         self.setParent(self.mayaMainWindow)
@@ -233,15 +236,30 @@ class MX_TransferWeight(QWidget):
     def transfer_vertex_weight(self,args):
         '''传递点的权重'''
 
-        sel = cmds.ls( orderedSelection=True)
+        sel = cmds.ls(orderedSelection=True, fl=True) #配合 selectPref(tso=True) 才能用
         if len(sel) < 2:
             cmds.warning("请至少选择两个对象。")
             return
 
-        cmds.select(sel[0])
-        mel.eval("CopyVertexWeights;")
+        sel_A = sel[0:(len(sel)//2)]
+        sel_B = sel[(len(sel)//2):]
 
-        cmds.select(sel[1:])
-        mel.eval("PasteVertexWeights;")
+        print(sel_A)
+        print(sel_B)
 
-        print("transfered.")
+
+
+        if len(sel_A)==len(sel_B):
+            for vtx_A , vtx_B in zip(sel_A,sel_B):
+                cmds.select(vtx_A)
+                mel.eval("CopyVertexWeights;")
+
+                cmds.select(vtx_B)
+                mel.eval("PasteVertexWeights;")
+
+            print("transfered.")           
+
+        else:
+            print("Please select equal number vertex")
+        
+        cmds.select(sel_B)

@@ -86,6 +86,9 @@ class MX_RigTools(QWidget):
         self.ui.pushButton_12.clicked.connect(self.add_ctrl_to_jnts)
         self.ui.pushButton_12.setToolTip(u"add ctrls to joint chain, select joint root and click button")
 
+        self.ui.pushButton_13.clicked.connect(self.extract_deltas)
+        self.ui.pushButton_13.setToolTip(u"select skin mesh, and then select corrective mesh")
+
         self.show()
 
 
@@ -178,3 +181,10 @@ class MX_RigTools(QWidget):
         unload_pkgs.unload_packages(True,['rig.scripts.mx_add_ctrl_to_jnts'])
         from rig.scripts import mx_add_ctrl_to_jnts
         mx_add_ctrl_to_jnts.add_ctrl_to_jnts()
+
+    @Slot()
+    def extract_deltas(self):
+
+        unload_pkgs.unload_packages(True,['rig.scripts.mx_extract_deltas'])
+        from rig.scripts import mx_extract_deltas
+        mx_extract_deltas.extractDeltasCmd()
