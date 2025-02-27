@@ -66,6 +66,9 @@ class MX_AnimTools(QWidget):
         self.ui.pushButton_7.clicked.connect(self.bake_mesh)
         self.ui.pushButton_8.clicked.connect(self.one_to_many_constraint)
 
+        self.ui.pushButton_9.clicked.connect(self.fake_dyn)
+        self.ui.pushButton_9.setToolTip(u"select ctrl first and then nucleus , hair, and optional nrigid")
+
         self.show()
 
 
@@ -128,3 +131,10 @@ class MX_AnimTools(QWidget):
         unload_pkgs.unload_packages(True,['anim.scripts.mx_one_to_many_constraint'])
         from anim.scripts import mx_one_to_many_constraint        
         mx_one_to_many_constraint.one_to_multi_constraint()
+    
+    @Slot()
+    def fake_dyn(self):
+        
+        unload_pkgs.unload_packages(True,['anim.script.mx_fake_dyn'])
+        from anim.scripts import mx_fake_dyn
+        mx_fake_dyn.fake_dyn()

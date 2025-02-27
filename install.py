@@ -114,7 +114,6 @@ class MX_ToolPackShelf(Shelf):
     def __init__(self, name="", iconPath=""):
         super(MX_ToolPackShelf,self).__init__(name, iconPath)
 
-
     def build(self):
 
         self.addButon(parent=self.name, label="common tool", command = cmds_list.commands[0], icon="common.png", toolTip="common tool")
@@ -125,8 +124,6 @@ class MX_ToolPackShelf(Shelf):
         self.addButon(parent=self.name, label="render tool", command = cmds_list.commands[5], icon="render.png", toolTip="render tool") 
         self.addButon(parent=self.name, label="ai", command = cmds_list.commands[6], icon="ai.png", toolTip="ai tool") 
         self.addButon(parent=self.name, label="settings", command = cmds_list.commands[7], icon="settings.png", toolTip="settings") 
-        self.addButon(parent=self.name, label="dock", command = self.create_dock_shelf, icon="dock.png", toolTip="dock") 
-
         
         '''
         self.addButon("popup")
@@ -366,8 +363,24 @@ def create_mx_shelf(root_path,icon_path):
     command8 = inspect.cleandoc(command8)
     cmds_list.add_commands(command8)
     
+    global mx_toolpack_instance
 
-    MX_ToolPackShelf(name="mx_toolpack", iconPath=icon_path)
+    mx_toolpack_instance = MX_ToolPackShelf(name="mx_toolpack", iconPath=icon_path)
+
+    # 为“dock”按钮绑定实例方法
+    cmds.shelfButton(parent=mx_toolpack_instance.name,
+                     label="dock", 
+                     command=lambda *args: mx_toolpack_instance.create_dock_shelf(),
+                     sourceType="Python",                     
+                     image=os.path.join(icon_path, "dock.png"),
+                     annotation="dock")
+
+    #启动自动添加
+    mx_toolpack_instance.create_dock_shelf()
+    
+    return mx_toolpack_instance
+
+
 
 def onMayaDroppedPythonFile(*args):
 

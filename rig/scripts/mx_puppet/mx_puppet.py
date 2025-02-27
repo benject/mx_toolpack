@@ -99,9 +99,7 @@ class MX_Puppet(QWidget):
         unload_pkgs.unload_packages(True, ['rig.scripts.mx_puppet.mx_spring_rig'])
         from rig.scripts.mx_puppet import mx_spring_rig 
         sr = mx_spring_rig.MX_SpringRig()
-        
 
-    
     @Slot()
     def import_humanbody(self):
 

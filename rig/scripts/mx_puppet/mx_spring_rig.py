@@ -3,7 +3,6 @@ import sys, os
 import random
 
 from PySide2 import QtWidgets, QtCore, QtGui
-
 import maya.OpenMayaUI as omui
 import maya.cmds as cmds
 import maya.mel as mel
@@ -12,17 +11,22 @@ from shiboken2 import wrapInstance
 
 class MX_SpringRig(QtWidgets.QDialog):
     def __init__(self):
-        
-        # 获取 Maya 主窗口作为父级，如果外部未指定，则自动获取
+        # Get Maya's main window as the parent.
         self.mayaMainWindowPtr = omui.MQtUtil.mainWindow()        
-
-        if(sys.version>"3"):        
-            self.mayaMainWindow = wrapInstance(int(self.mayaMainWindowPtr), QtWidgets.QWidget)  #for maya2022 and later long has been change to int
+        if sys.version > "3":
+            self.mayaMainWindow = wrapInstance(int(self.mayaMainWindowPtr), QtWidgets.QWidget)
         else:
-            self.mayaMainWindow = wrapInstance(long(self.mayaMainWindowPtr), QtWidgets.QWidget)  #for maya2020 and earlier
-    
-        super(MX_SpringRig, self).__init__( self.mayaMainWindow )
-   
+            self.mayaMainWindow = wrapInstance(long(self.mayaMainWindowPtr), QtWidgets.QWidget)
+        
+        # Initialize the dialog with Maya's main window as parent.
+        super(MX_SpringRig, self).__init__(self.mayaMainWindow)
+        
+        # Check for an existing window with the same name and close it.
+        for widget in self.mayaMainWindow.children():
+            if widget.objectName() == 'CreateSpring':
+                widget.close()
+                widget.deleteLater()
+                break
         
         self.setObjectName('CreateSpring')
         self.setWindowTitle(u"弹簧工具")
@@ -32,14 +36,7 @@ class MX_SpringRig(QtWidgets.QDialog):
         self.show()
     
     def setupUI(self):
-
-        # 检查是否已有同名窗口并关闭
-        for widget in self.mayaMainWindow .children():
-            if widget.objectName() == 'CreateSpring':
-                widget.close()
-                widget.deleteLater()
-                break
-        # 使用 Arial 9pt 字体
+        # Use Arial 9pt font.
         font = QtGui.QFont("Arial", 9)
         
         layout = QtWidgets.QVBoxLayout(self)
@@ -47,7 +44,7 @@ class MX_SpringRig(QtWidgets.QDialog):
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setAlignment(QtCore.Qt.AlignCenter)
         
-        # 第一部分：准备工作
+        # Section 1: Preparation
         label1 = QtWidgets.QLabel(u"准备工作")
         label1.setFont(font)
         label1.setAlignment(QtCore.Qt.AlignCenter)
@@ -62,7 +59,7 @@ class MX_SpringRig(QtWidgets.QDialog):
         
         layout.addSpacing(5)
         
-        # 第二部分：创建绑定
+        # Section 2: Rig Creation
         label2 = QtWidgets.QLabel(u"创建绑定")
         label2.setFont(font)
         label2.setAlignment(QtCore.Qt.AlignCenter)
@@ -82,9 +79,11 @@ class MX_SpringRig(QtWidgets.QDialog):
         cmds.polySelect(spring_mesh, edgeLoopPath=[3215, 6407])
         spring_curve = cmds.polyToCurve(form=2, degree=3, conformToSmoothMeshPreview=1)[0]
         cmds.reverseCurve(spring_curve, ch=False, rpo=1)
-        self.spring_circle = cmds.circle(c=(0, 0, 0), nr=(0, 1, 0), sw=360, r=2, d=3, ut=0, tol=0.01, s=8, ch=0)[0]
+        self.spring_circle = cmds.circle(c=(0, 0, 0), nr=(0, 1, 0), sw=360, r=2, d=3, ut=0,
+                                         tol=0.01, s=8, ch=0)[0]
         self.lattice = cmds.lattice(spring_curve, dv=(2, 2, 2), oc=True)
-        spring_surf = cmds.extrude(self.spring_circle, spring_curve, ch=True, rn=False, po=0, et=2, ucp=1, fpt=1, upn=1, rotation=0, scale=1, rsp=1)
+        spring_surf = cmds.extrude(self.spring_circle, spring_curve, ch=True, rn=False, po=0, et=2,
+                                   ucp=1, fpt=1, upn=1, rotation=0, scale=1, rsp=1)
         cmds.delete(spring_mesh)
         self.dis_node0 = cmds.distanceDimension(sp=(-10, 50, 0), ep=(-10, 20, 0))
         self.dis_node1 = cmds.distanceDimension(sp=(-20, 50, 0), ep=(-20, 0, 0))
@@ -92,7 +91,7 @@ class MX_SpringRig(QtWidgets.QDialog):
         self.locator0 = cmds.listConnections(self.dis_node0)
         self.locator1 = cmds.listConnections(self.dis_node1)
         self.locator2 = cmds.listConnections(self.dis_node2)
-        grp = cmds.group(em=True,n="Spring_Fixed_Grp")
+        grp = cmds.group(em=True, n="Spring_Fixed_Grp")
         cmds.parent(self.spring_circle, grp)
         cmds.parent(spring_curve, grp)
         cmds.parent(self.lattice, grp)
@@ -105,15 +104,18 @@ class MX_SpringRig(QtWidgets.QDialog):
     def create_spring_rig(self):
         dis0 = cmds.getAttr(self.dis_node0 + ".distance")
         dis1 = cmds.getAttr(self.dis_node2 + ".distance") - cmds.getAttr(self.dis_node1 + ".distance")
+        
         cube0 = cmds.polyCube(h=1, ch=False)
         cube1 = cmds.polyCube(h=dis0, ch=False)
         cube2 = cmds.polyCube(h=dis0, ch=False)
         cube3 = cmds.polyCube(h=1, ch=False)
         cubes = [cube0, cube1, cube2, cube3]
+        
         cmds.move(0, -0.5, 0, cube0, r=True)
         cmds.move(0, dis0/2, 0, cube1, r=True)
         cmds.move(0, dis0/2, 0, cube2, r=True)
         cmds.move(0, 50 + dis1, 0, cube3, r=True)
+        
         muscle_nodes = []
         for i, cube in enumerate(cubes):
             cmds.setAttr(cube[0] + ".v", 0)
@@ -124,41 +126,39 @@ class MX_SpringRig(QtWidgets.QDialog):
                 cmds.setAttr(muscle_node[0] + ".reverseNormals", 1)
             muscle_nodes.append(muscle_node[0])
         cmds.select(clear=True)
+        
         joint_base = cmds.joint(p=(0, 0, 0))
         cmds.select(clear=True)
         joint_top = cmds.joint(p=(0, 50, 0))
         cmds.skinCluster([joint_base, joint_top], self.lattice[1], tsb=True)
+        
         grp0 = cmds.group(em=True)
         cmds.select(grp0)
         keepOut1 = mel.eval("cMuscle_rigKeepOutSel();")
         cmds.parent(joint_base, cmds.listRelatives(keepOut1)[1])
+        
         grp1 = cmds.group(em=True)
         cmds.move(0, 50, 0, grp1)
         cmds.select(grp1)
         keepOut2 = mel.eval("cMuscle_rigKeepOutSel();")
         cmds.parent(joint_top, cmds.listRelatives(keepOut2)[1])
+        
         cmds.setAttr(keepOut1[0] + ".inDirectionX", 0)
         cmds.setAttr(keepOut1[0] + ".inDirectionY", 1)
         cmds.setAttr(keepOut2[0] + ".inDirectionX", 0)
         cmds.setAttr(keepOut2[0] + ".inDirectionY", 1)
+        
         cmds.select(cube0, cube1, keepOut1)
         mel.eval("cMuscle_keepOutAddRemMuscle(1);")
         cmds.select(cube2, cube3, keepOut2)
         mel.eval("cMuscle_keepOutAddRemMuscle(1);")
-        grp2 = cmds.group(em=True,n='Spring_Grp'+"_"+str(random.randint(0,1000000)))
-        ctrl = cmds.circle(c=(0, 0, 0), nr=(0, 1, 0), sw=360, r=15, d=3, ut=0, tol=0.01, s=8, ch=0)[0]
         
-
-        cmds.setAttr("{}.tx".format(ctrl), l=True )
-        cmds.setAttr("{}.tz".format(ctrl), l=True )
-        cmds.setAttr("{}.rx".format(ctrl), l=True )
-        cmds.setAttr("{}.ry".format(ctrl), l=True )
-        cmds.setAttr("{}.rz".format(ctrl), l=True )
-        cmds.setAttr("{}.sx".format(ctrl), l=True )
-        cmds.setAttr("{}.sy".format(ctrl), l=True )
-        cmds.setAttr("{}.sz".format(ctrl), l=True )
-        cmds.setAttr("{}.v".format(ctrl), l=True )
-
+        grp2 = cmds.group(em=True, n='Spring_Grp' + "_" + str(random.randint(0, 1000000)))
+        ctrl = cmds.circle(c=(0, 0, 0), nr=(0, 1, 0), sw=360, r=15, d=3,
+                           ut=0, tol=0.01, s=8, ch=0)[0]
+        # Lock transformation and scale attributes for the control
+        for attr in ["tx", "tz", "rx", "ry", "rz", "sx", "sy", "sz", "v"]:
+            cmds.setAttr("{}.{}".format(ctrl, attr), l=True)
         
         cmds.parent(cube1[0], cube0[0])
         cmds.parent(cube2[0], cube0[0])
@@ -170,16 +170,13 @@ class MX_SpringRig(QtWidgets.QDialog):
         cmds.delete(self.locator0)
         cmds.delete(self.locator1)
         cmds.delete(self.locator2)
-
+        
         cmds.select(grp2)
         mel.eval('CenterPivot;')
-        ctrl_all = cmds.circle(r=20,nr=(0,1,0),ch=False,n='Spring_Rig_Ctrl')
-        pcnt = cmds.pointConstraint(grp2,ctrl_all,mo=False)
+        ctrl_all = cmds.circle(r=20, nr=(0, 1, 0), ch=False, n='Spring_Rig_Ctrl')[0]
+        pcnt = cmds.pointConstraint(grp2, ctrl_all, mo=False)
         cmds.delete(pcnt)
-
+        
         cmds.scaleConstraint(ctrl_all, self.spring_circle)
-
         cmds.parent(grp2, ctrl_all)
 
-
-        

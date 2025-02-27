@@ -10,7 +10,7 @@ class MX_CreateCtrl:
             if cmds.window(self.window, exists=True):
                 cmds.deleteUI(self.window, window=True)
 
-            self.window = cmds.window(self.window, title='CreateCtrl', widthHeight=(340, 300))
+            self.window = cmds.window(self.window, title='CreateCtrl', widthHeight=(340, 400))
             self.layout = cmds.columnLayout(adjustableColumn=True)
 
             self.initUI()
@@ -75,7 +75,7 @@ class MX_CreateCtrl:
         cmds.showWindow(self.window)
 
         # 设置窗口宽度
-        cmds.window(self.window, edit=True, widthHeight=(340, 300))
+        cmds.window(self.window, edit=True, widthHeight=(340, 400))
 
     def create_ctrl(self, type, *args):
         if type == 1: # Circle

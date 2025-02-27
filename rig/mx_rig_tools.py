@@ -69,6 +69,7 @@ class MX_RigTools(QWidget):
         self.ui.pushButton_1.clicked.connect( self.transfer_weight )
         self.ui.pushButton_2.clicked.connect( self.metahuman_motionbuilder )        
         self.ui.pushButton_3.clicked.connect(self.fit_ground)
+        self.ui.pushButton_3.setToolTip(u"select ground first and then locator")
         self.ui.pushButton_4.clicked.connect(self.create_ctrl)
         self.ui.pushButton_4.setToolTip(u"open create controller window")
         self.ui.pushButton_6.clicked.connect(self.mx_puppet)
