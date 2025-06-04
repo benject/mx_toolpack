@@ -174,6 +174,6 @@ class MX_CommonTools(QWidget):
 
     @Slot()
     def clear_display_layers(self):
-        unload_pkgs.unload_packages(True, ['common.scripts.mx_remove_unload_ref'])
+        unload_pkgs.unload_packages(True, ['common.scripts.mx_clear_display_layers'])
         from common.scripts import mx_clear_display_layers
         mx_clear_display_layers.clear_display_layers()

@@ -126,8 +126,8 @@ class MX_RigTools(QWidget):
 
     @Slot()
     def fit_ground(self):
-        
-        unload_pkgs.unload_packages(True, ['rig.scripts.mx_auto_fit_fit_ground'])
+
+        unload_pkgs.unload_packages(True, ['rig.scripts.mx_auto_fit_ground'])
         from rig.scripts import mx_auto_fit_ground
         mx_auto_fit_ground.auto_fit_ground()
 
@@ -135,7 +135,7 @@ class MX_RigTools(QWidget):
     @Slot()
     def create_ctrl(self):
 
-        unload_pkgs.unload_packages(True, ['rig.scripts.mx_auto_fit_fit_ground'])
+        unload_pkgs.unload_packages(True, ['rig.scripts.mx_auto_fit_ground'])
         from rig.scripts import mx_create_ctrl
         mcc = mx_create_ctrl.MX_CreateCtrl()
 
