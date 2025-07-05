@@ -13,11 +13,9 @@ class MX_CreateCtrl:
             self.window = cmds.window(self.window, title='CreateCtrl', widthHeight=(340, 400))
             self.layout = cmds.columnLayout(adjustableColumn=True)
 
-            self.initUI()
-        
+            self.create_ui()
 
-
-    def initUI(self):
+    def create_ui(self):
         buttons = [
             ("Circle", 1),
             ("Cross", 2),

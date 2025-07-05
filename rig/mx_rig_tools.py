@@ -90,6 +90,9 @@ class MX_RigTools(QWidget):
         self.ui.pushButton_13.clicked.connect(self.extract_deltas)
         self.ui.pushButton_13.setToolTip(u"select skin mesh, and then select corrective mesh")
 
+        self.ui.pushButton_14.clicked.connect(self.attribute_toolpanel)
+        self.ui.pushButton_14.setToolTip(u"open attribute tool panel")
+
         self.show()
 
 
@@ -189,3 +192,10 @@ class MX_RigTools(QWidget):
         unload_pkgs.unload_packages(True,['rig.scripts.mx_extract_deltas'])
         from rig.scripts import mx_extract_deltas
         mx_extract_deltas.extractDeltasCmd()
+    
+    @Slot()
+    def attribute_toolpanel(self):
+
+        unload_pkgs.unload_packages(True,['rig.scripts.mx_attribute_toolpanel'])
+        from rig.scripts import mx_attribute_toolpanel
+        mx_attribute_toolpanel = mx_attribute_toolpanel.MX_AttributeToolPanel()
