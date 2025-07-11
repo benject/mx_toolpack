@@ -128,24 +128,39 @@ class MX_AttrBatchConnector(QtWidgets.QDialog):
                 QtWidgets.QListWidgetItem(node, list_widget)
 
     def _refresh_src_attrs(self, node):
-        self._populate_attr_list(node, self.src_attr_list)
+        self._populate_attr_list(node, self.src_attr_list, is_driver=True)
 
     def _refresh_dst_attrs(self):
         selected_items = self.dst_list.selectedItems()
         if selected_items:
             node = selected_items[0].text()
-            self._populate_attr_list(node, self.dst_attr_list)
+            self._populate_attr_list(node, self.dst_attr_list, is_driver=False)
 
-    def _populate_attr_list(self, node, list_widget):
+    def _populate_attr_list(self, node, list_widget, is_driver=False):
         list_widget.blockSignals(True)
         list_widget.clear()
         if not node or not cmds.objExists(node):
             list_widget.blockSignals(False)
             return
 
-        attrs = cmds.listAttr(node, keyable=True) or []
-        attrs += cmds.listAttr(node, userDefined=True) or []
-        attrs = sorted(set(attrs))
+        attrs = []
+        
+        if is_driver:
+            # 对于driver，优先列出output属性和可连接属性
+            output_attrs = cmds.listAttr(node, output=True) or []
+            connectable_attrs = cmds.listAttr(node, connectable=True) or []
+            keyable_attrs = cmds.listAttr(node, keyable=True) or []
+            user_attrs = cmds.listAttr(node, userDefined=True) or []
+            
+            # 合并所有属性，去重并排序
+            attrs = sorted(set(output_attrs + connectable_attrs + keyable_attrs + user_attrs))
+        else:
+            # 对于driven，只列出基本的可输入属性
+            keyable_attrs = cmds.listAttr(node, keyable=True) or []
+            user_attrs = cmds.listAttr(node, userDefined=True) or []
+            
+            # 合并所有属性，去重并排序
+            attrs = sorted(set(keyable_attrs + user_attrs))
 
         for attr in attrs:
             QtWidgets.QListWidgetItem(attr, list_widget)
