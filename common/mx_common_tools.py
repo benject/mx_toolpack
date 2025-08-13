@@ -32,26 +32,33 @@ class Ui_MX_CommonTools(object):
         lbl_font = QFont("Arial", 9)
         lbl_font.setBold(True)
 
-        # UI 项目顺序：标签和按钮交替
+        # UI 项目顺序：标签和按钮交替（按需求：常用工具 → 批量工具 → 选择工具 → 场景优化）
         items = [
+            # 常用工具
+            ("label_3", "常用工具", True),
+            ("pushButton_8", "互换名字", False),
+            ("pushButton_7", "保存信息到文件", False),
+            ("pushButton_2", "随机分布", False),
+            ("pushButton_9", "沿曲线复制", False),
+            ("pushButton_13", "全贴图显示", False),
+
+            # 批量工具
             ("label_2", "批量工具", True),
             ("pushButton", "批量打组", False),
-            ("pushButton_2", "随机分布", False),
             ("pushButton_6", "批量对齐", False),
             ("pushButton_14", "批量镜像", False),
-            ("pushButton_9", "沿曲线复制", False),
-            ("label_3", "常用工具", True),
+
+            # 选择工具
+            ("label_4", "选择工具", True),
+            ("pushButton_11", "选择工具集", False),
+
+            # 场景优化（包含所有“修复”相关）
+            ("label", "场景优化", True),
             ("pushButton_3", "查找重名", False),
             ("pushButton_4", "修复重名", False),
             ("pushButton_5", "修复弹窗", False),
             ("pushButton_10", "修复模型消失", False),
-            ("label_4", "选择工具", True),
-            ("pushButton_11", "选择工具集", False),
             ("pushButton_12", "修复材质锁", False),
-            ("pushButton_13", "全贴图显示", False),
-            ("label", "场景优化", True),
-            ("pushButton_7", "保存信息到文件", False),
-            ("pushButton_8", "互换名字", False),
             ("pushButton_15", "移除未加载引用", False),
             ("pushButton_16", "清除显示层", False)
         ]

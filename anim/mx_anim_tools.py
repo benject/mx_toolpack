@@ -135,6 +135,6 @@ class MX_AnimTools(QWidget):
     @Slot()
     def fake_dyn(self):
         
-        unload_pkgs.unload_packages(True,['anim.script.mx_fake_dyn'])
+        unload_pkgs.unload_packages(True,['anim.scripts.mx_fake_dyn'])
         from anim.scripts import mx_fake_dyn
         mx_fake_dyn.fake_dyn()

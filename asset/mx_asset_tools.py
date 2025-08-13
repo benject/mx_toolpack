@@ -9,11 +9,54 @@ from maya import OpenMayaUI as omui
 from PySide2.QtCore import * 
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from PySide2.QtUiTools import QUiLoader
+## QUiLoader not needed after switching to programmatic UI
 
 from shiboken2 import wrapInstance 
 
 import unload_pkgs
+
+# --- GENERATED UI CLASS START ---
+class Ui_MX_AssetTools(object):
+    def setupUi(self, Form):
+        Form.setObjectName("AssetTools")
+        Form.setSizePolicy(QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred))
+
+        self.layout = QVBoxLayout(Form)
+        self.layout.setContentsMargins(5, 5, 5, 5)
+        self.layout.setSpacing(5)
+
+        btn_font = QFont("Arial", 9)
+        btn_policy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+
+        # 保持对象名一致，便于复用下方信号连接
+        buttons = [
+            ("pushButton_1", "Poly Haven"),
+            ("pushButton_2", "Texture Haven"),
+            ("pushButton_3", "Asset Library"),
+            ("pushButton_4", "降面"),
+            ("pushButton_5", "移动点"),
+            ("pushButton_6", "环转曲线"),
+            ("pushButton_7", "按材质分离"),
+            ("pushButton_8", "UV工具"),
+            ("pushButton_9", "增长选环"),
+            ("pushButton_10", "Transfer UV"),
+            ("pushButton_11", "Poly工具"),
+        ]
+
+        for obj_name, text in buttons:
+            btn = QPushButton(text, Form)
+            btn.setObjectName(obj_name)
+            btn.setFont(btn_font)
+            btn.setSizePolicy(btn_policy)
+            self.layout.addWidget(btn)
+            setattr(self, obj_name, btn)
+
+        self.layout.addStretch()
+        Form.adjustSize()
+
+    def retranslateUi(self, Form):
+        pass
+# --- GENERATED UI CLASS END ---
 
 #========== class defination
 
@@ -47,15 +90,11 @@ class MX_AssetTools(QWidget):
         self.root_path = root_path
 
 
-    def initUI(self):       
-        
-        loader = QUiLoader()
-        file = QFile(self.root_path+"/mx_asset_tools.ui")
-        file.open(QFile.ReadOnly) 
-        self.ui = loader.load(file, parentWidget=self)
-        file.close()
+    def initUI(self):
+        # 使用程序化 UI
+        self.ui = Ui_MX_AssetTools()
+        self.ui.setupUi(self)
 
-        
         # 设置窗口标志，只保留关闭按钮
         self.setWindowFlags(Qt.Window | Qt.WindowCloseButtonHint)
 
@@ -63,6 +102,7 @@ class MX_AssetTools(QWidget):
         self.ui.pushButton_1.clicked.connect(self.poly_haven)
         self.ui.pushButton_2.clicked.connect(self.texture_haven)
 
+        self.ui.pushButton_3.clicked.connect(self.asset_library)
         self.ui.pushButton_4.clicked.connect(self.reduce_mesh)
 
         self.ui.pushButton_5.clicked.connect(self.move_vtx)
@@ -80,15 +120,22 @@ class MX_AssetTools(QWidget):
 
     @Slot()
     def poly_haven(self):        
-        unload_pkgs.unload_packages(True, ['assets.scripts.mx_poly_haven.MX_PolyHaven'])
+        unload_pkgs.unload_packages(True, ['asset.scripts.mx_poly_haven'])
         from asset.scripts import mx_poly_haven
-        ph = mx_poly_haven.MX_PolyHaven(os.path.join(self.root_path,"assets"))
+        ph = mx_poly_haven.MX_PolyHaven(os.path.join(self.root_path, "assets"))
 
     @Slot()
     def texture_haven(self):        
-        unload_pkgs.unload_packages(True, ['assets.scripts.mx_texture_haven.MX_TextureHaven'])
+        unload_pkgs.unload_packages(True, ['asset.scripts.mx_texture_haven'])
         from asset.scripts import mx_texture_haven
-        th = mx_texture_haven.MX_TextureHaven(os.path.join(self.root_path,"assets"))    
+        th = mx_texture_haven.MX_TextureHaven(os.path.join(self.root_path, "assets"))    
+
+    @Slot()
+    def asset_library(self):
+        unload_pkgs.unload_packages(True, ['asset.scripts.mx_asset_library'])
+        from asset.scripts import mx_asset_library
+        # 保持实例引用，避免被 GC 回收导致窗口不显示或事件无效
+        self._asset_library_win = mx_asset_library.MX_AssetLibrary(os.path.join(self.root_path, "assets"))
 
     @Slot()
     def reduce_mesh(self):
